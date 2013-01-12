@@ -29,15 +29,15 @@
     <parameter key="database_driver">pdo_mysql</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
-    <parameter key="database_name">symfony</parameter>
+    <parameter key="database_name">portfolio</parameter>
     <parameter key="database_user">root</parameter>
-    <parameter key="database_password">null</parameter>
+    <parameter key="database_password">droder86</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
     <parameter key="mailer_user">null</parameter>
     <parameter key="mailer_password">null</parameter>
-    <parameter key="locale">en</parameter>
-    <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
+    <parameter key="locale">fr</parameter>
+    <parameter key="secret">token458767485portfolio45</parameter>
     <parameter key="controller_resolver.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver</parameter>
     <parameter key="controller_name_converter.class">Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser</parameter>
     <parameter key="response_listener.class">Symfony\Component\HttpKernel\EventListener\ResponseListener</parameter>
@@ -79,10 +79,10 @@
     <parameter key="debug.stopwatch.class">Symfony\Component\HttpKernel\Debug\Stopwatch</parameter>
     <parameter key="debug.container.dump">/home/thanatos/workspace/portfolio/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="debug.controller_resolver.class">Symfony\Bundle\FrameworkBundle\Controller\TraceableControllerResolver</parameter>
-    <parameter key="kernel.secret">ThisTokenIsNotSoSecretChangeIt</parameter>
+    <parameter key="kernel.secret">token458767485portfolio45</parameter>
     <parameter key="kernel.trusted_proxies" type="collection"/>
     <parameter key="kernel.trust_proxy_headers">false</parameter>
-    <parameter key="kernel.default_locale">en</parameter>
+    <parameter key="kernel.default_locale">fr</parameter>
     <parameter key="session.class">Symfony\Component\HttpFoundation\Session\Session</parameter>
     <parameter key="session.flashbag.class">Symfony\Component\HttpFoundation\Session\Flash\FlashBag</parameter>
     <parameter key="session.attribute_bag.class">Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag</parameter>
@@ -460,8 +460,8 @@
     <parameter key="jms_di_extra.directories" type="collection"/>
     <parameter key="jms_di_extra.cache_dir">/home/thanatos/workspace/portfolio/app/cache/dev/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/home/thanatos/workspace/portfolio/app/cache/dev/jms_diextra/doctrine/EntityManager_50e0ad66237d3.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50e0ad66237d3_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/home/thanatos/workspace/portfolio/app/cache/dev/jms_diextra/doctrine/EntityManager_50f165d53c82c.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50f165d53c82c_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -558,7 +558,7 @@
     </service>
     <service id="locale_listener" class="Symfony\Component\HttpKernel\EventListener\LocaleListener">
       <tag name="kernel.event_subscriber"/>
-      <argument>en</argument>
+      <argument>fr</argument>
       <argument type="service" id="router"/>
     </service>
     <service id="event_dispatcher" class="Symfony\Component\HttpKernel\Debug\ContainerAwareTraceableEventDispatcher">
@@ -1139,7 +1139,7 @@
     </service>
     <service id="form.csrf_provider" class="Symfony\Component\Form\Extension\Csrf\CsrfProvider\SessionCsrfProvider">
       <argument type="service" id="session"/>
-      <argument>ThisTokenIsNotSoSecretChangeIt</argument>
+      <argument>token458767485portfolio45</argument>
     </service>
     <service id="form.type_extension.csrf" class="Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension">
       <tag name="form.type_extension" alias="form"/>
@@ -2081,11 +2081,11 @@
     <service id="doctrine.dbal.logger.profiling.default" class="Doctrine\DBAL\Logging\DebugStack" public="false"/>
     <service id="doctrine.dbal.default_connection" class="stdClass" factory-method="createConnection" factory-service="doctrine.dbal.connection_factory">
       <argument type="collection">
-        <argument key="dbname">symfony</argument>
+        <argument key="dbname">portfolio</argument>
         <argument key="host">127.0.0.1</argument>
         <argument key="port">null</argument>
         <argument key="user">root</argument>
-        <argument key="password">null</argument>
+        <argument key="password">droder86</argument>
         <argument key="charset">UTF8</argument>
         <argument key="driver">pdo_mysql</argument>
         <argument key="driverOptions" type="collection"/>
@@ -2138,8 +2138,8 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager50e0ad66237d3_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>/home/thanatos/workspace/portfolio/app/cache/dev/jms_diextra/doctrine/EntityManager_50e0ad66237d3.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager50f165d53c82c_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/home/thanatos/workspace/portfolio/app/cache/dev/jms_diextra/doctrine/EntityManager_50f165d53c82c.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>
