@@ -25,13 +25,17 @@ twig:
 
 # Assetic Configuration
 assetic:
-   debug: %kernel.debug%
+   debug: "%kernel.debug%"
    use_controller: false
    filters:
        cssrewrite: ~
        less:
            node: /usr/bin/node
-           node_paths: [/usr/lib/node, /usr/lib/node_modules]
+           node_paths: [/usr/bin/node, /usr/local/lib/node_modules]
+           yui_css:
+              jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+           yui_js:
+              jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
            
 # Doctrine Configuration
 doctrine:
