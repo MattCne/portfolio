@@ -17,7 +17,14 @@
 		<!-- header wrapper -->
 		<div class="wrapper cf">
 			<div id="logo">
-				<a href="index.html" ><img src="img/logo.png" alt="" /></a>
+				<a href="/" >
+				{% image output="bundles/portfolio/images/logo.png"
+				    '@PortfolioBundle/Resources/public/images/logo.png'
+				%}
+				    <img src="{{ asset_url }}" alt="Matthieu Portfolio" />
+				{% endimage %}
+				
+				</a>
 			</div>
 		</div><!-- ENDS header wrapper -->
 		
