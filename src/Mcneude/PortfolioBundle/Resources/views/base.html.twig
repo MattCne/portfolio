@@ -1,6 +1,11 @@
 <!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	{% include 'PortfolioBundle:Includes:head.html.twig' %}
+	{% include 'PortfolioBundle:Include:head.html.twig' %}
 </head>
 <body>
 
@@ -116,9 +121,10 @@
 	
 	
 	<footer>
-		{% include 'PortfolioBundle:Includes:footer.html.twig' %}
+		{% include 'PortfolioBundle:Include:footer.html.twig' %}
 	</footer>
 
-	{% include 'PortfolioBundle:Includes:scripts.html.twig' %}
+{% include 'PortfolioBundle:Include:scripts.html.twig' %}
+	
 </body>
 </html>
