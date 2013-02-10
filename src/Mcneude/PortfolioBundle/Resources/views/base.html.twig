@@ -5,133 +5,16 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	{% include 'PortfolioBundle:Include:head.html.twig' %}
+	{% include 'PortfolioBundle::head.html.twig' %}
 </head>
 <body>
-
-
- 
 	<!-- HEADER -->
-	<header>
-		
-		<!-- header wrapper -->
-		<div class="wrapper cf">
-			<div id="logo">
-				<a href="/" >
-				{% image output="bundles/portfolio/images/logo.png"
-				    '@PortfolioBundle/Resources/public/images/logo.png'
-				%}
-				    <img src="{{ asset_url }}" alt="Matthieu Portfolio" />
-				{% endimage %}
-				
-				</a>
-			</div>
-		</div><!-- ENDS header wrapper -->
-		
-		
-		
-		<!-- nav -->
-		<nav class="cf">
-			<div class="wrapper cf">
-				<ul id="nav" class="sf-menu">
-					<li class="current-menu-item"><a href="index.html">HOME<i><b></b></i></a></li>
-					<li><a href="page.html">ABOUT<i><b></b></i></a>
-						<ul>
-							<li><a href="page.html">Columns</a></li>
-							<li><a href="page-typography.html">Typography</a></li>
-							<li><a href="page-elements.html">Elements</a></li>
-						</ul>
-					</li>
-					<li><a href="blog.html">BLOG<i><b></b></i></a></li>
-					<li><a href="portfolio.html">WORK<i><b></b></i></a></li>
-					<li><a href="contact.html">CONTACT<i><b></b></i></a></li>
-					<li><a href="http://luiszuno.com/blog/downloads/vintage-html-template">DOWNLOAD NOW!<i><b></b></i></a></li>
-				</ul>
-				<div id="combo-holder"></div>
-			</div>
-		</nav>
-		<!-- ends nav -->
-			
-	</header>
-	<!-- ENDS HEADER -->
+	{% include 'PortfolioBundle:Include:header.html.twig' %}
 	
+	<!-- FOOTER -->
+	{% include 'PortfolioBundle:Include:footer.html.twig' %}
 	
-	<!-- MAIN -->
-	<div role="main" id="main">
-		<div class="wrapper">
-		
-		<!-- SLIDER -->
-		<div class="slider-wrapper theme-default theme-project theme-home">
-            <div class="ribbon"></div>
-            <div id="slider" class="nivoSlider">
-                <img src="img/dummies/slides/01.jpg" alt="" />
-                <a href="#"><img src="img/dummies/slides/02.jpg" alt="" title="This is an example of a caption" /></a>
-                <img src="img/dummies/slides/03.jpg" alt="" />
-            </div>
-        </div>
-		<!-- ENDS SLIDER -->
-		
-		
-		<!-- headline -->
-		<div class="headline">
-			I'm a Retro style HTML template and completely FREE!
-		</div>
-		<!-- ENDS headline -->
-		
-			
-	 	 <!-- Feature -->
-	 	 <ul id="filter-container-feature" class="feature">
-		 	<li>
-			 	<a href="single.html" class="thumb" ><img src="img/dummies/430x500a.jpg" alt="" />
-				 	<div class="date"><span class="d">23</span><span class="m">Jan</span></div>
-			 	</a>
-			 	<div class="caption">Lorem ipsum dolor amet</div>
-		 	</li>
-		 	<li>
-			 	<a href="single.html" class="thumb" ><img src="img/dummies/430x500b.jpg" alt="" />
-				 	<div class="date"><span class="d">23</span><span class="m">Jan</span></div>
-			 	</a>
-			 	<div class="caption">Lorem ipsum dolor amet</div>
-		 	</li>
-		 	<li>
-			 	<a href="single.html" class="thumb" ><img src="img/dummies/430x500c.jpg" alt="" />
-				 	<div class="date"><span class="d">23</span><span class="m">Jan</span></div>
-			 	</a>
-			 	<div class="caption">Lorem ipsum dolor amet</div>
-		 	</li>
-		 	
-		 	<li>
-			 	<a href="single.html" class="thumb" ><img src="img/dummies/430x500d.jpg" alt="" />
-				 	<div class="date"><span class="d">23</span><span class="m">Jan</span></div>
-			 	</a>
-			 	<div class="caption">Lorem ipsum dolor amet</div>
-		 	</li>
-		 	<li>
-			 	<a href="single.html" class="thumb" ><img src="img/dummies/430x500e.jpg" alt="" />
-				 	<div class="date"><span class="d">23</span><span class="m">Jan</span></div>
-			 	</a>
-			 	<div class="caption">Lorem ipsum dolor amet</div>
-		 	</li>
-		 	<li>
-			 	<a href="single.html" class="thumb" ><img src="img/dummies/430x500f.jpg" alt="" />
-				 	<div class="date"><span class="d">23</span><span class="m">Jan</span></div>
-			 	</a>
-			 	<div class="caption">Lorem ipsum dolor amet</div>
-		 	</li>  
-	 	 </ul>
-	 	 <!-- ENDS feature -->
-	  
-	  
-	  </div>
-	</div>
-	<!-- ENDS MAIN -->
-	
-	
-	<footer>
-		{% include 'PortfolioBundle:Include:footer.html.twig' %}
-	</footer>
-
-{% include 'PortfolioBundle:Include:scripts.html.twig' %}
+	{% include 'PortfolioBundle:Include:scripts.html.twig' %}
 	
 </body>
 </html>
