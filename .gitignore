@@ -1,7 +1,0 @@
-.buildpath
-.project
-.settings
-app/cache
-app/logs
-vendor
-dump
