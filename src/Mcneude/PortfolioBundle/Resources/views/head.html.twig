@@ -4,15 +4,14 @@
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	
+	<!-- KNACSS en premier pour reseter les styles -->
+	<link href="{{ asset('/css/knacss.css') }}" rel="stylesheet" type="text/css" />
+		
 	{% stylesheets
-    '@PortfolioBundle/Resources/public/less/*'
+    '@PortfolioBundle/Resources/public/less/all.less'
     filter='less'
-    output='css/all.css'
+    output='css/stylesheet.css'
 	%}
 	        <link href="{{ asset_url }}" rel="stylesheet" media="screen" type="text/css" />
 	{% endstylesheets %}
 	
-	<!-- All JavaScript at the bottom, except this Modernizr build.
-	   Modernizr enables HTML5 elements & feature detects for optimal performance.
-	   Create your own custom Modernizr build: www.modernizr.com/download/ -->
-	<script src="js/modernizr-2.5.3.min.js"></script>

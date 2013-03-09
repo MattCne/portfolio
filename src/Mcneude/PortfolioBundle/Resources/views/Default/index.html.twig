@@ -1,1 +1,18 @@
-Hello {{ name }}!
+{# src/Acme/BlogBundle/Resources/views/Blog/index.html.twig #}
+{% extends 'PortfolioBundle::base.html.twig' %}
+
+
+{% block body %}
+<article class="test">
+	<section class="projet">
+		<div class="visuel">
+			<img src="" alt="visuel" />
+		</div>
+		<div class="accroche">
+			<p>Ceci est l'accroche du projet.</p>
+			<p> Ceci est l'accroche du projet. Ceci est l'accroche du projet.</p>
+			<p> Ceci est l'accroche du projet. </p>
+		</div>
+	</section>
+</article>
+{% endblock %}
