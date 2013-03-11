@@ -3,15 +3,16 @@
 	<meta name="description" content="">
 	<!-- Mobile viewport optimized: h5bp.com/viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	
+
 	<!-- KNACSS en premier pour reseter les styles -->
-	<link href="{{ asset('/css/knacss.css') }}" rel="stylesheet" type="text/css" />
-		
+
 	{% stylesheets
-    '@PortfolioBundle/Resources/public/less/all.less'
+    '@PortfolioBundle/Resources/public/less/*'
     filter='less'
     output='css/stylesheet.css'
+
+    '@PortfolioBundle/Resources/public/css/*'
 	%}
 	        <link href="{{ asset_url }}" rel="stylesheet" media="screen" type="text/css" />
+
 	{% endstylesheets %}
-	

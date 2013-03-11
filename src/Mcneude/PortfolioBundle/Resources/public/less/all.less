@@ -1,3 +1,46 @@
-@import 'mixins.less';
-@import 'layout.less';
-@import 'projet.less';
+@noir:#000000;
+@blanc:#ffffff;
+
+@gris-clair:#E8DDC7;
+@gris-fonce:#ABABAB;
+
+body{
+    width:960px;
+    margin:auto;
+}
+
+body > header{
+    border-bottom:1px solid @gris-clair;    
+    padding:1em;
+} 
+
+
+body > footer{
+    height:150px;
+    border:1px solid @noir;
+    padding:1em;
+    text-align:center;
+}
+
+#main{
+    height:50px;
+    border:1px solid @noir;
+    padding:1em;
+    text-align:center;
+}
+
+footer{
+    clear:both;
+}
+
+.projet{
+    //Pour trois blocs sur la même ligne : moins les margin
+    width:( 100% - 20% ) / 3;
+    margin:0 10% 0 0;
+    float:left;
+    
+    border:1px solid @gris-fonce;
+    .accroche{
+        padding:1em;
+    }
+}

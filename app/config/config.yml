@@ -31,7 +31,7 @@ assetic:
        cssrewrite: ~
        less:
            node: /usr/bin/node
-           node_paths: [/usr/bin/node, /usr/local/lib/node_modules]
+           node_paths: [/usr/bin/node, /usr/lib/node_modules]
        yui_css:
           jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
        yui_js:
