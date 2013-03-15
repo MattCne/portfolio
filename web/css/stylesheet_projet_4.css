@@ -1,0 +1,24 @@
+.projet {
+  width: 20%;
+  margin: 0 5% 0 0;
+  float: left;
+  -moz-border-radius: 0px 5px 0px 5px;
+  -webkit-border-radius: 0px 5px 0px 5px;
+  -o-border-radius: 0px 5px 0px 5px;
+  border-radius: 0px 5px 0px 5px;
+  -webkit-box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.51);
+  -o-box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.51);
+  box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.51);
+  border: 1px solid #ababab;
+}
+.projet .accroche {
+  padding: 1em;
+}
+.projet:before {
+  display: block;
+  content: " ";
+  width: 20%;
+  height: 100%;
+  background: #FFF6A5;
+}

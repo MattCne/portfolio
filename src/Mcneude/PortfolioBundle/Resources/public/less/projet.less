@@ -1,13 +1,23 @@
 @import 'variables.less';
+@import 'mixins.less';
 
 .projet{
     //Pour trois blocs sur la même ligne : moins les margin
-    width:( 100% - 20% ) / 3;
-    margin:0 10% 0 0;
+    width:( 100% - 20% ) / 4;
+    margin:0 5% 0 0;
     float:left;
+    .border( 0px 5px 0px 5px );
+    .shadow( 1px 2px 14px 0px rgba(0,0,0,0.51) );
     
     border:1px solid @gris-fonce;
     .accroche{
         padding:1em;
+    }
+    &:before{
+        display:block;
+        content:" ";
+        width:20%;
+        height:100%;
+        background:#FFF6A5;
     }
 }

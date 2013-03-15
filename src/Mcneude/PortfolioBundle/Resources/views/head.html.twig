@@ -7,14 +7,14 @@
 	<!-- KNACSS en premier pour reseter les styles -->
 
 	{% stylesheets
+    '@PortfolioBundle/Resources/public/css/*'
+
+
 	'@PortfolioBundle/Resources/public/less/variables.less'
     '@PortfolioBundle/Resources/public/less/layout.less'
     '@PortfolioBundle/Resources/public/less/projet.less'
     filter='less'
     output='css/stylesheet.css'
-
-    '@PortfolioBundle/Resources/public/css/*'
-
 	%}
 	        <link href="{{ asset_url }}" rel="stylesheet" media="screen" type="text/css" />
 

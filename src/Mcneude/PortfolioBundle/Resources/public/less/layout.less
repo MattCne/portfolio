@@ -1,29 +1,39 @@
 @import 'variables.less';
 
 body{
-    width:960px;
-    margin:auto;
+    width:100%;
+    background:#FFF6A5;
 }
 
-body > header{
+li{
+    list-style:none;
+}
+
+#main{
+    background:#FFFFFF;
+}
+
+#main > header{
     border-bottom:1px solid @gris-clair;    
     padding:1em;
 } 
 
 
-body > footer{
+#main > footer{
     height:150px;
     border:1px solid @noir;
     padding:1em;
     text-align:center;
 }
 
-#main{
-    height:50px;
-    border:1px solid @noir;
-    padding:1em;
-    text-align:center;
+#main-menu{
+    float:right;
+    li{
+        float:left;
+        
+    }
 }
+
 
 footer{
     clear:both;
