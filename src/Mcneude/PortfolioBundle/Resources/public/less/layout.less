@@ -1,4 +1,5 @@
 @import 'variables.less';
+@import 'mixins.less';
 
 body{
     width:100%;
@@ -9,18 +10,22 @@ li{
     list-style:none;
 }
 
+a{
+    text-decoration:none;
+    color:@gris-fonce;
+}
+
 #main{
     background:#FFFFFF;
 }
 
 #main > header{
     border-bottom:1px solid @gris-clair;    
-    padding:1em;
+    .clearfix;
 } 
 
 
 #main > footer{
-    height:150px;
     border:1px solid @noir;
     padding:1em;
     text-align:center;
@@ -28,9 +33,17 @@ li{
 
 #main-menu{
     float:right;
-    li{
+    > li{
         float:left;
         
+        > a{
+        display:block;
+        padding:2em;
+            .transition( background 0.5s );
+            &:hover{
+                background:@gris-clair;
+            }
+        }
     }
 }
 
