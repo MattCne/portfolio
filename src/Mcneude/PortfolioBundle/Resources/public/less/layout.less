@@ -1,5 +1,6 @@
 @import 'variables.less';
 @import 'mixins.less';
+@import 'fontcustom.less';
 
 body{
     width:100%;
@@ -20,15 +21,15 @@ a{
 }
 
 #main > header{
-    border-bottom:1px solid @gris-clair;    
-    .clearfix;
+	.clearfix;
 } 
 
 .full{
+	.clearfix;
+	
     padding:1em;
-    .clearfix;
+    margin-top:8em;
 }
-
 
 #main > footer{
     border:1px solid @noir;
@@ -37,16 +38,50 @@ a{
 }
 
 #main-menu{
+	width:50%;
     float:right;
+    .clearfix;
     > li{
         float:left;
-        
+        width:20%;
+        position:relative;
+        &:before{
+	        position:absolute;
+	        width:2em;
+	        
+	        bottom:-0.5em;
+	        right:0;
+	        font-size:2em;
+	        color:@blanc;	        
+	        .fontcustom;
+	        .transition( all 0.5s );
+        }
+        &:hover{
+        	&:before{
+        		color:#FFF;
+        		.transform( scale( 3.2 ) );
+        	}
+        }
         > a{
-        display:block;
-        padding:2em;
+        	display:block;
+        	letter-spacing:0.05em;
+        	text-align:center;
+        	
+        	.opensanslight( 1.1em );
             .transition( background 0.5s );
+            span{
+            	display:block;
+            	position:relative;
+        	padding:1.5em;
+            }
             &:hover{
-                background:@gris-clair;
+            	.opensansbold( 1.1em );
+            	
+            	margin-top:0;
+                background:#D4D8DB;
+                color:#465A7B;
+                
+                .shadow( 0px 0px 20px 5px #DBDBDB );
             }
         }
     }

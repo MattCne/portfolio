@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'opensanslight';
-  src: url('../fonts/OpenSans-Light-webfont.eot');
-  src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Light-webfont.svg') format('svg');
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Light-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'opensansbold';
-  src: url('../fonts/OpenSans-Bold-webfont.eot');
-  src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Bold-webfont.svg') format('svg');
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'opensansitalic';
-  src: url('../fonts/OpenSans-Italic-webfont.eot');
-  src: url('../fonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Italic-webfont.woff') format('woff'), url('../fonts/OpenSans-Italic-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Italic-webfont.svg') format('svg');
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -42,7 +42,7 @@
 */
 @font-face {
   font-family: "fontcustom";
-  src: url("../font-icon/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.eot?#iefix") format("embedded-opentype"), url("../font-icon/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.woff") format("woff"), url("../font-icon/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.ttf") format("truetype"), url("../font-icon/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.svg#fontcustom") format("svg");
+  src: url("/bundles/portfolio/font/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.woff") format("woff"), url("/bundles/portfolio/font/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.ttf") format("truetype"), url("/bundles/portfolio/font/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -169,16 +169,56 @@ a {
   text-align: center;
 }
 #main-menu {
-  width: 40%;
+  width: 50%;
   float: right;
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+}
+#main-menu:before,
+#main-menu:after {
+  content: "";
+  display: table;
+}
+#main-menu:after {
+  clear: both;
 }
 #main-menu > li {
   float: left;
+  width: 20%;
+  position: relative;
+}
+#main-menu > li:before {
+  position: absolute;
+  width: 2em;
+  bottom: -0.5em;
+  right: 0;
+  font-size: 2em;
+  color: #ffffff;
   font-family: "fontcustom";
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#main-menu > li:hover:before {
+  color: #FFF;
+  transform: scale(3.2);
+  -ms-transform: scale(3.2);
+  /* IE 9 */
+
+  -webkit-transform: scale(3.2);
+  /* Safari and Chrome */
+
+  -o-transform: scale(3.2);
+  /* Opera */
+
+  -moz-transform: scale(3.2);
+  /* Firefox */
+
 }
 #main-menu > li > a {
   display: block;
-  padding: 1.5em;
   letter-spacing: 0.05em;
   text-align: center;
   font-family: "opensanslight", Arial, sans-serif;
@@ -189,29 +229,24 @@ a {
   -moz-transition: background 0.5s;
   -o-transition: background 0.5s;
   transition: background 0.5s;
-  -webkit-transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
 }
 #main-menu > li > a span {
   display: block;
-  -webkit-transition: margin-top 0.5s;
-  -moz-transition: margin-top 0.5s;
-  -o-transition: margin-top 0.5s;
-  transition: margin-top 0.5s;
+  position: relative;
+  padding: 1.5em;
 }
 #main-menu > li > a:hover {
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.2em;
   margin-top: 0;
   background: #D4D8DB;
-  color: #FFF;
+  color: #465A7B;
   -webkit-box-shadow: 0px 0px 20px 5px #dbdbdb;
   -moz-box-shadow: 0px 0px 20px 5px #dbdbdb;
   -o-box-shadow: 0px 0px 20px 5px #dbdbdb;
   box-shadow: 0px 0px 20px 5px #dbdbdb;
-}
-#main-menu > li > a:hover span {
-  margin-top: -0.5em;
 }
 footer {
   clear: both;
