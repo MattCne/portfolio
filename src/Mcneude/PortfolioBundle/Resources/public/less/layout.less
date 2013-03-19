@@ -54,7 +54,6 @@ a{
         	
         	.opensanslight( 1.1em );
             .transition( all 0.5s );
-            margin-top:0.5em;
             span{
             	display:block;
             	position:relative;
@@ -74,6 +73,9 @@ a{
 			        color:@blanc;	        
 			        .fontcustom;
 			        .transition( all 0.5s );
+			        
+			        //A RETIRER QUAND CHROME POURRA LE SUPPORTER !!!
+			        -webkit-transition:none;
 			        opacity:0;
 		        }
 		        
@@ -86,11 +88,9 @@ a{
 		        }
             }
             &:hover{
-            	.opensansbold();
-            	
-            	margin-top:0;
+            	.opensansbold( 1.1em );
                 background:#D4D8DB;
-                color:#465A7B;
+                color:#FFF;
                 
                 .shadow( 0px 0px 20px 5px #DBDBDB );
             }
