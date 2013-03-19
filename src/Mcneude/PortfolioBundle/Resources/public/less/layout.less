@@ -22,6 +22,7 @@ a{
 
 #main > header{
 	.clearfix;
+	border-bottom:1px solid @gris-fonce;
 } 
 
 .full{
@@ -45,23 +46,7 @@ a{
         float:left;
         width:20%;
         position:relative;
-        &:before{
-	        position:absolute;
-	        width:2em;
-	        
-	        bottom:-0.5em;
-	        right:0;
-	        font-size:2em;
-	        color:@blanc;	        
-	        .fontcustom;
-	        .transition( all 0.5s );
-        }
-        &:hover{
-        	&:before{
-        		color:#FFF;
-        		.transform( scale( 3.2 ) );
-        	}
-        }
+      
         > a{
         	display:block;
         	letter-spacing:0.05em;
@@ -72,7 +57,32 @@ a{
             span{
             	display:block;
             	position:relative;
-        	padding:1.5em;
+            	z-index:100;
+            	
+            	width:100%;
+        		padding:1.5em;
+	        	&:before{
+			        position:absolute;
+			        z-index:10;
+			        width:2em;
+			        opacity:0.6;
+			        
+			        bottom:0;
+			        right:5%;
+			        font-size:1em;
+			        color:@blanc;	        
+			        .fontcustom;
+			        .transition( all 0.5s );
+			        opacity:0;
+		        }
+		        
+		        &:hover{
+		        	&:before{
+		        		opacity:.5;
+		        		color:#FFF;
+		        		.transform( scale( 5 ) );
+		        	}
+		        }
             }
             &:hover{
             	.opensansbold( 1.1em );

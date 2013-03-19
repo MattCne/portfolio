@@ -80,6 +80,7 @@
 //Border radius
 .border( @radius )
 {
+	-ms-border-radius:@radius;
     -moz-border-radius:@radius;
     -webkit-border-radius:@radius;
     -o-border-radius:@radius;
@@ -89,6 +90,7 @@
 //Box Shadow
 .shadow( @shadow )
 {
+	-ms-box-shadow: @shadow;
     -webkit-box-shadow: @shadow;
     -moz-box-shadow: @shadow;
     -o-box-shadow: @shadow;
@@ -97,6 +99,7 @@
 
 //Transition
 .transition(@transition: all) {
+	-ms-transition: @transition;
     -webkit-transition: @transition;
     -moz-transition: @transition;
     -o-transition: @transition;
@@ -106,10 +109,10 @@
 //Transform
 .transform( @transform ){
 	transform: @transform;
-	-ms-transform: @transform; /* IE 9 */
-	-webkit-transform: @transform; /* Safari and Chrome */
-	-o-transform: @transform; /* Opera */
-	-moz-transform: @transform; /* Firefox */
+	-ms-transform: @transform; 
+	-webkit-transform: @transform; 
+	-o-transform: @transform; 
+	-moz-transform: @transform;
 }
 
 // Gradients
