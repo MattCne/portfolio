@@ -3,7 +3,7 @@
 */
 @font-face {
   font-family: "fontcustom";
-  src: url("/bundles/portfolio/font/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.woff") format("woff"), url("/bundles/portfolio/font/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.ttf") format("truetype"), url("/bundles/portfolio/font/fontcustom-b6077bd6168bb0a1d2130f5f197364f0.svg#fontcustom") format("svg");
+  src: url("/bundles/portfolio/font/fontcustom-7774006d29e2b6ffba80c1be9d93b753.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/fontcustom-7774006d29e2b6ffba80c1be9d93b753.woff") format("woff"), url("/bundles/portfolio/font/fontcustom-7774006d29e2b6ffba80c1be9d93b753.ttf") format("truetype"), url("/bundles/portfolio/font/fontcustom-7774006d29e2b6ffba80c1be9d93b753.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -64,21 +64,30 @@ li[class*=" icon-"].icon-large:before {
 /*
   Icon Classes
 */
-.icon-phone:before {
+.icon-linkedin:before {
   content: "\f100";
 }
-.icon-graph:before {
+.icon-facebook:before {
   content: "\f101";
 }
-.icon-home:before {
+.icon-phone:before {
   content: "\f102";
 }
-.icon-reddit:before {
+.icon-graph:before {
   content: "\f103";
 }
-.icon-slideshare:before {
+.icon-home:before {
   content: "\f104";
 }
-.icon-tasks:before {
+.icon-skype:before {
   content: "\f105";
+}
+.icon-googleplus:before {
+  content: "\f106";
+}
+.icon-reddit:before {
+  content: "\f107";
+}
+.icon-slideshare:before {
+  content: "\f108";
 }
