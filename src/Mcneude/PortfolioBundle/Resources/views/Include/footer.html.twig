@@ -1,10 +1,37 @@
 <footer>
-	<ul class="sharebar">
-		<li>Google+</li>
-		<li>Viadeo</li>
-		<li>Linkedin</li>
-		<li>Facebook</li>
-		<li>Twitter</li>
-	</ul>
-	Ceci est le footer
+	{% include 'PortfolioBundle:Include:sharebar.html.twig' %}
+	
+	<section>
+		<h1>Liste de liens</h1>
+		<ul class="liste">
+			<li><a href="#">Test 1</a></li>
+			<li><a href="#">Test 2</a></li>
+			<li><a href="#">Test 3</a></li>
+			<li><a href="#">Test 4</a></li>
+		</ul>
+	</section>
+	
+	<section>
+		<h1>Liste de liens</h1>
+		<ul class="liste">
+			<li><a href="#">Test 1</a></li>
+			<li><a href="#">Test 2</a></li>
+			<li><a href="#">Test 3</a></li>
+			<li><a href="#">Test 4</a></li>
+		</ul>
+	</section>
+
+	<section>
+		<h1>Liste de liens</h1>
+		<ul class="liste">
+			<li><a href="#">Test 1</a></li>
+			<li><a href="#">Test 2</a></li>
+			<li><a href="#">Test 3</a></li>
+			<li><a href="#">Test 4</a></li>
+		</ul>
+	</section>
+	
+	<div id="pied_page">
+		<p>2013 copyright Matthieu Cneude | Powered by Symfony 2</p>
+	</div>	
 </footer>

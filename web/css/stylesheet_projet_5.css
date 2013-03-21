@@ -19,6 +19,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'felltypes';
+  src: url('/bundles/portfolio/font/IMFeENrm29P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .inline-block {
   display: inline-block;
   zoom: 1;
@@ -55,11 +61,4 @@
 }
 .projet .accroche {
   padding: 1em;
-}
-.projet:before {
-  display: block;
-  content: " ";
-  width: 20%;
-  height: 100%;
-  background: #FFF6A5;
 }

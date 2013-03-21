@@ -33,6 +33,21 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family: 'felltypes';
+    src: url('/bundles/portfolio/font/IMFeENrm29P.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.felltypes(@size: 1em, @weight: normal, @lineheight: 1.2em){
+	font-family: "felltypes", Arial, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineheight;
+}
+
 
 .opensanslight(@size: 1em, @weight: normal, @lineheight: 1.2em){
     font-family: "opensanslight", Arial, sans-serif;
@@ -113,6 +128,14 @@
 	-webkit-transform: @transform; 
 	-o-transform: @transform; 
 	-moz-transform: @transform;
+}
+
+.text-shadow( @text-shadow ){
+	-o-text-shadow:@text-shadow;
+	-moz-text-shadow:@text-shadow;
+	-ms-text-shadow:@text-shadow;
+	-webkit-text-shadow:@text-shadow;
+	text-shadow:@text-shadow;
 }
 
 // Gradients
