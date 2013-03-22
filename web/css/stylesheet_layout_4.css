@@ -154,6 +154,36 @@ a {
   text-decoration: none;
   color: #81adc8;
 }
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+h1 {
+  font-size: 1.5em;
+  color: #3a3728;
+}
+h2 {
+  font-size: 1.3em;
+  color: #665a4a;
+}
+h3 {
+  font-size: 1.1em;
+  color: #8e8367;
+}
+h4 {
+  font-size: 1em;
+  text-decoration: underline;
+  color: #ada58e;
+}
+.brown {
+  color: #574537;
+}
 #main {
   background: #ffffff;
 }
@@ -167,6 +197,26 @@ a {
   margin: 1em 0 0 0;
   position: relative;
   height: auto;
+  background: -moz-linear-gradient(left, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(230, 232, 227, 0.54)), color-stop(1%, rgba(230, 232, 227, 0.55)), color-stop(30%, rgba(255, 255, 255, 0.72)), color-stop(42%, rgba(255, 255, 255, 0.79)), color-stop(58%, rgba(255, 255, 255, 0.79)), color-stop(66%, rgba(255, 255, 255, 0.74)), color-stop(99%, rgba(230, 232, 227, 0.53)), color-stop(100%, rgba(230, 232, 227, 0.52)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(left, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(left, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to right, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8ae6e8e3', endColorstr='#85e6e8e3', GradientType=1);
+  /* IE6-9 */
 }
 #main > header:before,
 #main > header:after {
@@ -211,13 +261,12 @@ a {
 #main > header h1 {
   width: 50%;
   float: left;
-  font-family: "opensansbold", Arial, sans-serif;
-  font-size: 1.5em;
+  font-family: "felltypes", Arial, sans-serif;
+  font-size: 2em;
   font-weight: normal;
   line-height: 1.2em;
-  letter-spacing: 0.15em;
-  line-height: 1.5em;
-  padding: 0.5em 1em 0 1em;
+  letter-spacing: 0.05em;
+  padding: 0.5em 1em 0.5em 1em;
   color: #7a7970;
   -ms-transition: color 0.5s;
   -webkit-transition: color 0.5s;
@@ -229,10 +278,11 @@ a {
   color: #45443f;
 }
 #main > header h1 span {
+  font-size: 1em;
   display: block;
   text-transform: uppercase;
   font-family: "opensanslight", Arial, sans-serif;
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-weight: normal;
   line-height: 1.2em;
 }
@@ -266,7 +316,7 @@ a {
   position: relative;
   z-index: 100;
   width: 100%;
-  padding: 1.5em;
+  padding: 2em 1.5em 2em 1.5em;
   text-align: center;
   -ms-transition: padding-left 0.5s;
   -webkit-transition: padding-left 0.5s;
@@ -318,6 +368,7 @@ a {
   zoom: 1;
   position: relative;
   padding: 3em 0 1em 0;
+  z-index: 100;
 }
 .full:before,
 .full:after {

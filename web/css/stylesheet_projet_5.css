@@ -43,22 +43,78 @@
 .clearfix:after {
   clear: both;
 }
-.projet {
-  width: 20%;
-  margin: 0 5% 0 0;
-  float: left;
-  -ms-border-radius: 0px 5px 0px 5px;
-  -moz-border-radius: 0px 5px 0px 5px;
-  -webkit-border-radius: 0px 5px 0px 5px;
-  -o-border-radius: 0px 5px 0px 5px;
-  border-radius: 0px 5px 0px 5px;
-  -ms-box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.51);
-  -webkit-box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.51);
-  -moz-box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.51);
-  -o-box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.51);
-  box-shadow: 1px 2px 14px 0px rgba(0, 0, 0, 0.51);
-  border: 1px solid #45443f;
+.list-projet {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+  color: #ffffff;
 }
-.projet .accroche {
-  padding: 1em;
+.list-projet:before,
+.list-projet:after {
+  content: "";
+  display: table;
+}
+.list-projet:after {
+  clear: both;
+}
+.list-projet li {
+  position: relative;
+  width: 23%;
+  margin: 1%;
+  float: left;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  border-right: 1px solid #3a3728;
+}
+.list-projet li:last-child {
+  border-left: none;
+}
+.projet {
+  -ms-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.projet header {
+  position: absolute;
+  top: 84%;
+  z-index: 10;
+  opacity: 0.8;
+  width: 100%;
+  -ms-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.projet header h1 {
+  padding: 0.5em 0 0.5em 0.5em;
+  color: #c2bdac;
+  background: #457c9e;
+}
+.projet header .accroche {
+  -ms-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  position: relative;
+  padding: 0.75em 0 0.75em 0.75em;
+  background: #457c9e;
+  opacity: 0;
+  height: 0;
+}
+.projet .visuel {
+  width: 100%;
+}
+.projet .visuel img {
+  width: 100%;
+}
+.projet:hover header {
+  top: 0;
+}
+.projet:hover .accroche {
+  opacity: 1;
+  height: 100%;
 }

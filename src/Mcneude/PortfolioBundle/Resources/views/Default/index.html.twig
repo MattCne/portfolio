@@ -3,16 +3,17 @@
 
 
 {% block body %}
-<article class="full full-projet">
+<div class="full full-projet">
 
-	<!-- <div id="sequence-theme">
-		<ul class="controls">
-			<li class="status"></li>
-			<li class="prev"></li>
-			<li class="pause"></li>
-			<li class="next"></li>
-		</ul>
+
+
+	<!-- SLIDESHOW -->
+
+
+	<!--  <div id="sequence-theme">
 		<div id="sequence">  
+			<img class="prev" src="/bundles/portfolio/images/slideshow/bt-prev.png" alt="Previous" />
+			<img class="next" src="/bundles/portfolio/images/slideshow/bt-next.png" alt="Next" />
 			<ul>
 		        <li class="animate-in">
 		            <img class="my-image" src="{{ asset('/bundles/portfolio/images/projet/eovi_annuaire.png') }}" alt="An image of me" />
@@ -27,47 +28,80 @@
 	    </div>
 	</div> -->
 	
-    <ul>
+	
+	
+	<!-- TITRES -->
+	
+	
+	
+	<h1>Ceci est un titre H1</h1>
+	<h2>Ceci est un titre H2</h2>
+	<h3>Ceci est un titre H3</h3>
+	<h4>Ceci est un titre H4</h4>
+	
+	<p class="brown">Coukleur marron youpi youpi</p>
+	
+	
+	<!-- PROJETS -->
+	
+		
+    <ul class="list-projet">
         <li>
-        	<section class="projet">
-        		<div class="visuel">
-        			<img src="" alt="visuel" />
-        		</div>
-        		<div class="accroche">
-        			<p>Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
-        		</div>
-        	</section>
+        	<article class="projet">
+        		<figure class="visuel">
+        		    <img src="/bundles/portfolio/images/image_test.jpg" alt="visuel" />
+        		    <figcaption>
+	        			<h1>Site Internet Eovi</h1>
+		        		<div class="accroche">
+		        			Ceci est l'accroche pour le le site Internet Eovi. Ceci est l'accroche pour le le site Internet Eovi. Ceci est l'accroche pour le le site Internet Eovi. Ceci est l'accroche pour le le site Internet Eovi. 
+		        		</div>
+	        		</figcaption>
+        		</figure>
+        		
+        	</article>
     	</li>
         <li>
-        	<section class="projet">
-        		<div class="visuel">
-        			<img src="" alt="visuel" />
-        		</div>
-        		<div class="accroche">
-        			<p>Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
-        		</div>
-        	</section>
+        	<article class="projet">
+        		<figure class="visuel">
+        		    <img src="/bundles/portfolio/images/image_test.jpg" alt="visuel" />
+        		    <figcaption>
+	        			<h1>Titre du projet</h1>
+		        		<div class="accroche">
+		        			Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+		        		</div>
+	        		</figcaption>
+        		</figure>
+        		
+        	</article>
     	</li>
         <li>
-        	<section class="projet">
-        		<div class="visuel">
-        			<img src="" alt="visuel" />
-        		</div>
-        		<div class="accroche">
-        			<p>Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
-        		</div>
-        	</section>
+        	<article class="projet">
+        		<figure class="visuel">
+        		    <img src="/bundles/portfolio/images/image_test.jpg" alt="visuel" />
+        		    <figcaption>
+	        			<h1>Titre du projet</h1>
+		        		<div class="accroche">
+		        			Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+		        		</div>
+	        		</figcaption>
+        		</figure>
+        		
+        	</article>
     	</li>
         <li>
-        	<section class="projet">
-        		<div class="visuel">
-        			<img src="" alt="visuel" />
-        		</div>
-        		<div class="accroche">
-        			<p>Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
-        		</div>
-        	</section>
+        	<article class="projet">
+        		<figure class="visuel">
+        		    <img src="/bundles/portfolio/images/image_test.jpg" alt="visuel" />
+        		    <figcaption>
+	        			<h1>Titre du projet</h1>
+		        		<div class="accroche">
+		        			Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+		        		</div>
+	        		</figcaption>
+        		</figure>
+        		
+        	</article>
     	</li>
-    </ul>
-</article>
+   </ul>
+</div>
 {% endblock %}

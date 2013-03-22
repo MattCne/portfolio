@@ -1,20 +1,60 @@
 @import 'variables.less';
 @import 'mixins.less';
 
-
-.full-projet{
-    
+.list-projet{
+	.clearfix;
+	color:@blanc;
+	li{
+		position:relative;
+		width:100% / 4 - 2;
+		margin:1%;
+		float:left;
+		z-index:100;
+		
+		font-size:1.1em;
+		letter-spacing:0.05em;
+		
+		border-right:1px solid @elpaso;
+	}
+	li:last-child{
+		border-left:none;
+	}
 }
-.projet{
-    //Pour trois blocs sur la même ligne : moins les margin
-    width:( 100% - 20% ) / 4;
-    margin:0 5% 0 0;
-    float:left;
-    .border( 0px 5px 0px 5px );
-    .shadow( 1px 2px 14px 0px rgba(0,0,0,0.51) );
+
+
+.projet{    
+    .visuel{
+    	width:100%;
+    	
+    	position:relative;
+    	overflow:hidden;
     
-    border:1px solid @gris-fonce;
-    .accroche{
-        padding:1em;
-    }
+     	img{
+    		width:100%;
+    	}
+    	figcaption{
+			position:absolute;
+	    	top:84%;
+	    	z-index:10;
+	    	opacity:0.7;
+	    	width:100%;
+	    	height:100%;
+	    	background:darken( @chatelle, 40 );
+			.transition( all .3s ease-in-out );
+	    	h1{
+	    		padding:0.5em 0 0.5em 0.5em;
+	    		color: lighten( @eagle, 10 );
+	    	}
+	    	.accroche{
+	    		position:relative;
+	    		padding:0.75em 0 0.75em 0.75em;
+	    	}
+	    }
+    	&:hover{
+			figcaption{
+				top:0;
+			}
+		}
+    }  
+	
 }
