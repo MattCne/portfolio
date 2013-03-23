@@ -28,7 +28,7 @@ h2, h3, h4, p{
 
 h1{
 	font-size:1.3em;
-	color:lighten( @elpaso, 20 );
+	color:lighten( @granitgreen, 10 );
 	letter-spacing:0.08em;
 }
 
@@ -197,7 +197,6 @@ h4{
     position:relative;
     padding:1em 0 1em 0;
     margin:2em 0 0 0;
-    text-align:center;
     .clearfix;
      clear:both;
     #gradient .vertical( @dimgray, @fuscousgrey );
@@ -250,27 +249,34 @@ h4{
 	}
 	
 	section{
+		width:33.3333%;
 		float:left;
-		margin:1em;
-		> h1{
-			.opensansbold();
+		padding:1em;
+		border-right:1px solid rgba( 58, 65, 40, 0.8); //Elpaso
+		height:100%;
+		margin:1.5em 0 0 0;
+		> h2{
 			color:@glacier;	
-			font-size:1em;
+			padding:0 0 0.5em 0;
+			margin:0 0 0.5em 0;
+			line-height:1.4em;
+			border-bottom:1px solid @glacier;
 		}
 		> .liste{
 			margin:0;
 			padding:0;
 			> li{
 				text-align:left;
-				padding:0 0 0 1em;
 				> a{
-					font-size:1em;
+					font-size:1.1em;
+					letter-spacing:0.05em;
 					
 					color:@eagle;
-					.transition( color 0.5s );
+					.transition( all 0.5s );
 					
 					
 					&:before{
+						.transition( all 0.3s );
 						content:@fleche;
 						color:@eagle;
 						.inline-block;
@@ -282,6 +288,7 @@ h4{
 						color:@jetstream;
 						&:before{
 							color:@jetstream;
+							padding-right:1em;
 						}
 					}
 				}
