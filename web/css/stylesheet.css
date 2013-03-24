@@ -1135,7 +1135,7 @@ p {
 }
 h1 {
   font-size: 1.3em;
-  color: #767052;
+  color: #a59b83;
   letter-spacing: 0.08em;
 }
 h2 {
@@ -1230,7 +1230,8 @@ h4 {
 
   content: '';
 }
-#main > header h1 {
+#main > header h1,
+#main > header h2 {
   width: 50%;
   float: left;
   font-family: "felltypes", Arial, sans-serif;
@@ -1246,10 +1247,11 @@ h4 {
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
-#main > header h1:hover {
+#main > header h1:hover,
+#main > header h2:hover {
   color: #45443f;
 }
-#main > header h1 span {
+#main > header h2 {
   font-size: 1em;
   display: block;
   text-transform: uppercase;
@@ -1666,8 +1668,10 @@ h4 {
   transition: all 0.3s ease-in-out;
 }
 .projet .visuel figcaption h1 {
-  padding: 0.5em 0 0.5em 0.5em;
+  padding: 0.5em 0 1em 1em;
   color: #c2bdac;
+  border-bottom: 1px solid #ada58e;
+  margin: 0 0 0.5em 0;
 }
 .projet .visuel figcaption .accroche {
   position: relative;
@@ -1821,75 +1825,95 @@ li[class*=" icon-"].icon-large:before {
 .icon-slideshare:before {
   content: "\f10a";
 }
-.content_2col {
+.content {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
   zoom: 1;
 }
-.content_2col:before,
-.content_2col:after {
+.content:before,
+.content:after {
   content: "";
   display: table;
 }
-.content_2col:after {
+.content:after {
   clear: both;
 }
-.content_2col h1 {
+.content .italic {
+  font-family: "opensansitalic", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+.content .underline {
+  text-decoration: underline;
+}
+.content ul {
+  margin: 0;
+  padding: 0;
+}
+.content ul li:before {
+  -ms-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  content: '◢';
+  color: #b7cbd6;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  font-size: 0.8em;
+  vertical-align: top;
+  padding-right: 0.5em;
+}
+.content h1 {
   padding: 0 0 0.5em 0;
   margin: 0 0 0.5em 0;
   border-bottom: 1px solid #3a3728;
+}
+.content section {
+  float: left;
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  padding: 1em;
+  font-size: 1.25em;
+  color: #555555;
+}
+.content div {
+  letter-spacing: 0.03em;
+  line-height: 1.3em;
+  float: left;
+  padding: 0 0.25em 0 0;
+}
+.content.middle section {
+  margin: 0 25% 0 25%;
 }
 .content_2col section {
-  float: left;
   width: 50%;
-  font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1em;
-  font-weight: normal;
-  line-height: 1.2em;
-  padding: 1em;
-  font-size: 1.2em;
-  color: #555555;
-}
-.content_2col div {
-  letter-spacing: 0.03em;
-  line-height: 1.3em;
-}
-.content_4col {
-  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
-
-  zoom: 1;
-}
-.content_4col:before,
-.content_4col:after {
-  content: "";
-  display: table;
-}
-.content_4col:after {
-  clear: both;
-}
-.content_4col h1 {
-  padding: 0 0 0.5em 0;
-  margin: 0 0 0.5em 0;
-  border-bottom: 1px solid #3a3728;
+  font-size: 1.4em;
+  letter-spacing: 0.04em;
 }
 .content_4col section {
-  float: left;
   width: 25%;
-  font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1em;
-  font-weight: normal;
-  line-height: 1.2em;
-  padding: 1em;
   font-size: 1.2em;
-  color: #555555;
 }
-.content_4col div {
-  letter-spacing: 0.03em;
-  line-height: 1.3em;
+.content_2x2col section {
+  width: 50%;
+  font-size: 1.34em;
 }
-.border {
-  border-right: 1px solid #665a4a;
-  color: red;
+.content_2x2col div {
+  width: 50%;
+  padding: 0 1.5em 0 0;
+}
+.content_2x4col section {
+  width: 50%;
+  font-size: 1.2em;
+}
+.content_2x4col div {
+  width: 25%;
+  padding: 0 1.5em 0 0;
 }
 
 /*

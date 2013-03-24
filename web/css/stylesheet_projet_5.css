@@ -93,8 +93,10 @@
   transition: all 0.3s ease-in-out;
 }
 .projet .visuel figcaption h1 {
-  padding: 0.5em 0 0.5em 0.5em;
+  padding: 0.5em 0 1em 1em;
   color: #c2bdac;
+  border-bottom: 1px solid #ada58e;
+  margin: 0 0 0.5em 0;
 }
 .projet .visuel figcaption .accroche {
   position: relative;

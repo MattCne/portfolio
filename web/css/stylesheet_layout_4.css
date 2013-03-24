@@ -171,7 +171,7 @@ p {
 }
 h1 {
   font-size: 1.3em;
-  color: #767052;
+  color: #a59b83;
   letter-spacing: 0.08em;
 }
 h2 {
@@ -266,7 +266,8 @@ h4 {
 
   content: '';
 }
-#main > header h1 {
+#main > header h1,
+#main > header h2 {
   width: 50%;
   float: left;
   font-family: "felltypes", Arial, sans-serif;
@@ -282,10 +283,11 @@ h4 {
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
-#main > header h1:hover {
+#main > header h1:hover,
+#main > header h2:hover {
   color: #45443f;
 }
-#main > header h1 span {
+#main > header h2 {
   font-size: 1em;
   display: block;
   text-transform: uppercase;

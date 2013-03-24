@@ -86,25 +86,29 @@ h4{
 		content:'';
 	}
 	
-	h1{
+	hgroup{
 		width:50%;
 		float:left;
-		.felltypes( 2em );
-		letter-spacing:0.05em;
-		padding:0.5em 1em 0.5em 1em;
-		color:lighten( @gris-fonce, 20 );
+		margin:0;
+		padding:0;
+		padding:1.3em 1em 0.5em 1.3em;
 		
-		.transition( color 0.5s );
-		&:hover{
-			color:@gris-fonce;
+		h1{
+			.felltypes( 2em );
+			letter-spacing:0.05em;
+			color:lighten( @gris-fonce, 20 );
+			.transition( color 0.5s );
+			&:hover{
+				color:@gris-fonce;
+			}
 		}
-		
-		span{
+		h2{
 			font-size:1em;
+			margin:0;
+			
+			clear:both;
 			display:block;
 			text-transform:uppercase;
-			
-			.opensanslight( 0.6em );
 		}
 	}
 } 
