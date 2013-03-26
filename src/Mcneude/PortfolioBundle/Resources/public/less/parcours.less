@@ -1,0 +1,42 @@
+@import 'variables.less';
+@import 'mixins.less';
+@import 'fontcustom.less';
+
+.full-cv{
+    #experiences{
+        padding:1em;
+        width:50%;   
+        float:left;
+        .clearfix;
+        .exp_pro{
+            position:relative;
+            margin:1em 0 0 0;
+            
+            .clearfix;
+            header{
+                time{
+                    position:absolute;
+                    top:0;
+                    right:0;
+                }
+            }
+            .visuel, .content{
+                float:left;
+            }
+            .visuel{
+                width:33.333333%;
+            }
+            .content{
+                width:66.666666%;
+                padding:0 0 0.5em 0.5em;
+            }
+        }
+    }
+    #etude{
+        float:left;
+    }
+    #exp_comp{
+        clear:both;
+        float:left;
+    }
+}
