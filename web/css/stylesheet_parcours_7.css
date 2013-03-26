@@ -48,7 +48,7 @@
 */
 @font-face {
   font-family: "fontcustom";
-  src: url("/bundles/portfolio/font/fontcustom-2ecb52e7143b8fc3003cc1536796d621.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/fontcustom-2ecb52e7143b8fc3003cc1536796d621.woff") format("woff"), url("/bundles/portfolio/font/fontcustom-2ecb52e7143b8fc3003cc1536796d621.ttf") format("truetype"), url("/bundles/portfolio/font/fontcustom-2ecb52e7143b8fc3003cc1536796d621.svg#fontcustom") format("svg");
+  src: url("/bundles/portfolio/font/fontcustom-669d4945711e49d311a42f2ca023e9e6.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/fontcustom-669d4945711e49d311a42f2ca023e9e6.woff") format("woff"), url("/bundles/portfolio/font/fontcustom-669d4945711e49d311a42f2ca023e9e6.ttf") format("truetype"), url("/bundles/portfolio/font/fontcustom-669d4945711e49d311a42f2ca023e9e6.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -109,38 +109,23 @@ li[class*=" icon-"].icon-large:before {
 /*
   Icon Classes
 */
-.icon-viadeo-favicon:before {
+.icon-moi:before {
   content: "\f100";
 }
-.icon-linkedin:before {
+.icon-telephone:before {
   content: "\f101";
 }
-.icon-facebook:before {
+.icon-projets:before {
   content: "\f102";
 }
-.icon-phone:before {
+.icon-arrow_right:before {
   content: "\f103";
 }
-.icon-graph:before {
+.icon-accueil:before {
   content: "\f104";
 }
-.icon-home:before {
+.icon-parcours:before {
   content: "\f105";
-}
-.icon-skype:before {
-  content: "\f106";
-}
-.icon-fc-webicon-twitter:before {
-  content: "\f107";
-}
-.icon-googleplus:before {
-  content: "\f108";
-}
-.icon-reddit:before {
-  content: "\f109";
-}
-.icon-slideshare:before {
-  content: "\f10a";
 }
 .full-cv #experiences {
   padding: 1em;

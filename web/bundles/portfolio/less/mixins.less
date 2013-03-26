@@ -1,0 +1,197 @@
+//Font face - Weight / Size / LineHeight
+
+@font-face{
+    font-family: 'opensanslight';
+    src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot');
+    src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/bundles/portfolio/font/OpenSans-Light-webfont.woff') format('woff'),
+         url('/bundles/portfolio/font/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('/bundles/portfolio/font/OpenSans-Light-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'opensansbold'; 
+    src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot');
+    src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/bundles/portfolio/font/OpenSans-Bold-webfont.woff') format('woff'),
+         url('/bundles/portfolio/font/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('/bundles/portfolio/font/OpenSans-Bold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'opensansitalic';
+    src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot');
+    src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/bundles/portfolio/font/OpenSans-Italic-webfont.woff') format('woff'),
+         url('/bundles/portfolio/font/OpenSans-Italic-webfont.ttf') format('truetype'),
+         url('/bundles/portfolio/font/OpenSans-Italic-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'felltypes';
+    src: url('/bundles/portfolio/font/IMFeENrm29P.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.felltypes(@size: 1em, @weight: normal, @lineheight: 1.2em){
+	font-family: "felltypes", Arial, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineheight;
+}
+
+
+.opensanslight(@size: 1em, @weight: normal, @lineheight: 1.2em){
+    font-family: "opensanslight", Arial, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineheight;
+}
+
+.opensansbold(@size: 1em, @weight: normal, @lineheight: 1.2em){
+    font-family: "opensansbold", Arial, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineheight;
+}
+
+.opensansitalic(@size: 1em, @weight: normal, @lineheight: 1.2em){
+    font-family: "opensansitalic", Arial, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineheight;
+}
+
+//Inline block avec hack ie7
+.inline-block{
+    display: inline-block;
+    zoom: 1;
+    *display: inline;   
+}
+
+.clearfix{
+    &:before, &:after{
+        content:"";
+        display:table;
+    }
+    
+    &:after{
+       clear: both;
+    }
+    
+    /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+    zoom: 1;
+}
+
+
+//Border radius
+.border( @radius )
+{
+	-ms-border-radius:@radius;
+    -moz-border-radius:@radius;
+    -webkit-border-radius:@radius;
+    -o-border-radius:@radius;
+    border-radius:@radius;
+}
+
+//Box Shadow
+.shadow( @shadow )
+{
+	-ms-box-shadow: @shadow;
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    -o-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
+
+//Transition
+.transition(@transition: all) {
+	-ms-transition: @transition;
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+//Transform
+.transform( @transform ){
+	transform: @transform;
+	-ms-transform: @transform; 
+	-webkit-transform: @transform; 
+	-o-transform: @transform; 
+	-moz-transform: @transform;
+}
+
+.text-shadow( @text-shadow ){
+	-o-text-shadow:@text-shadow;
+	-moz-text-shadow:@text-shadow;
+	-ms-text-shadow:@text-shadow;
+	-webkit-text-shadow:@text-shadow;
+	text-shadow:@text-shadow;
+}
+
+// Gradients
+#gradient {
+	
+    .horizontal (@startColor: #555, @endColor: #333, @css3pie: none) {
+        background-color: @endColor;
+		background-repeat: repeat-x;
+		background-image: -khtml-gradient(linear, left top, right top, from(@startColor), to(@endColor)); /* Konqueror */
+		background-image: -moz-linear-gradient(left, @startColor, @endColor); /* FF 3.6+ */
+		background-image: -ms-linear-gradient(left, @startColor, @endColor); /* IE10 */
+		background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, @startColor), color-stop(100%, @endColor)); /* Safari 4+, Chrome 2+ */
+		background-image: -webkit-linear-gradient(left, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
+		background-image: -o-linear-gradient(left, @startColor, @endColor); /* Opera 11.10 */
+		-pie-background: linear-gradient(left, @startColor, @endColor);
+		behavior: @css3pie;
+		background-image: linear-gradient(left, @startColor, @endColor); /* the standard */
+    }
+    
+    .vertical (@startColor: #555, @endColor: #333, @css3pie: none) {
+		background-color: @endColor;
+		background-repeat: repeat-x;
+		background-image: -khtml-gradient(linear, left top, left bottom, from(@startColor), to(@endColor)); /* Konqueror */
+		background-image: -moz-linear-gradient(@startColor, @endColor); /* FF 3.6+ */
+		background-image: -ms-linear-gradient(@startColor, @endColor); /* IE10 */
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor)); /* Safari 4+, Chrome 2+ */
+		background-image: -webkit-linear-gradient(@startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
+		background-image: -o-linear-gradient(@startColor, @endColor); /* Opera 11.10 */
+		-pie-background: linear-gradient(@startColor, @endColor);
+        behavior: @css3pie;
+        background-image: linear-gradient(@startColor, @endColor); /* the standard */
+    }
+    
+    .directional (@startColor: #555, @endColor: #333, @deg: 45deg, @css3pie: none) {
+		background-color: @endColor;
+		background-repeat: repeat-x;
+		background-image: -moz-linear-gradient(@deg, @startColor, @endColor); /* FF 3.6+ */
+		background-image: -ms-linear-gradient(@deg, @startColor, @endColor); /* IE10 */
+		background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
+		background-image: -o-linear-gradient(@deg, @startColor, @endColor); /* Opera 11.10 */
+		-pie-background: linear-gradient(@deg, @startColor, @endColor);
+        behavior: @css3pie;
+		background-image: linear-gradient(@deg, @startColor, @endColor); /* the standard */
+    }
+    
+    .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 0.5, @endColor: #c3325f, @css3pie: none) {
+        @percentStop: 0% + @colorStop * 100;
+        background-color: @endColor;
+        background-repeat: repeat-x;
+        background-repeat: no-repeat;
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+		background-image: -webkit-linear-gradient(@startColor, color-stop(@colorStop, @midColor), @endColor);
+		background-image: -moz-linear-gradient(@startColor, @midColor @percentStop, @endColor);
+        background-image: -o-linear-gradient(@startColor, @midColor @percentStop, @endColor); /* Opera 11.10 */
+        -pie-background: linear-gradient(@startColor, @midColor @percentStop, @endColor);
+        behavior: @css3pie;
+        background-image: linear-gradient(@startColor, color-stop(@midColor, @colorStop), @endColor); /* the standard */
+    }
+}
