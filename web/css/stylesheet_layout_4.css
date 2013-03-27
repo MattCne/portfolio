@@ -48,7 +48,7 @@
 */
 @font-face {
   font-family: "fontcustom";
-  src: url("/bundles/portfolio/font/fontcustom-669d4945711e49d311a42f2ca023e9e6.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/fontcustom-669d4945711e49d311a42f2ca023e9e6.woff") format("woff"), url("/bundles/portfolio/font/fontcustom-669d4945711e49d311a42f2ca023e9e6.ttf") format("truetype"), url("/bundles/portfolio/font/fontcustom-669d4945711e49d311a42f2ca023e9e6.svg#fontcustom") format("svg");
+  src: url("/bundles/portfolio/font/fontcustom-bfc04200d2b7d3c7cae377cedc6d4598.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/fontcustom-bfc04200d2b7d3c7cae377cedc6d4598.woff") format("woff"), url("/bundles/portfolio/font/fontcustom-bfc04200d2b7d3c7cae377cedc6d4598.ttf") format("truetype"), url("/bundles/portfolio/font/fontcustom-bfc04200d2b7d3c7cae377cedc6d4598.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -112,13 +112,13 @@ li[class*=" icon-"].icon-large:before {
 .icon-moi:before {
   content: "\f100";
 }
-.icon-telephone:before {
+.icon-arrow_right:before {
   content: "\f101";
 }
-.icon-projets:before {
+.icon-telephone:before {
   content: "\f102";
 }
-.icon-arrow_right:before {
+.icon-projets:before {
   content: "\f103";
 }
 .icon-accueil:before {
@@ -126,6 +126,9 @@ li[class*=" icon-"].icon-large:before {
 }
 .icon-parcours:before {
   content: "\f105";
+}
+.icon-footer_arrow_right:before {
+  content: "\f106";
 }
 body {
   width: 100%;
@@ -323,9 +326,8 @@ h4 {
   position: absolute;
   z-index: 10;
   opacity: 0.6;
-  bottom: -4em;
+  bottom: 0;
   right: 15%;
-  font-size: 1em;
   color: #ffffff;
   font-family: "fontcustom";
   -ms-transition: all 0.5s;
