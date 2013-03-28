@@ -551,7 +551,7 @@ h4 {
   text-shadow: -3px 1px 5px #665a4a;
 }
 #main > footer section {
-  width: 33.3333%;
+  width: 25%;
   float: left;
   padding: 1em;
   border-right: 1px solid rgba(58, 65, 40, 0.8);
@@ -583,14 +583,16 @@ h4 {
   transition: all 0.5s;
 }
 #main > footer section > .liste > li > a:before {
-  content: '◢';
+  font-family: "fontcustom";
+  content: "\f106";
   color: #ada58e;
   display: inline-block;
   zoom: 1;
   *display: inline;
-  font-size: 0.8em;
-  vertical-align: top;
+  font-size: 0.6em;
+  vertical-align: middle;
   padding-right: 0.5em;
+  padding-bottom: 0.1em;
 }
 #main > footer section > .liste > li > a:hover {
   color: #b7cbd6;

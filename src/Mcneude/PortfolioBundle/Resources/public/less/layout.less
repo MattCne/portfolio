@@ -262,7 +262,7 @@ h4{
 	}
 	
 	section{
-		width:33.3333%;
+		width:25%;
 		float:left;
 		padding:1em;
 		border-right:1px solid rgba( 58, 65, 40, 0.8); //Elpaso
@@ -289,12 +289,14 @@ h4{
 					
 					
 					&:before{
-						content:@fleche;
+						.fontcustom;
+						content: "\f106";
 						color:@eagle;
 						.inline-block;
-						font-size:0.8em;
-						vertical-align:top;
+						font-size:0.6em;
+						vertical-align:middle;
 						padding-right:0.5em;
+						padding-bottom:0.1em;
 					}
 					&:hover{
 						color:@jetstream;
