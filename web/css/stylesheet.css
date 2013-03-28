@@ -1278,7 +1278,8 @@ h4 {
   position: absolute;
   z-index: 10;
   opacity: 0.6;
-  bottom: 0;
+  bottom: -1.6em;
+  font-size: 3em;
   right: 15%;
   color: #ffffff;
   font-family: "fontcustom";
@@ -1287,7 +1288,7 @@ h4 {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transition: none;
+  -webkit-transition: opacity 0.5s;
   opacity: 0;
 }
 #main-menu > li > a > span:hover {
@@ -1301,6 +1302,14 @@ h4 {
   -webkit-transform: scale(5);
   -o-transform: scale(5);
   -moz-transform: scale(5);
+}
+#main-menu > li > a > span.icon-moi:before {
+  font-size: 1.2em;
+  bottom: 0;
+}
+#main-menu > li > a > span.icon-parcours:before {
+  font-size: 0.8em;
+  bottom: 1.5em;
 }
 #main-menu > li > a:hover {
   background: #c6cccc;
