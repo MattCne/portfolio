@@ -1132,8 +1132,50 @@ h4 {
 .brown {
   color: #574537;
 }
+img {
+  width: 100%;
+}
 #main {
+  position: relative;
   background: #ffffff;
+}
+#main:before {
+  position: absolute;
+  top: 6.333333em;
+  width: 100%;
+  height: 1em;
+  background-color: #457c9e;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#5d96b9), to(#457c9e));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#5d96b9, #457c9e);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#5d96b9, #457c9e);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d96b9), color-stop(100%, #457c9e));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#5d96b9, #457c9e);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#5d96b9, #457c9e);
+  /* Opera 11.10 */
+
+  -pie-background: linear-gradient(#5d96b9, #457c9e);
+  behavior: none;
+  background-image: linear-gradient(#5d96b9, #457c9e);
+  /* the standard */
+
+  -ms-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  -webkit-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  -moz-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  -o-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  border-top: 1px solid #c8dbe7;
+  content: '';
 }
 #main > header {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
@@ -1325,7 +1367,7 @@ h4 {
 
   zoom: 1;
   position: relative;
-  padding: 3em 0 1em 0;
+  padding: 3em 1em 1em 1em;
   z-index: 100;
 }
 .full:before,
@@ -1335,44 +1377,6 @@ h4 {
 }
 .full:after {
   clear: both;
-}
-.full:before {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 1em;
-  background-color: #457c9e;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#5d96b9), to(#457c9e));
-  /* Konqueror */
-
-  background-image: -moz-linear-gradient(#5d96b9, #457c9e);
-  /* FF 3.6+ */
-
-  background-image: -ms-linear-gradient(#5d96b9, #457c9e);
-  /* IE10 */
-
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d96b9), color-stop(100%, #457c9e));
-  /* Safari 4+, Chrome 2+ */
-
-  background-image: -webkit-linear-gradient(#5d96b9, #457c9e);
-  /* Safari 5.1+, Chrome 10+ */
-
-  background-image: -o-linear-gradient(#5d96b9, #457c9e);
-  /* Opera 11.10 */
-
-  -pie-background: linear-gradient(#5d96b9, #457c9e);
-  behavior: none;
-  background-image: linear-gradient(#5d96b9, #457c9e);
-  /* the standard */
-
-  -ms-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-  -webkit-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-  -moz-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-  -o-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-  box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-  border-top: 1px solid #c8dbe7;
-  content: '';
 }
 #main > footer {
   border: 1px solid #3a3728;
@@ -2044,21 +2048,30 @@ li[class*=" icon-"].icon-large:before {
 .icon-footer_arrow_right:before {
   content: "\f106";
 }
-.full-cv #experiences {
-  padding: 1em;
-  width: 50%;
-  float: left;
-  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
-
-  zoom: 1;
-}
-.full-cv #experiences:before,
-.full-cv #experiences:after {
-  content: "";
-  display: table;
-}
-.full-cv #experiences:after {
+.full-cv > h1 {
+  width: 70%;
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 1.2em;
+  border-bottom: 1px solid #3a3728;
+  padding: 0 0 0.5em 0;
+  margin: 0.5em 0 0.5em 0.5em;
   clear: both;
+  display: block;
+}
+.full-cv #experiences,
+.full-cv #etude,
+.full-cv #exp_comp,
+.full-cv #competence {
+  width: 50%;
+}
+.full-cv #experiences,
+.full-cv #etude,
+.full-cv #exp_comp,
+.full-cv #competence,
+.full-cv #qualite-defaut {
+  padding: 1em;
 }
 .full-cv #experiences .exp_pro {
   position: relative;
@@ -2091,11 +2104,12 @@ li[class*=" icon-"].icon-large:before {
   width: 66.666666%;
   padding: 0 0 0.5em 0.5em;
 }
-.full-cv #etude {
-  float: left;
+.full-cv #qualite-defaut {
+  width: 100%;
 }
-.full-cv #exp_comp {
-  clear: both;
+.full-cv #qualite-defaut #qualite,
+.full-cv #qualite-defaut #defaut {
+  width: 50%;
   float: left;
 }
 

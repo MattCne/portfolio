@@ -130,21 +130,30 @@ li[class*=" icon-"].icon-large:before {
 .icon-footer_arrow_right:before {
   content: "\f106";
 }
-.full-cv #experiences {
-  padding: 1em;
-  width: 50%;
-  float: left;
-  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
-
-  zoom: 1;
-}
-.full-cv #experiences:before,
-.full-cv #experiences:after {
-  content: "";
-  display: table;
-}
-.full-cv #experiences:after {
+.full-cv > h1 {
+  width: 70%;
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 1.2em;
+  border-bottom: 1px solid #3a3728;
+  padding: 0 0 0.5em 0;
+  margin: 0.5em 0 0.5em 0.5em;
   clear: both;
+  display: block;
+}
+.full-cv #experiences,
+.full-cv #etude,
+.full-cv #exp_comp,
+.full-cv #competence {
+  width: 50%;
+}
+.full-cv #experiences,
+.full-cv #etude,
+.full-cv #exp_comp,
+.full-cv #competence,
+.full-cv #qualite-defaut {
+  padding: 1em;
 }
 .full-cv #experiences .exp_pro {
   position: relative;
@@ -177,10 +186,11 @@ li[class*=" icon-"].icon-large:before {
   width: 66.666666%;
   padding: 0 0 0.5em 0.5em;
 }
-.full-cv #etude {
-  float: left;
+.full-cv #qualite-defaut {
+  width: 100%;
 }
-.full-cv #exp_comp {
-  clear: both;
+.full-cv #qualite-defaut #qualite,
+.full-cv #qualite-defaut #defaut {
+  width: 50%;
   float: left;
 }
