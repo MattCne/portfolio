@@ -247,3 +247,10 @@ li[class*=" icon-"].icon-large:before {
   width: 25%;
   padding: 0 1.25em 0 0;
 }
+/* Autre contenu */
+.accroche {
+  padding: 0.5em 0 0.5em 0.5em;
+  margin: 0.5em 0 0.5em 0;
+  border-top: 1px solid #555555;
+  border-bottom: 1px solid #555555;
+}

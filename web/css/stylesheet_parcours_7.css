@@ -130,23 +130,21 @@ li[class*=" icon-"].icon-large:before {
 .icon-footer_arrow_right:before {
   content: "\f106";
 }
-.full-cv > h1 {
-  width: 70%;
-  font-family: "opensansbold", Arial, sans-serif;
-  font-size: 1.5em;
-  font-weight: normal;
-  line-height: 1.2em;
-  border-bottom: 1px solid #3a3728;
-  padding: 0 0 0.5em 0;
-  margin: 0.5em 0 0.5em 0.5em;
-  clear: both;
-  display: block;
+.full-cv {
+  color: #555555;
 }
 .full-cv #experiences,
 .full-cv #etude,
 .full-cv #exp_comp,
 .full-cv #competence {
   width: 50%;
+}
+.full-cv #experiences header h1,
+.full-cv #etude header h1,
+.full-cv #exp_comp header h1,
+.full-cv #competence header h1 {
+  font-size: 1.5em;
+  padding: 0.5em 0 0.5em 0;
 }
 .full-cv #experiences,
 .full-cv #etude,

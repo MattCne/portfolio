@@ -428,13 +428,17 @@ img {
   clear: both;
 }
 .full > h1 {
+  width: 70%;
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 2.5em;
+  font-weight: normal;
+  line-height: 1.2em;
+  border-bottom: 1px solid #81adc8;
+  padding: 0 0 0.5em 0;
+  margin: 0 0 0.5em 0.5em;
+  clear: both;
+  display: block;
   color: #81adc8;
-  font-size: 2em;
-  -o-text-shadow: 0.05em 0.05em #457c9e;
-  -moz-text-shadow: 0.05em 0.05em #457c9e;
-  -ms-text-shadow: 0.05em 0.05em #457c9e;
-  -webkit-text-shadow: 0.05em 0.05em #457c9e;
-  text-shadow: 0.05em 0.05em #457c9e;
 }
 #main > footer {
   border: 1px solid #3a3728;
@@ -573,11 +577,11 @@ img {
   margin: 1.5em 0 0 0;
 }
 #main > footer section > h2 {
-  color: #81adc8;
+  color: #56b0ff;
   padding: 0 0 0.5em 0;
   margin: 0 0 0.5em 0;
   line-height: 1.4em;
-  border-bottom: 1px solid #81adc8;
+  border-bottom: 1px solid #56b0ff;
 }
 #main > footer section > .liste {
   margin: 0;
@@ -609,9 +613,9 @@ img {
   padding-bottom: 0.1em;
 }
 #main > footer section > .liste > li > a:hover {
-  color: #b7cbd6;
+  color: #56b0ff;
   padding-left: 0.5em;
 }
 #main > footer section > .liste > li > a:hover:before {
-  color: #b7cbd6;
+  color: #56b0ff;
 }
