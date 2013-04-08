@@ -189,6 +189,7 @@ img {
 }
 #main:before {
   position: absolute;
+  z-index: 1000;
   top: 6.333333em;
   width: 100%;
   height: 1em;
@@ -425,6 +426,15 @@ img {
 }
 .full:after {
   clear: both;
+}
+.full > h1 {
+  color: #81adc8;
+  font-size: 2em;
+  -o-text-shadow: 0.05em 0.05em #457c9e;
+  -moz-text-shadow: 0.05em 0.05em #457c9e;
+  -ms-text-shadow: 0.05em 0.05em #457c9e;
+  -webkit-text-shadow: 0.05em 0.05em #457c9e;
+  text-shadow: 0.05em 0.05em #457c9e;
 }
 #main > footer {
   border: 1px solid #3a3728;
