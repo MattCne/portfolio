@@ -5,7 +5,10 @@
 
 .content{
 	.clearfix;
-	
+    letter-spacing:0.03em;
+    line-height:1.5em;
+    padding: 0 0.25em 0 0;
+        
 	.italic{
 		.opensansitalic;
 	}
@@ -66,18 +69,18 @@
 		font-size:1.25em;
 		color:@dimgray;
 	}
-	div{
-		letter-spacing:0.03em;
-		line-height:1.5em;
-		float:left;
-		padding: 0 0.25em 0 0;
-	}
 }
 
 .content.middle{
 	section{
 		margin: 0 25% 0 25%;	
 	}
+}
+
+.content_2col, .content_4col, .content_2x2col, .content_2x4col{
+    div{
+        float:left;
+    }
 }
 
 .content_2col{

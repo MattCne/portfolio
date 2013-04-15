@@ -134,6 +134,7 @@ body {
   width: 100%;
   background: #81adc8;
   position: relative;
+  color: #555555;
 }
 li {
   list-style: none;
@@ -153,7 +154,7 @@ h3,
 h4,
 p {
   font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: normal;
   line-height: 1.2em;
 }
@@ -476,7 +477,7 @@ img {
 
   color: #457c9e;
   font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: normal;
   line-height: 1.2em;
 }

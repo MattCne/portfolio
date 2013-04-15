@@ -3,15 +3,8 @@
 @import 'fontcustom.less';
 
 .full-cv{
-    
-    color:@dimgray;
-    
-    .row{
-        article{
-           
-        }
-    }
-    
+    .opensanslight;
+   
     #experiences, #etude, #exp_comp, #competence{
         width:50%;   
          header{
@@ -27,32 +20,46 @@
     }
     
     #experiences{
-       
-        .exp_pro{
-            position:relative;
-            margin:1em 0 0 0;
-            
-            .clearfix;
-            header{
-                time{
-                    position:absolute;
-                    top:0;
-                    right:0;
+        > ul{
+            > li{
+                 &:before{
+                    content:none;
+                 }
+                    
+                .exp_pro{
+                    margin:1em 0 0 0;
+                   
+                    .clearfix;
+                    header{
+                        position:relative;
+                        
+                        h1{
+                            .opensansbold( 1.1em );
+                            color:lighten( @elpaso, 50 );
+                            letter-spacing:0em;
+                            border-color:lighten( @elpaso, 50 );
+                        }
+                        time{
+                            position:absolute;
+                            bottom:0.8em;
+                            font-size:0.8em;
+                            right:0;
+                        }
+                    }
+                    .visuel, .content{
+                        float:left;
+                    }
+                    .visuel{
+                        width:33.333333%;
+                    }
+                    .content{
+                        width:66.666666%;
+                        padding:0 0 0.5em 0.5em;
+                    }
                 }
-            }
-            .visuel, .content{
-                float:left;
-            }
-            .visuel{
-                width:33.333333%;
-            }
-            .content{
-                width:66.666666%;
-                padding:0 0 0.5em 0.5em;
             }
         }
     }
-    
     
     #qualite-defaut{
         width:100%;

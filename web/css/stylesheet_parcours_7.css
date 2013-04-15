@@ -131,7 +131,10 @@ li[class*=" icon-"].icon-large:before {
   content: "\f106";
 }
 .full-cv {
-  color: #555555;
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.2em;
 }
 .full-cv #experiences,
 .full-cv #etude,
@@ -153,34 +156,49 @@ li[class*=" icon-"].icon-large:before {
 .full-cv #qualite-defaut {
   padding: 1em;
 }
-.full-cv #experiences .exp_pro {
-  position: relative;
+.full-cv #experiences > ul > li:before {
+  content: none;
+}
+.full-cv #experiences > ul > li .exp_pro {
   margin: 1em 0 0 0;
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
   zoom: 1;
 }
-.full-cv #experiences .exp_pro:before,
-.full-cv #experiences .exp_pro:after {
+.full-cv #experiences > ul > li .exp_pro:before,
+.full-cv #experiences > ul > li .exp_pro:after {
   content: "";
   display: table;
 }
-.full-cv #experiences .exp_pro:after {
+.full-cv #experiences > ul > li .exp_pro:after {
   clear: both;
 }
-.full-cv #experiences .exp_pro header time {
+.full-cv #experiences > ul > li .exp_pro header {
+  position: relative;
+}
+.full-cv #experiences > ul > li .exp_pro header h1 {
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #bfbaa2;
+  letter-spacing: 0em;
+  border-color: #bfbaa2;
+}
+.full-cv #experiences > ul > li .exp_pro header time {
   position: absolute;
-  top: 0;
+  bottom: 0.8em;
+  font-size: 0.8em;
   right: 0;
 }
-.full-cv #experiences .exp_pro .visuel,
-.full-cv #experiences .exp_pro .content {
+.full-cv #experiences > ul > li .exp_pro .visuel,
+.full-cv #experiences > ul > li .exp_pro .content {
   float: left;
 }
-.full-cv #experiences .exp_pro .visuel {
+.full-cv #experiences > ul > li .exp_pro .visuel {
   width: 33.333333%;
 }
-.full-cv #experiences .exp_pro .content {
+.full-cv #experiences > ul > li .exp_pro .content {
   width: 66.666666%;
   padding: 0 0 0.5em 0.5em;
 }
