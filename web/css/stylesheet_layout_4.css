@@ -297,14 +297,14 @@ img {
 
   content: '';
 }
-#main > header hgroup {
+#main > header .titres {
   width: 50%;
   float: left;
   margin: 0;
   padding: 0;
   padding: 1.3em 1em 0.5em 1.3em;
 }
-#main > header hgroup h1 {
+#main > header .titres h1 {
   font-family: "felltypes", Arial, sans-serif;
   font-size: 2em;
   font-weight: normal;
@@ -317,10 +317,10 @@ img {
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
-#main > header hgroup h1:hover {
+#main > header .titres h1:hover {
   color: #45443f;
 }
-#main > header hgroup h2 {
+#main > header .titres h2 {
   font-size: 1em;
   margin: 0;
   clear: both;
