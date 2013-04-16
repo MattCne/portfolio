@@ -146,8 +146,17 @@ li[class*=" icon-"].icon-large:before {
 .content:after {
   clear: both;
 }
+.content .big-font {
+  font-size: 1.25em;
+}
 .content .italic {
   font-family: "opensansitalic", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+.content .bold {
+  font-family: "opensansbold", Arial, sans-serif;
   font-size: 1em;
   font-weight: normal;
   line-height: 1.2em;
@@ -167,7 +176,8 @@ li[class*=" icon-"].icon-large:before {
   color: #9493a6;
   border-color: #9493a6;
 }
-.content strong {
+.content strong,
+.content .rouge {
   color: #be6c57;
 }
 .content ul {
@@ -204,16 +214,15 @@ li[class*=" icon-"].icon-large:before {
 .content h1 {
   padding: 0 0 0.5em 0;
   margin: 0 0 0.5em 0;
-  border-bottom: 1px solid #3a3728;
+  border-bottom: 1px solid #bfbaa2;
 }
 .content section {
   float: left;
   font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: normal;
   line-height: 1.2em;
   padding: 1em;
-  font-size: 1.25em;
   color: #555555;
 }
 .content.middle section {

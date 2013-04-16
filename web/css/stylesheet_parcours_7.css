@@ -136,6 +136,9 @@ li[class*=" icon-"].icon-large:before {
   font-weight: normal;
   line-height: 1.2em;
 }
+.full-cv .accroche {
+  border: none;
+}
 .full-cv #experiences,
 .full-cv #etude,
 .full-cv #exp_comp,
@@ -161,6 +164,7 @@ li[class*=" icon-"].icon-large:before {
 }
 .full-cv #experiences > ul > li .exp_pro {
   margin: 1em 0 0 0;
+  width: 100%;
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
   zoom: 1;
