@@ -3,11 +3,25 @@
 @import 'fontcustom.less';
 
 .full-cv{
-    #experiences{
-        padding:1em;
+    
+    > h1{
+        width:70%;
+        .opensansbold( 1.5em);
+        border-bottom:1px solid @elpaso;
+        padding:0 0 0.5em 0;
+        margin:0.5em 0 0.5em 0.5em;
+        clear:both;
+        display:block;
+    }
+    
+    #experiences, #etude, #exp_comp, #competence{
         width:50%;   
-        float:left;
-        .clearfix;
+    }
+    #experiences, #etude, #exp_comp, #competence, #qualite-defaut{
+        padding:1em;
+    }
+    #experiences{
+       
         .exp_pro{
             position:relative;
             margin:1em 0 0 0;
@@ -32,11 +46,14 @@
             }
         }
     }
-    #etude{
-        float:left;
-    }
-    #exp_comp{
-        clear:both;
-        float:left;
+    
+    
+    #qualite-defaut{
+        width:100%;
+        
+        #qualite, #defaut{
+            width:50%;
+            float:left;
+        }
     }
 }

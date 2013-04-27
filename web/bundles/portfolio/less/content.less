@@ -27,18 +27,29 @@
 		color:@contessa;
 	}
 	
-	ul{
+    ul{
 		margin:0;
 		padding:0;
 		li{
 			&:before{
 				.transition( all 0.3s );
-				content:@fleche;
-				color:@jetstream;
+				.fontcustom;
+				content: "\f101";
+				color:darken( @jetstream, 10 );
 				.inline-block;
-				font-size:0.8em;
-				vertical-align:top;
+				font-size:0.6em;
+				vertical-align:middle;
 				padding-right:0.5em;
+			}
+			> ul{
+			    padding:0 0 0 0.8em;
+			    > li{
+			        &:before{
+			            content:"↳";
+			            .opensanslight(1em);
+			            padding-right:0.3em;
+			        }
+			    }
 			}
 		}
 	}

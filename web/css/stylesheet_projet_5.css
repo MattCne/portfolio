@@ -43,6 +43,9 @@
 .clearfix:after {
   clear: both;
 }
+/*******************/
+/* DESKTOP VERSION */
+/*******************/
 .list-projet {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
@@ -105,3 +108,6 @@
 .projet .visuel:hover figcaption {
   top: 0;
 }
+/*******************/
+/* MOBILE VERSION  */
+/*******************/
