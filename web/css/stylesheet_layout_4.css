@@ -162,7 +162,7 @@ p {
 }
 h1 {
   font-size: 1.3em;
-  color: #a59b83;
+  color: #615f74;
   letter-spacing: 0.08em;
 }
 h2 {
@@ -192,6 +192,7 @@ img {
 }
 #main:before {
   position: absolute;
+  z-index: 1000;
   top: 6.333333em;
   width: 100%;
   height: 1em;

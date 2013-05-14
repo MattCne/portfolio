@@ -104,6 +104,7 @@
 .projet .visuel figcaption .accroche {
   position: relative;
   border: none;
+  padding: 0.5em 1em;
 }
 .projet .visuel:hover figcaption {
   top: 0;

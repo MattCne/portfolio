@@ -34,7 +34,7 @@ h2, h3, h4, p{
 
 h1{
 	font-size:1.3em;
-	color:lighten( @granitgreen, 10 );
+	color:darken( @chatelle, 30 );
 	letter-spacing:0.08em;
 }
 
@@ -70,6 +70,7 @@ img{
     background:@blanc;
     &:before{
         position:absolute;
+        z-index:1000;
         //before header 1em + menu text 1.2em + paddding menu 4em + espace 0.133333em
         top:6.333333em;
         width:100%;
