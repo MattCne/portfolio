@@ -24,18 +24,15 @@ a{
     color:@glacier;
 }
 
-h1{
-	.opensansbold;
-}
-
 h2, h3, h4, p{
 	.opensanslight;
 }
 
 h1{
-	font-size:1.3em;
-	color:darken( @chatelle, 30 );
-	letter-spacing:0.08em;
+    .opensansbold;
+	font-size:1.8em;
+	color:darken( @chatelle, 20 );
+	letter-spacing:0.05em;
 }
 
 h2{
@@ -213,7 +210,11 @@ img{
 	.clearfix;
 	position:relative;
     padding:3em 1em 1em 1em;
-    z-index:100;   
+    z-index:100;  
+    > h1{
+        font-size:2em;
+        color:darken( @chatelle, 30 );
+    } 
 }
 
 #main > footer{

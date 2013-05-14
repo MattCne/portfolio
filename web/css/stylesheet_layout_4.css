@@ -145,12 +145,6 @@ a {
   text-decoration: none;
   color: #81adc8;
 }
-h1 {
-  font-family: "opensansbold", Arial, sans-serif;
-  font-size: 1em;
-  font-weight: normal;
-  line-height: 1.2em;
-}
 h2,
 h3,
 h4,
@@ -161,9 +155,13 @@ p {
   line-height: 1.2em;
 }
 h1 {
-  font-size: 1.3em;
-  color: #615f74;
-  letter-spacing: 0.08em;
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  font-size: 1.8em;
+  color: #79778f;
+  letter-spacing: 0.05em;
 }
 h2 {
   font-size: 1.3em;
@@ -427,6 +425,10 @@ img {
 }
 .full:after {
   clear: both;
+}
+.full > h1 {
+  font-size: 2em;
+  color: #615f74;
 }
 #main > footer {
   border: 1px solid #3a3728;
