@@ -351,6 +351,33 @@ img{
 			float:none;
 			width:100%;
 			border-top:1px solid darken( @glacier, 20 );
+			background:@glacier;
+			> a{
+    			color:@blanc;
+    			.transition( none );
+    			> span{
+    			    .transition( none );
+    			    padding:1.5em;
+    			    
+        			&:hover{
+        			    padding-left:1.5em;
+        			    background:@blanc;
+        			    color:darken( @glacier, 20 );
+        			    .shadow( 0px 0px 10px 3px #FFFFFF );
+        			    
+    			        &:before{
+                            opacity:0;
+                        }
+                    }
+                    &.icon-accueil{
+                        //Padding d'un em en plus a cause de la barre
+                        padding:2em 1.5em 1.5em 1.5em;
+                    }  
+    			}
+			}
+			&:hover{
+			  
+			}
 		}
 		li:first-child{
 			border-top:none;
