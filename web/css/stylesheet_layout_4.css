@@ -165,7 +165,6 @@ h1 {
 }
 h2 {
   font-size: 1.3em;
-  color: #665a4a;
   letter-spacing: 0.05em;
 }
 h3 {
@@ -177,9 +176,6 @@ h4 {
   font-size: 1em;
   text-decoration: underline;
   color: #ada58e;
-}
-.brown {
-  color: #574537;
 }
 img {
   width: 100%;
@@ -233,7 +229,7 @@ img {
   zoom: 1;
   clear: both;
   border-bottom: 1px solid #457c9e;
-  border-top: 1px solid #2b291e;
+  border-top: 1px solid #6d8365;
   margin: 1em 0 0 0;
   position: relative;
   height: auto;
@@ -338,7 +334,7 @@ img {
 }
 #main-menu > li > a {
   display: block;
-  color: #574537;
+  color: #45443f;
   letter-spacing: 0.05em;
   text-align: center;
   font-family: "opensanslight", Arial, sans-serif;
@@ -431,7 +427,7 @@ img {
   color: #615f74;
 }
 #main > footer {
-  border: 1px solid #3a3728;
+  border: 1px solid #6d8365;
   position: relative;
   padding: 1em 0 1em 0;
   margin: 2em 0 0 0;
@@ -514,7 +510,7 @@ img {
   -o-box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
   box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
   border-top: 1px solid #c8dbe7;
-  border-bottom: 1px solid #3a3728;
+  border-bottom: 1px solid #6d8365;
   content: '';
 }
 #main > footer > .sharebar {
@@ -551,7 +547,7 @@ img {
   clear: both;
   float: right;
   font-size: 0.8em;
-  color: #b3a796;
+  color: #ffffff;
   -o-text-shadow: -3px 1px 5px #665a4a;
   -moz-text-shadow: -3px 1px 5px #665a4a;
   -ms-text-shadow: -3px 1px 5px #665a4a;
