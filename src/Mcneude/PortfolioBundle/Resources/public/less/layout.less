@@ -112,7 +112,7 @@ img{
 			color:lighten( @gris-fonce, 20 );
 			.transition( color 0.5s );
 			&:hover{
-				color:@gris-fonce;
+				color:@glacier;
 			}
 		}
 		h2{
@@ -189,10 +189,18 @@ img{
                 bottom:1.5em;
             }
             &:hover{
-                background:@glacier;
+                background: #cc9090;
+                background: -moz-linear-gradient(left,  #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
+                background: -webkit-gradient(linear, left top, right top, color-stop(0%,#cc9090), color-stop(25%,#cc3b3b), color-stop(75%,#cc3b3b), color-stop(100%,#cc9090));
+                background: -webkit-linear-gradient(left,  #cc9090 0%,#cc3b3b 25%,#cc3b3b 75%,#cc9090 100%);
+                background: -o-linear-gradient(left,  #cc9090 0%,#cc3b3b 25%,#cc3b3b 75%,#cc9090 100%);
+                background: -ms-linear-gradient(left,  #cc9090 0%,#cc3b3b 25%,#cc3b3b 75%,#cc9090 100%);
+                background: linear-gradient(to right,  #cc9090 0%,#cc3b3b 25%,#cc3b3b 75%,#cc9090 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc9090', endColorstr='#cc9090',GradientType=1 );
+
                 color:@blanc;
-                
-                .shadow( 0px 0px 20px 5px #DBDBDB );
+               
+                .shadow( 0px 0px 20px 5px lighten( #cc3b3b, 20 ) );
             }
         }
     }

@@ -1121,13 +1121,11 @@ h2 {
 }
 h3 {
   font-size: 1.1em;
-  color: #8e8367;
   letter-spacing: 0.03em;
 }
 h4 {
   font-size: 1em;
   text-decoration: underline;
-  color: #ada58e;
 }
 img {
   width: 100%;
@@ -1265,7 +1263,7 @@ img {
   transition: color 0.5s;
 }
 #main > header .titres h1:hover {
-  color: #45443f;
+  color: #81adc8;
 }
 #main > header .titres h2 {
   font-size: 1em;
@@ -1350,13 +1348,20 @@ img {
   bottom: 1.5em;
 }
 #main-menu > li > a:hover {
-  background: #c6cccc;
+  background: #cc9090;
+  background: -moz-linear-gradient(left, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #cc9090), color-stop(25%, #cc3b3b), color-stop(75%, #cc3b3b), color-stop(100%, #cc9090));
+  background: -webkit-linear-gradient(left, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
+  background: -o-linear-gradient(left, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
+  background: -ms-linear-gradient(left, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
+  background: linear-gradient(to right, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc9090', endColorstr='#cc9090', GradientType=1);
   color: #ffffff;
-  -ms-box-shadow: 0px 0px 20px 5px #dbdbdb;
-  -webkit-box-shadow: 0px 0px 20px 5px #dbdbdb;
-  -moz-box-shadow: 0px 0px 20px 5px #dbdbdb;
-  -o-box-shadow: 0px 0px 20px 5px #dbdbdb;
-  box-shadow: 0px 0px 20px 5px #dbdbdb;
+  -ms-box-shadow: 0px 0px 20px 5px #e18c8c;
+  -webkit-box-shadow: 0px 0px 20px 5px #e18c8c;
+  -moz-box-shadow: 0px 0px 20px 5px #e18c8c;
+  -o-box-shadow: 0px 0px 20px 5px #e18c8c;
+  box-shadow: 0px 0px 20px 5px #e18c8c;
 }
 .full {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
@@ -1531,7 +1536,6 @@ img {
 #main > footer section > .liste > li > a {
   font-size: 1.1em;
   letter-spacing: 0.05em;
-  color: #ada58e;
   -ms-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -1541,7 +1545,6 @@ img {
 #main > footer section > .liste > li > a:before {
   font-family: "fontcustom";
   content: "\f106";
-  color: #ada58e;
   display: inline-block;
   zoom: 1;
   *display: inline;
@@ -1551,11 +1554,11 @@ img {
   padding-bottom: 0.1em;
 }
 #main > footer section > .liste > li > a:hover {
-  color: #b7cbd6;
+  color: #81adc8;
   padding-left: 0.5em;
 }
 #main > footer section > .liste > li > a:hover:before {
-  color: #b7cbd6;
+  color: #81adc8;
 }
 /*****************/
 /*    MOBILE     */
@@ -1731,8 +1734,8 @@ img {
 }
 .projet .visuel figcaption h1 {
   padding: 0.5em 0 1em 1em;
-  color: #c2bdac;
-  border-bottom: 1px solid #ada58e;
+  color: #cccbd4;
+  border-bottom: 1px solid #b0afbd;
   margin: 0 0 0.5em 0;
   font-size: 1.4em;
 }
@@ -1940,7 +1943,7 @@ li[class*=" icon-"].icon-large:before {
   transition: all 0.3s;
   font-family: "fontcustom";
   content: "\f101";
-  color: #97b4c3;
+  color: #5d96b9;
   display: inline-block;
   zoom: 1;
   *display: inline;

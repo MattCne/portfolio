@@ -190,7 +190,7 @@ li[class*=" icon-"].icon-large:before {
   transition: all 0.3s;
   font-family: "fontcustom";
   content: "\f101";
-  color: #97b4c3;
+  color: #5d96b9;
   display: inline-block;
   zoom: 1;
   *display: inline;
