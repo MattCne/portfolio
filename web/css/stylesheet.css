@@ -1271,6 +1271,14 @@ img {
   clear: both;
   display: block;
   text-transform: uppercase;
+  -ms-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+#main > header .titres h2:hover {
+  color: #ea4f4f;
 }
 #main-menu {
   width: 50%;
