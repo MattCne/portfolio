@@ -204,9 +204,9 @@ li[class*=" icon-"].icon-large:before {
   font-size: 1.1em;
   font-weight: normal;
   line-height: 1.2em;
-  color: #6d8365;
+  color: #6aaa78;
   letter-spacing: 0em;
-  border-color: #6d8365;
+  border-color: #6aaa78;
 }
 .full-cv #experiences > ul > li .exp_pro header time,
 .full-cv #etude > ul > li .exp_pro header time,

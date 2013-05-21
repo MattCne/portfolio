@@ -31,19 +31,21 @@ h2, h3, h4, p{
 h1{
     .opensansbold;
 	font-size:1.8em;
-	color:darken( @chatelle, 20 );
+	color:@glacier;
 	letter-spacing:0.05em;
 }
 
 h2{
 	font-size:1.3em;
 	letter-spacing:0.05em;
+	color:@tomatoes;
 }
 
 
 h3{
 	font-size:1.1em;
 	letter-spacing:0.03em;
+	color:darken( @chatelle, 20 );
 }
 
 h4{
@@ -78,7 +80,7 @@ img{
 	.clearfix;
 	clear:both;
 	border-bottom:1px solid darken( @glacier, 20 );
-	border-top:1px solid @elpaso;
+	border-top:1px solid @olive;
 	margin:1em 0 0 0;
 	position:relative;
 	height:auto;
@@ -122,6 +124,8 @@ img{
 			clear:both;
 			display:block;
 			text-transform:uppercase;
+			color:lighten( @gris-fonce, 10 );
+			
 			.transition( color 0.5s );
 			
 			&:hover{
@@ -219,12 +223,11 @@ img{
     z-index:100;  
     > h1{
         font-size:2em;
-        color:darken( @chatelle, 30 );
     } 
 }
 
 #main > footer{
-    border:1px solid @elpaso;
+    border:1px solid @olive;
     position:relative;
     padding:1em 0 1em 0;
     margin:2em 0 0 0;
@@ -242,7 +245,7 @@ img{
 		#gradient .vertical( darken( @glacier, 10), darken( @glacier, 20) );
 		.shadow(  0px 3px 10px 5px rgba( 175, 175, 175, .3 ) );
 		border-top:1px solid lighten( @glacier, 20 );
-		border-bottom:1px solid @elpaso;
+		border-bottom:1px solid @olive;
 		content:'';
 	}
     
