@@ -1348,14 +1348,14 @@ img {
   bottom: 1.5em;
 }
 #main-menu > li > a:hover {
-  background: #cc9090;
-  background: -moz-linear-gradient(left, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #cc9090), color-stop(25%, #cc3b3b), color-stop(75%, #cc3b3b), color-stop(100%, #cc9090));
-  background: -webkit-linear-gradient(left, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
-  background: -o-linear-gradient(left, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
-  background: -ms-linear-gradient(left, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
-  background: linear-gradient(to right, #cc9090 0%, #cc3b3b 25%, #cc3b3b 75%, #cc9090 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc9090', endColorstr='#cc9090', GradientType=1);
+  background: #cc7272;
+  background: -moz-linear-gradient(left, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #cc7272), color-stop(50%, #ea4f4f), color-stop(100%, #cc7272));
+  background: -webkit-linear-gradient(left, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
+  background: -o-linear-gradient(left, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
+  background: -ms-linear-gradient(left, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
+  background: linear-gradient(to right, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc7272', endColorstr='#cc7272', GradientType=1);
   color: #ffffff;
   -ms-box-shadow: 0px 0px 20px 5px #e18c8c;
   -webkit-box-shadow: 0px 0px 20px 5px #e18c8c;
