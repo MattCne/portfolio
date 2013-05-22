@@ -178,8 +178,8 @@ li[class*=" icon-"].icon-large:before {
   transition: all 0.5s;
 }
 .content a:hover {
-  color: #9493a6;
-  border-color: #9493a6;
+  color: #e52121;
+  border-color: #e52121;
 }
 .content strong,
 .content .rouge {
