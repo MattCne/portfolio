@@ -176,7 +176,7 @@ h2 {
   line-height: 1.2em;
   font-size: 1.3em;
   letter-spacing: 0.05em;
-  color: #6aaa78;
+  color: #1cd06a;
 }
 h3 {
   font-size: 1.1em;
@@ -239,7 +239,7 @@ img {
   zoom: 1;
   clear: both;
   border-bottom: 1px solid #457c9e;
-  border-top: 1px solid #6aaa78;
+  border-top: 1px solid #1cd06a;
   margin: 1em 0 0 0;
   position: relative;
   height: auto;
@@ -371,19 +371,13 @@ img {
   transition: all 0.5s;
 }
 #main-menu > li > a:hover {
-  background: #cc7272;
-  background: -moz-linear-gradient(left, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #cc7272), color-stop(50%, #ea4f4f), color-stop(100%, #cc7272));
-  background: -webkit-linear-gradient(left, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
-  background: -o-linear-gradient(left, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
-  background: -ms-linear-gradient(left, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
-  background: linear-gradient(to right, #cc7272 0%, #ea4f4f 50%, #cc7272 100%);
+  background: #1cd06a;
   color: #ffffff;
-  -ms-box-shadow: 0px 0px 20px 5px #e18c8c;
-  -webkit-box-shadow: 0px 0px 20px 5px #e18c8c;
-  -moz-box-shadow: 0px 0px 20px 5px #e18c8c;
-  -o-box-shadow: 0px 0px 20px 5px #e18c8c;
-  box-shadow: 0px 0px 20px 5px #e18c8c;
+  -ms-box-shadow: 0px 0px 20px 0px #67eba0;
+  -webkit-box-shadow: 0px 0px 20px 0px #67eba0;
+  -moz-box-shadow: 0px 0px 20px 0px #67eba0;
+  -o-box-shadow: 0px 0px 20px 0px #67eba0;
+  box-shadow: 0px 0px 20px 0px #67eba0;
 }
 #main-menu > li > a > span {
   display: block;
@@ -625,11 +619,11 @@ img {
   padding-bottom: 0.1em;
 }
 #main > footer section > .liste > li > a:hover {
-  color: #ea4f4f;
+  color: #c8dbe7;
   padding-left: 0.5em;
 }
 #main > footer section > .liste > li > a:hover:before {
-  color: #bd1616;
+  color: #a5c4d7;
 }
 /*****************/
 /*    MOBILE     */

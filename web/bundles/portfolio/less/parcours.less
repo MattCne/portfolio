@@ -3,51 +3,72 @@
 @import 'fontcustom.less';
 
 .full-cv{
+    .opensanslight;
     
-    > h1{
-        width:70%;
-        .opensansbold( 1.5em);
-        border-bottom:1px solid @elpaso;
-        padding:0 0 0.5em 0;
-        margin:0.5em 0 0.5em 0.5em;
-        clear:both;
-        display:block;
-    }
-    
+     .accroche{
+         border:none;
+     }
+   
     #experiences, #etude, #exp_comp, #competence{
         width:50%;   
+         header{
+            h1{
+                font-size:1.5em;
+                padding:0.5em 0 0.5em 0;
+            }
+           
+        }
     }
     #experiences, #etude, #exp_comp, #competence, #qualite-defaut{
         padding:1em;
     }
-    #experiences{
-       
-        .exp_pro{
-            position:relative;
-            margin:1em 0 0 0;
-            
-            .clearfix;
-            header{
-                time{
-                    position:absolute;
-                    top:0;
-                    right:0;
+    
+    #experiences, #etude{
+        > ul{
+            > li{
+                 &:before{
+                    content:none;
+                 }
+                    
+                .exp_pro, 
+                .exp_etude{
+                    margin:1em 0 0 0;
+                    width:100%;
+                   
+                    .clearfix;
+                    header{
+                        position:relative;
+                        
+                        h1{
+                            .opensansbold( 1.1em );
+                            color:@tomatoes;
+                            letter-spacing:0em;
+                            border-color: @tomatoes;
+                        }
+                        time{
+                            position:absolute;
+                            bottom:0.8em;
+                            font-size:0.8em;
+                            right:0;
+                            color: lighten( @tomatoes, 10 );
+                        }
+                    }
+                    .visuel, .content{
+                        float:left;
+                    }
+                    .visuel{
+                        width:33.333333%;
+                    }
+                    .content{
+                        width:66.666666%;
+                        padding:0 0 0.5em 0.5em;
+                    }
                 }
-            }
-            .visuel, .content{
-                float:left;
-            }
-            .visuel{
-                width:33.333333%;
-            }
-            .content{
-                width:66.666666%;
-                padding:0 0 0.5em 0.5em;
             }
         }
     }
-    
-    
+
+
     #qualite-defaut{
         width:100%;
         

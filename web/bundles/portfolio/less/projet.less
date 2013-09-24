@@ -1,5 +1,11 @@
 @import 'variables.less';
 @import 'mixins.less';
+@import 'fontcustom.less';
+
+/*******************/
+/* DESKTOP VERSION */
+/*******************/
+
 
 .list-projet{
 	.clearfix;
@@ -14,15 +20,14 @@
 		font-size:1.1em;
 		letter-spacing:0.05em;
 		
-		border-right:1px solid @elpaso;
+		border-right:1px solid @olive;
 	}
 	li:last-child{
 		border-left:none;
 	}
 }
  
-
-.projet{    
+.projet{
     .visuel{
     	width:100%;
     	
@@ -42,15 +47,17 @@
 	    	background:darken( @chatelle, 40 );
 			.transition( all .3s ease-in-out );
 	    	h1{
-	    		padding:0.5em 0 1em 1em;
-	    		color: lighten( @eagle, 10 );
-	    		border-bottom:1px solid @eagle;
+	    		padding:0.5em 0 0.5em 1em;
+	    		color: lighten( @chatelle, 10 );
+	    		border-bottom:1px solid @chatelle;
 	    		margin:0 0 0.5em 0;
+	    		font-size:1.4em;
 	    		
 	    	}
 	    	.accroche{
 	    		position:relative;
-	    		padding:0.75em 0 0.75em 0.75em;
+	    		border:none;
+	    		padding: 0.5em 1em;
 	    	}
 	    }
     	&:hover{
@@ -60,3 +67,7 @@
 		}
     }  
 }
+
+/*******************/
+/* MOBILE VERSION  */
+/*******************/

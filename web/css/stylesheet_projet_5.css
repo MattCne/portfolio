@@ -75,7 +75,7 @@
   z-index: 100;
   font-size: 1.1em;
   letter-spacing: 0.05em;
-  border-right: 1px solid #6aaa78;
+  border-right: 1px solid #1cd06a;
 }
 .list-projet li:last-child {
   border-left: none;

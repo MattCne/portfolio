@@ -2,41 +2,40 @@
 @import 'mixins.less';
 @import 'fontcustom.less';
 
-
 .content{
 	.clearfix;
-   
+
     padding: 0 0.25em 0 0;
-    
+
     .big-font{
         font-size:1.25em;
     }
-        
+
     .italic{
 		.opensansitalic;
 	}
-	
+
 	.bold{
 	    .opensansbold;
 	}
-	
+
 	.underline{
 		text-decoration:underline;
 	}
-	
+
 	a{
 		border-bottom:1px dotted @glacier;
 		.transition( all 0.5s );
 		&:hover{
-			color:darken( @ruby, 10 );
-			border-color:darken( @ruby, 10 );
+			color:@contessa;
+			border-color:@contessa;
 		}
 	}
-	
+
 	strong, .rouge{
 		color:@contessa;
 	}
-	
+
     ul{
 		margin:0;
 		padding:0;
@@ -63,16 +62,16 @@
 			}
 		}
 	}
-	
+
 	h1{
 		padding:0 0 0.5em 0;
 		margin:0 0 0.5em 0;
-		color:@olive;
+        color:darken( @chatelle, 10 );
 		border-bottom:1px solid @chatelle;
 	}
 	section{
 		float:left;
-		.opensanslight( 1.2em );
+		.opensanslight( 1em );
 		padding:1em;
 		color:@dimgray;
 		letter-spacing:0.03em;
@@ -82,7 +81,7 @@
 
 .content.middle{
 	section{
-		margin: 0 25% 0 25%;	
+		margin: 0 25% 0 25%;
 	}
 }
 
