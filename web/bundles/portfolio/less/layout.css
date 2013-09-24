@@ -575,7 +575,7 @@ img {
 }
 #main > footer section > .liste > li > a:before {
   font-family: "fontcustom";
-  content: "\f106";
+  content: "\f100";
   display: inline-block;
   zoom: 1;
   *display: inline;

@@ -160,7 +160,7 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
   font-family: "fontcustom";
-  content: "\f101";
+  content: "\f106";
   color: #5d96b9;
   display: inline-block;
   zoom: 1;
@@ -189,7 +189,7 @@
 .content section {
   float: left;
   font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: normal;
   line-height: 1.2em;
   padding: 1em;
