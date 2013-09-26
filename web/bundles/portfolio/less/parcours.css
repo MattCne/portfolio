@@ -1,5 +1,5 @@
-NameError: .border-radius is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/parcours.less:20:8
-19         border: 1px solid lighten( @dimgray, 40 );
-20         .border-radius( 5px 5px 10px 10px );
-21         .shadow(  0px 0px 10px 3px rgba( 85, 85, 85, .2  ) );
+NameError: .box is undefined in /home/thanatos/workspace/portfolio/web/bundles/portfolio/less/parcours.less:13:8
+12     #experiences, #etude, #exp_comp, #competence{
+13         .box;
+14 
 

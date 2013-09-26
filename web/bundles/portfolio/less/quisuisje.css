@@ -1,0 +1,5 @@
+NameError: .box is undefined in /home/thanatos/workspace/portfolio/web/bundles/portfolio/less/quisuisje.less:7:8
+6     #pourquoi, #methode, #workflow, #infos {
+7         .box;
+8     }
+

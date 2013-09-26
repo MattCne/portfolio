@@ -30,6 +30,8 @@ h1{
 	font-size:1.8em;
 	color:@glacier;
 	letter-spacing:0.05em;
+    border-bottom: 1px solid @glacier;
+    margin: 0 0 1em 0;
 }
 
 h2{
@@ -48,11 +50,23 @@ h3{
 
 h4{
 	font-size:1em;
-	text-decoration:underline;
+    text-decoration:underline;
 }
 
 img{
     width:100%;
+}
+
+.box{
+    border: 1px solid lighten( @dimgray, 40 );
+    .border-radius( 5px 5px 10px 10px );
+    .shadow(  0px 0px 10px 3px rgba( 85, 85, 85, .2  ) );
+
+     width:48%;
+     padding: 1em;
+     display: block;
+     margin: 0.5em 1em 1em 1em;
+     float: left;
 }
 
 #main{
@@ -74,7 +88,7 @@ img{
 
 
 #main > header{
-	
+
 	.clearfix;
 	clear:both;
 	border-bottom:1px solid darken( @glacier, 20 );
@@ -82,14 +96,14 @@ img{
 	margin:1em 0 0 0;
 	position:relative;
 	height:auto;
-	
+
 	background: -moz-linear-gradient(left, rgba(230,232,227,0.54) 0%, rgba(230,232,227,0.55) 1%, rgba(255,255,255,0.72) 30%, rgba(255,255,255,0.79) 42%, rgba(255,255,255,0.79) 58%, rgba(255,255,255,0.74) 66%, rgba(230,232,227,0.53) 99%, rgba(230,232,227,0.52) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(230,232,227,0.54)), color-stop(1%,rgba(230,232,227,0.55)), color-stop(30%,rgba(255,255,255,0.72)), color-stop(42%,rgba(255,255,255,0.79)), color-stop(58%,rgba(255,255,255,0.79)), color-stop(66%,rgba(255,255,255,0.74)), color-stop(99%,rgba(230,232,227,0.53)), color-stop(100%,rgba(230,232,227,0.52))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(left, rgba(230,232,227,0.54) 0%,rgba(230,232,227,0.55) 1%,rgba(255,255,255,0.72) 30%,rgba(255,255,255,0.79) 42%,rgba(255,255,255,0.79) 58%,rgba(255,255,255,0.74) 66%,rgba(230,232,227,0.53) 99%,rgba(230,232,227,0.52) 100%); /* Chrome10+,Safari5.1+ */
 	background: -o-linear-gradient(left, rgba(230,232,227,0.54) 0%,rgba(230,232,227,0.55) 1%,rgba(255,255,255,0.72) 30%,rgba(255,255,255,0.79) 42%,rgba(255,255,255,0.79) 58%,rgba(255,255,255,0.74) 66%,rgba(230,232,227,0.53) 99%,rgba(230,232,227,0.52) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(left, rgba(230,232,227,0.54) 0%,rgba(230,232,227,0.55) 1%,rgba(255,255,255,0.72) 30%,rgba(255,255,255,0.79) 42%,rgba(255,255,255,0.79) 58%,rgba(255,255,255,0.74) 66%,rgba(230,232,227,0.53) 99%,rgba(230,232,227,0.52) 100%); /* IE10+ */
 	background: linear-gradient(to right, rgba(230,232,227,0.54) 0%,rgba(230,232,227,0.55) 1%,rgba(255,255,255,0.72) 30%,rgba(255,255,255,0.79) 42%,rgba(255,255,255,0.79) 58%,rgba(255,255,255,0.74) 66%,rgba(230,232,227,0.53) 99%,rgba(230,232,227,0.52) 100%); /* W3C */
-	
+
 	&:before{
 		position:absolute;
 		top:-1em;
@@ -98,14 +112,14 @@ img{
 		#gradient .vertical( @dimgray, @fuscousgrey );
 		content:'';
 	}
-	
+
 	.titres{
 		width:50%;
 		float:left;
 		margin:0;
 		padding:0;
 		padding:1.3em 1em 0.5em 1.3em;
-		
+
 		h1{
 			.felltypes( 2em );
 			letter-spacing:0.05em;
@@ -113,57 +127,61 @@ img{
 			.transition( color 0.5s );
 			&:hover{
 				color:@glacier;
-			}
+		    }
+
+            //Annule les régles du H1 de base
+            margin-bottom: 0;
+            border: none;
 		}
 		h2{
 			font-size:1em;
 			margin:0;
 			.opensanslight;
-			
+
 			clear:both;
 			display:block;
 			text-transform:uppercase;
 			color:lighten( @gris-fonce, 10 );
-			
+
 			.transition( color 0.5s );
-			
+
 			&:hover{
                 color:@ruby;
             }
 		}
 	}
-} 
+}
 
 #main-menu{
 	width:50%;
     float:right;
     margin:0;
-    
+
     > li{
         float:left;
         width:20%;
         position:relative;
-      
+
         > a{
         	display:block;
         	color:@gris-fonce;
         	letter-spacing:0.05em;
         	text-align:center;
-        	
+
         	.opensanslight( 1.2em );
             .transition( all 0.5s );
-            
+
             &:hover{
                 background: darken( @chatelle, 40 );
                 color:@blanc;
                 .shadow( 0px 0px 20px 0px  lighten( @chatelle, 20 ) );
             }
-            
+
             > span{
             	display:block;
             	position:relative;
             	z-index:100;
-            	
+
             	width:100%;
         		padding:2em 1.5em 2em 1.5em;
         		text-align:center;
@@ -180,12 +198,12 @@ img{
                     color:@blanc;
 			        .fontcustom;
 			        .transition( all 0.5s );
-			        
+
 			        //A RETIRER QUAND CHROME POURRA LE SUPPORTER !!!
 			        -webkit-transition: opacity 0.5s;
 			        opacity:0;
 		        }
-		        
+
 		        &:hover{
 		         	padding-left:0;
 		        	&:before{
@@ -215,10 +233,10 @@ img{
 	.clearfix;
 	position:relative;
     padding:3em 1em 1em 1em;
-    z-index:100;  
+    z-index:100;
     > h1{
         font-size:2em;
-    } 
+    }
 }
 
 #main > footer{
@@ -230,7 +248,7 @@ img{
      clear:both;
     #gradient .vertical( @dimgray, @fuscousgrey );
     .opensanslight();
-    
+
     &:before{
 		position:absolute;
 		top:0;
@@ -242,7 +260,7 @@ img{
 		border-bottom:1px solid darken( @glacier, 40 );
 		content:'';
 	}
-    
+
     > .sharebar{
     	width:50%;
     	position:absolute;
@@ -250,13 +268,13 @@ img{
     	margin:0;
     	padding:0;
     	margin: 0 0 0 1em;
-    	
+
     	li:before{
     		color:lighten( @dimgray, 10 );
     		width:2em;
     		font-size:2em;
     	}
-    	
+
     	> li{
     		float:left;
     		width:40px;
@@ -267,7 +285,7 @@ img{
     		}
     	}
     }
-    
+
 	> #pied_page{
 		clear:both;
 		float:right;
@@ -275,7 +293,7 @@ img{
 		color:lighten( @gris-clair, 40 );
 		.text-shadow( -3px 1px 5px rgba(102, 90, 74, 1) );
 	}
-	
+
 	section{
 		width:25%;
 		float:left;
@@ -284,7 +302,7 @@ img{
 		height:100%;
 		margin:1.5em 0 0 0;
 		> h2{
-			color:@glacier;	
+			color:@glacier;
 			padding:0 0 0.5em 0;
 			margin:0 0 0.5em 0;
 			line-height:1.4em;
@@ -299,10 +317,10 @@ img{
 					font-size:1.1em;
 					letter-spacing:0.05em;
 					color:@blanc;
-					
+
 					.transition( all 0.5s );
-					
-					
+
+
 					&:before{
 						.fontcustom;
 						content: "\f100";
@@ -315,7 +333,7 @@ img{
 					&:hover{
 						color: @chatelle;
 						padding-left:0.5em;
-						
+
 						&:before{
                             color: @chatelle;
 						}
@@ -340,7 +358,7 @@ img{
         .shadow(  0px 0px 10px 10px rgba( 175, 175, 175, .3 ) );
     }
 }
-    
+
 	#main > header{
 		.titres{
 			float:none;
@@ -350,7 +368,7 @@ img{
 			padding:0;
 		}
 	}
-	
+
 	#main-menu{
 		float:none;
 		width:100%;
@@ -364,15 +382,15 @@ img{
 			> a{
     			color:@blanc;
     			.transition( none );
-    			
+
     			&:hover{
     			    .shadow( 0px 0px 0px 0px #FFF );
     			}
-    			
+
     			> span{
     			    .transition( none );
     			    padding:1.5em;
-    			    
+
         			&:hover{
         			    padding-left:1.5em;
                         #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
@@ -384,7 +402,7 @@ img{
                     &.icon-accueil{
                         //Padding d'un em en plus a cause de la barre
                         padding:2em 1.5em 1.5em 1.5em;
-                    }  
+                    }
     			}
 			}
 		}
@@ -392,7 +410,7 @@ img{
 			border-top:none;
 		}
 	}
-	
+
 	#main > footer section{
 		float:none;
 		width:100%;
@@ -410,5 +428,5 @@ img{
         #main-menu{
             width:75%;
         }
-    }    
+    }
 }
