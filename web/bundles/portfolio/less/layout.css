@@ -1,5 +1,0 @@
-NameError: .border-radius is undefined in /home/thanatos/workspace/portfolio/web/bundles/portfolio/less/layout.less:62:4
-61     border: 1px solid lighten( @dimgray, 40 );
-62     .border-radius( 5px 5px 10px 10px );
-63     .shadow(  0px 0px 10px 3px rgba( 85, 85, 85, .2  ) );
-
