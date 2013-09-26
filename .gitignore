@@ -5,3 +5,4 @@ app/cache
 app/logs
 vendor
 dump
+web

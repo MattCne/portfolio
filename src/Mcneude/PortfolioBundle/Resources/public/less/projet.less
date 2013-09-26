@@ -16,24 +16,24 @@
 		margin:1%;
 		float:left;
 		z-index:100;
-		
+
 		font-size:1.1em;
 		letter-spacing:0.05em;
-		
+
 		border-right:1px solid @olive;
 	}
 	li:last-child{
 		border-left:none;
 	}
 }
- 
+
 .projet{
     .visuel{
     	width:100%;
-    	
+
     	position:relative;
     	overflow:hidden;
-    
+
      	img{
     		width:100%;
     	}
@@ -52,7 +52,7 @@
 	    		border-bottom:1px solid @chatelle;
 	    		margin:0 0 0.5em 0;
 	    		font-size:1.4em;
-	    		
+
 	    	}
 	    	.accroche{
 	    		position:relative;
@@ -68,6 +68,32 @@
     }  
 }
 
-/*******************/
-/* MOBILE VERSION  */
-/*******************/
+/*****************/
+/*    MOBILE     */
+/*****************/
+
+@media screen and (max-width: 760px) {
+    .list-projet{
+        li{
+            float: none;
+            width: 100%;
+        }
+    }
+    .projet{
+        .visuel{
+            &:hover{
+                figcaption{
+                    top: 84%;
+                }
+            }
+        }
+    }
+}
+
+/*****************/
+/*    TABLETTE   */
+/*****************/
+
+@media screen and (min-width: 760px) and (max-width: 1600px) {
+
+}

@@ -105,6 +105,12 @@
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
   zoom: 1;
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  letter-spacing: 0.03em;
+  line-height: 2em;
   padding: 0 0.25em 0 0;
 }
 .content:before,
@@ -188,14 +194,8 @@
 }
 .content section {
   float: left;
-  font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1.2em;
-  font-weight: normal;
-  line-height: 1.2em;
   padding: 1em;
   color: #555555;
-  letter-spacing: 0.03em;
-  line-height: 1.5em;
 }
 .content.middle section {
   margin: 0 25% 0 25%;

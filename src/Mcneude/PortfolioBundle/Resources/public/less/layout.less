@@ -10,6 +10,8 @@ body{
     width:100%;
     position:relative;
     color:@dimgray;
+
+    font-size: 14px;
 }
 
 li{
@@ -58,11 +60,11 @@ img{
 }
 
 .box{
-    border: 1px solid lighten( @dimgray, 40 );
+    border: 1px solid lighten( @dimgray, 60 );
     .border-radius( 5px 5px 10px 10px );
     .shadow(  0px 0px 10px 3px rgba( 85, 85, 85, .2  ) );
 
-     width:48%;
+     width:47%;
      padding: 1em;
      display: block;
      margin: 0.5em 1em 1em 1em;
@@ -298,7 +300,7 @@ img{
 		width:25%;
 		float:left;
 		padding:1em;
-		border-right:1px solid lighten( @dimgray, 5 ); //Elpaso
+		border-right:1px solid lighten( @dimgray, 5 );
 		height:100%;
 		margin:1.5em 0 0 0;
 		> h2{
@@ -344,20 +346,21 @@ img{
 	}
 }
 
-
-
-
 /*****************/
 /*    MOBILE     */
 /*****************/
 
 @media screen and (max-width: 760px) {
-#main{
-    &:before{
-        #gradient .vertical( @ruby, darken( @contessa, 30 ) );
-        .shadow(  0px 0px 10px 10px rgba( 175, 175, 175, .3 ) );
+    h1{
+        font-size: 1.6em;
     }
-}
+
+    #main{
+        &:before{
+            #gradient .vertical( @ruby, darken( @contessa, 30 ) );
+            .shadow(  0px 0px 10px 10px rgba( 175, 175, 175, .3 ) );
+        }
+    }
 
 	#main > header{
 		.titres{
@@ -378,7 +381,10 @@ img{
 			float:none;
 			width:100%;
 			border-top:1px solid darken( @glacier, 40 );
-            #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
+            #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
+            .border-radius( 3px );
+            margin: 0.5em 0 0 0;
+
 			> a{
     			color:@blanc;
     			.transition( none );
@@ -414,11 +420,16 @@ img{
 	#main > footer section{
 		float:none;
 		width:100%;
-		li{
-			padding:0 0 1em 0;
+        padding: 0.5em 1em;
+        li{
+			padding: 0;
 		}
 	}
 }
+
+/*****************/
+/*    TABLETTE   */
+/*****************/
 
 @media screen and (min-width: 760px) and (max-width: 1600px) {
     #main > header {
