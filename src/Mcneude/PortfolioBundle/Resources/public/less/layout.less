@@ -179,8 +179,9 @@ img{
 
             &:hover{
                 background: darken( @chatelle, 40 );
+                opacity: 0.8;
                 color:@blanc;
-                .shadow( 0px 0px 20px 0px  lighten( @chatelle, 20 ) );
+                .shadow( 0px 0px 20px 0px @chatelle );
             }
 
             > span{

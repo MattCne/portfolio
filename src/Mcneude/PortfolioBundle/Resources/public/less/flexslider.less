@@ -103,3 +103,41 @@ html[xmlns] .slides {display: block;}
 .flexslider .slides img {
   width: 100%;
 }
+
+
+/*** Modifs du thème de base ***/
+
+.flexslider{
+    padding: 1em;
+    margin-bottom: 6em;
+}
+
+.flex-control-paging li a {
+    background: @chatelle;
+    opacity: 0.5
+}
+
+.flex-control-paging li a:hover {
+    background: @glacier;
+    opacity: 0.7;
+}
+.flex-control-paging li a.flex-active {
+    background: darken( @glacier, 20 );
+    opacity: 0.9;
+    cursor: default;
+}
+
+.flex-direction-nav a{
+    height: 55px;
+}
+
+.flex-direction-nav a:before, .flex-direction-nav a.flex-next:before{
+    color: @glacier;
+}
+
+.flex-direction-nav a:before  {
+    content: '◀';
+}
+.flex-direction-nav a.flex-next:before  {
+    content: '▶';
+}
