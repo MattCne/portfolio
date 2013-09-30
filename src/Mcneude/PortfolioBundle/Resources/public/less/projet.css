@@ -169,6 +169,14 @@
   top: 0;
 }
 /*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1600px) {
+  .list-projet li {
+    width: 48%;
+  }
+}
+/*****************/
 /*    MOBILE     */
 /*****************/
 @media screen and (max-width: 760px) {
@@ -179,10 +187,4 @@
   .projet .visuel:hover figcaption {
     top: 84%;
   }
-}
-/*****************/
-/*    TABLETTE   */
-/*****************/
-@media screen and (min-width: 760px) and (max-width: 1600px) {
-  
 }
