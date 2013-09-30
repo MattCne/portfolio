@@ -1815,7 +1815,12 @@ img {
 /*    MOBILE     */
 /*****************/
 @media screen and (max-width: 760px) {
-  
+  .full-cv #experiences,
+  .full-cv #etude,
+  .full-cv #exp_comp,
+  .full-cv #competence {
+    width: 100%;
+  }
 }
 @font-face {
   font-family: 'opensanslight';
@@ -1957,7 +1962,12 @@ img {
 /*    MOBILE     */
 /*****************/
 @media screen and (max-width: 760px) {
-  
+  .full-quisuisje #pourquoi,
+  .full-quisuisje #methode,
+  .full-quisuisje #workflow,
+  .full-quisuisje #infos {
+    width: 100%;
+  }
 }
 /*
  * jQuery FlexSlider v2.2.0
