@@ -4,7 +4,7 @@
 
 .content{
 	.clearfix;
-    .opensanslight( 1.1em );
+    .opensanslight( 1.2em );
     letter-spacing: 0.03em;
     line-height: 2em;
 
@@ -39,7 +39,7 @@
 
     ul{
 		margin:0;
-		padding:0;
+		padding:0 0 0 1em;
 		li{
 			&:before{
 				.transition( all 0.3s );
@@ -52,7 +52,6 @@
 				padding-right:0.5em;
 			}
 			> ul{
-			    padding:0 0 0 0.8em;
 			    > li{
 			        &:before{
 			            content:"↳";
@@ -79,9 +78,7 @@
 }
 
 .content.middle{
-	section{
-		margin: 0 25% 0 25%;
-	}
+    margin: 2.5em 25% 2.5em 25%;
 }
 
 .content_2col, .content_4col, .content_2x2col, .content_2x4col{

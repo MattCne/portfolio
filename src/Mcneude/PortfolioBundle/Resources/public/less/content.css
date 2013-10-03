@@ -106,7 +106,7 @@
 
   zoom: 1;
   font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: normal;
   line-height: 1.2em;
   letter-spacing: 0.03em;
@@ -156,7 +156,7 @@
 }
 .content ul {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1em;
 }
 .content ul li:before {
   -ms-transition: all 0.3s;
@@ -173,9 +173,6 @@
   font-size: 0.6em;
   vertical-align: middle;
   padding-right: 0.5em;
-}
-.content ul li > ul {
-  padding: 0 0 0 0.8em;
 }
 .content ul li > ul > li:before {
   content: "↳";
@@ -196,8 +193,8 @@
   padding: 1em;
   color: #555555;
 }
-.content.middle section {
-  margin: 0 25% 0 25%;
+.content.middle {
+  margin: 2.5em 25% 2.5em 25%;
 }
 .content_2col div,
 .content_4col div,
