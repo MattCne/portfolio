@@ -1171,6 +1171,9 @@ img {
 .list-projet li:last-child {
   border-left: none;
 }
+.projet a {
+  color: #ffffff;
+}
 .projet .visuel {
   width: 100%;
   position: relative;
