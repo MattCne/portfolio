@@ -1,5 +1,5 @@
-NameError: .border-radius is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/layout.less:395:12
-394             #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
-395             .border-radius( 3px );
-396             margin: 0.5em 0 0 0;
+NameError: .border-radius is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/layout.less:396:12
+395             #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
+396             .border-radius( 3px );
+397             margin: 0.5em 0 0 0;
 

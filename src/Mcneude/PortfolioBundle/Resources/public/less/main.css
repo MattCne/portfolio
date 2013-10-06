@@ -713,11 +713,11 @@ img {
   background-image: linear-gradient(#5d96b9, #457c9e);
   /* the standard */
 
-  -ms-box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
-  -webkit-box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
-  -moz-box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
-  -o-box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
-  box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
+  -ms-box-shadow: 0 3px 32px 20px rgba(175, 175, 175, 0.25);
+  -webkit-box-shadow: 0 3px 32px 20px rgba(175, 175, 175, 0.25);
+  -moz-box-shadow: 0 3px 32px 20px rgba(175, 175, 175, 0.25);
+  -o-box-shadow: 0 3px 32px 20px rgba(175, 175, 175, 0.25);
+  box-shadow: 0 3px 32px 20px rgba(175, 175, 175, 0.25);
   border-top: 1px solid #c8dbe7;
   border-bottom: 1px solid #264457;
   content: '';
@@ -776,12 +776,13 @@ img {
   height: 100%;
   margin: 1.5em 0 0 0;
 }
-#main > footer section > h2 {
-  color: #81adc8;
+#main > footer section > h1 {
+  font-size: 1.3em;
+  color: #ffffff;
   padding: 0 0 0.5em 0;
   margin: 0 0 0.5em 0;
   line-height: 1.4em;
-  border-bottom: 1px solid #81adc8;
+  border-bottom: 1px solid #ffffff;
 }
 #main > footer section > .liste {
   margin: 0;
@@ -812,7 +813,7 @@ img {
   padding-bottom: 0.1em;
 }
 #main > footer section > .liste > li > a:hover {
-  color: #b0afbd;
+  color: #81adc8;
   padding-left: 0.5em;
 }
 #main > footer section > .liste > li > a:hover:before {
