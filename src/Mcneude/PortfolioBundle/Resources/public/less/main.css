@@ -813,11 +813,11 @@ img {
   padding-bottom: 0.1em;
 }
 #main > footer section > .liste > li > a:hover {
-  color: #81adc8;
+  color: #c8dbe7;
   padding-left: 0.5em;
 }
 #main > footer section > .liste > li > a:hover:before {
-  color: #b0afbd;
+  color: #81adc8;
 }
 /*****************/
 /*    MOBILE     */
