@@ -2,3 +2,40 @@
 @import 'mixins.less';
 @import 'fontcustom.less';
 
+.full-projet-interieur{
+    position: relative;
+    > h1{
+        position: relative;
+    }
+    > .projet-link{
+        position: absolute;
+        right: 2em;
+        top: 3em;
+        color: @gris-fonce;
+        font-family: "opensansbold",Arial,sans-serif;
+    }
+
+    > a.projet-link{
+        color: @ruby;
+
+        font-size: 1.1em;
+        letter-spacing: 0.02em;
+        line-height: 2em;
+
+        .transition( all 0.5s );
+
+        &:hover{
+            right: 1em;
+            color: @tomatoes;
+        }
+        &:before{
+            .fontcustom;
+            content: "\f100";
+            .inline-block;
+            font-size:0.6em;
+            vertical-align:middle;
+            padding-bottom:0.1em;
+        }
+    }
+
+}

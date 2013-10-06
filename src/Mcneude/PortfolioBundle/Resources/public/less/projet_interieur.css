@@ -101,3 +101,41 @@
 .fontcustom {
   font-family: "fontcustom";
 }
+.full-projet-interieur {
+  position: relative;
+}
+.full-projet-interieur > h1 {
+  position: relative;
+}
+.full-projet-interieur > .projet-link {
+  position: absolute;
+  right: 2em;
+  top: 3em;
+  color: #45443f;
+  font-family: "opensansbold", Arial, sans-serif;
+}
+.full-projet-interieur > a.projet-link {
+  color: #ea4f4f;
+  font-size: 1.1em;
+  letter-spacing: 0.02em;
+  line-height: 2em;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.full-projet-interieur > a.projet-link:hover {
+  right: 1em;
+  color: #cc7272;
+}
+.full-projet-interieur > a.projet-link:before {
+  font-family: "fontcustom";
+  content: "\f100";
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  font-size: 0.6em;
+  vertical-align: middle;
+  padding-bottom: 0.1em;
+}
