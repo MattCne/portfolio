@@ -1,5 +1,5 @@
-NameError: variable @chatelle is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/flexslider.less:116:16
-115 .flex-control-paging li a {
-116     background: @chatelle;
-117     opacity: 0.5
+NameError: .border-radius is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/flexslider.less:113:4
+112     border: 5px solid @gris-clair;
+113     .border-radius( 5px 5px 5px 5px );
+114 }
 

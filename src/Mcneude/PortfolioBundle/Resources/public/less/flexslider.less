@@ -68,14 +68,12 @@ html[xmlns] .slides {display: block;}
 .flexslider:hover .flex-next { opacity: 0.7; right: 10px; }
 .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
 .flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
-.flex-direction-nav a:before  { font-family: "flexslider-icon"; font-size: 40px; display: inline-block; content: '\f001'; }
-.flex-direction-nav a.flex-next:before  { content: '\f002'; }
+.flex-direction-nav a:before  { font-size: 40px; display: inline-block;  }
 
 /* Pause/Play */
 .flex-pauseplay a { display: block; width: 20px; height: 20px; position: absolute; bottom: 5px; left: 10px; opacity: 0.8; z-index: 10; overflow: hidden; cursor: pointer; color: #000; }
-.flex-pauseplay a:before  { font-family: "flexslider-icon"; font-size: 20px; display: inline-block; content: '\f004'; }
+.flex-pauseplay a:before  { font-size: 20px; display: inline-block; }
 .flex-pauseplay a:hover  { opacity: 1; }
-.flex-pauseplay a.flex-play:before { content: '\f003'; }
 
 /* Control Nav */
 .flex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}
@@ -90,26 +88,29 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
 
+/*** Modifs du thème de base ***/
+
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
   .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
 }
 
 .flexslider {
-  width: 50%;
-  margin: 0 25% 0 25%;
+  width: 60%;
+  margin: 0 20% 0 20%;
+  height: 670px;
 }
 
 .flexslider .slides img {
-  width: 100%;
+  width: 90%;
+  margin: 0 5% 0 5%;
 }
 
-
-/*** Modifs du thème de base ***/
-
 .flexslider{
-    padding: 1em;
+    padding: 2.5em;
     margin-bottom: 6em;
+    border: 5px solid @gris-clair;
+    .border-radius( 5px 5px 5px 5px );
 }
 
 .flex-control-paging li a {
