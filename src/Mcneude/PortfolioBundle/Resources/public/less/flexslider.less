@@ -111,11 +111,17 @@ html[xmlns] .slides {display: block;}
     margin-bottom: 6em;
     border: 5px solid @gris-clair;
     .border-radius( 5px 5px 5px 5px );
+    ul > li > a{
+        display: block;
+        overflow: hidden;
+        max-height: 590px;
+    }
 }
 
 .flex-control-paging li a {
     background: @chatelle;
     opacity: 0.5
+
 }
 
 .flex-control-paging li a:hover {
@@ -130,8 +136,8 @@ html[xmlns] .slides {display: block;}
 
 .flex-direction-nav a{
     height: 55px;
-}
 
+}
 .flex-direction-nav a:before, .flex-direction-nav a.flex-next:before{
     color: @glacier;
 }

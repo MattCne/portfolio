@@ -1,3 +1,5 @@
 $(function( $, undefined ){
-    $('.flexslider').flexslider();
+    $('.flexslider').flexslider({
+        animation: "slide",
+    });
 });

@@ -1,0 +1,12 @@
+/*
+Override des dimensions pour la lightbox
+Impossible de modifier directement en JS (fichier minifié)
+*/
+.lb-outerContainer {
+  width: 50% !important;
+  height: auto !important;
+}
+.lb-outerContainer img {
+  width: 100% !important;
+  height: auto !important;
+}

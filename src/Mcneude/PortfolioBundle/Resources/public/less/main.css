@@ -2396,6 +2396,11 @@ html[xmlns] .slides {
   border-radius: 5px 5px 5px 5px;
   behavior: none;
 }
+.flexslider ul > li > a {
+  display: block;
+  overflow: hidden;
+  max-height: 590px;
+}
 .flex-control-paging li a {
   background: #b0afbd;
   opacity: 0.5;
@@ -2421,4 +2426,16 @@ html[xmlns] .slides {
 }
 .flex-direction-nav a.flex-next:before {
   content: '▶';
+}
+/*
+Override des dimensions pour la lightbox
+Impossible de modifier directement en JS (fichier minifié)
+*/
+.lb-outerContainer {
+  width: 50% !important;
+  height: auto !important;
+}
+.lb-outerContainer img {
+  width: 100% !important;
+  height: auto !important;
 }
