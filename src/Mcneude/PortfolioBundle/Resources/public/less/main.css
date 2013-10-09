@@ -240,7 +240,7 @@ img {
   border-radius: 0 0 7px 10px;
   box-shadow: 0 15px 25px 10px rgba(208, 208, 204, 0.5);
   width: 47%;
-  padding: 1em;
+  padding: 1.5em 2em 2em 1.5em;
   display: block;
   margin: 0.5em 1em 1em 1em;
   float: left;
@@ -1398,6 +1398,9 @@ img {
   vertical-align: middle;
   padding-bottom: 0.1em;
 }
+.full-projet-interieur .accroche {
+  margin: 1em 25% 2em 25%;
+}
 @font-face {
   font-family: 'opensanslight';
   src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot');
@@ -1678,7 +1681,6 @@ img {
 /* Autre contenu */
 .accroche {
   padding: 1em 0 1em 0;
-  margin: 1em 25% 2em 25%;
   border-top: 1px solid #d0d0cc;
   border-bottom: 1px solid #d0d0cc;
 }
@@ -2102,7 +2104,7 @@ img {
   border-radius: 0 0 7px 10px;
   box-shadow: 0 15px 25px 10px rgba(208, 208, 204, 0.5);
   width: 47%;
-  padding: 1em;
+  padding: 1.5em 2em 2em 1.5em;
   display: block;
   margin: 0.5em 1em 1em 1em;
   float: left;
