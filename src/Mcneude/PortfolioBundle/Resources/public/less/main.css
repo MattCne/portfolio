@@ -297,7 +297,7 @@ img {
   zoom: 1;
   clear: both;
   border-bottom: 1px solid #457c9e;
-  border-top: 1px solid #508b50;
+  border-top: 1px solid #78c678;
   margin: 1em 0 0 0;
   position: relative;
   height: auto;
@@ -792,6 +792,34 @@ img {
   -webkit-text-shadow: -3px 1px 5px #665a4a;
   text-shadow: -3px 1px 5px #665a4a;
 }
+#main > footer #twitter ul {
+  margin: 0;
+  padding: 0;
+}
+#main > footer #twitter ul li {
+  border-top: 1px solid #626262;
+  padding: 1em 0 1em 0;
+}
+#main > footer #twitter ul li article {
+  padding: 0.5em;
+}
+#main > footer #twitter ul li article time {
+  color: #78c678;
+}
+#main > footer #twitter ul li article a {
+  color: #81adc8;
+  -ms-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+#main > footer #twitter ul li article a:hover {
+  color: #ea4f4f;
+}
+#main > footer #twitter ul li:first-child {
+  border-top: none;
+}
 #main > footer section {
   width: 25%;
   float: left;
@@ -1194,7 +1222,7 @@ img {
   z-index: 100;
   font-size: 1.1em;
   letter-spacing: 0.05em;
-  border-right: 1px solid #508b50;
+  border-right: 1px solid #78c678;
 }
 .list-projet li:last-child {
   border-left: none;

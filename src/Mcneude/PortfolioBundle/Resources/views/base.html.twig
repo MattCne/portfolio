@@ -10,17 +10,17 @@
 <body>
     <div id="main">
     	<!-- HEADER -->
-    	{% include 'PortfolioBundle:Include:header.html.twig' %}
+    	{% include 'PortfolioBundle:layout:header.html.twig' %}
 
     	<!-- BODY -->
     	{% block body %} {% endblock %}
 
     	<!-- FOOTER -->
-    	{% include 'PortfolioBundle:Include:footer.html.twig' %}
+        {% render 'PortfolioBundle:Footer:renderFooter' with { 'nbrTweets': 3 }  %}
 
     	<!-- SCRIPTS -->
     </div>
-{% include 'PortfolioBundle:Include:scripts.html.twig' %}
+{% include 'PortfolioBundle:layout:scripts.html.twig' %}
     
 </body>
 </html>

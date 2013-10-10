@@ -1,5 +1,5 @@
 <footer>
-	{% include 'PortfolioBundle:Include:sharebar.html.twig' %}
+	{% include 'PortfolioBundle:layout:sharebar.html.twig' %}
 
 	<section>
 		<h1>Sites internet</h1>
@@ -36,9 +36,16 @@
 	</section>
 
 	<section id="twitter">
-		<h1>Twitter</h1>
+		<h1>Derniers tweets</h1>
         <ul>
-            {% render 'PortfolioBundle:Twitter:getLastTweet' with { 'max': 3 }  %}
+        {% for key, tweet in tweets %}
+            <li>
+                <article>
+                    <time>{{ tweet['date'] }}</time>
+                    <div>{{ tweet['text']|raw }}</div>
+                </article>
+            </li>
+        {% endfor %}
         </ul>
 	</section>
 
