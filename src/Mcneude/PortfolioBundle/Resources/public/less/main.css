@@ -238,7 +238,7 @@ img {
 .box {
   border: 1px solid #c8dbe7;
   border-radius: 0 0 7px 10px;
-  box-shadow: 0 15px 25px 10px rgba(208, 208, 204, 0.5);
+  box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
   width: 47%;
   padding: 1.5em 2em 2em 1.5em;
   display: block;
@@ -799,6 +799,7 @@ img {
   border-right: 1px solid #626262;
   height: 100%;
   margin: 1.5em 0 0 0;
+  color: #ffffff;
 }
 #main > footer section > h1 {
   font-size: 1.3em;
@@ -900,7 +901,8 @@ img {
   }
   #main-menu li {
     float: none;
-    width: 100%;
+    margin: 0.25em 0 0.25em 2%;
+    width: 96%;
     border-top: 1px solid #264457;
     background-color: #457c9e;
     background-repeat: repeat-x;
@@ -929,7 +931,6 @@ img {
     -moz-border-radius: 3px;
     border-radius: 3px;
     behavior: none;
-    margin: 0.5em 0 0 0;
   }
   #main-menu li > a {
     color: #ffffff;
@@ -2102,7 +2103,7 @@ img {
 .full-quisuisje #infos {
   border: 1px solid #c8dbe7;
   border-radius: 0 0 7px 10px;
-  box-shadow: 0 15px 25px 10px rgba(208, 208, 204, 0.5);
+  box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
   width: 47%;
   padding: 1.5em 2em 2em 1.5em;
   display: block;
@@ -2371,16 +2372,6 @@ html[xmlns] .slides {
   cursor: default;
 }
 /*** Modifs du thème de base ***/
-@media screen and (max-width: 860px) {
-  .flex-direction-nav .flex-prev {
-    opacity: 1;
-    left: 10px;
-  }
-  .flex-direction-nav .flex-next {
-    opacity: 1;
-    right: 10px;
-  }
-}
 .flexslider {
   width: 60%;
   margin: 0 20% 0 20%;
@@ -2429,6 +2420,43 @@ html[xmlns] .slides {
 .flex-direction-nav a.flex-next:before {
   content: '▶';
 }
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  .flexslider {
+    width: 100%;
+    margin: 0 0 6em 0;
+    padding: 0.5em 0 0.5em 0;
+    height: auto;
+  }
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1600px) {
+  .flexslider {
+    width: 80%;
+    margin: 0 10% 6em 10%;
+    padding: 0.5em 0 0.5em 0;
+  }
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
 /*
 Override des dimensions pour la lightbox
 Impossible de modifier directement en JS (fichier minifié)
@@ -2440,4 +2468,12 @@ Impossible de modifier directement en JS (fichier minifié)
 .lb-outerContainer img {
   width: 100% !important;
   height: auto !important;
+}
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  .lb-outerContainer {
+    width: 100% !important;
+  }
 }

@@ -62,7 +62,7 @@ img{
 .box{
     border: 1px solid lighten( @glacier, 20 );
     border-radius: 0 0 7px 10px;
-    box-shadow: 0 15px 25px 10px rgba( 208, 208, 204, 0.5 );
+    box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
 
      width:47%;
      padding: 1.5em 2em 2em 1.5em;
@@ -309,7 +309,9 @@ img{
 		border-right:1px solid lighten( @dimgray, 5 );
 		height:100%;
 		margin:1.5em 0 0 0;
-		> h1{
+        color:@blanc;
+
+        > h1{
             font-size:1.3em;
 			color: lighten( @gris-clair, 25 );
 			padding:0 0 0.5em 0;
@@ -325,7 +327,7 @@ img{
 				> a{
 					font-size:1.1em;
 					letter-spacing:0.05em;
-					color:@blanc;
+                    color:@blanc;
 
 					.transition( all 0.5s );
 
@@ -390,11 +392,11 @@ img{
 		padding:0;
 		li{
 			float:none;
-			width:100%;
+            margin: 0.25em 0 0.25em 2%;
+            width: 96%;
 			border-top:1px solid darken( @glacier, 40 );
             #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
             .border-radius( 3px );
-            margin: 0.5em 0 0 0;
 
 			> a{
     			color:@blanc;

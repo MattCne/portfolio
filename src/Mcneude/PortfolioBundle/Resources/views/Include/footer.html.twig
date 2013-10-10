@@ -35,14 +35,11 @@
 		</ul>
 	</section>
 
-	<section>
+	<section id="twitter">
 		<h1>Twitter</h1>
-		<ul class="liste">
-			<li><a href="#">Twit 1</a></li>
-			<li><a href="#">Twit 2</a></li>
-			<li><a href="#">Twit 3</a></li>
-			<li><a href="#">Twit 4</a></li>
-		</ul>
+        <ul>
+            {% render 'PortfolioBundle:Twitter:getLastTweet' with { 'max': 3 }  %}
+        </ul>
 	</section>
 
 	<div id="pied_page">

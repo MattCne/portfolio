@@ -1,5 +1,5 @@
-NameError: .border-radius is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/flexslider.less:113:4
-112     border: 5px solid @gris-clair;
-113     .border-radius( 5px 5px 5px 5px );
-114     ul > li > a{
+NameError: .border-radius is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/flexslider.less:108:4
+107     border: 5px solid @gris-clair;
+108     .border-radius( 5px 5px 5px 5px );
+109     ul > li > a{
 
