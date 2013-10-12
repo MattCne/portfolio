@@ -7,6 +7,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 class FooterController extends Controller
 {
+
+    /**
+     * Rend graphiquement le footer
+     * @param int $nbrTweets Nombre des derniers tweets apparaissant dans le footer
+     * @return Response
+     */
     public function renderFooterAction( $nbrTweets ) {
 
         $tweets = $this->getLastTweetAction( $nbrTweets );
@@ -19,6 +25,11 @@ class FooterController extends Controller
         return new Response( $content );
     }
 
+    /**
+     * Récupère les derniers tweets
+     * @param $nbrTweets Nombre des derniers tweets apparaissant dans le footer
+     * @return array Texte des tweets formatés et leurs dates
+     */
     private function getLastTweetAction( $nbrTweets )
     {
         $formatedTweets = array();

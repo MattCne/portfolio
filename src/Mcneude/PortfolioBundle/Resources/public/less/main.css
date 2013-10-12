@@ -545,6 +545,9 @@ img {
   bottom: 2em;
   right: 2em;
 }
+#main-menu > li a:nth-child( 2n + 1 ):hover {
+  background: #615f74;
+}
 .full {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
@@ -1710,8 +1713,6 @@ img {
 /* Autre contenu */
 .accroche {
   padding: 1em 0 1em 0;
-  border-top: 1px solid #d0d0cc;
-  border-bottom: 1px solid #d0d0cc;
 }
 .accroche > p {
   padding: 0 0.5em 0 0.5em;
