@@ -1,0 +1,28 @@
+{# src/Acme/BlogBundle/Resources/views/Blog/index.html.twig #}
+{% extends 'PortfolioBundle::base.html.twig' %}
+
+
+{% block body %}
+
+    <div class="full full-contact">
+        <h1>Contactez moi</h1>
+            <form>
+                <div>
+                    <label>Email:</label>
+                    <input id="email" type="text" placeholder="taper votre email"/>
+                </div>
+                <div>
+                    <label>Nom:</label>
+                    <input id="nom" type="text" placeholder="taper votre nom"/>
+                </div>
+                <div>
+                    <label>Message:</label>
+                    <textarea id="message" row=6 col=6></textarea>
+                </div>
+                <div class="formbutton">
+                    <input type="submit" value="Clique ici abrutis !"/>
+                </div>
+            </form>
+    </div>
+
+{% endblock %}

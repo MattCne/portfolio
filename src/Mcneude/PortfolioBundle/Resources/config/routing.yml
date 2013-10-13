@@ -1,3 +1,15 @@
-portfolio_homepage:
+homepage:
     pattern:  /
-    defaults: { _controller: PortfolioBundle:Default:index }
+    defaults: { _controller: PortfolioBundle:Home:render }
+quisuisje:
+    pattern: /quisuisje/
+    defaults: { _controller: PortfolioBundle:Quisuisje:render }
+parcours:
+    pattern: /parcours/
+    defaults: { _controller: PortfolioBundle:Parcours:render }
+projets:
+    pattern: /projets/
+    defaults: { _controller: PortfolioBundle:Projets:render }
+contact:
+    pattern: /contact/
+    defaults: { _controller: PortfolioBundle:Contact:render }

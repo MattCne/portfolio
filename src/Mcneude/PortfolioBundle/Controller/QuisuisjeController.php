@@ -4,7 +4,7 @@ namespace Mcneude\PortfolioBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class HomeController extends Controller
+class QuisuisjeController extends Controller
 {
     public function renderAction()
     {
@@ -14,6 +14,6 @@ class HomeController extends Controller
 
         $projets = $dbProjet->findAll();*/
 
-        return $this->render( 'PortfolioBundle:Pages:home.html.twig' );
+        return $this->render( 'PortfolioBundle:Pages:quisuisje.html.twig' );
     }
 }
