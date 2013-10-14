@@ -19,8 +19,14 @@
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
         "kriswallsmith/assetic": "1.1.0",
-        
-        "endroid/twitter-bundle": "dev-master"
+
+        "endroid/twitter-bundle": "dev-master",
+        "sonata-project/block-bundle": "2.1.*@dev",
+        "sonata-project/admin-bundle": "2.1.*@dev",
+        "sonata-project/cache-bundle": "2.1.*",
+        "sonata-project/doctrine-orm-admin-bundle": "2.1.*@dev",
+        "sonata-project/intl-bundle": "2.1.*"
+
     },
     "scripts": {
         "post-install-cmd": [
