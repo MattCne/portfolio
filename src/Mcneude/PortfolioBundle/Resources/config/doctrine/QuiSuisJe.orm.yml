@@ -1,0 +1,32 @@
+Mcneude\PortfolioBundle\Entity\QuiSuisJe:
+    type: entity
+    table: qui_suis_je
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        pourquoi:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        politique:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        methodes:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        infos:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

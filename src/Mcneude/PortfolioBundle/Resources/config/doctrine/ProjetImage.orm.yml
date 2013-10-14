@@ -1,0 +1,42 @@
+Mcneude\PortfolioBundle\Entity\ProjetImage:
+    type: entity
+    table: projet_image
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        url:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        nom:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        position:
+            type: integer
+            unsigned: false
+            nullable: true
+        mignatureUrl:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: mignature_url
+    manyToOne:
+        project:
+            targetEntity: Projet
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                project_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

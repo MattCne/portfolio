@@ -1,0 +1,61 @@
+Mcneude\PortfolioBundle\Entity\Projet:
+    type: entity
+    table: projet
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nom:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        position:
+            type: integer
+            unsigned: false
+            nullable: true
+        accroche:
+            type: text
+            nullable: true
+        idPrincipalImage:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: id_principal_image
+        urlInternal:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: url_internal
+        urlExternal:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: url_external
+        isWebsite:
+            type: boolean
+            nullable: true
+            column: is_website
+        difficultes:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        competences:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        technologies:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

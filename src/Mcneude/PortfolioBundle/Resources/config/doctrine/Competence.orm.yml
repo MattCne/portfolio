@@ -1,0 +1,27 @@
+Mcneude\PortfolioBundle\Entity\Competence:
+    type: entity
+    table: competence
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nom:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        note:
+            type: integer
+            unsigned: false
+            nullable: true
+        urlVisuel:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: url_visuel
+    lifecycleCallbacks: {  }
