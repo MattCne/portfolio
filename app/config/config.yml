@@ -66,3 +66,21 @@ endroid_twitter:
     consumer_secret: "skuARP5rSY0f9Y4qlOzwsNtlo9Uowv9G4J7TYcAcNc"
     access_token: "109274686-FnFFVbIprkT75WtItxhdsr09zWTBw3jcZo2krUrY"
     access_token_secret: "9dOq4JvVmo1bBkntgq7RX3Nke7FzvYpzv3ZySmfWhI"
+
+# Sonata Block Bundle
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+
+        #sonata.admin_doctrine_orm.block.audit:
+        #    contexts:   [admin]
+
+        sonata.block.service.text:
+        sonata.block.service.rss:
+
+        # Some specific block from the SonataMediaBundle
+        #sonata.media.block.media:
+        #sonata.media.block.gallery:
+        #sonata.media.block.feature_media:

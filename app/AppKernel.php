@@ -21,7 +21,15 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Mcneude\PortfolioBundle\PortfolioBundle(),
 
+            // Endroid Twitter Bundle
             new Endroid\Bundle\TwitterBundle\EndroidTwitterBundle(),
+
+            // Sonata Admin Bundle
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\IntlBundle\SonataIntlBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
