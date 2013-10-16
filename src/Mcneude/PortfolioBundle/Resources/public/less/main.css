@@ -210,7 +210,7 @@ h1 {
   line-height: 1.2em;
   font-size: 1.8em;
   color: #81adc8;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   border-bottom: 1px solid #81adc8;
   margin: 0 0 1em 0;
 }
@@ -614,6 +614,7 @@ img {
 }
 .full > h1 {
   font-size: 2.5em;
+  margin: 0 0 0.5em 0.5em;
 }
 #main > footer {
   border-top: 1px solid #457c9e;
@@ -1253,7 +1254,7 @@ img {
   transition: all 0.3s ease-in-out;
 }
 .projet .visuel figcaption h1 {
-  padding: 0.5em 0 0.5em 1em;
+  padding: 0.6em 0 0.5em 1em;
   color: #cccbd4;
   border-bottom: 1px solid #b0afbd;
   margin: 0 0 0.5em 0;
@@ -1545,7 +1546,7 @@ img {
   font-weight: normal;
   line-height: 1.2em;
   letter-spacing: 0.02em;
-  line-height: 2em;
+  line-height: 1.5em;
 }
 .content:before,
 .content:after {
@@ -1666,7 +1667,7 @@ img {
   padding-right: 0.3em;
 }
 .content h1 {
-  padding: 0 0 0.5em 0;
+  padding: 0 0 0.25em 0;
   margin: 0 0 0.5em 0;
   color: #9493a6;
   border-bottom: 1px solid #b0afbd;
@@ -1834,7 +1835,6 @@ img {
 .full-cv #exp_comp header h1,
 .full-cv #competence header h1 {
   font-size: 1.5em;
-  padding: 0.5em 0 0.5em 0;
 }
 .full-cv #experiences > ul > li:before,
 .full-cv #etude > ul > li:before {
