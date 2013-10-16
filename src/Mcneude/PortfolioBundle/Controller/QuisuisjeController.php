@@ -8,12 +8,19 @@ class QuisuisjeController extends Controller
 {
     public function renderAction()
     {
-        //Récupération des projets dans la base de donnée
-        /*$dbProjet = $this->getDoctrine()
-            ->getRepository('PortfolioBundle:Projet');
+        $quiSuisJeTable = $this->getDoctrine()
+            ->getRepository('PortfolioBundle:QuiSuisJe');
+        $quisuisje = $quiSuisJeTable->findAll();
 
-        $projets = $dbProjet->findAll();*/
+        //On prend le premier résultat
+        $quisuisje = $quisuisje[0];
 
-        return $this->render( 'PortfolioBundle:Pages:quisuisje.html.twig' );
+        return $this->render( 'PortfolioBundle:Pages:quisuisje.html.twig', array(
+            'pourquoi'      => $quisuisje->getPourquoi(),
+            'politique'     => $quisuisje->getPolitique(),
+            'methodes'      => $quisuisje->getMethodes(),
+            'infos'         => $quisuisje->getInfos(),
+            'competences'   => $quisuisje->getCompetences()
+        ) );
     }
 }

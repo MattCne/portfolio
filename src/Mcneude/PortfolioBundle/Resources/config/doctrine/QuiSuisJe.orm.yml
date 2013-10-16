@@ -26,7 +26,12 @@ Mcneude\PortfolioBundle\Entity\QuiSuisJe:
             nullable: true
         infos:
             type: string
-            length: 45
+            length: 200
+            fixed: false
+            nullable: true
+        competences:
+            type: string
+            length: 200
             fixed: false
             nullable: true
     lifecycleCallbacks: {  }
