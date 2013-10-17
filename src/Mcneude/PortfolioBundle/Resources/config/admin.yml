@@ -1,15 +1,5 @@
 # Acme/DemoBundle/Resources/config/admin.yml
 services:
-    sonata.admin.projet:
-        class: Mcneude\PortfolioBundle\Admin\ProjetAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenus", label: "Projets" }
-        arguments:
-            - ~
-            - Mcneude\PortfolioBundle\Entity\Projet
-            - ~
-        calls:
-            - [ setTranslationDomain, [PortfolioBundle]]
     sonata.admin.quisuisje:
         class: Mcneude\PortfolioBundle\Admin\QuiSuisJeAdmin
         tags:
@@ -17,6 +7,16 @@ services:
         arguments:
             - ~
             - Mcneude\PortfolioBundle\Entity\QuiSuisJe
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+    sonata.admin.projet:
+        class: Mcneude\PortfolioBundle\Admin\ProjetAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contenus", label: "Projets" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\Projet
             - ~
         calls:
             - [ setTranslationDomain, [PortfolioBundle]]
