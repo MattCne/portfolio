@@ -1,6 +1,6 @@
-Mcneude\PortfolioBundle\Entity\Projet:
+Mcneude\PortfolioBundle\Entity\Projets:
     type: entity
-    table: projet
+    table: projets
     fields:
         id:
             id: true
@@ -18,7 +18,7 @@ Mcneude\PortfolioBundle\Entity\Projet:
             type: integer
             unsigned: false
             nullable: true
-        accroche:
+        description:
             type: text
             nullable: true
         idPrincipalImage:
@@ -44,11 +44,6 @@ Mcneude\PortfolioBundle\Entity\Projet:
             nullable: true
             column: is_website
         difficultes:
-            type: string
-            length: 200
-            fixed: false
-            nullable: true
-        competences:
             type: string
             length: 200
             fixed: false

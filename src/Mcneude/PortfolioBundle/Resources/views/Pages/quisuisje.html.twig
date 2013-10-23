@@ -12,7 +12,9 @@
                 <h1>Pourquoi développeur web ?</h1>
             </header>
             <div class="content">
-                {{ pourquoi }}
+                {% if quisuisje is not empty %}
+                    {{ quisuisje.getPourquoi | raw }}
+                {% endif %}
             </div>
         </article>
 
@@ -20,22 +22,25 @@
             <article class="content box" id="competence">
                 <header>
                     <h1>Compétences</h1>
-
-                    <div class="accroche">J'ai un parcours de fou</div>
+                    <div class="accroche">
+                        {% if accroches is not empty  %}
+                            {{ accroches.getAccrocheCompetences | raw }}
+                        {% endif %}
+                    </div>
                 </header>
 
                 <section id="langages">
                     <ul>
-                        <li>CSS</li>
-                        <li>JS</li>
-                        <li>Plein de choses c'est fou</li>
+                        {% if quisuisje is not empty %}
+                           {{ quisuisje.getCompetencesTech | raw }}
+                        {% endif %}
                     </ul>
                 </section>
                 <section id="communication">
                     <ul>
-                        <li>Je sais parler</li>
-                        <li>je sais embobiner les gens</li>
-                        <li>vive la communication !</li>
+                        {%  if quisuisje is not empty %}
+                            {{ quisuisje.getCompetencesCom | raw }}
+                        {% endif %}
                     </ul>
                 </section>
             </article>
@@ -43,12 +48,17 @@
             <article class="content box">
                 <header>
                     <h1>Methodes de conception.</h1>
+                    <div class="accroche">
+                        {% if accroches is not empty %}
+                            {{ accroches.getAccrocheMethodes | raw }}
+                        {% endif %}
+                    </div>
                 </header>
                 <div class="content">
                     <ul>
-                        <li>Coder</li>
-                        <li>Réfléchir</li>
-                        <li>Aimer</li>
+                        {%  if quisuisje is not empty %}
+                            {{ quisuisje.getMethodes | raw }}
+                        {% endif %}
                     </ul>
                 </div>
             </article>
@@ -58,12 +68,17 @@
             <article class="content box">
                 <header>
                     <h1>Politique / Workflow</h1>
+                    <div class="accroche">
+                        {% if accroches is not empty %}
+                            {{ accroches.getAccrochePolitique | raw }}
+                        {% endif %}
+                    </div>
                 </header>
                 <div class="content">
                     <ul>
-                        <li>Coder</li>
-                        <li>Réfléchir</li>
-                        <li>Aimer</li>
+                        {% if quisuisje is not empty %}
+                            {{ quisuisje.getPolitique | raw }}
+                        {% endif %}
                     </ul>
                 </div>
             </article>
@@ -71,12 +86,15 @@
             <article class="content box">
                 <header>
                     <h1>Informations complémentaires</h1>
+                    {% if accroches is not empty %}
+                        <div class="accroche"> {{ accroches.getAccrocheInfos | raw }}</div>
+                    {% endif %}
                 </header>
                 <div class="content">
                     <ul>
-                        <li>Coder</li>
-                        <li>Réfléchir</li>
-                        <li>Aimer</li>
+                        {% if quisuisje is not empty %}
+                            {{ quisuisje.getInfos | raw }}
+                        {% endif %}
                     </ul>
                 </div>
             </article>

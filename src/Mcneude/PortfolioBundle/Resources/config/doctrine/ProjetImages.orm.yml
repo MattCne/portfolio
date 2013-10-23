@@ -1,6 +1,6 @@
-Mcneude\PortfolioBundle\Entity\ProjetImage:
+Mcneude\PortfolioBundle\Entity\ProjetImages:
     type: entity
-    table: projet_image
+    table: projet_images
     fields:
         id:
             id: true
@@ -23,20 +23,14 @@ Mcneude\PortfolioBundle\Entity\ProjetImage:
             type: integer
             unsigned: false
             nullable: true
-        mignatureUrl:
-            type: string
-            length: 45
-            fixed: false
-            nullable: true
-            column: mignature_url
     manyToOne:
-        project:
-            targetEntity: Projet
+        projet:
+            targetEntity: Projets
             cascade: {  }
             mappedBy: null
             inversedBy: null
             joinColumns:
-                project_id:
+                projet_id:
                     referencedColumnName: id
             orphanRemoval: false
     lifecycleCallbacks: {  }

@@ -91,3 +91,8 @@ sonata_block:
 # Admin
 sonata_admin:
     title:      Portfolio Matthieu Cneude
+
+#TinyMCE for Admin
+stfalcon_tinymce:
+        include_jquery: true
+        tinymce_jquery: true

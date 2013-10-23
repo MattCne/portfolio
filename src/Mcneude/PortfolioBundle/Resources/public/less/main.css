@@ -196,8 +196,7 @@ a {
   color: #81adc8;
 }
 h3,
-h4,
-p {
+h4 {
   font-family: "opensanslight", Arial, sans-serif;
   font-size: 1.2em;
   font-weight: normal;
@@ -870,11 +869,11 @@ img {
   padding-bottom: 0.1em;
 }
 #main > footer section > .liste > li > a:hover {
-  color: #c8dbe7;
+  color: #ef7d7d;
   padding-left: 0.5em;
 }
 #main > footer section > .liste > li > a:hover:before {
-  color: #81adc8;
+  color: #ea4f4f;
 }
 /*****************/
 /*    MOBILE     */

@@ -1,0 +1,40 @@
+Mcneude\PortfolioBundle\Entity\ParcoursExperiences:
+    type: entity
+    table: parcours_experiences
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nom:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        description:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        urlImage:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: url_image
+        url:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        position:
+            type: integer
+            unsigned: false
+            nullable: true
+        date:
+            type: date
+            nullable: true
+    lifecycleCallbacks: {  }

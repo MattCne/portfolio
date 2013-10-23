@@ -26,10 +26,12 @@ class AppKernel extends Kernel
 
             // Sonata Admin Bundle
             new Sonata\BlockBundle\SonataBlockBundle(),
-            new Sonata\IntlBundle\SonataIntlBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
+
+            new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -11,117 +11,93 @@
             <header>
                 <h1>Expériences professionnelles</h1>
 
-                <div classe="accroche">Mes expériences professionnelles au cour du temps</div>
+                <div classe="accroche">
+                    {% if accroches is not null %}
+                        {{ accroches.getAccrocheExperiences | raw }}
+                    {% endif %}
+                </div>
             </header>
-            <ul>
-                <li>
-                    <section class="exp_pro">
-                        <header>
-                            <h1>Heliopsis</h1>
-                            <time>12 juin 2013</time>
-                        </header>
-                        <div class="visuel"><img src="/bundles/portfolio/images/heliopsis-logo.png"
-                                                 alt="Heliopsis"/></div>
-                        <div class="content">Ceci est l'entreprise Heliopsis</div>
-                    </section>
-                </li>
-
-                <li>
-                    <section class="exp_pro">
-                        <header>
-                            <h1>Autre entreprise</h1>
-                            <time class="rouge bold">12 juin 2013</time>
-                        </header>
-                        <div class="visuel"><img src="/bundles/portfolio/images/heliopsis-logo.png"
-                                                 alt="Heliopsis"/></div>
-                        <div class="content">Une autre entreprise !</div>
-                    </section>
-                </li>
-
-                <li>
-                    <section class="exp_pro">
-                        <header>
-                            <h1>Heliopsis</h1>
-                            <time>12 juin 2013</time>
-                        </header>
-                        <div class="visuel"><img src="/bundles/portfolio/images/heliopsis-logo.png"
-                                                 alt="Heliopsis"/></div>
-                        <div class="content">Ceci est l'entreprise Heliopsis</div>
-                    </section>
-                </li>
-            </ul>
+            {% if experiences is not empty %}
+                <ul>
+                    {% for experience in experiences %}
+                        <li>
+                            <section class="exp_pro">
+                                <header>
+                                    <h1>{{ experience.getNom }}</h1>
+                                    <time>{{ experience.getDate | date("d/m/Y") }}</time>
+                                </header>
+                                <div class="visuel">
+                                    <img src="/bundles/portfolio/images{{ experience.getUrlImage }}"
+                                         alt="{{ experience.getNom }}" title="{{ experience.getNom }}"/>
+                                </div>
+                                <div class="content">{{ experience.getDescription | raw}}</div>
+                            </section>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </article>
         <article class="content box" id="etude">
             <header>
                 <h1>Etudes réalisés</h1>
 
-                <div class="accroche">J'ai un parcours de fou</div>
+                <div class="accroche">
+                    {% if accroches is not null %}
+                        {{ accroches.getAccrocheEtudes | raw }}
+                    {% endif %}
+                </div>
             </header>
-            <ul>
-                <li>
-                    <section class="exp_etude">
-                        <header>
-                            <h1>Licence multimedia Mende</h1>
-                            <time class="rouge bold">12 juin 2013</time>
-                        </header>
-                        <div class="visuel"><img src="/bundles/portfolio/images/heliopsis-logo.png"
-                                                 alt="Heliopsis"/></div>
-                        <div class="content">Ceci est l'entreprise Heliopsis</div>
-                    </section>
-                </li>
-
-                <li>
-                    <section class="exp_etude">
-                        <header>
-                            <h1>BTS</h1>
-                        </header>
-                        <div class="visuel"><img src="/bundles/portfolio/images/heliopsis-logo.png"
-                                                 alt="Heliopsis"/></div>
-                        <div class="content">Une autre entreprise !</div>
-                    </section>
-                </li>
-
-                <li>
-                    <section class="exp_etude">
-                        <header>
-                            <h1>College</h1>
-                        </header>
-                        <div class="visuel"><img src="/bundles/portfolio/images/heliopsis-logo.png"
-                                                 alt="Heliopsis"/></div>
-                        <div class="content">Ceci est l'entreprise Heliopsis</div>
-                    </section>
-                </li>
-            </ul>
+            {% if etudes is not empty %}
+                <ul>
+                    {% for etude in etudes %}
+                        <li>
+                            <section class="exp_etude">
+                                <header>
+                                    <h1>{{ etude.getNom }}</h1>
+                                    <time>{{ etude.getDate | date("d/m/Y") }}</time>
+                                </header>
+                                <div class="visuel"><img src="/bundles/portfolio/images{{ etude.getUrlImage }}"
+                                                         alt="Heliopsis"/></div>
+                                <div class="content">{{ etude.getDescription | raw}}</div>
+                            </section>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </article>
         <div class="row">
             <article class="content box" id="exp_comp">
                 <header>
                     <h1>Expériences complémentaires</h1>
 
-                    <div class="accroche">Compétences ne sont rien si l'employé n'est pas adapaté aux valeurs
-                        de l'entreprise...
+                    <div class="accroche">
+                        {% if accroches is not null %}
+                            {{ accroches.getAccrocheExperiencesComplementaires | raw }}
+                        {% endif %}
                     </div>
                 </header>
-                <ul>
-                    <li>mac Do</li>
-                    <li>Glander</li>
-                    <li>Jouer à SFIV</li>
-                    <li>Autres...</li>
-                </ul>
+                <div class="content">
+                    {% if parcours is not null %}
+                        {{ parcours.getExperiencesComplementaires | raw }}
+                    {% endif %}
+                </div>
             </article>
 
             <article class="content box" id="exp_comp">
                 <header>
                     <h1>Intérets</h1>
 
-                    <div class="accroche">J'ai plein d'autres intérêts vieille bique</div>
+                    <div class="accroche">
+                        {% if accroches is not null %}
+                            {{ accroches.getAccrocheInterets | raw }}
+                        {% endif %}
+                    </div>
                 </header>
-                <ul>
-                    <li>mac Do</li>
-                    <li>Glander</li>
-                    <li>Jouer à SFIV</li>
-                    <li>Autres...</li>
-                </ul>
+                <div class="content">
+                    {% if parcours is not null %}
+                        {{ parcours.getInterets | raw }}
+                    {% endif %}
+                </div>
             </article>
         </div>
     </div>

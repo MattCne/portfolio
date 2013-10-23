@@ -1,0 +1,36 @@
+Mcneude\PortfolioBundle\Entity\QuisuisjeAccroches:
+    type: entity
+    table: quisuisje_accroches
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        accrocheCompetences:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: accroche_competences
+        accrocheMethodes:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: accroche_methodes
+        accrochePolitique:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: accroche_politique
+        accrocheInfos:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: accroche_infos
+    lifecycleCallbacks: {  }

@@ -6,7 +6,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class QuiSuisJeAdmin extends Admin
+class QuisuisjeAccrochesAdmin extends Admin
 {
     /**
      * Configuration du formulaire
@@ -15,7 +15,10 @@ class QuiSuisJeAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add( 'nom', 'text', array( 'label' => 'Nom du projet' ) )
+            ->add( 'accroche_methodes', 'textarea', array( 'label' => 'Methodes de conception' ) )
+            ->add( 'accroche_infos', 'textarea', array( 'label' => 'Informations complémentaires' ) )
+            ->add( 'accroche_politique', 'textarea', array( 'label' => 'Politique / workflow' ) )
+            ->add( 'accroche_competences', 'textarea', array( 'label' => 'Compétences' ) )
         ;
     }
 
@@ -26,7 +29,10 @@ class QuiSuisJeAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-
+            ->add( 'accrocheMethodes' )
+            ->add( 'accrocheInfos' )
+            ->add( 'accrochePolitique' )
+            ->add( 'accrocheCompetences' )
         ;
     }
 
@@ -37,6 +43,10 @@ class QuiSuisJeAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
+            ->add('accroche_methodes')
+            ->add('accroche_infos')
+            ->add('accroche_politique')
+            ->add('accroche_competences')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),

@@ -6,7 +6,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class ProjetAdmin extends Admin
+class ParcoursAdmin extends Admin
 {
     /**
      * Configuration du formulaire
@@ -15,8 +15,8 @@ class ProjetAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add( 'nom', 'text', array( 'label' => 'Nom du projet' ) )
-            ->add( 'accroche', 'text', array( 'label' => 'Accroche du projet' ) )
+            ->add( 'experiences_complementaires', 'textarea', array( 'label' => 'Experiences complémentaires' ) )
+            ->add( 'interets', 'textarea', array( 'label' => 'Intérets' ) )
         ;
     }
 
@@ -27,8 +27,8 @@ class ProjetAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('nom')
-            ->add('accroche')
+            ->add('experiencesComplementaires')
+            ->add('interets')
         ;
     }
 
@@ -39,8 +39,15 @@ class ProjetAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('nom')
-            ->add('accroche')
+            ->add('experiences_complementaires')
+            ->add('interets')
+            ->add('_action', 'actions', array(
+                'actions' => array(
+                    'view' => array(),
+                    'edit' => array(),
+                    'delete' => array(),
+                )
+            ))
         ;
     }
 }

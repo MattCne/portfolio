@@ -1,0 +1,44 @@
+Mcneude\PortfolioBundle\Entity\Quisuisje:
+    type: entity
+    table: quisuisje
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        pourquoi:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        competencesTech:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: competences_tech
+        competencesCom:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: competences_com
+        methodes:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        politique:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+        infos:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

@@ -5,9 +5,9 @@ namespace Mcneude\PortfolioBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * ProjetImage
+ * ProjetImages
  */
-class ProjetImage
+class ProjetImages
 {
     /**
      * @var integer
@@ -35,9 +35,9 @@ class ProjetImage
     private $mignatureUrl;
 
     /**
-     * @var \Mcneude\PortfolioBundle\Entity\Projet
+     * @var \Mcneude\PortfolioBundle\Entity\Projets
      */
-    private $project;
+    private $projet;
 
 
     /**
@@ -54,7 +54,7 @@ class ProjetImage
      * Set url
      *
      * @param string $url
-     * @return ProjetImage
+     * @return ProjetImages
      */
     public function setUrl($url)
     {
@@ -77,7 +77,7 @@ class ProjetImage
      * Set nom
      *
      * @param string $nom
-     * @return ProjetImage
+     * @return ProjetImages
      */
     public function setNom($nom)
     {
@@ -100,7 +100,7 @@ class ProjetImage
      * Set position
      *
      * @param integer $position
-     * @return ProjetImage
+     * @return ProjetImages
      */
     public function setPosition($position)
     {
@@ -123,7 +123,7 @@ class ProjetImage
      * Set mignatureUrl
      *
      * @param string $mignatureUrl
-     * @return ProjetImage
+     * @return ProjetImages
      */
     public function setMignatureUrl($mignatureUrl)
     {
@@ -143,25 +143,25 @@ class ProjetImage
     }
 
     /**
-     * Set project
+     * Set projet
      *
-     * @param \Mcneude\PortfolioBundle\Entity\Projet $project
-     * @return ProjetImage
+     * @param \Mcneude\PortfolioBundle\Entity\Projets $projet
+     * @return ProjetImages
      */
-    public function setProject(\Mcneude\PortfolioBundle\Entity\Projet $project = null)
+    public function setProjet(\Mcneude\PortfolioBundle\Entity\Projets $projet = null)
     {
-        $this->project = $project;
+        $this->projet = $projet;
     
         return $this;
     }
 
     /**
-     * Get project
+     * Get projet
      *
-     * @return \Mcneude\PortfolioBundle\Entity\Projet 
+     * @return \Mcneude\PortfolioBundle\Entity\Projets 
      */
-    public function getProject()
+    public function getProjet()
     {
-        return $this->project;
+        return $this->projet;
     }
 }

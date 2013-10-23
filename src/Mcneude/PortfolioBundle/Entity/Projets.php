@@ -3,11 +3,13 @@
 namespace Mcneude\PortfolioBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 /**
- * Projet
+ * Projets
  */
-class Projet
+class Projets
 {
     /**
      * @var integer
@@ -27,7 +29,7 @@ class Projet
     /**
      * @var string
      */
-    private $accroche;
+    private $description;
 
     /**
      * @var string
@@ -57,13 +59,35 @@ class Projet
     /**
      * @var string
      */
-    private $competences;
-
-    /**
-     * @var string
-     */
     private $technologies;
 
+    /**
+     * @var ArrayCollection
+     */
+    private $projetImages;
+
+    public function __toString()
+    {
+        return $this->nom;
+    }
+
+
+    public function __construct() {
+        $this->projetImages = new ArrayCollection();
+    }
+
+    public function addProjetImages( \Mcneude\PortfolioBundle\Entity\ProjetImages $projetImages )
+    {
+        $projetImages->setProjet( $this );
+        $this->projetImages->add( $projetImages );
+
+        return $this;
+    }
+
+    public function getProjetImages()
+    {
+        return $this->projetImages;
+    }
 
     /**
      * Get id
@@ -79,7 +103,7 @@ class Projet
      * Set nom
      *
      * @param string $nom
-     * @return Projet
+     * @return Projets
      */
     public function setNom($nom)
     {
@@ -102,7 +126,7 @@ class Projet
      * Set position
      *
      * @param integer $position
-     * @return Projet
+     * @return Projets
      */
     public function setPosition($position)
     {
@@ -122,33 +146,33 @@ class Projet
     }
 
     /**
-     * Set accroche
+     * Set description
      *
-     * @param string $accroche
-     * @return Projet
+     * @param string $description
+     * @return Projets
      */
-    public function setAccroche($accroche)
+    public function setDescription($description)
     {
-        $this->accroche = $accroche;
+        $this->description = $description;
     
         return $this;
     }
 
     /**
-     * Get accroche
+     * Get description
      *
      * @return string 
      */
-    public function getAccroche()
+    public function getDescription()
     {
-        return $this->accroche;
+        return $this->description;
     }
 
     /**
      * Set idPrincipalImage
      *
      * @param string $idPrincipalImage
-     * @return Projet
+     * @return Projets
      */
     public function setIdPrincipalImage($idPrincipalImage)
     {
@@ -171,7 +195,7 @@ class Projet
      * Set urlInternal
      *
      * @param string $urlInternal
-     * @return Projet
+     * @return Projets
      */
     public function setUrlInternal($urlInternal)
     {
@@ -194,7 +218,7 @@ class Projet
      * Set urlExternal
      *
      * @param string $urlExternal
-     * @return Projet
+     * @return Projets
      */
     public function setUrlExternal($urlExternal)
     {
@@ -217,7 +241,7 @@ class Projet
      * Set isWebsite
      *
      * @param boolean $isWebsite
-     * @return Projet
+     * @return Projets
      */
     public function setIsWebsite($isWebsite)
     {
@@ -240,7 +264,7 @@ class Projet
      * Set difficultes
      *
      * @param string $difficultes
-     * @return Projet
+     * @return Projets
      */
     public function setDifficultes($difficultes)
     {
@@ -260,33 +284,10 @@ class Projet
     }
 
     /**
-     * Set competences
-     *
-     * @param string $competences
-     * @return Projet
-     */
-    public function setCompetences($competences)
-    {
-        $this->competences = $competences;
-    
-        return $this;
-    }
-
-    /**
-     * Get competences
-     *
-     * @return string 
-     */
-    public function getCompetences()
-    {
-        return $this->competences;
-    }
-
-    /**
      * Set technologies
      *
      * @param string $technologies
-     * @return Projet
+     * @return Projets
      */
     public function setTechnologies($technologies)
     {
@@ -304,4 +305,5 @@ class Projet
     {
         return $this->technologies;
     }
+
 }

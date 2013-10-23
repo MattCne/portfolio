@@ -1,22 +1,102 @@
 # Acme/DemoBundle/Resources/config/admin.yml
 services:
-    sonata.admin.quisuisje:
-        class: Mcneude\PortfolioBundle\Admin\QuiSuisJeAdmin
+
+  #################
+  # Qui suis je ? #
+  #################
+
+    sonata.admin.quisuisjeAccroches:
+        class: Mcneude\PortfolioBundle\Admin\QuisuisjeAccrochesAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenus", label: "Qui suis je ?" }
+            - { name: sonata.admin, manager_type: orm, group: "Qui suis-je ?", label: "Accroches" }
         arguments:
             - ~
-            - Mcneude\PortfolioBundle\Entity\QuiSuisJe
+            - Mcneude\PortfolioBundle\Entity\QuisuisjeAccroches
             - ~
         calls:
             - [ setTranslationDomain, [PortfolioBundle]]
-    sonata.admin.projet:
-        class: Mcneude\PortfolioBundle\Admin\ProjetAdmin
+
+    sonata.admin.quisuisje:
+        class: Mcneude\PortfolioBundle\Admin\QuisuisjeAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Contenus", label: "Projets" }
+            - { name: sonata.admin, manager_type: orm, group: "Qui suis-je ?", label: "Contenus" }
+        arguments :
+            - ~
+            - Mcneude\PortfolioBundle\Entity\Quisuisje
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+  #################
+  #   Parcours    #
+  #################
+
+    sonata.admin.parcoursAccroche:
+        class: Mcneude\PortfolioBundle\Admin\ParcoursAccrochesAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Parcours", label: "Accroches" }
         arguments:
             - ~
-            - Mcneude\PortfolioBundle\Entity\Projet
+            - Mcneude\PortfolioBundle\Entity\ParcoursAccroches
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+    sonata.admin.parcoursExperiences:
+        class: Mcneude\PortfolioBundle\Admin\ParcoursExperiencesAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Parcours", label: "Experiences" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\ParcoursExperiences
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+    sonata.admin.parcoursEtudes:
+        class: Mcneude\PortfolioBundle\Admin\ParcoursEtudesAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Parcours", label: "Etudes" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\ParcoursEtudes
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+    sonata.admin.parcours:
+        class: Mcneude\PortfolioBundle\Admin\ParcoursAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Parcours", label: "Experiences complémentaires / Intérets" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\Parcours
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+  #################
+  #   Projets    #
+  #################
+
+    sonata.admin.projets:
+        class: Mcneude\PortfolioBundle\Admin\ProjetsAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Projets", label: "Contenus" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\Projets
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+    sonata.admin.projetImages:
+        class: Mcneude\PortfolioBundle\Admin\ProjetImagesAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Images de projets", label: "Contenus" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\ProjetImages
             - ~
         calls:
             - [ setTranslationDomain, [PortfolioBundle]]
