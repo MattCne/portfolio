@@ -21,21 +21,31 @@ Mcneude\PortfolioBundle\Entity\Projets:
         description:
             type: text
             nullable: true
-        idPrincipalImage:
+        difficultes:
+            type: text
+            nullable: true
+        technologies:
+            type: text
+            nullable: true
+        competencesAcquises:
+            type: text
+            nullable: true
+            column: competences_acquises
+        urlMiniature:
             type: string
-            length: 200
+            length: 45
             fixed: false
             nullable: true
-            column: id_principal_image
+            column: url_miniature
         urlInternal:
             type: string
-            length: 200
+            length: 45
             fixed: false
             nullable: true
             column: url_internal
         urlExternal:
             type: string
-            length: 200
+            length: 45
             fixed: false
             nullable: true
             column: url_external
@@ -43,14 +53,4 @@ Mcneude\PortfolioBundle\Entity\Projets:
             type: boolean
             nullable: true
             column: is_website
-        difficultes:
-            type: string
-            length: 200
-            fixed: false
-            nullable: true
-        technologies:
-            type: string
-            length: 200
-            fixed: false
-            nullable: true
     lifecycleCallbacks: {  }

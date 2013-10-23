@@ -3,36 +3,35 @@
 
 	<section>
 		<h1>Sites internet</h1>
-		<ul class="liste">
-			<li><a href="#">Sydev</a></li>
-			<li><a href="#">Sogelink</a></li>
-			<li><a href="#">Sydev</a></li>
-			<li><a href="#">Sogelink</a></li>
-			<li><a href="#">Sydev</a></li>
-			<li><a href="#">Sogelink</a></li>
-			<li><a href="#">Sydev</a></li>
-			<li><a href="#">Sogelink</a></li>
-		</ul>
+        {% if sitesInternet is not null %}
+            <ul class="liste">
+                {% for siteInternet in sitesInternet  %}
+                    <li><a href="#">{{ siteInternet.nom }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 	</section>
 
 	<section>
 		<h1>Autres projets de développement</h1>
-		<ul class="liste">
-			<li><a href="#">Test 1</a></li>
-			<li><a href="#">Test 2</a></li>
-			<li><a href="#">Test 3</a></li>
-			<li><a href="#">Test 4</a></li>
-		</ul>
+        {% if autresProjets is not null %}
+            <ul class="liste">
+                {% for autreProjet in autresProjets  %}
+                    <li><a href="#">{{ autreProjet.nom }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 	</section>
 
 	<section>
 		<h1>Fichiers</h1>
-		<ul class="liste">
-			<li><a href="#">Test 1</a></li>
-			<li><a href="#">Test 2</a></li>
-			<li><a href="#">Test 3</a></li>
-			<li><a href="#">Test 4</a></li>
-		</ul>
+        {% if fichiers is not null %}
+            <ul class="liste">
+                {% for fichier in fichiers %}
+                    <li><a href="#">{{ fichier.nom }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
 	</section>
 
 	<section id="twitter">

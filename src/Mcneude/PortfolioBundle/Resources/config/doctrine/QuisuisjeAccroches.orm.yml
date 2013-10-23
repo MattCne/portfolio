@@ -10,27 +10,19 @@ Mcneude\PortfolioBundle\Entity\QuisuisjeAccroches:
             generator:
                 strategy: IDENTITY
         accrocheCompetences:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
             column: accroche_competences
         accrocheMethodes:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
             column: accroche_methodes
         accrochePolitique:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
             column: accroche_politique
         accrocheInfos:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
             column: accroche_infos
     lifecycleCallbacks: {  }

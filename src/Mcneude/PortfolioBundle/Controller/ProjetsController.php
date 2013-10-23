@@ -8,12 +8,15 @@ class ProjetsController extends Controller
 {
     public function renderAction()
     {
-        //Récupération des projets dans la base de donnée
-        /*$dbProjet = $this->getDoctrine()
-            ->getRepository('PortfolioBundle:Projet');
+        $projetsDb = $this->getDoctrine()
+            ->getRepository('PortfolioBundle:Projets')
+            ->createQueryBuilder('projets')
+            ->orderBy('projets.position')
+            ->getQuery()
+            ->getresult();
 
-        $projets = $dbProjet->findAll();*/
-
-        return $this->render( 'PortfolioBundle:Pages:projets.html.twig' );
+        return $this->render( 'PortfolioBundle:Pages:projets.html.twig', array(
+            'projets' => $projetsDb
+        ) );
     }
 }

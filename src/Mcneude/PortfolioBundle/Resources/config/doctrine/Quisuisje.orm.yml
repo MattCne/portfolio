@@ -10,35 +10,23 @@ Mcneude\PortfolioBundle\Entity\Quisuisje:
             generator:
                 strategy: IDENTITY
         pourquoi:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
         competencesTech:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
             column: competences_tech
         competencesCom:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
             column: competences_com
         methodes:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
         politique:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
         infos:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
     lifecycleCallbacks: {  }

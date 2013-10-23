@@ -9,22 +9,16 @@ Mcneude\PortfolioBundle\Entity\ParcoursAccroches:
             nullable: false
             generator:
                 strategy: IDENTITY
-        accrocheExperiences:
-            type: string
-            length: 200
-            fixed: false
-            nullable: true
-            column: accroche_experiences
         accrocheEtudes:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
             column: accroche_etudes
+        accrocheExperiences:
+            type: text
+            nullable: true
+            column: accroche_experiences
         accrocheExperiencesComplementaires:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
             column: accroche_experiences_complementaires
         accrocheInterets:

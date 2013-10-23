@@ -76,7 +76,7 @@ services:
             - [ setTranslationDomain, [PortfolioBundle]]
 
   #################
-  #   Projets    #
+  #   Projets     #
   #################
 
     sonata.admin.projets:
@@ -93,10 +93,25 @@ services:
     sonata.admin.projetImages:
         class: Mcneude\PortfolioBundle\Admin\ProjetImagesAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Images de projets", label: "Contenus" }
+            - { name: sonata.admin, manager_type: orm, group: "Projets", label: "Images" }
         arguments:
             - ~
             - Mcneude\PortfolioBundle\Entity\ProjetImages
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+  #################
+  #   Fichiers    #
+  #################
+
+    sonata.admin.projetImages:
+        class: Mcneude\PortfolioBundle\Admin\FichiersAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Autre", label: "Fichiers" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\Fichiers
             - ~
         calls:
             - [ setTranslationDomain, [PortfolioBundle]]

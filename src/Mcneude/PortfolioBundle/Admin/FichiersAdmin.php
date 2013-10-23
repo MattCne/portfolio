@@ -6,7 +6,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class ProjetImagesAdmin extends Admin
+class FichiersAdmin extends Admin
 {
     /**
      * Configuration du formulaire
@@ -17,8 +17,7 @@ class ProjetImagesAdmin extends Admin
         $formMapper
             ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
             ->add( 'url', 'text', array( 'label' => 'Url' ) )
-            ->add( 'position', 'text', array( 'label' => 'position' ) )
-            ->add( 'projet', 'sonata_type_model', array(), array() )
+            ->add( 'position', 'text', array( 'label' => 'Position' ) )
         ;
     }
 
@@ -30,6 +29,7 @@ class ProjetImagesAdmin extends Admin
     {
         $datagridMapper
             ->add('nom')
+            ->add('position')
         ;
     }
 
@@ -40,7 +40,7 @@ class ProjetImagesAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('nom')
+            ->add('nom')
             ->add('url')
             ->add('position')
             ->add('_action', 'actions', array(
@@ -49,7 +49,7 @@ class ProjetImagesAdmin extends Admin
                     'edit' => array(),
                     'delete' => array(),
                 )
-            ) )
+            ))
         ;
     }
 }

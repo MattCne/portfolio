@@ -68,7 +68,10 @@ class Projets
 
     public function __toString()
     {
-        return $this->nom;
+        if( $this->nom )
+            return $this->nom;
+        else
+            return '';
     }
 
 
@@ -306,4 +309,60 @@ class Projets
         return $this->technologies;
     }
 
+    /**
+     * @var string
+     */
+    private $competencesAcquises;
+
+    /**
+     * @var string
+     */
+    private $urlMiniature;
+
+
+    /**
+     * Set competencesAcquises
+     *
+     * @param string $competencesAcquises
+     * @return Projets
+     */
+    public function setCompetencesAcquises($competencesAcquises)
+    {
+        $this->competencesAcquises = $competencesAcquises;
+    
+        return $this;
+    }
+
+    /**
+     * Get competencesAcquises
+     *
+     * @return string 
+     */
+    public function getCompetencesAcquises()
+    {
+        return $this->competencesAcquises;
+    }
+
+    /**
+     * Set urlMiniature
+     *
+     * @param string $urlMiniature
+     * @return Projets
+     */
+    public function setUrlMiniature($urlMiniature)
+    {
+        $this->urlMiniature = $urlMiniature;
+    
+        return $this;
+    }
+
+    /**
+     * Get urlMiniature
+     *
+     * @return string 
+     */
+    public function getUrlMiniature()
+    {
+        return $this->urlMiniature;
+    }
 }

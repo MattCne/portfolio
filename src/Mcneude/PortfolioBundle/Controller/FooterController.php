@@ -16,10 +16,17 @@ class FooterController extends Controller
     public function renderFooterAction( $nbrTweets ) {
 
         $tweets = $this->getLastTweetAction( $nbrTweets );
+        $sitesInternet = $this->getSitesInternet();
+        $autresProjets = $this->getAutresProjets();
+        $fichiers = $this->getFiles();
 
         $content = $this->renderView(
-            'PortfolioBundle:layout:footer.html.twig',
-            array( 'tweets' => $tweets )
+            'PortfolioBundle:layout:footer.html.twig', array(
+                'tweets' => $tweets,
+                'sitesInternet' => $sitesInternet,
+                'autresProjets'=> $autresProjets,
+                'fichiers'  => $fichiers
+            )
         );
 
         return new Response( $content );
@@ -50,5 +57,44 @@ class FooterController extends Controller
         }
 
         return ( $formatedTweets );
+    }
+
+
+    private function getSitesInternet()
+    {
+        $projetsDb = $this->getDoctrine()
+            ->getRepository('PortfolioBundle:Projets')
+            ->createQueryBuilder('projets')
+            ->where( 'projets.isWebsite = 1')
+            ->orderBy('projets.position')
+            ->getQuery()
+            ->getresult();
+
+        return $projetsDb;
+    }
+
+    private function getAutresProjets()
+    {
+        $projetsDb = $this->getDoctrine()
+            ->getRepository('PortfolioBundle:Projets')
+            ->createQueryBuilder('projets')
+            ->where( 'projets.isWebsite = 0')
+            ->orderBy('projets.position')
+            ->getQuery()
+            ->getresult();
+
+        return $projetsDb;
+    }
+
+    private function getFiles()
+    {
+        $filesDb = $this->getDoctrine()
+            ->getRepository('PortfolioBundle:Fichiers')
+            ->createQueryBuilder('fichiers')
+            ->orderBy('fichiers.position')
+            ->getQuery()
+            ->getresult();
+
+        return $filesDb;
     }
 }

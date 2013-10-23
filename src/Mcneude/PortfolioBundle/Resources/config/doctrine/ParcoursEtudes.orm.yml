@@ -15,9 +15,7 @@ Mcneude\PortfolioBundle\Entity\ParcoursEtudes:
             fixed: false
             nullable: true
         description:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
         urlImage:
             type: string

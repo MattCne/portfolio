@@ -6,74 +6,28 @@
 
     <div class="full full-projets">
         <h1>Projets</h1>
-        <ul class="list-projet">
-            <li>
-                <article class="projet">
-                    <a href="#">
-                        <figure class="visuel">
-                            <img src="/bundles/portfolio/images/image_test.jpg" alt="visuel"/>
-                            <figcaption>
-                                <h1>Site Internet Eovi</h1>
+        {% if projets is not null %}
+            <ul class="list-projet">
+                {% for projet in projets  %}
+                    <li>
+                        <article class="projet">
+                            <a href="#">
+                                <figure class="visuel">
+                                    <img src="/bundles/portfolio/images{{ projet.urlMiniature }}" alt="visuel"/>
+                                    <figcaption>
+                                        <h1>{{ projet.nom }}</h1>
 
-                                <div class="accroche">
-                                    Ceci est l'accroche pour le le site Internet Eovi. Ceci est l'accroche pour le le site
-                                    Internet Eovi. Ceci est l'accroche pour le le site Internet Eovi. Ceci est l'accroche pour
-                                    le le site Internet Eovi.
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </article>
-            </li>
-            <li>
-                <article class="projet">
-                    <figure class="visuel">
-                        <img src="/bundles/portfolio/images/image_test.jpg" alt="visuel"/>
-                        <figcaption>
-                            <h1>Titre du projet</h1>
-
-                            <div class="accroche">
-                                Do you believe that shit? It actually says that in the little book that comes with it: the
-                                most popular gun in American crime. Like they're actually proud of that shit.
-                            </div>
-                        </figcaption>
-                    </figure>
-
-                </article>
-            </li>
-            <li>
-                <article class="projet">
-                    <figure class="visuel">
-                        <img src="/bundles/portfolio/images/image_test.jpg" alt="visuel"/>
-                        <figcaption>
-                            <h1>Titre du projet</h1>
-
-                            <div class="accroche">
-                                Do you believe that shit? It actually says that in the little book that comes with it: the
-                                most popular gun in American crime. Like they're actually proud of that shit.
-                            </div>
-                        </figcaption>
-                    </figure>
-
-                </article>
-            </li>
-            <li>
-                <article class="projet">
-                    <figure class="visuel">
-                        <img src="/bundles/portfolio/images/image_test.jpg" alt="visuel"/>
-                        <figcaption>
-                            <h1>Titre du projet</h1>
-
-                            <div class="accroche">
-                                Do you believe that shit? It actually says that in the little book that comes with it: the
-                                most popular gun in American crime. Like they're actually proud of that shit.
-                            </div>
-                        </figcaption>
-                    </figure>
-
-                </article>
-            </li>
-        </ul>
+                                        <div class="accroche">
+                                            {{ projet.description | raw }}
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </div>
 
 {% endblock %}
