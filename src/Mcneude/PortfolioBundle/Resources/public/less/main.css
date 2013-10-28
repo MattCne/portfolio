@@ -2453,18 +2453,7 @@ html[xmlns] .slides {
 /*****************/
 @media screen and (max-width: 760px) {
   .flexslider {
-    width: 100%;
-    margin: 0 0 6em 0;
-    padding: 0.5em 0 0.5em 0;
-    height: auto;
-  }
-  .flex-direction-nav .flex-prev {
-    opacity: 1;
-    left: 10px;
-  }
-  .flex-direction-nav .flex-next {
-    opacity: 1;
-    right: 10px;
+    display: none;
   }
 }
 /*****************/
