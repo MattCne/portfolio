@@ -32,6 +32,13 @@ class AppKernel extends Kernel
             new Sonata\AdminBundle\SonataAdminBundle(),
 
             new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
+
+            //Sonata User Configuration
+            new FOS\UserBundle\FOSUserBundle(),
+            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

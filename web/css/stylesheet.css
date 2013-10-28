@@ -1,0 +1,3095 @@
+@charset "UTF-8";
+/*
+ * www.KNACSS.com V2.5b @author: Raphael Goetter, Alsacreations
+ * Licence CC-BY http://creativecommons.org/licenses/by/3.0/fr/
+ */
+/* ----------------------------- */
+/* summary */
+/* ----------------------------- */
+/*
+1- reset
+2- layout and modules
+3- header
+4- sidebar
+5- footer
+6- forms
+7- main
+8- iefix
+9- print
+10- desktop medias
+11- mobile
+*/
+/* ----------------------------- */
+/* ==reset */
+/* ----------------------------- */
+/* base font-size corresponds to 10px and is adapted to rem unit */
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Century Gothic", helvetica, arial, sans-serif;
+  font-size: 1.4em;
+  /* equiv 14px */
+
+  line-height: 1.5;
+  /* adapt to your design */
+
+}
+/* font-sizing for content */
+/* preserve vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea,
+caption,
+details,
+figure,
+hgroup {
+  font-size: 1em;
+  /* equiv 14px */
+
+  line-height: 1.5;
+  margin: 1.5em 0 0;
+}
+h1,
+.h1-like {
+  font-size: 1.8571em;
+  /* equiv 26px */
+
+  font-weight: normal;
+  line-height: 1.6154em;
+  margin: .8077em 0 0 0;
+}
+h2,
+.h2-like {
+  font-size: 1.7143em;
+  /* equiv 24px */
+
+  font-weight: normal;
+  line-height: 1.75em;
+  margin: .875em 0 0 0;
+}
+h3,
+.h3-like {
+  font-size: 1.5714em;
+  /* equiv 22px */
+
+  font-weight: normal;
+  line-height: 1.909em;
+  margin: .9545em 0 0 0;
+}
+h4,
+.h4-like {
+  font-size: 1.4286em;
+  /* equiv 20px */
+
+  font-weight: normal;
+  line-height: 1.05em;
+  margin: 1.05em 0 0 0;
+}
+h5,
+.h5-like {
+  font-size: 1.2857em;
+  /* equiv 18px */
+
+  font-weight: normal;
+  line-height: 1.1667em;
+  margin: 1.1667em 0 0 0;
+}
+h6,
+.h6-like {
+  font-size: 1.1429em;
+  /* equiv 16px */
+
+  font-weight: normal;
+  line-height: 1.3125em;
+  margin: 1.3125em 0 0 0;
+}
+/* alternate font-sizing */
+.smaller {
+  font-size: .7143em;
+  /* equiv 10px */
+
+  line-height: 2.1em;
+}
+.small {
+  font-size: .8571em;
+  /* equiv 12px */
+
+  line-height: 1.75em;
+}
+.big {
+  font-size: 1.1429em;
+  /* equiv 16px */
+
+  line-height: 1.3125em;
+}
+.bigger {
+  font-size: 1.2857em;
+  /* equiv 18px */
+
+  line-height: 1.1667em;
+}
+.biggest {
+  font-size: 1.4286em;
+  /* equiv 20px */
+
+  line-height: 1.05em;
+}
+/* soft reset */
+html,
+body,
+textarea,
+figure,
+label {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  padding-left: 2em;
+}
+code,
+pre,
+samp {
+  white-space: pre-wrap;
+  font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
+}
+code {
+  line-height: 1em;
+}
+table {
+  margin-bottom: 1.5em;
+}
+/* avoid top margins on first content element */
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+/* avoid margins on nested elements */
+li p,
+li ul,
+li ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* HTML5 tags */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+/* max values */
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video {
+  max-width: 100%;
+}
+/* you shall not pass */
+div,
+textarea,
+table,
+td,
+th,
+code,
+pre,
+samp {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+/* pictures */
+img {
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+/* scripts */
+body > script {
+  display: none !important;
+}
+/* skip-links */
+.skip-links {
+  position: absolute;
+}
+.skip-links a {
+  position: absolute;
+  left: -9999px;
+  padding: 0.5em;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+.skip-links a:focus {
+  position: static;
+}
+/* ----------------------------- */
+/* ==layout and modules */
+/* ----------------------------- */
+/* switching box model for all elements */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* float layout */
+/* ----------- */
+/* tutorial : http://knacss.com/demos/tutoriel.html */
+/* module, contains floats (.item is the same) */
+.mod,
+.item {
+  overflow: hidden;
+}
+/* table layout */
+/* ------------------ */
+.row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.row > *,
+.col {
+  display: table-cell;
+  vertical-align: top;
+}
+/* blocks that needs to be placed under floats */
+.clear,
+.line,
+.row {
+  clear: both;
+}
+/* blocks that must contain floats */
+.clearfix:after,
+.line:after,
+.mod:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* alignments (blocks and inline) */
+/* ------------------------------ */
+/* left elements */
+.left {
+  float: left;
+}
+img.left {
+  margin-right: 1em;
+}
+/* right elements */
+.right {
+  float: right;
+}
+img.right {
+  margin-left: 1em;
+}
+img.left,
+img.right {
+  margin-bottom: 5px;
+}
+.center {
+  margin: auto;
+}
+.txtleft {
+  text-align: left;
+}
+.txtright {
+  text-align: right;
+}
+.txtcenter {
+  text-align: center;
+}
+/* just inline-block */
+.inbl {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -0.25em;
+}
+/* grids    */
+/* ------------------------------ */
+/* equal grids with 2% gutter */
+[class*=grid] > * {
+  float: left;
+}
+/* direct childrens are floating */
+[class*=grid] > * + * {
+  margin-left: 2%;
+}
+/* here's the gutter */
+.grid2 > * {
+  width: 49%;
+}
+.grid3 > * {
+  width: 32%;
+}
+.grid4 > * {
+  width: 23.5%;
+}
+.grid5 > * {
+  width: 18.4%;
+}
+.grid6 > * {
+  width: 15%;
+}
+/* unequal grids (1-2, 2-1, 1-3 and 3-1) */
+.grid2-1 > *:first-child,
+.grid1-2 > * + * {
+  width: 66%;
+}
+.grid1-2 > *:first-child,
+.grid2-1 > * + * {
+  width: 32%;
+}
+.grid1-3 > *:first-child,
+.grid3-1 > * + * {
+  width: 23.5%;
+}
+.grid3-1 > *:first-child,
+.grid1-3 > * + * {
+  width: 74.5%;
+}
+/* blocks widths (percentage and pixels) */
+.w10 {
+  width: 10%;
+}
+.w20 {
+  width: 20%;
+}
+.w25 {
+  width: 25%;
+}
+.w30 {
+  width: 30%;
+}
+.w33 {
+  width: 33.333%;
+}
+.w40 {
+  width: 40%;
+}
+.w50 {
+  width: 50%;
+}
+.w60 {
+  width: 60%;
+}
+.w66 {
+  width: 66.666%;
+}
+.w70 {
+  width: 70%;
+}
+.w75 {
+  width: 75%;
+}
+.w80 {
+  width: 80%;
+}
+.w90 {
+  width: 90%;
+}
+.w100 {
+  width: 100%;
+}
+.w50p {
+  width: 50px;
+}
+.w100p {
+  width: 100px;
+}
+.w150p {
+  width: 150px;
+}
+.w200p {
+  width: 200px;
+}
+.w300p {
+  width: 300px;
+}
+.w400p {
+  width: 400px;
+}
+.w500p {
+  width: 500px;
+}
+.w600p {
+  width: 600px;
+}
+.w700p {
+  width: 700px;
+}
+.w800p {
+  width: 800px;
+}
+.w960p {
+  width: 960px;
+}
+.mw960p {
+  max-width: 960px;
+}
+/* spacing helpers
+p,m = padding,margin
+a,t,r,b,l = all,top,right,bottom,left
+s,m,l,n = small(10px),medium(20px),large(30px),none(0)
+source https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
+*/
+.m-reset,
+.ma0 {
+  margin: 0;
+}
+.p-reset,
+.pa0 {
+  padding: 0;
+}
+.ma1,
+.mas {
+  margin: 10px;
+}
+.ma2,
+.mam {
+  margin: 20px;
+}
+.ma3,
+.mal {
+  margin: 30px;
+}
+.pa1,
+.pas {
+  padding: 10px;
+}
+.pa2,
+.pam {
+  padding: 20px;
+}
+.pa3,
+.pal {
+  padding: 30px;
+}
+.mt0,
+.mtn {
+  margin-top: 0;
+}
+.mt1,
+.mts {
+  margin-top: 10px;
+}
+.mt2,
+.mtm {
+  margin-top: 20px;
+}
+.mt3,
+.mtl {
+  margin-top: 30px;
+}
+.mr0,
+.mrn {
+  margin-right: 0;
+}
+.mr1,
+.mrs {
+  margin-right: 10px;
+}
+.mr2,
+.mrm {
+  margin-right: 20px;
+}
+.mr3,
+.mrl {
+  margin-right: 30px;
+}
+.mb0,
+.mbn {
+  margin-bottom: 0;
+}
+.mb1,
+.mbs {
+  margin-bottom: 10px;
+}
+.mb2,
+.mbm {
+  margin-bottom: 20px;
+}
+.mb3,
+.mbl {
+  margin-bottom: 30px;
+}
+.ml0,
+.mln {
+  margin-left: 0;
+}
+.ml1,
+.mls {
+  margin-left: 10px;
+}
+.ml2,
+.mlm {
+  margin-left: 20px;
+}
+.ml3,
+.mll {
+  margin-left: 30px;
+}
+.pt0,
+.ptn {
+  padding-top: 0;
+}
+.pt1,
+.pts {
+  padding-top: 10px;
+}
+.pt2,
+.ptm {
+  padding-top: 20px;
+}
+.pt3,
+.ptl {
+  padding-top: 30px;
+}
+.pr0,
+.prn {
+  padding-right: 0;
+}
+.pr1,
+.prs {
+  padding-right: 10px;
+}
+.pr2,
+.prm {
+  padding-right: 20px;
+}
+.pr3,
+.prl {
+  padding-right: 30px;
+}
+.pb0,
+.pbn {
+  padding-bottom: 0;
+}
+.pb1,
+.pbs {
+  padding-bottom: 10px;
+}
+.pb2,
+.pbm {
+  padding-bottom: 20px;
+}
+.pb3,
+.pbl {
+  padding-bottom: 30px;
+}
+.pl0,
+.pln {
+  padding-left: 0;
+}
+.pl1,
+.pls {
+  padding-left: 10px;
+}
+.pl2,
+.plm {
+  padding-left: 20px;
+}
+.pl3,
+.pll {
+  padding-left: 30px;
+}
+/* hiding content */
+.visually-hidden {
+  position: absolute;
+  left: -7000px;
+  overflow: hidden;
+}
+[dir=rtl] .visually-hidden {
+  left: auto;
+  right: -7000px;
+}
+.desktop-hidden {
+  display: none;
+}
+/* hidden on desktop */
+/* hidden on mobile */
+/* hidden on tablets */
+/* hidden on smartphones */
+/* ----------------------------- */
+/* ==header */
+/* ----------------------------- */
+/* ----------------------------- */
+/* ==sidebar */
+/* ----------------------------- */
+/* ----------------------------- */
+/* ==footer */
+/* ----------------------------- */
+/* ----------------------------- */
+/* ==forms */
+/* ----------------------------- */
+form,
+fieldset {
+  border: none;
+}
+input,
+button,
+select,
+label {
+  vertical-align: middle;
+  /* @bugfix alignment */
+
+}
+textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+/* ----------------------------- */
+/* ==main */
+/* ----------------------------- */
+/* ----------------------------- */
+/* ==iefix */
+/* ----------------------------- */
+/* haslayout for IE6/IE7 */
+.ie67 .clearfix,
+.ie67 .line,
+.ie67 .mod,
+.ie67 .row,
+.ie67 .col {
+  zoom: 1;
+}
+/* inline-block and table-cell for IE6/IE7 */
+/* warning: .col needs width on IE6/IE7 */
+.ie67 .btn,
+.ie67 .col,
+.ie67 .inbl {
+  display: inline;
+  zoom: 1;
+}
+.ie8 img {
+  width: auto;
+  /* @bugfix for IE8 */
+
+}
+/* Active box-sizing for IE6/IE7 */
+/* @source https://github.com/Schepp/box-sizing-polyfill */
+/*
+.ie67 * {
+	behavior: url(/js/boxsizing.htc);
+}
+*/
+/* ----------------------------- */
+/* ==print */
+/* ----------------------------- */
+/* quick print reset */
+@media print {
+  p,
+  blockquote {
+    orphans: 2;
+    widows: 2;
+  }
+  blockquote,
+  ul,
+  ol {
+    page-break-inside: avoid;
+  }
+  h1,
+  h2,
+  h3,
+  caption {
+    page-break-after: avoid;
+  }
+}
+/* ----------------------------- */
+/* ==desktop medias */
+/* ----------------------------- */
+@media (min-width: 641px) {
+  /* here go rules for big resources and big screens like: background-images, font-faces, etc. */
+}
+/* ----------------------------- */
+/* ==mobile */
+/* ----------------------------- */
+/* quick tablet reset */
+@media (max-width: 768px) {
+  .tablet-hidden {
+    display: none;
+  }
+  .w60,
+  .w66,
+  .w70,
+  .w75,
+  .w80,
+  .w90,
+  .w100,
+  .w600p,
+  .w700p,
+  .w800p,
+  .w960p,
+  .mw960p {
+    width: auto;
+  }
+  /* responsive widths for medium (m) screens, like tablets */
+  .m25 {
+    width: 25%;
+  }
+  .m33 {
+    width: 33.3333%;
+  }
+  .m50 {
+    width: 50%;
+  }
+  .m66 {
+    width: 66.6666%;
+  }
+  .m75 {
+    width: 75%;
+  }
+  .m100 {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0;
+  }
+}
+/* quick smartphone reset */
+@media (max-width: 640px) {
+  .phone-hidden {
+    display: none;
+  }
+  .mod,
+  .item,
+  .col,
+  label,
+  fieldset {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0;
+  }
+  .w30,
+  .w33,
+  .w40,
+  .w50,
+  .w300p,
+  .w400p,
+  .w500p {
+    width: auto;
+  }
+  .row {
+    display: block !important;
+    width: 100% !important;
+  }
+  /* responsive widths for tiny (t) screens, like smartphones */
+  .t25 {
+    width: 25%;
+  }
+  .t33 {
+    width: 33.3333%;
+  }
+  .t50 {
+    width: 50%;
+  }
+  .t66 {
+    width: 66.6666%;
+  }
+  .t75 {
+    width: 75%;
+  }
+  .t100 {
+    display: block !important;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border: 0;
+  }
+  th,
+  td {
+    display: block !important;
+    width: auto !important;
+    text-align: left !important;
+  }
+  thead {
+    display: none;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  /* Style adjustments for retina devices */
+}
+/* orientation iOS font-size fix */
+@media (orientation: landscape) and (max-device-width: 768px) {
+  html,
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+.clearfix {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/* for image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden  */
+.visuallyhidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* inline-block + hack pour IE7 */
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+/* background Clip */
+.background-clip {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+/* Border Radius */
+/* Border Image */
+/* Drop shadows */
+/* Box sizing */
+/* Text shadows 
+Polyfill disponible sur https://github.com/heygrady/textshadow
+*/
+/* Transitions */
+/* Rotation */
+/* CSS3 Content Columns
+ Polyfill disponible sur http://www.csscripting.com/css-multi-column/ 
+*/
+#debug {
+  background-color: #fff;
+}
+#debug .error {
+  color: red;
+}
+#debug .warning {
+  color: orange;
+}
+#debug .debug {
+  color: green;
+}
+@font-face {
+  font-family: 'opensanslight';
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Light-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansbold';
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansitalic';
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'biko';
+  src: url('/bundles/portfolio/font/Biko_Bold.otf');
+  src: url('/bundles/portfolio/font/Biko_Bold.otf') format('embedded-opentype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('woff'), url('/bundles/portfolio/font/Biko_Bold.otf') format('truetype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'felltypes';
+  src: url('/bundles/portfolio/font/IMFeENrm29P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.clearfix {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+  Font Custom - icon webfonts made simple
+*/
+@font-face {
+  font-family: "fontcustom";
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot");
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.woff") format("woff"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.ttf") format("truetype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-footer_arrow_right:before,
+.icon-parcours:before,
+.icon-projets:before,
+.icon-moi:before,
+.icon-telephone:before,
+.icon-accueil:before,
+.icon-arrow_right:before {
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+.icon-footer_arrow_right:before {
+  content: "\f100";
+}
+.icon-parcours:before {
+  content: "\f101";
+}
+.icon-projets:before {
+  content: "\f102";
+}
+.icon-moi:before {
+  content: "\f103";
+}
+.icon-telephone:before {
+  content: "\f104";
+}
+.icon-accueil:before {
+  content: "\f105";
+}
+.icon-arrow_right:before {
+  content: "\f106";
+}
+.fontcustom {
+  font-family: "fontcustom";
+}
+/*****************/
+/*    DESKTOP    */
+/*****************/
+body {
+  width: 100%;
+  position: relative;
+  color: #555555;
+  font-size: 14px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #81adc8;
+}
+h3,
+h4,
+p {
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+h1 {
+  font-family: "biko", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  font-size: 1.8em;
+  color: #81adc8;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #81adc8;
+  margin: 0 0 1em 0;
+}
+h2 {
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  color: #79778f;
+}
+h3 {
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
+  color: #79778f;
+}
+h4 {
+  font-size: 1em;
+  text-decoration: underline;
+}
+img {
+  width: 100%;
+}
+.box {
+  border: 1px solid #eeeeee;
+  -moz-border-radius: 5px 5px 10px 10px;
+  border-radius: 5px 5px 10px 10px;
+  behavior: none;
+  -ms-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  -o-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  width: 47%;
+  padding: 1em;
+  display: block;
+  margin: 0.5em 1em 1em 1em;
+  float: left;
+}
+#main {
+  position: relative;
+  background: #ffffff;
+}
+#main:before {
+  position: absolute;
+  z-index: 1000;
+  top: 6.333333em;
+  width: 100%;
+  height: 1em;
+  background-color: #457c9e;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#5d96b9), to(#457c9e));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#5d96b9, #457c9e);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#5d96b9, #457c9e);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d96b9), color-stop(100%, #457c9e));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#5d96b9, #457c9e);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#5d96b9, #457c9e);
+  /* Opera 11.10 */
+
+  -pie-background: linear-gradient(#5d96b9, #457c9e);
+  behavior: none;
+  background-image: linear-gradient(#5d96b9, #457c9e);
+  /* the standard */
+
+  -ms-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  -webkit-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  -moz-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  -o-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  border-top: 1px solid #c8dbe7;
+  content: '';
+}
+#main > header {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+  clear: both;
+  border-bottom: 1px solid #457c9e;
+  border-top: 1px solid #508b50;
+  margin: 1em 0 0 0;
+  position: relative;
+  height: auto;
+  background: -moz-linear-gradient(left, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(230, 232, 227, 0.54)), color-stop(1%, rgba(230, 232, 227, 0.55)), color-stop(30%, rgba(255, 255, 255, 0.72)), color-stop(42%, rgba(255, 255, 255, 0.79)), color-stop(58%, rgba(255, 255, 255, 0.79)), color-stop(66%, rgba(255, 255, 255, 0.74)), color-stop(99%, rgba(230, 232, 227, 0.53)), color-stop(100%, rgba(230, 232, 227, 0.52)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(left, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(left, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(left, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to right, rgba(230, 232, 227, 0.54) 0%, rgba(230, 232, 227, 0.55) 1%, rgba(255, 255, 255, 0.72) 30%, rgba(255, 255, 255, 0.79) 42%, rgba(255, 255, 255, 0.79) 58%, rgba(255, 255, 255, 0.74) 66%, rgba(230, 232, 227, 0.53) 99%, rgba(230, 232, 227, 0.52) 100%);
+  /* W3C */
+
+}
+#main > header:before,
+#main > header:after {
+  content: "";
+  display: table;
+}
+#main > header:after {
+  clear: both;
+}
+#main > header:before,
+#main > header:after {
+  content: "";
+  display: table;
+}
+#main > header:after {
+  clear: both;
+}
+#main > header:before,
+#main > header:after {
+  content: "";
+  display: table;
+}
+#main > header:after {
+  clear: both;
+}
+#main > header:before,
+#main > header:after {
+  content: "";
+  display: table;
+}
+#main > header:after {
+  clear: both;
+}
+#main > header:before,
+#main > header:after {
+  content: "";
+  display: table;
+}
+#main > header:after {
+  clear: both;
+}
+#main > header:before,
+#main > header:after {
+  content: "";
+  display: table;
+}
+#main > header:after {
+  clear: both;
+}
+#main > header:before {
+  position: absolute;
+  top: -1em;
+  width: 100%;
+  height: 1em;
+  background-color: #414141;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#555555), to(#414141));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#555555, #414141);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#555555, #414141);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #414141));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#555555, #414141);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#555555, #414141);
+  /* Opera 11.10 */
+
+  -pie-background: linear-gradient(#555555, #414141);
+  behavior: none;
+  background-image: linear-gradient(#555555, #414141);
+  /* the standard */
+
+  content: '';
+}
+#main > header .titres {
+  width: 50%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding: 1.3em 1em 0.5em 1.3em;
+}
+#main > header .titres h1 {
+  font-family: "felltypes", Arial, sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  color: #7a7970;
+  -ms-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  margin-bottom: 0;
+  border: none;
+}
+#main > header .titres h1:hover {
+  color: #81adc8;
+}
+#main > header .titres h2 {
+  font-size: 1em;
+  margin: 0;
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.2em;
+  clear: both;
+  display: block;
+  text-transform: uppercase;
+  color: #605e57;
+  -ms-transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+#main > header .titres h2:hover {
+  color: #ea4f4f;
+}
+#main-menu {
+  width: 50%;
+  float: right;
+  margin: 0;
+}
+#main-menu > li {
+  float: left;
+  width: 20%;
+  position: relative;
+}
+#main-menu > li > a {
+  display: block;
+  color: #45443f;
+  letter-spacing: 0.05em;
+  text-align: center;
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.2em;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#main-menu > li > a:hover {
+  background: #494858;
+  color: #ffffff;
+  -ms-box-shadow: 0px 0px 20px 0px #e7e7eb;
+  -webkit-box-shadow: 0px 0px 20px 0px #e7e7eb;
+  -moz-box-shadow: 0px 0px 20px 0px #e7e7eb;
+  -o-box-shadow: 0px 0px 20px 0px #e7e7eb;
+  box-shadow: 0px 0px 20px 0px #e7e7eb;
+}
+#main-menu > li > a > span {
+  display: block;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  padding: 2em 1.5em 2em 1.5em;
+  text-align: center;
+  -ms-transition: padding-left 0.5s;
+  -webkit-transition: padding-left 0.5s;
+  -moz-transition: padding-left 0.5s;
+  -o-transition: padding-left 0.5s;
+  transition: padding-left 0.5s;
+}
+#main-menu > li > a > span:before {
+  position: absolute;
+  z-index: 10;
+  opacity: 0.6;
+  bottom: 0.5em;
+  font-size: 3em;
+  right: 0.5em;
+  color: #ffffff;
+  font-family: "fontcustom";
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: opacity 0.5s;
+  opacity: 0;
+}
+#main-menu > li > a > span:hover {
+  padding-left: 0;
+}
+#main-menu > li > a > span:hover:before {
+  opacity: 0.4;
+  color: #ffffff;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+  transform: scale(3);
+  -ms-transform: scale(3);
+  -webkit-transform: scale(3);
+  -o-transform: scale(3);
+  -moz-transform: scale(3);
+}
+#main-menu > li > a > span.icon-moi:before {
+  font-size: 1.5em;
+  bottom: 2em;
+  right: 2em;
+}
+#main-menu > li > a > span.icon-parcours:before {
+  font-size: 1.5em;
+  bottom: 2em;
+  right: 2em;
+}
+.full {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+  position: relative;
+  padding: 3em 1em 1em 1em;
+  z-index: 100;
+}
+.full:before,
+.full:after {
+  content: "";
+  display: table;
+}
+.full:after {
+  clear: both;
+}
+.full:before,
+.full:after {
+  content: "";
+  display: table;
+}
+.full:after {
+  clear: both;
+}
+.full:before,
+.full:after {
+  content: "";
+  display: table;
+}
+.full:after {
+  clear: both;
+}
+.full:before,
+.full:after {
+  content: "";
+  display: table;
+}
+.full:after {
+  clear: both;
+}
+.full:before,
+.full:after {
+  content: "";
+  display: table;
+}
+.full:after {
+  clear: both;
+}
+.full:before,
+.full:after {
+  content: "";
+  display: table;
+}
+.full:after {
+  clear: both;
+}
+.full > h1 {
+  font-size: 2em;
+}
+#main > footer {
+  border-top: 1px solid #457c9e;
+  position: relative;
+  padding: 1em 0 1em 0;
+  margin: 2em 0 0 0;
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+  clear: both;
+  background-color: #414141;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#555555), to(#414141));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#555555, #414141);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#555555, #414141);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #414141));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#555555, #414141);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#555555, #414141);
+  /* Opera 11.10 */
+
+  -pie-background: linear-gradient(#555555, #414141);
+  behavior: none;
+  background-image: linear-gradient(#555555, #414141);
+  /* the standard */
+
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+#main > footer:before,
+#main > footer:after {
+  content: "";
+  display: table;
+}
+#main > footer:after {
+  clear: both;
+}
+#main > footer:before,
+#main > footer:after {
+  content: "";
+  display: table;
+}
+#main > footer:after {
+  clear: both;
+}
+#main > footer:before,
+#main > footer:after {
+  content: "";
+  display: table;
+}
+#main > footer:after {
+  clear: both;
+}
+#main > footer:before,
+#main > footer:after {
+  content: "";
+  display: table;
+}
+#main > footer:after {
+  clear: both;
+}
+#main > footer:before,
+#main > footer:after {
+  content: "";
+  display: table;
+}
+#main > footer:after {
+  clear: both;
+}
+#main > footer:before,
+#main > footer:after {
+  content: "";
+  display: table;
+}
+#main > footer:after {
+  clear: both;
+}
+#main > footer:before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1em;
+  background-color: #457c9e;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#5d96b9), to(#457c9e));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#5d96b9, #457c9e);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#5d96b9, #457c9e);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d96b9), color-stop(100%, #457c9e));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#5d96b9, #457c9e);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#5d96b9, #457c9e);
+  /* Opera 11.10 */
+
+  -pie-background: linear-gradient(#5d96b9, #457c9e);
+  behavior: none;
+  background-image: linear-gradient(#5d96b9, #457c9e);
+  /* the standard */
+
+  -ms-box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
+  -webkit-box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
+  -moz-box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
+  -o-box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
+  box-shadow: 0px 3px 10px 5px rgba(175, 175, 175, 0.3);
+  border-top: 1px solid #c8dbe7;
+  border-bottom: 1px solid #264457;
+  content: '';
+}
+#main > footer > .sharebar {
+  width: 50%;
+  position: absolute;
+  top: -1.25em;
+  margin: 0;
+  padding: 0;
+  margin: 0 0 0 1em;
+}
+#main > footer > .sharebar li:before {
+  color: #6f6f6f;
+  width: 2em;
+  font-size: 2em;
+}
+#main > footer > .sharebar > li {
+  float: left;
+  width: 40px;
+  height: 40px;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#main > footer > .sharebar > li:hover {
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+  transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+}
+#main > footer > #pied_page {
+  clear: both;
+  float: right;
+  font-size: 0.8em;
+  color: #ffffff;
+  -o-text-shadow: -3px 1px 5px #665a4a;
+  -moz-text-shadow: -3px 1px 5px #665a4a;
+  -ms-text-shadow: -3px 1px 5px #665a4a;
+  -webkit-text-shadow: -3px 1px 5px #665a4a;
+  text-shadow: -3px 1px 5px #665a4a;
+}
+#main > footer section {
+  width: 25%;
+  float: left;
+  padding: 1em;
+  border-right: 1px solid #626262;
+  height: 100%;
+  margin: 1.5em 0 0 0;
+}
+#main > footer section > h2 {
+  color: #81adc8;
+  padding: 0 0 0.5em 0;
+  margin: 0 0 0.5em 0;
+  line-height: 1.4em;
+  border-bottom: 1px solid #81adc8;
+}
+#main > footer section > .liste {
+  margin: 0;
+  padding: 0;
+}
+#main > footer section > .liste > li {
+  text-align: left;
+}
+#main > footer section > .liste > li > a {
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#main > footer section > .liste > li > a:before {
+  font-family: "fontcustom";
+  content: "\f100";
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  font-size: 0.6em;
+  vertical-align: middle;
+  padding-right: 0.5em;
+  padding-bottom: 0.1em;
+}
+#main > footer section > .liste > li > a:hover {
+  color: #b0afbd;
+  padding-left: 0.5em;
+}
+#main > footer section > .liste > li > a:hover:before {
+  color: #b0afbd;
+}
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  #main:before {
+    background-color: #592e23;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#ea4f4f), to(#592e23));
+    /* Konqueror */
+  
+    background-image: -moz-linear-gradient(#ea4f4f, #592e23);
+    /* FF 3.6+ */
+  
+    background-image: -ms-linear-gradient(#ea4f4f, #592e23);
+    /* IE10 */
+  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ea4f4f), color-stop(100%, #592e23));
+    /* Safari 4+, Chrome 2+ */
+  
+    background-image: -webkit-linear-gradient(#ea4f4f, #592e23);
+    /* Safari 5.1+, Chrome 10+ */
+  
+    background-image: -o-linear-gradient(#ea4f4f, #592e23);
+    /* Opera 11.10 */
+  
+    -pie-background: linear-gradient(#ea4f4f, #592e23);
+    behavior: none;
+    background-image: linear-gradient(#ea4f4f, #592e23);
+    /* the standard */
+  
+    -ms-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+    -moz-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+    -o-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+    box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
+  }
+  #main > header .titres {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    padding: 0;
+  }
+  #main-menu {
+    float: none;
+    width: 100%;
+    margin: 2em 0 0 0;
+    padding: 0;
+  }
+  #main-menu li {
+    float: none;
+    width: 100%;
+    border-top: 1px solid #264457;
+    background-color: #457c9e;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#5d96b9), to(#457c9e));
+    /* Konqueror */
+  
+    background-image: -moz-linear-gradient(#5d96b9, #457c9e);
+    /* FF 3.6+ */
+  
+    background-image: -ms-linear-gradient(#5d96b9, #457c9e);
+    /* IE10 */
+  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d96b9), color-stop(100%, #457c9e));
+    /* Safari 4+, Chrome 2+ */
+  
+    background-image: -webkit-linear-gradient(#5d96b9, #457c9e);
+    /* Safari 5.1+, Chrome 10+ */
+  
+    background-image: -o-linear-gradient(#5d96b9, #457c9e);
+    /* Opera 11.10 */
+  
+    -pie-background: linear-gradient(#5d96b9, #457c9e);
+    background-image: linear-gradient(#5d96b9, #457c9e);
+    /* the standard */
+  
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    behavior: none;
+    margin: 0.5em 0 0 0;
+  }
+  #main-menu li > a {
+    color: #ffffff;
+    -ms-transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+  #main-menu li > a:hover {
+    -ms-box-shadow: 0px 0px 0px 0px #ffffff;
+    -webkit-box-shadow: 0px 0px 0px 0px #ffffff;
+    -moz-box-shadow: 0px 0px 0px 0px #ffffff;
+    -o-box-shadow: 0px 0px 0px 0px #ffffff;
+    box-shadow: 0px 0px 0px 0px #ffffff;
+  }
+  #main-menu li > a > span {
+    -ms-transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    padding: 1.5em;
+  }
+  #main-menu li > a > span:hover {
+    padding-left: 1.5em;
+    background-color: #35607b;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#5d96b9), to(#35607b));
+    /* Konqueror */
+  
+    background-image: -moz-linear-gradient(#5d96b9, #35607b);
+    /* FF 3.6+ */
+  
+    background-image: -ms-linear-gradient(#5d96b9, #35607b);
+    /* IE10 */
+  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d96b9), color-stop(100%, #35607b));
+    /* Safari 4+, Chrome 2+ */
+  
+    background-image: -webkit-linear-gradient(#5d96b9, #35607b);
+    /* Safari 5.1+, Chrome 10+ */
+  
+    background-image: -o-linear-gradient(#5d96b9, #35607b);
+    /* Opera 11.10 */
+  
+    -pie-background: linear-gradient(#5d96b9, #35607b);
+    behavior: none;
+    background-image: linear-gradient(#5d96b9, #35607b);
+    /* the standard */
+  
+  }
+  #main-menu li > a > span:hover:before {
+    display: none;
+  }
+  #main-menu li > a > span.icon-accueil {
+    padding: 2em 1.5em 1.5em 1.5em;
+  }
+  #main-menu li:first-child {
+    border-top: none;
+  }
+  #main > footer section {
+    float: none;
+    width: 100%;
+    padding: 0.5em 1em;
+  }
+  #main > footer section li {
+    padding: 0;
+  }
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1600px) {
+  #main > header .titres {
+    width: 25%;
+  }
+  #main > header #main-menu {
+    width: 75%;
+  }
+}
+@font-face {
+  font-family: 'opensanslight';
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Light-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansbold';
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansitalic';
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'biko';
+  src: url('/bundles/portfolio/font/Biko_Bold.otf');
+  src: url('/bundles/portfolio/font/Biko_Bold.otf') format('embedded-opentype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('woff'), url('/bundles/portfolio/font/Biko_Bold.otf') format('truetype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'felltypes';
+  src: url('/bundles/portfolio/font/IMFeENrm29P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.clearfix {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+  Font Custom - icon webfonts made simple
+*/
+@font-face {
+  font-family: "fontcustom";
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot");
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.woff") format("woff"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.ttf") format("truetype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-footer_arrow_right:before,
+.icon-parcours:before,
+.icon-projets:before,
+.icon-moi:before,
+.icon-telephone:before,
+.icon-accueil:before,
+.icon-arrow_right:before {
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+.icon-footer_arrow_right:before {
+  content: "\f100";
+}
+.icon-parcours:before {
+  content: "\f101";
+}
+.icon-projets:before {
+  content: "\f102";
+}
+.icon-moi:before {
+  content: "\f103";
+}
+.icon-telephone:before {
+  content: "\f104";
+}
+.icon-accueil:before {
+  content: "\f105";
+}
+.icon-arrow_right:before {
+  content: "\f106";
+}
+.fontcustom {
+  font-family: "fontcustom";
+}
+/*******************/
+/* DESKTOP VERSION */
+/*******************/
+.list-projet {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+  color: #ffffff;
+}
+.list-projet:before,
+.list-projet:after {
+  content: "";
+  display: table;
+}
+.list-projet:after {
+  clear: both;
+}
+.list-projet:before,
+.list-projet:after {
+  content: "";
+  display: table;
+}
+.list-projet:after {
+  clear: both;
+}
+.list-projet:before,
+.list-projet:after {
+  content: "";
+  display: table;
+}
+.list-projet:after {
+  clear: both;
+}
+.list-projet:before,
+.list-projet:after {
+  content: "";
+  display: table;
+}
+.list-projet:after {
+  clear: both;
+}
+.list-projet:before,
+.list-projet:after {
+  content: "";
+  display: table;
+}
+.list-projet:after {
+  clear: both;
+}
+.list-projet:before,
+.list-projet:after {
+  content: "";
+  display: table;
+}
+.list-projet:after {
+  clear: both;
+}
+.list-projet li {
+  position: relative;
+  width: 23%;
+  margin: 1%;
+  float: left;
+  z-index: 100;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  border-right: 1px solid #508b50;
+}
+.list-projet li:last-child {
+  border-left: none;
+}
+.projet .visuel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.projet .visuel img {
+  width: 100%;
+}
+.projet .visuel figcaption {
+  position: absolute;
+  top: 84%;
+  z-index: 10;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  background: #494858;
+  -ms-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.projet .visuel figcaption h1 {
+  padding: 0.5em 0 0.5em 1em;
+  color: #cccbd4;
+  border-bottom: 1px solid #b0afbd;
+  margin: 0 0 0.5em 0;
+  font-size: 1.4em;
+}
+.projet .visuel figcaption .accroche {
+  position: relative;
+  border: none;
+  padding: 0.5em 1em;
+}
+.projet .visuel:hover figcaption {
+  top: 0;
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1600px) {
+  .list-projet li {
+    width: 48%;
+  }
+}
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  .list-projet li {
+    float: none;
+    width: 100%;
+  }
+  .projet .visuel:hover figcaption {
+    top: 84%;
+  }
+}
+@font-face {
+  font-family: 'opensanslight';
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Light-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansbold';
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansitalic';
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'biko';
+  src: url('/bundles/portfolio/font/Biko_Bold.otf');
+  src: url('/bundles/portfolio/font/Biko_Bold.otf') format('embedded-opentype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('woff'), url('/bundles/portfolio/font/Biko_Bold.otf') format('truetype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'felltypes';
+  src: url('/bundles/portfolio/font/IMFeENrm29P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.clearfix {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+  Font Custom - icon webfonts made simple
+*/
+@font-face {
+  font-family: "fontcustom";
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot");
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.woff") format("woff"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.ttf") format("truetype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-footer_arrow_right:before,
+.icon-parcours:before,
+.icon-projets:before,
+.icon-moi:before,
+.icon-telephone:before,
+.icon-accueil:before,
+.icon-arrow_right:before {
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+.icon-footer_arrow_right:before {
+  content: "\f100";
+}
+.icon-parcours:before {
+  content: "\f101";
+}
+.icon-projets:before {
+  content: "\f102";
+}
+.icon-moi:before {
+  content: "\f103";
+}
+.icon-telephone:before {
+  content: "\f104";
+}
+.icon-accueil:before {
+  content: "\f105";
+}
+.icon-arrow_right:before {
+  content: "\f106";
+}
+.fontcustom {
+  font-family: "fontcustom";
+}
+.content {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  letter-spacing: 0.03em;
+  line-height: 2em;
+  padding: 0 0.25em 0 0;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content .big-font {
+  font-size: 1.25em;
+}
+.content .italic {
+  font-family: "opensansitalic", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+.content .bold {
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+.content .underline {
+  text-decoration: underline;
+}
+.content a {
+  border-bottom: 1px dotted #81adc8;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.content a:hover {
+  color: #be6c57;
+  border-color: #be6c57;
+}
+.content strong,
+.content .rouge {
+  color: #be6c57;
+}
+.content ul {
+  margin: 0;
+  padding: 0;
+}
+.content ul li:before {
+  -ms-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: "fontcustom";
+  content: "\f106";
+  color: #5d96b9;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  font-size: 0.6em;
+  vertical-align: middle;
+  padding-right: 0.5em;
+}
+.content ul li > ul {
+  padding: 0 0 0 0.8em;
+}
+.content ul li > ul > li:before {
+  content: "↳";
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  padding-right: 0.3em;
+}
+.content h1 {
+  padding: 0 0 0.5em 0;
+  margin: 0 0 0.5em 0;
+  color: #9493a6;
+  border-bottom: 1px solid #b0afbd;
+}
+.content section {
+  float: left;
+  padding: 1em;
+  color: #555555;
+}
+.content.middle section {
+  margin: 0 25% 0 25%;
+}
+.content_2col div,
+.content_4col div,
+.content_2x2col div,
+.content_2x4col div {
+  float: left;
+}
+.content_2col section {
+  width: 50%;
+  font-size: 1.2em;
+  letter-spacing: 0.04em;
+}
+.content_4col section {
+  width: 25%;
+  font-size: 1.2em;
+}
+.content_2x2col section {
+  width: 50%;
+  font-size: 1.2em;
+}
+.content_2x2col div {
+  width: 50%;
+  padding: 0 1.25em 0 0;
+}
+.content_2x4col section {
+  width: 50%;
+  font-size: 1.2em;
+}
+.content_2x4col div {
+  width: 25%;
+  padding: 0 1.25em 0 0;
+}
+/* Autre contenu */
+.accroche {
+  padding: 0.5em 0 0.5em 0.5em;
+  margin: 0.5em 0 0.5em 0;
+  border-top: 1px solid #d0d0cc;
+  border-bottom: 1px solid #d0d0cc;
+}
+@font-face {
+  font-family: 'opensanslight';
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Light-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansbold';
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansitalic';
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'biko';
+  src: url('/bundles/portfolio/font/Biko_Bold.otf');
+  src: url('/bundles/portfolio/font/Biko_Bold.otf') format('embedded-opentype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('woff'), url('/bundles/portfolio/font/Biko_Bold.otf') format('truetype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'felltypes';
+  src: url('/bundles/portfolio/font/IMFeENrm29P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.clearfix {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+  Font Custom - icon webfonts made simple
+*/
+@font-face {
+  font-family: "fontcustom";
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot");
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.woff") format("woff"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.ttf") format("truetype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-footer_arrow_right:before,
+.icon-parcours:before,
+.icon-projets:before,
+.icon-moi:before,
+.icon-telephone:before,
+.icon-accueil:before,
+.icon-arrow_right:before {
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+.icon-footer_arrow_right:before {
+  content: "\f100";
+}
+.icon-parcours:before {
+  content: "\f101";
+}
+.icon-projets:before {
+  content: "\f102";
+}
+.icon-moi:before {
+  content: "\f103";
+}
+.icon-telephone:before {
+  content: "\f104";
+}
+.icon-accueil:before {
+  content: "\f105";
+}
+.icon-arrow_right:before {
+  content: "\f106";
+}
+.fontcustom {
+  font-family: "fontcustom";
+}
+.full-cv {
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+.full-cv .accroche {
+  border: none;
+}
+.full-cv #experiences,
+.full-cv #etude,
+.full-cv #exp_comp,
+.full-cv #competence {
+  border: 1px solid #eeeeee;
+  -moz-border-radius: 5px 5px 10px 10px;
+  border-radius: 5px 5px 10px 10px;
+  behavior: none;
+  -ms-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  -o-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  width: 47%;
+  padding: 1em;
+  display: block;
+  margin: 0.5em 1em 1em 1em;
+  float: left;
+}
+.full-cv #experiences header h1,
+.full-cv #etude header h1,
+.full-cv #exp_comp header h1,
+.full-cv #competence header h1 {
+  font-size: 1.5em;
+  padding: 0.5em 0 0.5em 0;
+}
+.full-cv #experiences > ul > li:before,
+.full-cv #etude > ul > li:before {
+  content: none;
+}
+.full-cv #experiences > ul > li .exp_pro,
+.full-cv #etude > ul > li .exp_pro,
+.full-cv #experiences > ul > li .exp_etude,
+.full-cv #etude > ul > li .exp_etude {
+  margin: 1em 0 0 0;
+  width: 100%;
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+}
+.full-cv #experiences > ul > li .exp_pro:before,
+.full-cv #etude > ul > li .exp_pro:before,
+.full-cv #experiences > ul > li .exp_etude:before,
+.full-cv #etude > ul > li .exp_etude:before,
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  content: "";
+  display: table;
+}
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  clear: both;
+}
+.full-cv #experiences > ul > li .exp_pro:before,
+.full-cv #etude > ul > li .exp_pro:before,
+.full-cv #experiences > ul > li .exp_etude:before,
+.full-cv #etude > ul > li .exp_etude:before,
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  content: "";
+  display: table;
+}
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  clear: both;
+}
+.full-cv #experiences > ul > li .exp_pro:before,
+.full-cv #etude > ul > li .exp_pro:before,
+.full-cv #experiences > ul > li .exp_etude:before,
+.full-cv #etude > ul > li .exp_etude:before,
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  content: "";
+  display: table;
+}
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  clear: both;
+}
+.full-cv #experiences > ul > li .exp_pro:before,
+.full-cv #etude > ul > li .exp_pro:before,
+.full-cv #experiences > ul > li .exp_etude:before,
+.full-cv #etude > ul > li .exp_etude:before,
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  content: "";
+  display: table;
+}
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  clear: both;
+}
+.full-cv #experiences > ul > li .exp_pro:before,
+.full-cv #etude > ul > li .exp_pro:before,
+.full-cv #experiences > ul > li .exp_etude:before,
+.full-cv #etude > ul > li .exp_etude:before,
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  content: "";
+  display: table;
+}
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  clear: both;
+}
+.full-cv #experiences > ul > li .exp_pro:before,
+.full-cv #etude > ul > li .exp_pro:before,
+.full-cv #experiences > ul > li .exp_etude:before,
+.full-cv #etude > ul > li .exp_etude:before,
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  content: "";
+  display: table;
+}
+.full-cv #experiences > ul > li .exp_pro:after,
+.full-cv #etude > ul > li .exp_pro:after,
+.full-cv #experiences > ul > li .exp_etude:after,
+.full-cv #etude > ul > li .exp_etude:after {
+  clear: both;
+}
+.full-cv #experiences > ul > li .exp_pro header,
+.full-cv #etude > ul > li .exp_pro header,
+.full-cv #experiences > ul > li .exp_etude header,
+.full-cv #etude > ul > li .exp_etude header {
+  position: relative;
+}
+.full-cv #experiences > ul > li .exp_pro header h1,
+.full-cv #etude > ul > li .exp_pro header h1,
+.full-cv #experiences > ul > li .exp_etude header h1,
+.full-cv #etude > ul > li .exp_etude header h1 {
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #cc7272;
+  letter-spacing: 0em;
+  border-color: #cc7272;
+}
+.full-cv #experiences > ul > li .exp_pro header time,
+.full-cv #etude > ul > li .exp_pro header time,
+.full-cv #experiences > ul > li .exp_etude header time,
+.full-cv #etude > ul > li .exp_etude header time {
+  position: absolute;
+  bottom: 0.8em;
+  font-size: 0.8em;
+  right: 0;
+  color: #ea4f4f;
+}
+.full-cv #experiences > ul > li .exp_pro .visuel,
+.full-cv #etude > ul > li .exp_pro .visuel,
+.full-cv #experiences > ul > li .exp_etude .visuel,
+.full-cv #etude > ul > li .exp_etude .visuel,
+.full-cv #experiences > ul > li .exp_pro .content,
+.full-cv #etude > ul > li .exp_pro .content,
+.full-cv #experiences > ul > li .exp_etude .content,
+.full-cv #etude > ul > li .exp_etude .content {
+  float: left;
+}
+.full-cv #experiences > ul > li .exp_pro .visuel,
+.full-cv #etude > ul > li .exp_pro .visuel,
+.full-cv #experiences > ul > li .exp_etude .visuel,
+.full-cv #etude > ul > li .exp_etude .visuel {
+  width: 33.333333%;
+}
+.full-cv #experiences > ul > li .exp_pro .content,
+.full-cv #etude > ul > li .exp_pro .content,
+.full-cv #experiences > ul > li .exp_etude .content,
+.full-cv #etude > ul > li .exp_etude .content {
+  width: 66.666666%;
+  padding: 0 0 0.5em 0.5em;
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1600px) {
+  .full-cv #experiences,
+  .full-cv #etude,
+  .full-cv #exp_comp,
+  .full-cv #competence {
+    width: 100%;
+  }
+}
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  
+}
+@font-face {
+  font-family: 'opensanslight';
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Light-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansbold';
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansitalic';
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'biko';
+  src: url('/bundles/portfolio/font/Biko_Bold.otf');
+  src: url('/bundles/portfolio/font/Biko_Bold.otf') format('embedded-opentype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('woff'), url('/bundles/portfolio/font/Biko_Bold.otf') format('truetype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'felltypes';
+  src: url('/bundles/portfolio/font/IMFeENrm29P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.clearfix {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+  Font Custom - icon webfonts made simple
+*/
+@font-face {
+  font-family: "fontcustom";
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot");
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.woff") format("woff"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.ttf") format("truetype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-footer_arrow_right:before,
+.icon-parcours:before,
+.icon-projets:before,
+.icon-moi:before,
+.icon-telephone:before,
+.icon-accueil:before,
+.icon-arrow_right:before {
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+.icon-footer_arrow_right:before {
+  content: "\f100";
+}
+.icon-parcours:before {
+  content: "\f101";
+}
+.icon-projets:before {
+  content: "\f102";
+}
+.icon-moi:before {
+  content: "\f103";
+}
+.icon-telephone:before {
+  content: "\f104";
+}
+.icon-accueil:before {
+  content: "\f105";
+}
+.icon-arrow_right:before {
+  content: "\f106";
+}
+.fontcustom {
+  font-family: "fontcustom";
+}
+/*****************/
+/*    DESKTOP    */
+/*****************/
+.full-quisuisje #pourquoi,
+.full-quisuisje #methode,
+.full-quisuisje #workflow,
+.full-quisuisje #infos {
+  border: 1px solid #eeeeee;
+  -moz-border-radius: 5px 5px 10px 10px;
+  border-radius: 5px 5px 10px 10px;
+  behavior: none;
+  -ms-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  -o-box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  box-shadow: 0px 0px 10px 3px rgba(85, 85, 85, 0.2);
+  width: 47%;
+  padding: 1em;
+  display: block;
+  margin: 0.5em 1em 1em 1em;
+  float: left;
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1600px) {
+  .full-quisuisje #pourquoi,
+  .full-quisuisje #methode,
+  .full-quisuisje #workflow,
+  .full-quisuisje #infos {
+    width: 100%;
+  }
+}
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  .full-quisuisje #pourquoi,
+  .full-quisuisje #methode,
+  .full-quisuisje #workflow,
+  .full-quisuisje #infos {
+    width: 100%;
+  }
+}
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('fonts/flexslider-icon.eot');
+  src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .slides {
+  display: block;
+}
+* html .slides {
+  height: 1%;
+}
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+  display: block;
+}
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {
+  margin: 0 0 60px;
+  background: #fff;
+  border: 4px solid #fff;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  zoom: 1;
+}
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.loading .flex-viewport {
+  max-height: 300px;
+}
+.flexslider .slides {
+  zoom: 1;
+}
+.carousel li {
+  margin-right: 5px;
+}
+/* Direction Nav */
+.flex-direction-nav {
+  *height: 0;
+}
+.flex-direction-nav a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.flex-direction-nav .flex-prev {
+  left: -50px;
+}
+.flex-direction-nav .flex-next {
+  right: -50px;
+  text-align: right;
+}
+.flexslider:hover .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+.flexslider:hover .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
+.flex-direction-nav .flex-disabled {
+  opacity: 0!important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  display: inline-block;
+  content: '\f001';
+}
+.flex-direction-nav a.flex-next:before {
+  content: '\f002';
+}
+/* Pause/Play */
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+/* Control Nav */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+}
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+.flex-control-paging li a.flex-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+}
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
+.flexslider {
+  width: 50%;
+  margin: 0 25% 0 25%;
+}
+.flexslider .slides img {
+  width: 100%;
+}

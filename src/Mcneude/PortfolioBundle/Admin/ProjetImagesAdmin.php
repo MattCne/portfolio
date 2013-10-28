@@ -43,6 +43,7 @@ class ProjetImagesAdmin extends Admin
             ->addIdentifier('nom')
             ->add('url')
             ->add('position')
+            ->add( 'projet', 'sonata_type_model', array(), array() )
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),

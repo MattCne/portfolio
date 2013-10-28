@@ -1,0 +1,23 @@
+body {
+  border: 1px solid #ababab;
+  width: 100%;
+}
+body > header {
+  border-bottom: 1px solid #e8ddc7;
+  padding: 1em;
+}
+body > footer {
+  height: 150px;
+  border: 1px solid #000000;
+  padding: 1em;
+  text-align: center;
+}
+#main {
+  height: 50px;
+  border: 1px solid #000000;
+  padding: 1em;
+  text-align: center;
+}
+footer {
+  clear: both;
+}

@@ -14,3 +14,10 @@
 /web/bundles/
 
 .idea
+
+.travis.yml
+/LICENSE
+/README.md
+/UPGRADE.md
+/dump/
+vhost

@@ -105,7 +105,7 @@ services:
   #   Fichiers    #
   #################
 
-    sonata.admin.projetImages:
+    sonata.admin.projetFichiers:
         class: Mcneude\PortfolioBundle\Admin\FichiersAdmin
         tags:
             - { name: sonata.admin, manager_type: orm, group: "Autre", label: "Fichiers" }

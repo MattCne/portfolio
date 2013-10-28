@@ -15,8 +15,8 @@ class ParcoursAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add( 'experiences_complementaires', 'textarea', array( 'label' => 'Experiences complémentaires' ) )
-            ->add( 'interets', 'textarea', array( 'label' => 'Intérets' ) )
+            ->add( 'experiences_complementaires', 'textarea', array( 'label' => 'Experiences complémentaires', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'interets', 'textarea', array( 'label' => 'Intérets', 'attr' => array( 'class' => 'tinymce' ) ) )
         ;
     }
 

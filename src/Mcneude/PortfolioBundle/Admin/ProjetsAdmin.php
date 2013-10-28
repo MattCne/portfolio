@@ -16,10 +16,10 @@ class ProjetsAdmin extends Admin
     {
         $formMapper
             ->add( 'nom', 'text', array( 'label' => 'Nom du projet' ) )
-            ->add( 'description', 'textarea', array( 'label' => 'Description du projet' ) )
-            ->add( 'difficultes', 'textarea', array( 'label' => 'Difficultés rencontrés' ) )
-            ->add( 'technologies', 'textarea', array( 'label' => 'Technologies utilisées' ) )
-            ->add( 'competences_acquises', 'textarea', array( 'label' => 'Compétences acquises' ) )
+            ->add( 'description', 'textarea', array( 'label' => 'Description du projet', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'difficultes', 'textarea', array( 'label' => 'Difficultés rencontrés', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'technologies', 'textarea', array( 'label' => 'Technologies utilisées', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'competences_acquises', 'textarea', array( 'label' => 'Compétences acquises', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'url_miniature', 'text', array( 'label' => 'Url de la miniature principale' ) )
             ->add( 'url_internal', 'text', array( 'label' => 'Url interne', 'required' => false ) )
             ->add( 'url_external', 'text', array( 'label' => 'Url externe', 'required' => false ) )

@@ -71,7 +71,7 @@ class Projets
         if( $this->nom )
             return $this->nom;
         else
-            return '';
+            return 'Unknown';
     }
 
 

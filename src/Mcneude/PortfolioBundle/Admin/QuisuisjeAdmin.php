@@ -15,12 +15,12 @@ class QuisuisjeAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add( 'pourquoi', 'textarea', array( 'label' => 'Pourquoi développeur web ?' ) )
-            ->add( 'competencesTech', 'textarea', array( 'label' => 'Compétences techniques' ) )
-            ->add( 'competencesCom', 'textarea', array( 'label' => 'Compétences communication' ) )
-            ->add( 'methodes', 'textarea', array( 'label' => 'Methodes de conception' ) )
-            ->add( 'politique', 'textarea', array( 'label' => 'Politique / workflow' ) )
-            ->add( 'infos', 'textarea', array( 'label' => 'Informations complémentaires' ) )
+            ->add( 'pourquoi', 'textarea', array( 'label' => 'Pourquoi développeur web ?', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'competencesTech', 'textarea', array( 'label' => 'Compétences techniques', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'competencesCom', 'textarea', array( 'label' => 'Compétences communication', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'methodes', 'textarea', array( 'label' => 'Methodes de conception', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'politique', 'textarea', array( 'label' => 'Politique / workflow', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'infos', 'textarea', array( 'label' => 'Informations complémentaires', 'attr' => array( 'class' => 'tinymce' ) ) )
         ;
     }
 

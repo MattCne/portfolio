@@ -16,7 +16,7 @@ class ParcoursExperiencesAdmin extends Admin
     {
         $formMapper
             ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
-            ->add( 'description', 'textarea', array( 'label' => 'Description' ) )
+            ->add( 'description', 'textarea', array( 'label' => 'Description', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'date', 'date', array( 'label' => 'date' ) )
             ->add( 'urlImage', 'text', array( 'label' => 'URL image' ) )
             ->add( 'url', 'text', array( 'label' => 'URL' ) )

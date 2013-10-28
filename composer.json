@@ -20,6 +20,8 @@
         "jms/di-extra-bundle": "1.1.*",
         "kriswallsmith/assetic": "1.1.0",
 
+        "friendsofsymfony/user-bundle": "*@dev",
+
         "endroid/twitter-bundle": "dev-master",
         "stfalcon/tinymce-bundle": "dev-master",
 
@@ -27,6 +29,7 @@
         "sonata-project/admin-bundle": "2.1.*@dev",
         "sonata-project/cache-bundle": "2.1.*",
         "sonata-project/doctrine-orm-admin-bundle": "2.1.*@dev",
+        "sonata-project/user-bundle": "2.1.*@dev",
 
         "sonata-project/jquery-bundle": "1.8.*@dev"
     },
