@@ -107,14 +107,12 @@
 .full-projet-interieur > h1 {
   position: relative;
 }
-.full-projet-interieur > .projet-link {
+.full-projet-interieur > a.projet-link {
   position: absolute;
   right: 2em;
   top: 3em;
   color: #45443f;
   font-family: "opensansbold", Arial, sans-serif;
-}
-.full-projet-interieur > a.projet-link {
   color: #ea4f4f;
   font-size: 1.1em;
   letter-spacing: 0.02em;
@@ -141,4 +139,40 @@
 }
 .full-projet-interieur .accroche {
   margin: 1em 25% 2em 25%;
+}
+.full-projet-interieur .gallery .slides {
+  border-bottom: 3px solid #9493A6;
+  border-top: 3px solid #9493A6;
+  padding: 3% 10%;
+}
+.full-projet-interieur .gallery .slides li {
+  border: 5px solid #D0D0CC;
+  border-radius: 5px 5px 5px 5px;
+  float: left;
+  height: 300px;
+  margin: 0 2.5%;
+  overflow: hidden;
+  padding: 0.5em;
+  width: 28%;
+}
+.full-projet-interieur .gallery .slides li a {
+  display: block;
+}
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  .full-projet-interieur > a.projet-link {
+    position: static;
+  }
+  .full-projet-interieur .accroche {
+    margin: 0;
+  }
+  .full-projet-interieur .gallery .slides li {
+    width: 100%;
+    margin: 0 0 1.5em;
+  }
+  .full-projet-interieur .gallery .slides li:last-child {
+    margin: 0;
+  }
 }

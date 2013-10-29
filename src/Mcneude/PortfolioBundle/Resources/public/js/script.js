@@ -22,4 +22,3 @@ $(function( $, undefined ){
     })
 
 })(window.jQuery);
-

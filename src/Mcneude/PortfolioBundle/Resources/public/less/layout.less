@@ -398,6 +398,13 @@ img{
 
     .box{
         width: 100%;
+        margin: 0.5em 0 0.5em 0;
+    }
+
+    .full{
+        > h1{
+            margin: 0;
+        }
     }
 
     #main{
@@ -427,7 +434,7 @@ img{
             margin: 0.25em 0 0.25em 2%;
             width: 96%;
 			border-top:1px solid darken( @glacier, 40 );
-            #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
+			#gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
             .border-radius( 3px );
 
 			> a{
@@ -443,8 +450,8 @@ img{
     			    padding:1.5em;
 
         			&:hover{
-        			    padding-left:1.5em;
-                        #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
+                        #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
+                        padding-left:1.5em;
 
     			        &:before{
                             display:none;
@@ -462,14 +469,23 @@ img{
 		}
 	}
 
-	#main > footer section{
-		float:none;
-		width:100%;
-        padding: 0.5em 1em;
-        li{
-			padding: 0;
-		}
-	}
+	#main > footer{
+        .sharebar{
+            width: 100%;
+            margin: 0 10% 0 10%;
+            li{
+                margin: 0 10% 0 0;
+            }
+        }
+        section{
+            float:none;
+            width:100%;
+            padding: 0.5em 1em;
+            li{
+                padding: 0;
+            }
+        }
+    }
 }
 
 /*****************/
