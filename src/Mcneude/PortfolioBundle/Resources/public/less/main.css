@@ -1456,6 +1456,18 @@ img {
   overflow: hidden;
   padding: 0.5em;
   width: 28%;
+  -ms-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.full-projet-interieur .gallery .slides li:hover {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .full-projet-interieur .gallery .slides li a {
   display: block;

@@ -884,7 +884,7 @@ img {
   }
   .box {
     width: 100%;
-    margin: 0 0 1em 0;
+    margin: 0.5em 0 0.5em 0;
   }
   .full > h1 {
     margin: 0;
@@ -1456,6 +1456,13 @@ img {
   overflow: hidden;
   padding: 0.5em;
   width: 28%;
+}
+.full-projet-interieur .gallery .slides li:hover {
+  -webkit-transform: rotate(540deg);
+  -moz-transform: rotate(540deg);
+  -o-transform: rotate(540deg);
+  -ms-transform: rotate(540deg);
+  transform: rotate(540deg);
 }
 .full-projet-interieur .gallery .slides li a {
   display: block;
