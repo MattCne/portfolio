@@ -106,11 +106,11 @@
 
   zoom: 1;
   font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: normal;
   line-height: 1.2em;
   letter-spacing: 0.03em;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 .content:before,
 .content:after {
@@ -119,9 +119,6 @@
 }
 .content:after {
   clear: both;
-}
-.content .big-font {
-  font-size: 1.25em;
 }
 .content .italic {
   font-family: "opensansitalic", Arial, sans-serif;
@@ -204,16 +201,13 @@
 }
 .content_2col section {
   width: 50%;
-  font-size: 1.2em;
   letter-spacing: 0.04em;
 }
 .content_4col section {
   width: 25%;
-  font-size: 1.2em;
 }
 .content_2x2col section {
   width: 50%;
-  font-size: 1.2em;
 }
 .content_2x2col div {
   width: 50%;
@@ -221,7 +215,6 @@
 }
 .content_2x4col section {
   width: 50%;
-  font-size: 1.2em;
 }
 .content_2x4col div {
   width: 25%;
@@ -249,7 +242,6 @@
   }
   .content_4col section {
     width: 100%;
-    font-size: 1.2em;
   }
   .content_2x2col section {
     width: 100%;
@@ -258,6 +250,20 @@
     width: 100%;
   }
   .content_2x4col section {
+    width: 100%;
+  }
+  .content_2x4col div {
+    width: 100%;
+  }
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1600px) {
+  .content_4col section {
+    width: 50%;
+  }
+  .content_2x2col div {
     width: 100%;
   }
   .content_2x4col div {

@@ -78,19 +78,7 @@ img{
 #main{
     position:relative;
     background:@blanc;
-    &:before{
-        position:absolute;
-        z-index:1000;
-        //before header 1em + menu text 1.2em + paddding menu 4em + espace 0.133333em
-        top:6.333333em;
-        width:100%;
-        height:1em;
-        #gradient .vertical( darken( @glacier, 10), darken( @glacier, 20) );
-        .shadow(  0 0 15px 5px rgba(175, 175, 175, 0.3) );
 
-        border-top:1px solid lighten( @glacier, 20 );
-        content:'';
-    }
 }
 
 
@@ -98,7 +86,6 @@ img{
 
 	.clearfix;
 	clear:both;
-	border-bottom:1px solid darken( @glacier, 20 );
 	border-top:1px solid @olive;
 	margin:1em 0 0 0;
 	position:relative;
@@ -120,8 +107,19 @@ img{
 		content:'';
 	}
 
+    &:after{
+        margin: 0.1em 0 0 0;
+        width:100%;
+        height:1em;
+        #gradient .vertical( darken( @glacier, 10), darken( @glacier, 20) );
+        .shadow(  0 0 15px 5px rgba(175, 175, 175, 0.3) );
+
+        border-top:1px solid lighten( @glacier, 20 );
+        content:'';
+    }
+
 	.titres{
-		width:50%;
+		width:40%;
 		float:left;
 		margin:0;
 		padding:0;
@@ -160,7 +158,7 @@ img{
 }
 
 #main-menu{
-	width:50%;
+	width:60%;
     float:right;
     margin:0;
 
@@ -407,12 +405,6 @@ img{
         }
     }
 
-    #main{
-        &:before{
-            #gradient .vertical( @ruby, darken( @contessa, 30 ) );
-            .shadow(  0px 0px 10px 10px rgba( 175, 175, 175, .3 ) );
-        }
-    }
 
 	#main > header{
 		.titres{
@@ -422,6 +414,10 @@ img{
 			margin-top:1em;
 			padding:0;
 		}
+        &:after{
+            content: none;
+        }
+
 	}
 
 	#main-menu{
@@ -470,19 +466,19 @@ img{
 	}
 
 	#main > footer{
-        .sharebar{
-            width: 100%;
-            margin: 0 10% 0 10%;
-            li{
-                margin: 0 10% 0 0;
-            }
-        }
+
         section{
             float:none;
             width:100%;
             padding: 0.5em 1em;
             li{
                 padding: 0;
+            }
+        }
+        .sharebar{
+            width: 100%;
+            li{
+                margin: 0 1em 0 0;
             }
         }
     }
@@ -499,13 +495,30 @@ img{
 
     #main > header {
         .titres{
-            width:25%;
-        }    .box{
-        width: 100%;
+            width:100%;
+            text-align: center;
+        }
+        .box{
+            width: 100%;
+        }
+
     }
 
-        #main-menu{
-            width:75%;
+    #main-menu{
+        width:100%;
+        margin: 0;
+        padding: 0;
+        li a{
+            font-size:1em;
+        }
+    }
+
+
+    #main > footer{
+        .sharebar{
+            li{
+                margin: 0 1em 0 0;
+            }
         }
     }
 }
