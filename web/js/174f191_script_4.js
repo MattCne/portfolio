@@ -1,1 +1,0 @@
-$(function(a,b){a(".flexslider").flexslider({animation:"slide"})});(function(b,d){var c=b("body #main > footer section");var a=0;c.each(function(){if(b(this).outerHeight()>=a){a=b(this).outerHeight()}});c.each(function(){b(this).height(a)})})(window.jQuery);
