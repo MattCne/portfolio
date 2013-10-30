@@ -1142,69 +1142,111 @@ img {
 /*******************/
 /* DESKTOP VERSION */
 /*******************/
-.list-projet {
+.full-projets .list-groupe {
+  border: 1px solid #d0d0cc;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  behavior: none;
+  background: #dcdcd9;
+  padding: 1em;
+  margin: 0 5% 0 5%;
+}
+.full-projets .list-groupe a {
+  display: inline-block;
+  color: #9f9f97;
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  font-weight: bolder;
+  margin: 0 1em 0 0;
+  padding: 0.5em;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  behavior: none;
+  border: 1px solid #dcdcd9;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.full-projets .list-groupe a:hover,
+.full-projets .list-groupe a.active {
+  color: #ffffff;
+  border: 1px solid ;
+}
+.full-projets .list-groupe a.active {
+  border-color: #ea4f4f;
+  background: #ea4f4f;
+}
+.full-projets .list-groupe a:hover {
+  border-color: #78c678;
+  background: #78c678;
+}
+.full-projets .list-projet {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
   zoom: 1;
   color: #ffffff;
 }
-.list-projet:before,
-.list-projet:after {
+.full-projets .list-projet:before,
+.full-projets .list-projet:after {
   content: "";
   display: table;
 }
-.list-projet:after {
+.full-projets .list-projet:after {
   clear: both;
 }
-.list-projet:before,
-.list-projet:after {
+.full-projets .list-projet:before,
+.full-projets .list-projet:after {
   content: "";
   display: table;
 }
-.list-projet:after {
+.full-projets .list-projet:after {
   clear: both;
 }
-.list-projet:before,
-.list-projet:after {
+.full-projets .list-projet:before,
+.full-projets .list-projet:after {
   content: "";
   display: table;
 }
-.list-projet:after {
+.full-projets .list-projet:after {
   clear: both;
 }
-.list-projet:before,
-.list-projet:after {
+.full-projets .list-projet:before,
+.full-projets .list-projet:after {
   content: "";
   display: table;
 }
-.list-projet:after {
+.full-projets .list-projet:after {
   clear: both;
 }
-.list-projet:before,
-.list-projet:after {
+.full-projets .list-projet:before,
+.full-projets .list-projet:after {
   content: "";
   display: table;
 }
-.list-projet:after {
+.full-projets .list-projet:after {
   clear: both;
 }
-.list-projet:before,
-.list-projet:after {
+.full-projets .list-projet:before,
+.full-projets .list-projet:after {
   content: "";
   display: table;
 }
-.list-projet:after {
+.full-projets .list-projet:after {
   clear: both;
 }
-.list-projet:before,
-.list-projet:after {
+.full-projets .list-projet:before,
+.full-projets .list-projet:after {
   content: "";
   display: table;
 }
-.list-projet:after {
+.full-projets .list-projet:after {
   clear: both;
 }
-.list-projet li {
+.full-projets .list-projet li {
   position: relative;
   width: 23%;
   margin: 1%;
@@ -1214,18 +1256,18 @@ img {
   letter-spacing: 0.05em;
   border-right: 1px solid #78c678;
 }
-.list-projet li:last-child {
+.full-projets .list-projet li:last-child {
   border-left: none;
 }
-.projet .visuel {
+.full-projets .projet .visuel {
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.projet .visuel img {
+.full-projets .projet .visuel img {
   width: 100%;
 }
-.projet .visuel figcaption {
+.full-projets .projet .visuel figcaption {
   position: absolute;
   top: 84%;
   z-index: 10;
@@ -1239,28 +1281,28 @@ img {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.projet .visuel figcaption h1 {
+.full-projets .projet .visuel figcaption h1 {
   padding: 0.6em 0 0.5em 1em;
   color: #cccbd4;
   border-bottom: 1px solid #b0afbd;
   margin: 0 0 0.5em 0;
   font-size: 1.4em;
 }
-.projet .visuel figcaption .accroche {
+.full-projets .projet .visuel figcaption .accroche {
   position: relative;
   border: none;
   padding: 0.5em 1em;
   margin: 0;
   color: #ffffff;
 }
-.projet .visuel:hover figcaption {
+.full-projets .projet .visuel:hover figcaption {
   top: 0;
 }
 /*****************/
 /*    TABLETTE   */
 /*****************/
 @media screen and (min-width: 760px) and (max-width: 1600px) {
-  .list-projet li {
+  .full-projets .list-projet li {
     width: 48%;
   }
 }
@@ -1268,11 +1310,11 @@ img {
 /*    MOBILE     */
 /*****************/
 @media screen and (max-width: 760px) {
-  .list-projet li {
+  .full-projets .list-projet li {
     float: none;
     width: 100%;
   }
-  .projet .visuel:hover figcaption {
+  .full-projets .projet .visuel:hover figcaption {
     top: 84%;
   }
 }

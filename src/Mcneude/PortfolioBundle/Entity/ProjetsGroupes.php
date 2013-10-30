@@ -71,6 +71,16 @@ class ProjetsGroupes
     }
 
     /**
+     * Formate le nom pour en faire des classes valides HTML
+     *
+     * @return string
+     */
+    public function getNomFormate()
+    {
+        return strtolower( str_replace( ' ', '_', $this->nom ) );
+    }
+
+    /**
      * Set position
      *
      * @param integer $position

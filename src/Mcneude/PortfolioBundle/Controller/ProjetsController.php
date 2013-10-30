@@ -15,8 +15,15 @@ class ProjetsController extends Controller
             ->getQuery()
             ->getresult();
 
+        foreach( $projetsDb as $projetDb )
+        {
+            foreach( $projetDb->getProjetsGroupe() as $groupeDb )
+                $groupes[$groupeDb->getNomFormate()] = $groupeDb->getNom();
+        }
+
         return $this->render( 'PortfolioBundle:Pages:projets.html.twig', array(
-            'projets' => $projetsDb
+            'projets' => $projetsDb,
+            'groupes' => $groupes
         ) );
     }
 }
