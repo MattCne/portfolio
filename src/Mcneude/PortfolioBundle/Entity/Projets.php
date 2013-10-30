@@ -365,4 +365,42 @@ class Projets
     {
         return $this->urlMiniature;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $projetsGroupe;
+
+
+    /**
+     * Add projetsGroupe
+     *
+     * @param \Mcneude\PortfolioBundle\Entity\ProjetsGroupes $projetsGroupe
+     * @return Projets
+     */
+    public function addProjetsGroupe(\Mcneude\PortfolioBundle\Entity\ProjetsGroupes $projetsGroupe)
+    {
+        $this->projetsGroupe[] = $projetsGroupe;
+    
+        return $this;
+    }
+
+    /**
+     * Remove projetsGroupe
+     *
+     * @param \Mcneude\PortfolioBundle\Entity\ProjetsGroupes $projetsGroupe
+     */
+    public function removeProjetsGroupe(\Mcneude\PortfolioBundle\Entity\ProjetsGroupes $projetsGroupe)
+    {
+        $this->projetsGroupe->removeElement($projetsGroupe);
+    }
+
+    /**
+     * Get projetsGroupe
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getProjetsGroupe()
+    {
+        return $this->projetsGroupe;
+    }
 }

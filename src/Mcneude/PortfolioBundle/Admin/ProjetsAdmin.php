@@ -20,11 +20,12 @@ class ProjetsAdmin extends Admin
             ->add( 'difficultes', 'textarea', array( 'label' => 'Difficultés rencontrés', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'technologies', 'textarea', array( 'label' => 'Technologies utilisées', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'competences_acquises', 'textarea', array( 'label' => 'Compétences acquises', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'projetsGroupe', 'sonata_type_model', array( 'label' => 'Groupes', 'required' => false, 'expanded' => true, 'multiple' => true)  )
             ->add( 'url_miniature', 'text', array( 'label' => 'Url de la miniature principale' ) )
             ->add( 'url_internal', 'text', array( 'label' => 'Url interne', 'required' => false ) )
             ->add( 'url_external', 'text', array( 'label' => 'Url externe', 'required' => false ) )
             ->add( 'position', 'text', array( 'label' => 'Position' ) )
-            ->add( 'is_website', 'checkbox', array( 'label' => 'Le projet est-il un site Internet ?') )
+            ->add( 'is_website', 'checkbox', array( 'label' => 'Le projet est-il un site Internet ?', 'required' => false ) )
         ;
     }
 
@@ -40,7 +41,6 @@ class ProjetsAdmin extends Admin
             ->add('difficultes')
             ->add('technologies')
             ->add('competencesAcquises')
-
         ;
     }
 
@@ -56,9 +56,11 @@ class ProjetsAdmin extends Admin
             ->add('difficultes')
             ->add('technologies')
             ->add('competences_acquises')
+            ->add( 'projetsGroupe' )
             ->add('url_miniature')
             ->add('url_internal')
             ->add('url_external')
+            ->add( 'position' )
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),

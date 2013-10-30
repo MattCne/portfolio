@@ -90,6 +90,17 @@ services:
         calls:
             - [ setTranslationDomain, [PortfolioBundle]]
 
+    sonata.admin.projetsGroupe:
+        class: Mcneude\PortfolioBundle\Admin\ProjetsGroupesAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Projets", label: "Groupes" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\ProjetsGroupes
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
     sonata.admin.projetImages:
         class: Mcneude\PortfolioBundle\Admin\ProjetImagesAdmin
         tags:

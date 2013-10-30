@@ -1,0 +1,29 @@
+Mcneude\PortfolioBundle\Entity\ProjetsGroupes:
+    type: entity
+    table: projets_groupes
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nom:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        position:
+            type: integer
+            unsigned: false
+            nullable: true
+    manyToMany:
+        projets:
+            targetEntity: Projets
+            cascade: {  }
+            mappedBy: projetsGroupe
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

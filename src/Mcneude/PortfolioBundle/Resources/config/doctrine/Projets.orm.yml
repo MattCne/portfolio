@@ -53,4 +53,21 @@ Mcneude\PortfolioBundle\Entity\Projets:
             type: boolean
             nullable: true
             column: is_website
+    manyToMany:
+        projetsGroupe:
+            targetEntity: ProjetsGroupes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: projets
+            joinTable:
+                name: groupes_has_projets
+                joinColumns:
+                    -
+                        name: projets_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: projets_groupe_id
+                        referencedColumnName: id
+            orderBy: null
     lifecycleCallbacks: {  }

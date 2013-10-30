@@ -1310,7 +1310,6 @@ img {
 
   zoom: 1;
   clear: both;
-  border-bottom: 1px solid #457c9e;
   border-top: 1px solid #78c678;
   margin: 1em 0 0 0;
   position: relative;
@@ -1423,9 +1422,7 @@ img {
   content: '';
 }
 #main > header:after {
-  position: absolute;
-  z-index: 1000;
-  top: 6.333333em;
+  margin: 0.1em 0 0 0;
   width: 100%;
   height: 1em;
   background-color: #457c9e;
@@ -1462,7 +1459,7 @@ img {
   content: '';
 }
 #main > header .titres {
-  width: 50%;
+  width: 40%;
   float: left;
   margin: 0;
   padding: 0;
@@ -1507,7 +1504,7 @@ img {
   color: #ea4f4f;
 }
 #main-menu {
-  width: 50%;
+  width: 60%;
   float: right;
   margin: 0;
 }
@@ -1943,44 +1940,15 @@ img {
   .full > h1 {
     margin: 0;
   }
-  #main:before {
-    background-color: #592e23;
-    background-repeat: repeat-x;
-    background-image: -khtml-gradient(linear, left top, left bottom, from(#ea4f4f), to(#592e23));
-    /* Konqueror */
-  
-    background-image: -moz-linear-gradient(#ea4f4f, #592e23);
-    /* FF 3.6+ */
-  
-    background-image: -ms-linear-gradient(#ea4f4f, #592e23);
-    /* IE10 */
-  
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ea4f4f), color-stop(100%, #592e23));
-    /* Safari 4+, Chrome 2+ */
-  
-    background-image: -webkit-linear-gradient(#ea4f4f, #592e23);
-    /* Safari 5.1+, Chrome 10+ */
-  
-    background-image: -o-linear-gradient(#ea4f4f, #592e23);
-    /* Opera 11.10 */
-  
-    -pie-background: linear-gradient(#ea4f4f, #592e23);
-    behavior: none;
-    background-image: linear-gradient(#ea4f4f, #592e23);
-    /* the standard */
-  
-    -ms-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-    -webkit-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-    -moz-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-    -o-box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-    box-shadow: 0px 0px 10px 10px rgba(175, 175, 175, 0.3);
-  }
   #main > header .titres {
     float: none;
     width: 100%;
     text-align: center;
     margin-top: 1em;
     padding: 0;
+  }
+  #main > header:after {
+    content: none;
   }
   #main-menu {
     float: none;
@@ -2081,13 +2049,6 @@ img {
   #main-menu li:first-child {
     border-top: none;
   }
-  #main > footer .sharebar {
-    width: 100%;
-    margin: 0 10% 0 10%;
-  }
-  #main > footer .sharebar li {
-    margin: 0 10% 0 0;
-  }
   #main > footer section {
     float: none;
     width: 100%;
@@ -2095,6 +2056,12 @@ img {
   }
   #main > footer section li {
     padding: 0;
+  }
+  #main > footer .sharebar {
+    width: 100%;
+  }
+  #main > footer .sharebar li {
+    margin: 0 1em 0 0;
   }
 }
 /*****************/
@@ -2105,13 +2072,22 @@ img {
     width: 100%;
   }
   #main > header .titres {
-    width: 25%;
+    width: 100%;
+    text-align: center;
   }
   #main > header .box {
     width: 100%;
   }
-  #main > header #main-menu {
-    width: 75%;
+  #main-menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #main-menu li a {
+    font-size: 1em;
+  }
+  #main > footer .sharebar li {
+    margin: 0 1em 0 0;
   }
 }
 @font-face {
@@ -2652,11 +2628,11 @@ img {
 
   zoom: 1;
   font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: normal;
   line-height: 1.2em;
   letter-spacing: 0.03em;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 .content:before,
 .content:after {
@@ -2713,9 +2689,6 @@ img {
 }
 .content:after {
   clear: both;
-}
-.content .big-font {
-  font-size: 1.25em;
 }
 .content .italic {
   font-family: "opensansitalic", Arial, sans-serif;
@@ -2798,16 +2771,13 @@ img {
 }
 .content_2col section {
   width: 50%;
-  font-size: 1.2em;
   letter-spacing: 0.04em;
 }
 .content_4col section {
   width: 25%;
-  font-size: 1.2em;
 }
 .content_2x2col section {
   width: 50%;
-  font-size: 1.2em;
 }
 .content_2x2col div {
   width: 50%;
@@ -2815,7 +2785,6 @@ img {
 }
 .content_2x4col section {
   width: 50%;
-  font-size: 1.2em;
 }
 .content_2x4col div {
   width: 25%;
@@ -2843,7 +2812,6 @@ img {
   }
   .content_4col section {
     width: 100%;
-    font-size: 1.2em;
   }
   .content_2x2col section {
     width: 100%;
@@ -2852,6 +2820,20 @@ img {
     width: 100%;
   }
   .content_2x4col section {
+    width: 100%;
+  }
+  .content_2x4col div {
+    width: 100%;
+  }
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1600px) {
+  .content_4col section {
+    width: 50%;
+  }
+  .content_2x2col div {
     width: 100%;
   }
   .content_2x4col div {
