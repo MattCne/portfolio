@@ -14,11 +14,11 @@
         background: lighten( @gris-clair, 5 );
         margin: 0 5% 0 5%;
         a.groupe, > span{
-            padding: 1.5em;
             .opensanslight( 1.1em );
             font-weight: bolder;
         }
         > span{
+            padding: 1.5em;
             background: @glacier;
             color: lighten( @gris-clair, 10 );
             .border-radius( 3px 60px 60px 3px );
@@ -26,6 +26,7 @@
             line-height: 1.5em;
         }
         a.groupe{
+            padding: 1.25em;
             display: inline-block;
             color: darken( @gris-clair, 20 );
             .border-radius( 5px );
@@ -118,12 +119,35 @@
     }
 }
 
-.projet-hidden{
-    //display: none;
+// Animation des projets
+
+.projet-hidden {
+    -webkit-animation: scaleRotateOut 0.6s forwards;
+    animation: scaleRotateOut 0.6s forwards;
 }
 
 .projet-active{
-    //display: block;
+    opacity: 0;
+    -webkit-animation: scaleRotateIn 0.6s forwards;
+    animation: scaleRotateIn 0.6s forwards;
+}
+
+@-webkit-keyframes scaleRotateOut {
+    100% { opacity: 0; -webkit-transform: scale(0); }
+}
+
+@keyframes scaleRotateOut {
+    100% { opacity: 0; transform: scale(0); }
+}
+
+@-webkit-keyframes scaleRotateIn {
+    0% { opacity: 0; -webkit-transform: translateX(50%) translateY(100%) rotate(25deg); }
+    100% { visibility: visible; opacity: 1; -webkit-transform: translateX(0%) translateY(0%) rotate(0deg); }
+}
+
+@keyframes scaleRotateIn {
+    0% { opacity: 0; transform: translateX(50%) translateY(100%) rotate(25deg); }
+    100% { visibility: visible; opacity: 1; transform: translateX(0%) translateY(0%) rotate(0deg); }
 }
 
 /*****************/
@@ -132,7 +156,22 @@
 
 @media screen and (min-width: 760px) and (max-width: 1600px) {
     .full-projets{
-            .list-projet{
+        .list-groupe{
+
+            a.groupe, > span{
+                .opensanslight( 1em );
+            }
+
+            a.groupe{
+                padding: 1em 0.5em 1em 0.5em;
+                margin: 0 0 0 0.5em;
+            }
+
+            a.all{
+                float: none;
+            }
+        }
+       .list-projet{
             li{
                 width: 48%;
             }
@@ -146,6 +185,25 @@
 
 @media screen and (max-width: 760px) {
     .full-projets{
+        .list-groupe{
+            background: none;
+            margin: 5%;
+
+            a.groupe, > span{
+                display: block;
+                padding: 0.5em;
+            }
+
+            > span{
+                .border-radius( 60px 60px 60px 60px );
+                border: 8px solid lighten( @glacier, 10 );
+                text-align: center;
+            }
+
+            a.all{
+                float: none;
+            }
+        }
         .list-projet{
             margin: 0;
             padding: 0;
@@ -164,35 +222,4 @@
             }
         }
     }
-}
-
-/* Scale and rotate */
-.projet-hidden {
-    -webkit-animation: scaleRotateOut 0.6s forwards;
-    animation: scaleRotateOut 0.6s forwards;
-}
-
-.projet-active{
-    opacity: 0;
-    -webkit-animation: scaleRotateIn 0.6s forwards;
-    animation: scaleRotateIn 0.6s forwards;
-}
-
-
-@-webkit-keyframes scaleRotateOut {
-    100% { opacity: 0; -webkit-transform: scale(0); }
-}
-
-@keyframes scaleRotateOut {
-    100% { opacity: 0; transform: scale(0); }
-}
-
-@-webkit-keyframes scaleRotateIn {
-    0% { opacity: 0; -webkit-transform: translateX(50%) translateY(100%) rotate(25deg); }
-    100% { visibility: visible; opacity: 1; -webkit-transform: translateX(0%) translateY(0%) rotate(0deg); }
-}
-
-@keyframes scaleRotateIn {
-    0% { opacity: 0; transform: translateX(50%) translateY(100%) rotate(25deg); }
-    100% { visibility: visible; opacity: 1; transform: translateX(0%) translateY(0%) rotate(0deg); }
 }
