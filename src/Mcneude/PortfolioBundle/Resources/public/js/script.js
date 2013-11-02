@@ -26,33 +26,60 @@ $(function( $, undefined ){
 
 /**
  * Gestion du changement de groupe dans la page Projet
+ * TODO gestion en Ajax (plus propre à l'initialisation de la page, plus rapide au chargement)
+ * TODO animation en CSS3 (ça en jette plus quand même =)
  */
 
 (function($, undefined){
-    var $listeGroupeContainer = $('.full-projets .list-groupe'),
+    var animEndEventNames = {
+        'WebkitAnimation' : 'webkitAnimationEnd',
+        'OAnimation' : 'oAnimationEnd',
+        'msAnimation' : 'MSAnimationEnd',
+        'animation' : 'animationend'
+    },
+        // animation end event name
+        animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
+
+        $groupeActive = 'active',
+        $projetActive = 'projet-active',
+        $projetHidden = 'projet-hidden',
+
         $listeGroupe = $('.full-projets .list-groupe a'),
         $listeProjetContainer = $('.full-projets .list-projet'),
         $listeProjet = $('.full-projets .list-projet li'),
 
-        $firstGroup  = $listeGroupeContainer.children('a:first-child'),
-        $firstGroupId = $firstGroup.data('id'),
+        $showAll = $('.full-projets .list-groupe .all');
 
-        $classActive = 'active';
-
-    //Initialisation : le premier groupe est selectionné
-    $firstGroup.addClass('active');
-    $listeProjetContainer.children('li').hide();
-    $listeProjetContainer.children('li.'+$firstGroupId).show();
+    //Initialisation : Tous les projets sont visibles
+    $listeProjet.show();
+    $showAll.addClass($groupeActive);
+    $listeProjet.addClass($projetActive);
 
     //Au click sur un groupe
-    $listeGroupe.on('click',function(){
-        var $currentId = $(this).data('id');
+    $listeGroupe.on( 'click',function(){
+        var $currentId = $(this).data('id'),
+            $currentProjet = $listeProjetContainer.children('li.'+$currentId);
 
-        $listeGroupe.removeClass($classActive);
-        $(this).addClass($classActive);
+        console.log($currentId);
 
-        $listeProjetContainer.children('li').hide();
-        $listeProjetContainer.children('li.'+$currentId).show();
+        $listeGroupe.removeClass($groupeActive);
+        $(this).addClass($groupeActive);
+
+        if (Modernizr.csstransitions) {
+            $listeProjet.removeClass($projetActive);
+            $listeProjet.addClass($projetHidden);
+            $listeProjetContainer.on( animEndEventName, 'li', function(event){
+                $listeProjet.hide();
+                $currentProjet.show();
+
+                console.log(event);
+
+                $currentProjet.removeClass($projetHidden);
+                $currentProjet.addClass($projetActive);
+
+                $listeProjetContainer.off( animEndEventName );
+            });
+        }
 
         return false;
     });

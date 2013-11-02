@@ -511,7 +511,6 @@ img {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transition: opacity 0.5s;
   opacity: 0;
 }
 #main-menu > li > a > span:hover {
@@ -1143,24 +1142,33 @@ img {
 /* DESKTOP VERSION */
 /*******************/
 .full-projets .list-groupe {
-  border: 1px solid #d0d0cc;
   -moz-border-radius: 3px;
   border-radius: 3px;
   behavior: none;
   background: #dcdcd9;
-  padding: 1em;
   margin: 0 5% 0 5%;
 }
-.full-projets .list-groupe a {
-  display: inline-block;
-  color: #9f9f97;
+.full-projets .list-groupe a.groupe,
+.full-projets .list-groupe > span {
+  padding: 1.5em;
   font-family: "opensanslight", Arial, sans-serif;
   font-size: 1.1em;
   font-weight: normal;
   line-height: 1.2em;
   font-weight: bolder;
-  margin: 0 1em 0 0;
-  padding: 0.5em;
+}
+.full-projets .list-groupe > span {
+  background: #81adc8;
+  color: #e8e8e7;
+  -moz-border-radius: 3px 60px 60px 3px;
+  border-radius: 3px 60px 60px 3px;
+  behavior: none;
+  border-right: 8px solid #a5c4d7;
+  line-height: 1.5em;
+}
+.full-projets .list-groupe a.groupe {
+  display: inline-block;
+  color: #9f9f97;
   -moz-border-radius: 5px;
   border-radius: 5px;
   behavior: none;
@@ -1171,18 +1179,21 @@ img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.full-projets .list-groupe a:hover,
-.full-projets .list-groupe a.active {
+.full-projets .list-groupe a.groupe:hover,
+.full-projets .list-groupe a.groupe.active {
   color: #ffffff;
   border: 1px solid ;
 }
-.full-projets .list-groupe a.active {
+.full-projets .list-groupe a.groupe.active {
   border-color: #ea4f4f;
   background: #ea4f4f;
 }
-.full-projets .list-groupe a:hover {
+.full-projets .list-groupe a.groupe:hover {
   border-color: #78c678;
   background: #78c678;
+}
+.full-projets .list-groupe a.all {
+  float: right;
 }
 .full-projets .list-projet {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
@@ -1259,6 +1270,9 @@ img {
 .full-projets .list-projet li:last-child {
   border-left: none;
 }
+.full-projets .projet {
+  display: none;
+}
 .full-projets .projet .visuel {
   width: 100%;
   position: relative;
@@ -1310,12 +1324,60 @@ img {
 /*    MOBILE     */
 /*****************/
 @media screen and (max-width: 760px) {
+  .full-projets .list-projet {
+    margin: 0;
+    padding: 0;
+  }
   .full-projets .list-projet li {
     float: none;
     width: 100%;
   }
   .full-projets .projet .visuel:hover figcaption {
     top: 84%;
+  }
+}
+/* Scale and rotate */
+.projet-hidden {
+  -webkit-animation: scaleRotateOut 0.6s forwards;
+  animation: scaleRotateOut 0.6s forwards;
+}
+.projet-active {
+  opacity: 0;
+  -webkit-animation: scaleRotateIn 0.6s forwards;
+  animation: scaleRotateIn 0.6s forwards;
+}
+@-webkit-keyframes scaleRotateOut {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+  }
+}
+@keyframes scaleRotateOut {
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes scaleRotateIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50%) translateY(100%) rotate(25deg);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(0%) translateY(0%) rotate(0deg);
+  }
+}
+@keyframes scaleRotateIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) translateY(100%) rotate(25deg);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0%) translateY(0%) rotate(0deg);
   }
 }
 @font-face {
@@ -1481,11 +1543,12 @@ img {
   transition: 0.5s;
 }
 .full-projet-interieur .gallery .slides li:hover {
-  -moz-transform: rotate(10deg);
-  -webkit-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  transform: rotate(10deg);
+  -moz-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+  border-color: #ea4f4f;
 }
 .full-projet-interieur .gallery .slides li a {
   display: block;

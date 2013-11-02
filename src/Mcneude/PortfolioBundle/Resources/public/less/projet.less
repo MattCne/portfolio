@@ -10,18 +10,24 @@
 .full-projets{
 
     .list-groupe{
-        border: 1px solid @gris-clair;
         .border-radius( 3px );
         background: lighten( @gris-clair, 5 );
-        padding: 1em;
         margin: 0 5% 0 5%;
-        a{
-            display: inline-block;
-            color: darken( @gris-clair, 20 );
+        a.groupe, > span{
+            padding: 1.5em;
             .opensanslight( 1.1em );
             font-weight: bolder;
-            margin: 0 1em 0 0;
-            padding: 0.5em;
+        }
+        > span{
+            background: @glacier;
+            color: lighten( @gris-clair, 10 );
+            .border-radius( 3px 60px 60px 3px );
+            border-right: 8px solid lighten( @glacier, 10 );
+            line-height: 1.5em;
+        }
+        a.groupe{
+            display: inline-block;
+            color: darken( @gris-clair, 20 );
             .border-radius( 5px );
             border: 1px solid lighten( @gris-clair, 5 );
 
@@ -40,6 +46,9 @@
                 border-color: @olive;
                 background: @olive;
             }
+        }
+        a.all{
+            float: right;
         }
     }
 
@@ -64,6 +73,8 @@
     }
 
     .projet{
+        //On n'affiche pas les projets au chargement de page - ils sont chargés en js
+        display: none;
         .visuel{
             width:100%;
 
@@ -107,6 +118,14 @@
     }
 }
 
+.projet-hidden{
+    //display: none;
+}
+
+.projet-active{
+    //display: block;
+}
+
 /*****************/
 /*    TABLETTE   */
 /*****************/
@@ -128,6 +147,8 @@
 @media screen and (max-width: 760px) {
     .full-projets{
         .list-projet{
+            margin: 0;
+            padding: 0;
             li{
                 float: none;
                 width: 100%;
@@ -143,4 +164,35 @@
             }
         }
     }
+}
+
+/* Scale and rotate */
+.projet-hidden {
+    -webkit-animation: scaleRotateOut 0.6s forwards;
+    animation: scaleRotateOut 0.6s forwards;
+}
+
+.projet-active{
+    opacity: 0;
+    -webkit-animation: scaleRotateIn 0.6s forwards;
+    animation: scaleRotateIn 0.6s forwards;
+}
+
+
+@-webkit-keyframes scaleRotateOut {
+    100% { opacity: 0; -webkit-transform: scale(0); }
+}
+
+@keyframes scaleRotateOut {
+    100% { opacity: 0; transform: scale(0); }
+}
+
+@-webkit-keyframes scaleRotateIn {
+    0% { opacity: 0; -webkit-transform: translateX(50%) translateY(100%) rotate(25deg); }
+    100% { visibility: visible; opacity: 1; -webkit-transform: translateX(0%) translateY(0%) rotate(0deg); }
+}
+
+@keyframes scaleRotateIn {
+    0% { opacity: 0; transform: translateX(50%) translateY(100%) rotate(25deg); }
+    100% { visibility: visible; opacity: 1; transform: translateX(0%) translateY(0%) rotate(0deg); }
 }
