@@ -25,6 +25,7 @@ class ProjetsAdmin extends Admin
             ->add( 'url_internal', 'text', array( 'label' => 'Url interne', 'required' => false ) )
             ->add( 'url_external', 'text', array( 'label' => 'Url externe', 'required' => false ) )
             ->add( 'position', 'text', array( 'label' => 'Position' ) )
+            ->add( 'slug', 'text', array( 'label' => 'Slug' ) )
             ->add( 'is_website', 'checkbox', array( 'label' => 'Le projet est-il un site Internet ?', 'required' => false ) )
         ;
     }

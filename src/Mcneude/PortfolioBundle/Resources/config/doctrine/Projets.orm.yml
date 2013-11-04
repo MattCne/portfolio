@@ -53,6 +53,11 @@ Mcneude\PortfolioBundle\Entity\Projets:
             type: boolean
             nullable: true
             column: is_website
+        slug:
+            type: string
+            length: 45
+            fixed: false
+            nullable: false
     manyToMany:
         projetsGroupe:
             targetEntity: ProjetsGroupes

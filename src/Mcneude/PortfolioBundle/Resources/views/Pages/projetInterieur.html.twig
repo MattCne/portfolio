@@ -1,0 +1,66 @@
+{# src/Acme/BlogBundle/Resources/views/Blog/index.html.twig #}
+{% extends 'PortfolioBundle::base.html.twig' %}
+
+
+{% block body %}
+    {% if projet is not empty %}
+        <article class="full full-projet-interieur">
+            <h1>{{ projet.nom }}</h1>
+            <a class="projet-link" title="{{ projet.nom }}"
+               href="{% if projet.urlInternal is not empty %}
+                        {{ projet.urlInternal }}
+                     {% elseif projet.urlExternal is not empty %}
+                        {{  projet.urlExternal }}
+                     {% endif %}"
+            >
+                Voir le site en ligne
+            </a>
+
+            <div class="accroche content">
+                {{ projet.description | raw  }}
+            </div>
+
+            {% if images is not empty %}
+                <div class="gallery">
+                    <ul class="slides">
+                        {% for image in images %}
+                            <li>
+                                <a data-lightbox="image-projet" href="{{ asset('/bundles/portfolio/images') }}{{ image.url }}">
+                                    <img src="{{ asset('/bundles/portfolio/images') }}{{ image.url }}"  alt="{{ image.nom }}" /></a>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            <section class="middle content">
+                <header>
+                    <h1>Technologies utilisées : </h1>
+                </header>
+                <div>
+                    {{ projet.technologies | raw }}
+                </div>
+            </section>
+
+            <section class="box content">
+                <header>
+                    <h1>Difficultés : </h1>
+                </header>
+                <div>
+                    {{ projet.difficultes | raw }}
+                </div>
+            </section>
+
+            <section class="box content">
+                <header>
+                    <h1>Compétences acquises par ce projet : </h1>
+                </header>
+                <div>
+                    {{ projet.competencesAcquises | raw }}
+                </div>
+            </section>
+        </article>
+    {% endif %}
+
+{% endblock %}

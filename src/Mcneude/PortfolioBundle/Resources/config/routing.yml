@@ -10,6 +10,9 @@ parcours:
 projets:
     pattern: /projets/
     defaults: { _controller: PortfolioBundle:Projets:render }
+projet_interieur:
+    pattern: /projets/{slug}/
+    defaults: { _controller: PortfolioBundle:ProjetInterieur:render  }
 contact:
     pattern: /contact/
     defaults: { _controller: PortfolioBundle:Contact:render }

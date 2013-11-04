@@ -89,6 +89,7 @@ class Projets
 
     public function getProjetImages()
     {
+
         return $this->projetImages;
     }
 
@@ -402,5 +403,33 @@ class Projets
     public function getProjetsGroupe()
     {
         return $this->projetsGroupe;
+    }
+    /**
+     * @var string
+     */
+    private $slug;
+
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Projets
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
