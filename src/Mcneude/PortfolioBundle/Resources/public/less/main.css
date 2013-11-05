@@ -257,6 +257,9 @@ img {
   zoom: 1;
   clear: both;
   border-top: 1px solid #78c678;
+  -moz-border-radius: 300px;
+  border-radius: 300px;
+  behavior: none;
   margin: 1em 0 0 0;
   position: relative;
   height: auto;
@@ -413,7 +416,7 @@ img {
   content: '';
 }
 #main > header .titres {
-  width: 40%;
+  width: 25%;
   float: left;
   margin: 0;
   padding: 0;
@@ -458,7 +461,7 @@ img {
   color: #ea4f4f;
 }
 #main-menu {
-  width: 60%;
+  width: 75%;
   float: right;
   margin: 0;
 }
@@ -585,6 +588,11 @@ img {
   -moz-box-shadow: 0px 0px 0px 0px;
   -o-box-shadow: 0px 0px 0px 0px;
   box-shadow: 0px 0px 0px 0px;
+}
+#main-menu li:last-child a {
+  -moz-border-radius: 0 48px 29px 0;
+  border-radius: 0 48px 29px 0;
+  behavior: none;
 }
 .full {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
@@ -958,7 +966,7 @@ img {
     float: none;
     width: 100%;
     margin: 2em 0 0 0;
-    padding: 0;
+    padding: 0.5em;
     border-radius: 255px;
     background: #d0d0cc;
   }
@@ -1106,16 +1114,15 @@ img {
 /*****************/
 /*    TABLETTE   */
 /*****************/
-@media screen and (min-width: 760px) and (max-width: 1600px) {
+@media screen and (min-width: 760px) and (max-width: 1330px) {
   .box {
     width: 100%;
+    margin-right: 0;
+    margin-left: 0;
   }
   #main > header .titres {
     width: 100%;
     text-align: center;
-  }
-  #main > header .box {
-    width: 100%;
   }
   #main-menu {
     width: 100%;
@@ -1125,6 +1132,9 @@ img {
   #main-menu li a,
   #main-menu li a.active {
     font-size: 1em;
+  }
+  #main > footer section {
+    width: 50%;
   }
   #main > footer .sharebar li {
     margin: 0 1em 0 0;
@@ -1462,7 +1472,7 @@ img {
 /*****************/
 /*    TABLETTE   */
 /*****************/
-@media screen and (min-width: 760px) and (max-width: 1600px) {
+@media screen and (min-width: 760px) and (max-width: 1330px) {
   .full-projets .list-groupe a.groupe,
   .full-projets .list-groupe > span {
     font-family: "opensanslight", Arial, sans-serif;
@@ -2024,7 +2034,7 @@ img {
 /*****************/
 /*    TABLETTE   */
 /*****************/
-@media screen and (min-width: 760px) and (max-width: 1600px) {
+@media screen and (min-width: 760px) and (max-width: 1330px) {
   .content_4col section {
     width: 50%;
   }
@@ -2140,7 +2150,7 @@ img {
 }
 .full-cv {
   font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: normal;
   line-height: 1.2em;
 }
@@ -2476,7 +2486,7 @@ img {
 /*****************/
 /*    TABLETTE   */
 /*****************/
-@media screen and (min-width: 760px) and (max-width: 1600px) {
+@media screen and (min-width: 760px) and (max-width: 1330px) {
   .full-quisuisje #pourquoi,
   .full-quisuisje #methode,
   .full-quisuisje #workflow,
@@ -2794,7 +2804,7 @@ html[xmlns] .slides {
 /*****************/
 /*    TABLETTE   */
 /*****************/
-@media screen and (min-width: 760px) and (max-width: 1600px) {
+@media screen and (min-width: 760px) and (max-width: 1330px) {
   .flexslider {
     width: 80%;
     margin: 0 10% 6em 10%;
