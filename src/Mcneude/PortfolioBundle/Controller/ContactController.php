@@ -2,12 +2,54 @@
 
 namespace Mcneude\PortfolioBundle\Controller;
 
+use Mcneude\PortfolioBundle\Formulaire\type\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Mcneude\PortfolioBundle\Formulaire\Contact;
+use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Component\HttpFoundation\Request;
 
 class ContactController extends Controller
 {
-    public function renderAction()
+    public function renderAction( Request $request )
     {
-        return $this->render( 'PortfolioBundle:Pages:contact.html.twig' );
+        $contact = new Contact();
+        $form = $this->createForm( 'Contact', $contact );
+
+        if ( $request->isMethod( 'POST' ) )
+        {
+            $form->bind( $request );
+
+            if ( $form->isValid() )
+            {
+                $adresse = $this->container->getParameter( 'admin_email' );
+                $message = \Swift_Message::newInstance()
+                            ->setSubject( $this->container->getParameter( 'admin_email_subject_prefixe' ).$form->get( 'sujet' )->getData() )
+                            ->setFrom( $form->get( 'email' )->getData() )
+                            ->setTo( $adresse )
+                            ->setBody(
+                                $this->renderView(
+                                    'PortfolioBundle:Emails/Forms:contact.html.twig',
+                                    array(
+                                        'nom' => $form->get( 'nom' )->getData(),
+                                        'prenom' => $form->get( 'prenom' )->getData(),
+                                        'sujet' => $form->get( 'sujet' )->getData(),
+                                        'societe' => $form->get( 'societe' )->getData(),
+                                        'adresse' => $form->get( 'adresse' )->getData(),
+                                        'telephone' => $form->get( 'telephone' )->getData(),
+                                        'message' => $form->get( 'message' )->getData()
+                                    )
+                                )
+                            );
+
+                $this->get( 'mailer' )->send( $message );
+                $request->getSession()->getFlashBag()->add( 'success', 'Votre email a bien été envoyé. Merci !' );
+
+                return $this->redirect( $this->generateUrl( 'contact' ) );
+            }
+        }
+
+        return $this->render('PortfolioBundle:Pages:contact.html.twig', array(
+            'form' => $form->createView()
+        ) );
     }
 }

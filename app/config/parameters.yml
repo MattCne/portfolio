@@ -13,3 +13,6 @@ parameters:
 
     locale:            fr
     secret:            token458767485portfolio45
+
+    admin_email:       matthieu.cneude@gmail.com
+    admin_email_subject_prefixe: Mail envoyé depuis le portfolio -

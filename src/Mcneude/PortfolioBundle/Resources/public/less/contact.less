@@ -1,0 +1,66 @@
+@import 'variables.less';
+@import 'mixins.less';
+@import 'fontcustom.less';
+
+.full.full-contact{
+    form{
+        margin: 1.5em 0 1.5em 2em;
+        .form-row{
+            margin: 0.5em 0 0.5em 0;
+            .transition( all 0.5s );
+            &:hover{
+                label{
+                    color: @chatelle;
+                    .opensansbold( 1.1em );
+                }
+            }
+        }
+        label{
+            .inline-block;
+            .opensanslight( 1.1em );
+            vertical-align: top;
+            width: 20%;
+            color: @gris-fonce;
+        }
+
+        input[type="text"], textarea{
+            width: 15em;
+            .opensanslight( 1.2em );
+            .border-radius( 3px );
+            border: 1px solid @glacier;
+            .transition( all 0.5s );
+            color: darken( @chatelle, 20 );
+            padding: 0.25em;
+            &:hover{
+                border-color: @chatelle;
+            }
+        }
+
+        textarea{
+            min-height: 10em;
+        }
+
+        .required{
+            &:after{
+                content:'*';
+                color: @ruby;
+            }
+        }
+
+        button{
+            #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
+            .opensanslight( 1.1em );
+            border: 1px solid @glacier;
+            border-radius: 20px;
+            color: #FFFFFF;
+            padding: 0.5em;
+            width: 9em;
+            .transition( all 0.5s );
+            &:hover{
+                #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
+                cursor: pointer;
+                .opensansbold( 1.1em );
+            }
+        }
+    }
+}

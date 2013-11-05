@@ -1,0 +1,30 @@
+{% extends 'PortfolioBundle:Emails:layout.html.twig' %}
+
+{% block email_title %}{{ sujet }}{% endblock %}
+
+{% block content %}
+    <h1>{{ sujet }}</h1>
+
+    <p>Un mail viens du portfolio :</p>
+
+    <div>
+        Nom : {{ nom }}
+        Prénom : {{ prenom }}
+        Sujet : {{ sujet }}
+        Société : {{ societe }}
+        Adresse : {{ adresse }}
+        Téléphone : {{ telephone }}
+        Message {{ message }}
+   </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+#Mcneude\PortfolioBundle\Formulaire\Contact:
+properties:
+    email:
+        - Email:
+              message: Merci de renseigner une adresse e-mail valide
+        - NotBlank:
+              message: Merci de renseigner une adresse e-mail
+    message:
+        - NotBlank:
+              message: Merci de taper un message

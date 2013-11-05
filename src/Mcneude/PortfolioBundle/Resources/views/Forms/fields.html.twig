@@ -1,0 +1,27 @@
+{% block form_row %}
+    {% spaceless %}
+        <div class="form-row form-row">
+            {% if 'checkbox' in form.vars.block_prefixes %}
+                {{ form_widget(form) }}
+                {{ form_label(form) }}
+                {{ form_errors(form) }}
+            {% else %}
+                {{ form_label(form) }}
+                {{ form_widget(form) }}
+                {{ form_errors(form) }}
+            {% endif %}
+        </div>
+    {% endspaceless %}
+{% endblock form_row %}
+
+{% block form_errors %}
+    {% spaceless %}
+        {% if errors|length > 0 %}
+            <ul class="error">
+                {% for error in errors %}
+                    <li>{{ error.message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endspaceless %}
+{% endblock form_errors %}

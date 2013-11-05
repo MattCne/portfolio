@@ -2,6 +2,9 @@ parameters:
 #    portfolio.example.class: Mcneude\PortfolioBundle\Example
 
 services:
-#    portfolio.example:
-#        class: %portfolio.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+# src/Mcneude/PortfolioBundle/Resources/config/services.yml
+services:
+     portfolio.form.type.Contact:
+        class: Mcneude\PortfolioBundle\Formulaire\type\ContactType
+        tags:
+            - { name: form.type, alias: Contact }
