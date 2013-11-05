@@ -578,6 +578,14 @@ img {
 #main-menu > li a:nth-child( 2n + 1 ):hover {
   background: #615f74;
 }
+#main-menu > li a.active:nth-child( 2n + 1 ) {
+  background: none;
+  -ms-box-shadow: 0px 0px 0px 0px;
+  -webkit-box-shadow: 0px 0px 0px 0px;
+  -moz-box-shadow: 0px 0px 0px 0px;
+  -o-box-shadow: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 0px 0px;
+}
 .full {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
@@ -3020,4 +3028,14 @@ Impossible de modifier directement en JS (fichier minifié)
   font-size: 1.1em;
   font-weight: normal;
   line-height: 1.2em;
+}
+.full.full-home > header > h1 {
+  border-bottom: 6px solid #35607b;
+  border-radius: 10px;
+  color: #605e57;
+  font-size: 3em;
+  margin: 0 25%;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
 }
