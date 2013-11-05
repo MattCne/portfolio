@@ -1,5 +1,6 @@
 {# src/Acme/BlogBundle/Resources/views/Blog/index.html.twig #}
 {% extends 'PortfolioBundle::base.html.twig' %}
+{% import 'PortfolioBundle::macros.html.twig' as macros %}
 
 
 {% block body %}
@@ -7,11 +8,7 @@
         <article class="full full-projet-interieur">
             <h1>{{ projet.nom }}</h1>
             <a class="projet-link" title="{{ projet.nom }}"
-               href="{% if projet.urlInternal is not empty %}
-                        {{ projet.urlInternal }}
-                     {% elseif projet.urlExternal is not empty %}
-                        {{  projet.urlExternal }}
-                     {% endif %}"
+               {{- macros.choice_url( projet.urlInternal, projet.urlExternal ) -}}
             >
                 Voir le site en ligne
             </a>

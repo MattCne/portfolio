@@ -1,12 +1,17 @@
 <footer>
 	{% include 'PortfolioBundle:layout:sharebar.html.twig' %}
+    {% import 'PortfolioBundle::macros.html.twig' as macros %}
 
 	<section>
 		<h1>Sites internet</h1>
         {% if sitesInternet is not null %}
             <ul class="liste">
                 {% for siteInternet in sitesInternet  %}
-                    <li><a href="#">{{ siteInternet.nom }}</a></li>
+                    <li>
+                        <a title="{{ siteInternet.nom }}" {{- macros.choice_url( siteInternet.urlInternal, siteInternet.urlExternal ) -}}>
+                            {{ siteInternet.nom }}
+                        </a>
+                    </li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -17,7 +22,11 @@
         {% if autresProjets is not null %}
             <ul class="liste">
                 {% for autreProjet in autresProjets  %}
-                    <li><a href="#">{{ autreProjet.nom }}</a></li>
+                    <li>
+                        <a title="{{ autreProjet.nom }}" {{- macros.choice_url( autreProjet.urlInternal, autreProjet.urlExternal ) -}}>
+                            {{ autreProjet.nom }}
+                        </a>
+                    </li>
                 {% endfor %}
             </ul>
         {% endif %}
@@ -28,7 +37,11 @@
         {% if fichiers is not null %}
             <ul class="liste">
                 {% for fichier in fichiers %}
-                    <li><a href="#">{{ fichier.nom }}</a></li>
+                    <li>
+                        <a  title="{{ fichier.nom }}"  href="/bundles/portfolio/PortfolioBundle{{ fichier.url }}">
+                            {{ fichier.nom }}
+                        </a>
+                    </li>
                 {% endfor %}
             </ul>
         {% endif %}

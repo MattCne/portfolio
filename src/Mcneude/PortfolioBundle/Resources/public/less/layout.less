@@ -445,7 +445,9 @@ img{
 		float:none;
 		width:100%;
 		margin:2em 0 0 0;
-		padding:0;
+		padding:0.5em;
+        border-radius: 255px;
+        background: @gris-clair;
 		li{
 			float:none;
             margin: 0.25em 0 0.25em 2%;
@@ -461,6 +463,16 @@ img{
     			&:hover{
     			    .shadow( 0px 0px 0px 0px #FFF );
     			}
+
+                &.active{
+                    color: @blanc;
+                    > span{
+                        #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
+                        &:before{
+                            color: @blanc;
+                        }
+                    }
+                }
 
     			> span{
     			    .transition( none );
@@ -529,7 +541,7 @@ img{
         width:100%;
         margin: 0;
         padding: 0;
-        li a{
+        li a, li a.active{
             font-size:1em;
         }
     }

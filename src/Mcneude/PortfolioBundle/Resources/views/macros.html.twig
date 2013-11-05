@@ -1,0 +1,13 @@
+{% macro choice_url( url_internal, url_external ) %}
+    {%- if url_internal is not empty -%}
+        href="{{ path( 'projet_interieur' , { 'slug': url_internal }) }}"
+    {%- elseif url_external is not empty -%}
+         href="http://{{-  url_external -}}"
+    {%- endif -%}
+{% endmacro %}
+
+{% macro is_current_route(route) %}
+    {%- if app.request.attributes.get('_route') == route -%}
+        {{- ' class="active"' -}}
+    {%- endif -%}
+{% endmacro %}

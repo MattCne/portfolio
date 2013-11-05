@@ -1,10 +1,4 @@
-{% macro is_current_route(route) %}
-    {%- if app.request.attributes.get('_route') == route -%}
-        {{- ' class="active"' -}}
-    {%- endif -%}
-{% endmacro %}
-
-{% import _self as croute %}
+{% import 'PortfolioBundle::macros.html.twig' as macros %}
 
 <header>
 	<div class="titres">
@@ -14,27 +8,27 @@
 	<nav>
 	    <ul id="main-menu">
 	        <li>
-	            <a href="{{ path( 'homepage' ) }}"  {{- croute.is_current_route('homepage') -}}>
+	            <a href="{{ path( 'homepage' ) }}"  {{- macros.is_current_route('homepage') -}}>
 	            	<span class="icon-accueil">Accueil</span>
 	            </a>
 	        </li>
 	        <li>
-	            <a href="{{ path( 'quisuisje' ) }}"  {{- croute.is_current_route('quisuisje') -}}>
+	            <a href="{{ path( 'quisuisje' ) }}"  {{- macros.is_current_route('quisuisje') -}}>
 	            	<span class="icon-moi">Qui suis-je ?</span>
 	            </a>
 	        </li>
 	        <li>
-	            <a href="{{ path( 'projets' ) }}"  {{- croute.is_current_route('projets') -}}>
+	            <a href="{{ path( 'projets' ) }}"  {{- macros.is_current_route('projets') -}}>
 	            	<span class="icon-projets">Projets</span>
 	            </a>
 	        </li>
 	        <li>
-                <a href="{{ path( 'parcours' ) }}"  {{- croute.is_current_route('parcours') -}}>
+                <a href="{{ path( 'parcours' ) }}"  {{- macros.is_current_route('parcours') -}}>
 	            	<span class="icon-parcours">Parcours</span>
 	            </a>
 	        </li>
 	        <li>
-                <a href="{{ path( 'contact' ) }}" {{- croute.is_current_route('contact') -}}>
+                <a href="{{ path( 'contact' ) }}" {{- macros.is_current_route('contact') -}}>
 	            	<span class="icon-telephone">Contactez moi</span>
 	            </a>
 	        </li>

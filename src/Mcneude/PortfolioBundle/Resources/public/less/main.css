@@ -959,6 +959,8 @@ img {
     width: 100%;
     margin: 2em 0 0 0;
     padding: 0;
+    border-radius: 255px;
+    background: #d0d0cc;
   }
   #main-menu li {
     float: none;
@@ -1007,6 +1009,39 @@ img {
     -moz-box-shadow: 0px 0px 0px 0px #ffffff;
     -o-box-shadow: 0px 0px 0px 0px #ffffff;
     box-shadow: 0px 0px 0px 0px #ffffff;
+  }
+  #main-menu li > a.active {
+    color: #ffffff;
+  }
+  #main-menu li > a.active > span {
+    background-color: #457c9e;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#5d96b9), to(#457c9e));
+    /* Konqueror */
+  
+    background-image: -moz-linear-gradient(#5d96b9, #457c9e);
+    /* FF 3.6+ */
+  
+    background-image: -ms-linear-gradient(#5d96b9, #457c9e);
+    /* IE10 */
+  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d96b9), color-stop(100%, #457c9e));
+    /* Safari 4+, Chrome 2+ */
+  
+    background-image: -webkit-linear-gradient(#5d96b9, #457c9e);
+    /* Safari 5.1+, Chrome 10+ */
+  
+    background-image: -o-linear-gradient(#5d96b9, #457c9e);
+    /* Opera 11.10 */
+  
+    -pie-background: linear-gradient(#5d96b9, #457c9e);
+    behavior: none;
+    background-image: linear-gradient(#5d96b9, #457c9e);
+    /* the standard */
+  
+  }
+  #main-menu li > a.active > span:before {
+    color: #ffffff;
   }
   #main-menu li > a > span {
     -ms-transition: none;
@@ -1087,7 +1122,8 @@ img {
     margin: 0;
     padding: 0;
   }
-  #main-menu li a {
+  #main-menu li a,
+  #main-menu li a.active {
     font-size: 1em;
   }
   #main > footer .sharebar li {
