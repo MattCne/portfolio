@@ -1,5 +1,5 @@
-NameError: variable @glacier is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/home.less:3:41
-2     > header > h1{
-3         border-bottom: 6px solid darken( @glacier, 30 );
-4         border-radius: 10px;
+NameError: variable @dimgray is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/home.less:5:29
+4     > header {
+5         #gradient .vertical( @dimgray, @fuscousgrey );
+6         padding: 1em;
 

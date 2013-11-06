@@ -19,13 +19,15 @@ class FooterController extends Controller
         $sitesInternet = $this->getSitesInternet();
         $autresProjets = $this->getAutresProjets();
         $fichiers = $this->getFiles();
+        $twitter_account = $this->container->getParameter( 'twitter_account' );
 
         $content = $this->renderView(
             'PortfolioBundle:layout:footer.html.twig', array(
                 'tweets' => $tweets,
                 'sitesInternet' => $sitesInternet,
                 'autresProjets'=> $autresProjets,
-                'fichiers'  => $fichiers
+                'fichiers'  => $fichiers,
+                'twitter_account' => $twitter_account
             )
         );
 

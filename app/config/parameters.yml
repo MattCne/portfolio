@@ -16,3 +16,4 @@ parameters:
 
     admin_email:       matthieu.cneude@gmail.com
     admin_email_subject_prefixe: Mail envoyé depuis le portfolio -
+    twitter_account: Cneude_Matthieu
