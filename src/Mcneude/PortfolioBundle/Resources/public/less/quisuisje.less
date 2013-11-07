@@ -7,32 +7,99 @@
 /*****************/
 
 .full-quisuisje {
-    #pourquoi, #methode, #workflow, #infos {
-        .box;
-    }
-}
+    #competences{
+        width: 100%;
+        margin: 0.5em 0 1em;
+        section.competences-groupe{
+            width: 48%;
+            > h1{
+                font-size:1.3em;
+                color: @gris-fonce;
+                border-color: lighten( @gris-fonce, 10 );
+                text-align: center;
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+                li{
+                    &:before{
+                        content: none;
+                    }
 
+                    > h2{
+                        position: relative;
+                        z-index: 1;
+                        .opensansbold();
+                        color: @blanc;
 
-/*****************/
-/*    TABLETTE   */
-/*****************/
+                        #gradient .vertical( lighten( @glacier, 10 ), @glacier );
+                        width: 100%;
+                        border: 1px solid @glacier;
+                        padding: 0.5em 0 0.5em 1em;
 
-@media screen and (min-width: 760px) and (max-width: 1330px) {
-    .full-quisuisje {
-        #pourquoi, #methode, #workflow, #infos {
-            width: 100%;
+                        .transition( all 0.5s );
+
+                        &:hover{
+                            #gradient .vertical( lighten( @olive, 10 ), @olive );
+                            border: 1px solid darken( @olive, 10 );
+                            padding-left: 1.5em;
+                            cursor: pointer;
+
+                        }
+
+                        &:before{
+                            .fontcustom;
+                            content: "\f100";
+                            .inline-block;
+                            font-size:0.6em;
+                            vertical-align:middle;
+                            padding-right:0.5em;
+                            padding-bottom:0.1em;
+                        }
+
+                        &.active{
+                            #gradient .vertical( lighten( @ruby, 10 ), @ruby );
+                            border: 1px solid darken( @ruby, 10 );
+                            padding-left: 1.5em;
+                            &:hover{
+                                #gradient .vertical( lighten( @ruby, 10 ), @ruby );
+                            }
+                        }
+                    }
+
+                    > .description{
+                        padding: 1em;
+                        border-left: 2px solid;
+                        border-right: 2px solid;
+                        border-color: @glacier;
+                        //display: none;
+                    }
+                }
+                li:first-child{
+                    > h2{
+                        .border-radius( 0px 30px 0px 0px );
+                        &:hover, &.active{
+                            .border-radius( 0px );
+                        }
+                    }
+                }
+                li:last-child{
+                    > h2{
+                        .border-radius( 0px 0px 0px 30px );
+                        &:hover, &.active{
+                            .border-radius( 0px );
+                        }
+                    }
+                    > .description{
+                        border-bottom: 2px solid;
+                        border-color: @glacier;
+                        .border-radius( 0px 0px 0px 30px );
+                    }
+                }
+            }
         }
-    }
-}
-
-/*****************/
-/*    MOBILE     */
-/*****************/
-
-@media screen and (max-width: 760px) {
-    .full-quisuisje {
-        #pourquoi, #methode, #workflow, #infos {
-            width: 100%;
+        section:first-child{
+            border-right: 2px solid @glacier;
         }
     }
 }

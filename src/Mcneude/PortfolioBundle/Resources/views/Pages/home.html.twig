@@ -4,7 +4,6 @@
 
 {% block body %}
     <div class="full full-home">
-
         <header>
             <h1>Bienvenu sur mon portfolio !</h1>
             <img src={{ asset("/bundles/portfolio/images/bureau.jpg") }} />
@@ -16,7 +15,7 @@
         </header>
 
         <!-- SLIDESHOW -->
-        <div>
+        <article id="derniers-projets" class="content">
             <h1> Mes cinq derniers projets en images</h1>
             <div class="slideshow flexslider">
                 <ul class="slides">
@@ -37,22 +36,21 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="row">
-            <div class="box">
+        </article>
+        <article class="row">
+            <div class="content box">
                 <h1>En ce moment je me documente sur...</h1>
                 <div class="content">
-                    Les design pattern en PHP !
+                    ...les design pattern en PHP
                 </div>
             </div>
-            <div class="box">
+            <div class="content box">
                 <h1>En ce moment je travaille sur...</h1>
                 <div class="content">
-                    ...mon portfolio !
+                    ...mon portfolio
                 </div>
             </div>
-
-        </div>
+        </article>
     </div>
 
 {% endblock %}

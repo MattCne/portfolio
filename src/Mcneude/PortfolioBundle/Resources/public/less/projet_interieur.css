@@ -1,5 +1,0 @@
-NameError: .rotation is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/projet_interieur.less:61:20
-60                 &:hover{
-61                     .rotation( 5deg );
-62                     border-color: @ruby;
-

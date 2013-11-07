@@ -18,33 +18,64 @@
             </div>
         </article>
 
+        <article id="competences" class="box content competences-groupe">
+            <header>
+                <h1>Compétences</h1>
+                <div class="accroche">
+                    {% if accroches is not empty  %}
+                        {{ accroches.getAccrocheCompetences | raw }}
+                    {% endif %}
+                </div>
+            </header>
+            <section class="competences-groupe">
+                <h1>Compétences en développement</h1>
+                <ul>
+                    <li class="content">
+                       <h2>test</h2>
+                       <div class="description">
+                            Description de la compétence
+                       </div>
+                    </li>
+                    <li class="content">
+                        <h2>test</h2>
+                        <div class="description">
+                            Description de la compétence
+                        </div>
+                    </li>
+                    <li class="content">
+                        <h2>test</h2>
+                        <div class="description">
+                            Description de la compétence
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="competences-groupe">
+                <h1>Autres compétences</h1>
+                <ul>
+                    <li class="content">
+                        <h2>test</h2>
+                        <div class="description">
+                            Description de la compétence
+                        </div>
+                    </li>
+                    <li class="content">
+                        <h2>test</h2>
+                        <div class="description">
+                            Description de la compétence
+                        </div>
+                    </li>
+                    <li class="content">
+                        <h2>test</h2>
+                        <div class="description">
+                            Description de la compétence
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
         <div class="row">
-            <article class="content box" id="competence">
-                <header>
-                    <h1>Compétences</h1>
-                    <div class="accroche">
-                        {% if accroches is not empty  %}
-                            {{ accroches.getAccrocheCompetences | raw }}
-                        {% endif %}
-                    </div>
-                </header>
-
-                <section id="langages">
-                    <ul>
-                        {% if quisuisje is not empty %}
-                           {{ quisuisje.getCompetencesTech | raw }}
-                        {% endif %}
-                    </ul>
-                </section>
-                <section id="communication">
-                    <ul>
-                        {%  if quisuisje is not empty %}
-                            {{ quisuisje.getCompetencesCom | raw }}
-                        {% endif %}
-                    </ul>
-                </section>
-            </article>
-
             <article class="content box">
                 <header>
                     <h1>Methodes de conception.</h1>
@@ -62,9 +93,6 @@
                     </ul>
                 </div>
             </article>
-        </div>
-
-        <div class="row">
             <article class="content box">
                 <header>
                     <h1>Politique / Workflow</h1>
@@ -82,23 +110,22 @@
                     </ul>
                 </div>
             </article>
-
-            <article class="content box">
-                <header>
-                    <h1>Informations complémentaires</h1>
-                    {% if accroches is not empty %}
-                        <div class="accroche"> {{ accroches.getAccrocheInfos | raw }}</div>
-                    {% endif %}
-                </header>
-                <div class="content">
-                    <ul>
-                        {% if quisuisje is not empty %}
-                            {{ quisuisje.getInfos | raw }}
-                        {% endif %}
-                    </ul>
-                </div>
-            </article>
         </div>
+        <article class="content middle">
+            <header>
+                <h1>Informations complémentaires</h1>
+                {% if accroches is not empty %}
+                    <div class="accroche"> {{ accroches.getAccrocheInfos | raw }}</div>
+                {% endif %}
+            </header>
+            <div class="content">
+                <ul>
+                    {% if quisuisje is not empty %}
+                        {{ quisuisje.getInfos | raw }}
+                    {% endif %}
+                </ul>
+            </div>
+        </article>
     </div>
 
 {% endblock %}

@@ -1041,6 +1041,19 @@ img {
   }
   #main-menu li > a.active > span:before {
     color: #ffffff;
+    left: 60%;
+    right: auto;
+    top: 0.25em;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    -o-transform: scale(2);
+    -moz-transform: scale(2);
   }
   #main-menu li > a > span {
     -ms-transition: none;
@@ -1094,9 +1107,6 @@ img {
   }
   #main > footer section li {
     padding: 0;
-  }
-  #main > footer .sharebar {
-    width: 100%;
   }
   #main > footer .sharebar li {
     margin: 0 1em 0 0;
@@ -2461,40 +2471,202 @@ img {
 /*****************/
 /*    DESKTOP    */
 /*****************/
-.full-quisuisje #pourquoi,
-.full-quisuisje #methode,
-.full-quisuisje #workflow,
-.full-quisuisje #infos {
-  border: 1px solid #c8dbe7;
-  border-radius: 0 0 7px 10px;
-  box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
-  width: 47%;
-  padding: 1.5em 2em 2em 1.5em;
-  display: block;
-  margin: 0.5em 1em 1em 1em;
-  float: left;
+.full-quisuisje #competences {
+  width: 100%;
+  margin: 0.5em 0 1em;
 }
-/*****************/
-/*    TABLETTE   */
-/*****************/
-@media screen and (min-width: 760px) and (max-width: 1330px) {
-  .full-quisuisje #pourquoi,
-  .full-quisuisje #methode,
-  .full-quisuisje #workflow,
-  .full-quisuisje #infos {
-    width: 100%;
-  }
+.full-quisuisje #competences section.competences-groupe {
+  width: 48%;
 }
-/*****************/
-/*    MOBILE     */
-/*****************/
-@media screen and (max-width: 760px) {
-  .full-quisuisje #pourquoi,
-  .full-quisuisje #methode,
-  .full-quisuisje #workflow,
-  .full-quisuisje #infos {
-    width: 100%;
-  }
+.full-quisuisje #competences section.competences-groupe > h1 {
+  font-size: 1.3em;
+  color: #45443f;
+  border-color: #605e57;
+  text-align: center;
+}
+.full-quisuisje #competences section.competences-groupe ul {
+  padding: 0;
+  margin: 0;
+}
+.full-quisuisje #competences section.competences-groupe ul li:before {
+  content: none;
+}
+.full-quisuisje #competences section.competences-groupe ul li > h2 {
+  position: relative;
+  z-index: 1;
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #ffffff;
+  background-color: #81adc8;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#a5c4d7), to(#81adc8));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#a5c4d7, #81adc8);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#a5c4d7, #81adc8);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a5c4d7), color-stop(100%, #81adc8));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#a5c4d7, #81adc8);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#a5c4d7, #81adc8);
+  /* Opera 11.10 */
+
+  -pie-background: linear-gradient(#a5c4d7, #81adc8);
+  behavior: none;
+  background-image: linear-gradient(#a5c4d7, #81adc8);
+  /* the standard */
+
+  width: 100%;
+  border: 1px solid #81adc8;
+  padding: 0.5em 0 0.5em 1em;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.full-quisuisje #competences section.competences-groupe ul li > h2:hover {
+  background-color: #78c678;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#9cd59c), to(#78c678));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#9cd59c, #78c678);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#9cd59c, #78c678);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9cd59c), color-stop(100%, #78c678));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#9cd59c, #78c678);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#9cd59c, #78c678);
+  /* Opera 11.10 */
+
+  -pie-background: linear-gradient(#9cd59c, #78c678);
+  behavior: none;
+  background-image: linear-gradient(#9cd59c, #78c678);
+  /* the standard */
+
+  border: 1px solid #54b754;
+  padding-left: 1.5em;
+  cursor: pointer;
+}
+.full-quisuisje #competences section.competences-groupe ul li > h2:before {
+  font-family: "fontcustom";
+  content: "\f100";
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  font-size: 0.6em;
+  vertical-align: middle;
+  padding-right: 0.5em;
+  padding-bottom: 0.1em;
+}
+.full-quisuisje #competences section.competences-groupe ul li > h2.active {
+  background-color: #ea4f4f;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ef7d7d), to(#ea4f4f));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#ef7d7d, #ea4f4f);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#ef7d7d, #ea4f4f);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef7d7d), color-stop(100%, #ea4f4f));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#ef7d7d, #ea4f4f);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#ef7d7d, #ea4f4f);
+  /* Opera 11.10 */
+
+  -pie-background: linear-gradient(#ef7d7d, #ea4f4f);
+  behavior: none;
+  background-image: linear-gradient(#ef7d7d, #ea4f4f);
+  /* the standard */
+
+  border: 1px solid #e52121;
+  padding-left: 1.5em;
+}
+.full-quisuisje #competences section.competences-groupe ul li > h2.active:hover {
+  background-color: #ea4f4f;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ef7d7d), to(#ea4f4f));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#ef7d7d, #ea4f4f);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#ef7d7d, #ea4f4f);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ef7d7d), color-stop(100%, #ea4f4f));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#ef7d7d, #ea4f4f);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#ef7d7d, #ea4f4f);
+  /* Opera 11.10 */
+
+  -pie-background: linear-gradient(#ef7d7d, #ea4f4f);
+  behavior: none;
+  background-image: linear-gradient(#ef7d7d, #ea4f4f);
+  /* the standard */
+
+}
+.full-quisuisje #competences section.competences-groupe ul li > .description {
+  padding: 1em;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-color: #81adc8;
+}
+.full-quisuisje #competences section.competences-groupe ul li:first-child > h2 {
+  -moz-border-radius: 0px 30px 0px 0px;
+  border-radius: 0px 30px 0px 0px;
+  behavior: none;
+}
+.full-quisuisje #competences section.competences-groupe ul li:first-child > h2:hover,
+.full-quisuisje #competences section.competences-groupe ul li:first-child > h2.active {
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  behavior: none;
+}
+.full-quisuisje #competences section.competences-groupe ul li:last-child > h2 {
+  -moz-border-radius: 0px 0px 0px 30px;
+  border-radius: 0px 0px 0px 30px;
+  behavior: none;
+}
+.full-quisuisje #competences section.competences-groupe ul li:last-child > h2:hover,
+.full-quisuisje #competences section.competences-groupe ul li:last-child > h2.active {
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  behavior: none;
+}
+.full-quisuisje #competences section.competences-groupe ul li:last-child > .description {
+  border-bottom: 2px solid;
+  border-color: #81adc8;
+  -moz-border-radius: 0px 0px 0px 30px;
+  border-radius: 0px 0px 0px 30px;
+  behavior: none;
+}
+.full-quisuisje #competences section:first-child {
+  border-right: 2px solid #81adc8;
 }
 /*
  * jQuery FlexSlider v2.2.0
@@ -3096,6 +3268,7 @@ Impossible de modifier directement en JS (fichier minifié)
   /* the standard */
 
   padding: 1em;
+  border-bottom: 4px solid #d0d0cc;
 }
 .full.full-home > header > h1 {
   border-bottom: 6px solid #c8dbe7;
@@ -3115,4 +3288,58 @@ Impossible de modifier directement en JS (fichier minifié)
 }
 .full.full-home > header .accroche {
   color: #e8e8e7;
+}
+.full.full-home #derniers-projets {
+  margin: 1em;
+}
+.full.full-home #derniers-projets > h1 {
+  font-size: 2em;
+  margin: 0 0 1em 0;
+}
+.full.full-home #derniers-projets li:before {
+  content: none;
+}
+.full.full-home .row .box .content {
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 2.3em;
+  font-weight: normal;
+  line-height: 1.2em;
+  letter-spacing: 0.03em;
+  line-height: 1.6em;
+  text-align: right;
+  color: #78c678;
+}
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  .full.full-home > header > h1 {
+    width: 100%;
+    font-size: 1.5em;
+    margin: 1em 0 1em 0;
+  }
+  .full.full-home > header > img {
+    width: 100%;
+    margin: 0;
+  }
+  .full.full-home #derniers-projets {
+    display: none;
+  }
+  .full.full-home .row .box .content {
+    font-size: 1.5em;
+  }
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1330px) {
+  .full.full-home > header > h1 {
+    width: 70%;
+    font-size: 2.5em;
+    margin: 1em 15%;
+  }
+  .full.full-home > header > img {
+    width: 100%;
+    margin: 0;
+  }
 }

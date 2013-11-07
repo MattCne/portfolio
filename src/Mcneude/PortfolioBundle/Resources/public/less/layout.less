@@ -469,6 +469,10 @@ img{
                         #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
                         &:before{
                             color: @blanc;
+                            left: 60%;
+                            right: auto;
+                            top: 0.25em;
+                            .transform( scale( 2 ) );
                         }
                     }
                 }
@@ -508,7 +512,6 @@ img{
             }
         }
         .sharebar{
-            width: 100%;
             li{
                 margin: 0 1em 0 0;
             }

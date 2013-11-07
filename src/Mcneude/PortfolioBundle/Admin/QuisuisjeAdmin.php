@@ -16,8 +16,6 @@ class QuisuisjeAdmin extends Admin
     {
         $formMapper
             ->add( 'pourquoi', 'textarea', array( 'label' => 'Pourquoi développeur web ?', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'competencesTech', 'textarea', array( 'label' => 'Compétences techniques', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'competencesCom', 'textarea', array( 'label' => 'Compétences communication', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'methodes', 'textarea', array( 'label' => 'Methodes de conception', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'politique', 'textarea', array( 'label' => 'Politique / workflow', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'infos', 'textarea', array( 'label' => 'Informations complémentaires', 'attr' => array( 'class' => 'tinymce' ) ) )
@@ -32,8 +30,6 @@ class QuisuisjeAdmin extends Admin
     {
         $datagridMapper
             ->add( 'pourquoi' )
-            ->add( 'competencesTech' )
-            ->add( 'competencesCom' )
             ->add( 'methodes' )
             ->add( 'politique' )
             ->add( 'infos' )
@@ -48,8 +44,6 @@ class QuisuisjeAdmin extends Admin
     {
         $listMapper
             ->add( 'pourquoi' )
-            ->add( 'competencesTech' )
-            ->add( 'competencesCom' )
             ->add( 'methodes' )
             ->add( 'politique' )
             ->add( 'infos' )
