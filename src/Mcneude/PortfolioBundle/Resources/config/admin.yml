@@ -27,6 +27,18 @@ services:
         calls:
             - [ setTranslationDomain, [PortfolioBundle]]
 
+    sonata.admin.quisuisjeCompetences:
+        class: Mcneude\PortfolioBundle\Admin\QuisuisjeCompetencesAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Qui suis-je ?", label: "Compétences" }
+        arguments :
+            - ~
+            - Mcneude\PortfolioBundle\Entity\QuisuisjeCompetences
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+
   #################
   #   Parcours    #
   #################

@@ -71,8 +71,8 @@ class ProjetsGroupes
     }
 
     /**
-     * Formate le nom pour en faire des classes valides HTML
-     *
+     * Get NomFormate
+     * Renvoie le nom formate (sans espace ni majuscules)
      * @return string
      */
     public function getNomFormate()

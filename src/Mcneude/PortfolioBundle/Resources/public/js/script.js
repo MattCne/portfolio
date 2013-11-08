@@ -60,8 +60,6 @@ $(function( $, undefined ){
         var $currentId = $(this).data('id'),
             $currentProjet = $listeProjetContainer.children('li.'+$currentId);
 
-        console.log($currentId);
-
         $listeGroupe.removeClass($groupeActive);
         $(this).addClass($groupeActive);
 
@@ -72,8 +70,6 @@ $(function( $, undefined ){
                 $listeProjet.hide();
                 $currentProjet.show();
 
-                console.log(event);
-
                 $currentProjet.removeClass($projetHidden);
                 $currentProjet.addClass($projetActive);
 
@@ -82,6 +78,19 @@ $(function( $, undefined ){
         }
 
         return false;
+    });
+
+})(window.jQuery);
+
+//Gestion de l'accordéon des compétences
+(function($, undefined){
+
+    //Initialisation
+    $('.full-quisuisje #competences .competence .description').hide();
+
+    $('.full-quisuisje #competences .competence .accordeon').on('click', function() {
+        if ($(this).next().is(':visible')) $(this).removeClass('active').next('.description').slideUp();
+        else $(this).addClass('active').next('.description').slideDown();
     });
 
 })(window.jQuery);

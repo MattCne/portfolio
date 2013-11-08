@@ -6,16 +6,18 @@
 /*    DESKTOP    */
 /*****************/
 
-.full-quisuisje {
+.full.full-quisuisje {
     #competences{
+        @description-border-color: @ruby;
+
         width: 100%;
         margin: 0.5em 0 1em;
         section.competences-groupe{
             width: 48%;
             > h1{
                 font-size:1.3em;
-                color: @gris-fonce;
-                border-color: lighten( @gris-fonce, 10 );
+                color: darken( @glacier, 30 );
+                border-color: darken( @glacier, 20 );
                 text-align: center;
             }
             ul{
@@ -61,18 +63,24 @@
                             #gradient .vertical( lighten( @ruby, 10 ), @ruby );
                             border: 1px solid darken( @ruby, 10 );
                             padding-left: 1.5em;
+                            .transition( all 0.5s );
+
                             &:hover{
-                                #gradient .vertical( lighten( @ruby, 10 ), @ruby );
+                                #gradient .vertical( lighten( @olive, 10 ), @olive );
+                                padding-left: 0.5em;
+                                border-color: @olive;
+                                + .description{
+                                    border-color: @olive;
+                                }
                             }
                         }
                     }
 
                     > .description{
-                        padding: 1em;
+                        padding: 1em 1em 1em 1.5em;
                         border-left: 2px solid;
                         border-right: 2px solid;
-                        border-color: @glacier;
-                        //display: none;
+                        border-color: @description-border-color;
                     }
                 }
                 li:first-child{
@@ -92,7 +100,9 @@
                     }
                     > .description{
                         border-bottom: 2px solid;
-                        border-color: @glacier;
+                        border-color: @description-border-color;
+                        padding-top:2em;
+                        margin-top:-1em;
                         .border-radius( 0px 0px 0px 30px );
                     }
                 }
@@ -100,6 +110,34 @@
         }
         section:first-child{
             border-right: 2px solid @glacier;
+        }
+    }
+}
+
+/*****************/
+/*    MOBILE     */
+/*****************/
+
+@media screen and (max-width: 760px){
+    .full.full-quisuisje {
+        #competences{
+            section.competences-groupe{
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*****************/
+/*    TABLETTE   */
+/*****************/
+
+@media screen and (min-width: 760px) and (max-width: 1330px) {
+    .full.full-quisuisje {
+        #competences{
+            section.competences-groupe{
+                width: 100%;
+            }
         }
     }
 }

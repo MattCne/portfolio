@@ -19,7 +19,7 @@
         }
         > span{
             padding: 1.5em;
-            background: @glacier;
+            #gradient .vertical( lighten( @glacier, 10 ), @glacier );
             color: lighten( @gris-clair, 10 );
             .border-radius( 0px 60px 60px 0px );
             border-right: 8px solid lighten( @glacier, 10 );
@@ -39,13 +39,13 @@
             }
 
             &.active{
-                border-color: @ruby;
-                background: @ruby;
+                border-color: darken( @ruby, 10 );
+                #gradient .vertical( lighten( @ruby, 10 ), @ruby );
             }
 
             &:hover{
-                border-color: @olive;
-                background: @olive;
+                border-color: darken( @olive, 10 );
+                #gradient .vertical( lighten( @olive, 10 ), @olive );
             }
         }
         a.all{

@@ -62,7 +62,7 @@ img{
 .box{
     border: 1px solid lighten( @glacier, 20 );
     border-radius: 0 0 7px 10px;
-    box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
+    .shadow( 0 7px 25px 5px rgba(208, 208, 204, 0.5) );
 
      width:47%;
      padding: 1.5em 2em 2em 1.5em;
@@ -196,6 +196,11 @@ img{
                         color:darken( @glacier, 20 );
                         .transform( scale( 3 ) );
                     }
+                }
+                //Correction sur le bouton contact pour ne pas avoir de scroll horizontal
+                > span.icon-telephone:before{
+                    right:auto;
+                    left: 2em;
                 }
             }
 

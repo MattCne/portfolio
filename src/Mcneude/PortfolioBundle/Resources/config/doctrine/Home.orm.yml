@@ -1,6 +1,6 @@
-Mcneude\PortfolioBundle\Entity\Quisuisje:
+Mcneude\PortfolioBundle\Entity\Home:
     type: entity
-    table: quisuisje
+    table: home
     fields:
         id:
             id: true
@@ -9,20 +9,18 @@ Mcneude\PortfolioBundle\Entity\Quisuisje:
             nullable: false
             generator:
                 strategy: IDENTITY
-        pourquoi:
+        image:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        accroche:
             type: text
             nullable: true
-        competencesCom:
+        apprendre:
             type: text
             nullable: true
-            column: competences_com
-        methodes:
-            type: text
-            nullable: true
-        politique:
-            type: text
-            nullable: true
-        infos:
+        construire:
             type: text
             nullable: true
     lifecycleCallbacks: {  }
