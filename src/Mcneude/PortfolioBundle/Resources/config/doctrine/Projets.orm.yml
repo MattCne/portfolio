@@ -37,12 +37,11 @@ Mcneude\PortfolioBundle\Entity\Projets:
             fixed: false
             nullable: true
             column: url_miniature
-        urlInternal:
+        slug:
             type: string
             length: 45
             fixed: false
-            nullable: true
-            column: url_internal
+            nullable: false
         urlExternal:
             type: string
             length: 45
@@ -53,11 +52,6 @@ Mcneude\PortfolioBundle\Entity\Projets:
             type: boolean
             nullable: true
             column: is_website
-        slug:
-            type: string
-            length: 45
-            fixed: false
-            nullable: false
     manyToMany:
         projetsGroupe:
             targetEntity: ProjetsGroupes

@@ -23,6 +23,10 @@ Mcneude\PortfolioBundle\Entity\ProjetImages:
             type: integer
             unsigned: false
             nullable: true
+        isImagePrincipale:
+            type: boolean
+            nullable: true
+            column: is_image_principale
     manyToOne:
         projet:
             targetEntity: Projets

@@ -7,11 +7,13 @@
     {% if projet is not empty %}
         <article class="full full-projet-interieur">
             <h1>{{ projet.nom }}</h1>
-            <a class="projet-link" title="{{ projet.nom }}"
-               {{- macros.choice_url( projet.urlInternal, projet.urlExternal ) -}}
-            >
-                Voir le site en ligne
-            </a>
+            {% if projet.urlExternal is not empty %}
+                <a class="projet-link" title="{{ projet.nom }}"
+                   href="http://{{ projet.urlExternal }}"
+                >
+                    Voir le site en ligne
+                </a>
+            {% endif %}
 
             <div class="accroche content">
                 {{ projet.description | raw  }}
@@ -22,8 +24,8 @@
                     <ul class="slides">
                         {% for image in images %}
                             <li>
-                                <a data-lightbox="image-projet" href="{{ asset('/bundles/portfolio/images') }}{{ image.url }}">
-                                    <img src="{{ asset('/bundles/portfolio/images') }}{{ image.url }}"  alt="{{ image.nom }}" /></a>
+                                <a data-lightbox="image-projet" href="{{ asset('/bundles/portfolio/images/content/projets') }}{{ image.url }}">
+                                    <img src="{{ asset('/bundles/portfolio/images/content/projets') }}{{ image.url }}"  alt="{{ image.nom }}" /></a>
                                 </a>
                             </li>
                         {% endfor %}

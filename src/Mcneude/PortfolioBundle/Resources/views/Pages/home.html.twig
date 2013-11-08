@@ -4,53 +4,48 @@
 
 {% block body %}
     <div class="full full-home">
-        <header>
-            <h1>Bienvenu sur mon portfolio !</h1>
-            <img src={{ asset("/bundles/portfolio/images/bureau.jpg") }} />
-            <div class="accroche content middle">
-                Ceci est l'accroche. Ceci est l'accroche. Ceci est l'accroche. Ceci est l'accroche. Ceci est l'accroche.
-
-                Ouaip. Ceci est l'accroche.
-            </div>
-        </header>
-
-        <!-- SLIDESHOW -->
-        <article id="derniers-projets" class="content">
-            <h1> Mes cinq derniers projets en images</h1>
-            <div class="slideshow flexslider">
-                <ul class="slides">
-                    <li>
-                        <a data-lightbox="image-diapo" href="{{ asset('/bundles/portfolio/images/projet/eovi/eovi_annuaire.png') }}">
-                            <img src="{{ asset('/bundles/portfolio/images/projet/eovi/eovi_annuaire.png') }}"  alt="An image of me" /></a>
-                        </a>
-                    </li>
-                    <li>
-                        <a data-lightbox="image-diapo" href="{{ asset('/bundles/portfolio/images/projet/eovi/eovi_pages_interieurs.png') }}">
-                            <img src="{{ asset('/bundles/portfolio/images/projet/eovi/eovi_pages_interieurs.png') }}" alt="An image of me" />
-                        </a>
-                    </li>
-                    <li>
-                        <a data-lightbox="image-diapo" href="{{ asset('/bundles/portfolio/images/projet/eovi/eovi_accueil.png') }}">
-                            <img src="{{ asset('/bundles/portfolio/images/projet/eovi/eovi_accueil.png') }}" alt="An image of me" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </article>
-        <article class="row">
-            <div class="content box">
-                <h1>En ce moment je me documente sur...</h1>
-                <div class="content">
-                    ...les design pattern en PHP
+        {% if home is not null %}
+            <header>
+                <h1>{{ home.titre }}</h1>
+                <img src={{ asset("/bundles/portfolio/images/content/home") }}{{ home.urlImage }} />
+                <div class="accroche content middle">
+                    {{ home.accroche | raw }}
                 </div>
-            </div>
-            <div class="content box">
-                <h1>En ce moment je travaille sur...</h1>
-                <div class="content">
-                    ...mon portfolio
+            </header>
+
+            {% if projetsImages is not empty %}
+            <!-- SLIDESHOW -->
+                <article id="derniers-projets">
+                    <h1> Mes cinq derniers projets en images</h1>
+                    <div class="slideshow flexslider">
+                        <ul class="slides">
+                            {% for image in projetsImages %}
+                                <li>
+                                    <a data-lightbox="image-diapo" href="{{ asset('/bundles/portfolio/images/content/projets') }}{{ image.url }}">
+                                        <img src="{{ asset('/bundles/portfolio/images/content/projets') }}{{ image.url }}"  alt="{{ image.nom }}" /></a>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </article>
+            {% endif %}
+
+            <article class="row">
+                <div class="content box">
+                    <h1>En ce moment je me documente sur...</h1>
+                    <div class="content">
+                        {{ home.apprendre }}
+                    </div>
                 </div>
-            </div>
-        </article>
+                <div class="content box">
+                    <h1>En ce moment je travaille sur...</h1>
+                    <div class="content">
+                        {{ home.construire }}
+                    </div>
+                </div>
+            </article>
+        {% endif %}
     </div>
 
 {% endblock %}

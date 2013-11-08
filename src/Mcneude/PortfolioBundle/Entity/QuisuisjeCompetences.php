@@ -174,4 +174,32 @@ class QuisuisjeCompetences
     {
         return strtolower( str_replace( ' ', '_', $this->nom ) );
     }
+    /**
+     * @var string
+     */
+    private $urlImage;
+
+
+    /**
+     * Set urlImage
+     *
+     * @param string $urlImage
+     * @return QuisuisjeCompetences
+     */
+    public function setUrlImage($urlImage)
+    {
+        $this->urlImage = $urlImage;
+    
+        return $this;
+    }
+
+    /**
+     * Get urlImage
+     *
+     * @return string 
+     */
+    public function getUrlImage()
+    {
+        return $this->urlImage;
+    }
 }

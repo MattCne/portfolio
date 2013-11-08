@@ -136,4 +136,60 @@ class Home
     {
         return $this->construire;
     }
+    /**
+     * @var string
+     */
+    private $titre;
+
+
+    /**
+     * Set titre
+     *
+     * @param string $titre
+     * @return Home
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+    
+        return $this;
+    }
+
+    /**
+     * Get titre
+     *
+     * @return string 
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+    /**
+     * @var string
+     */
+    private $urlImage;
+
+
+    /**
+     * Set urlImage
+     *
+     * @param string $urlImage
+     * @return Home
+     */
+    public function setUrlImage($urlImage)
+    {
+        $this->urlImage = $urlImage;
+    
+        return $this;
+    }
+
+    /**
+     * Get urlImage
+     *
+     * @return string 
+     */
+    public function getUrlImage()
+    {
+        return $this->urlImage;
+    }
 }

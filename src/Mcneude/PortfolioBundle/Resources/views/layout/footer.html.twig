@@ -8,7 +8,7 @@
             <ul class="liste">
                 {% for siteInternet in sitesInternet  %}
                     <li>
-                        <a title="{{ siteInternet.nom }}" {{- macros.choice_url( siteInternet.urlInternal, siteInternet.urlExternal ) -}}>
+                        <a title="{{ siteInternet.nom }}" {{- macros.choice_url( siteInternet.slug, siteInternet.urlExternal ) -}}>
                             {{ siteInternet.nom }}
                         </a>
                     </li>
@@ -23,7 +23,7 @@
             <ul class="liste">
                 {% for autreProjet in autresProjets  %}
                     <li>
-                        <a title="{{ autreProjet.nom }}" {{- macros.choice_url( autreProjet.urlInternal, autreProjet.urlExternal ) -}}>
+                        <a title="{{ autreProjet.nom }}" {{- macros.choice_url( autreProjet.slug, autreProjet.urlExternal ) -}}>
                             {{ autreProjet.nom }}
                         </a>
                     </li>
@@ -38,7 +38,7 @@
             <ul class="liste">
                 {% for fichier in fichiers %}
                     <li>
-                        <a  title="{{ fichier.nom }}"  href="/bundles/portfolio/PortfolioBundle{{ fichier.url }}">
+                        <a  title="{{ fichier.nom }}"  href="/bundles/portfolio/files{{ fichier.url }}">
                             {{ fichier.nom }}
                         </a>
                     </li>

@@ -21,11 +21,12 @@ Mcneude\PortfolioBundle\Entity\QuisuisjeCompetences:
             type: integer
             unsigned: false
             nullable: true
-        image:
+        urlImage:
             type: string
-            length: 200
+            length: 45
             fixed: false
             nullable: true
+            column: url_image
         isCompetencesTechniques:
             type: boolean
             nullable: true

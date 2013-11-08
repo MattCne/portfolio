@@ -16,8 +16,9 @@ class ProjetImagesAdmin extends Admin
     {
         $formMapper
             ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
-            ->add( 'url', 'text', array( 'label' => 'Url' ) )
+            ->add( 'url', 'text', array( 'label' => 'Url : /bundles/portfolio/images/content/projets' ) )
             ->add( 'position', 'text', array( 'label' => 'position' ) )
+            ->add( 'isImagePrincipale', 'checkbox', array( 'label' => 'Image principale ?', 'required' => false ) )
             ->add( 'projet', 'sonata_type_model', array(), array() )
         ;
     }
@@ -30,6 +31,9 @@ class ProjetImagesAdmin extends Admin
     {
         $datagridMapper
             ->add('nom')
+            ->add( 'url')
+            ->add( 'position' )
+            ->add( 'isImagePrincipale' )
         ;
     }
 
@@ -44,6 +48,7 @@ class ProjetImagesAdmin extends Admin
             ->add('url')
             ->add('position')
             ->add( 'projet', 'sonata_type_model', array(), array() )
+            ->add( 'isImagePrincipale' )
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),

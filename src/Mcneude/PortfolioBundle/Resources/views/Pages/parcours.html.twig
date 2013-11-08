@@ -27,7 +27,7 @@
                                     <time>{{ experience.getDate | date("d/m/Y") }}</time>
                                 </header>
                                 <div class="visuel">
-                                    <img src="/bundles/portfolio/images{{ experience.getUrlImage }}"
+                                    <img src="/bundles/portfolio/images/content/parcours_experiences{{ experience.getUrlImage }}"
                                          alt="{{ experience.getNom }}" title="{{ experience.getNom }}"/>
                                 </div>
                                 <div class="content">{{ experience.getDescription | raw}}</div>
@@ -56,7 +56,7 @@
                                     <h1>{{ etude.getNom }}</h1>
                                     <time>{{ etude.getDate | date("d/m/Y") }}</time>
                                 </header>
-                                <div class="visuel"><img src="/bundles/portfolio/images{{ etude.getUrlImage }}"
+                                <div class="visuel"><img src="/bundles/portfolio/images/content{{ etude.getUrlImage }}"
                                                          alt="Heliopsis"/></div>
                                 <div class="content">{{ etude.getDescription | raw}}</div>
                             </section>

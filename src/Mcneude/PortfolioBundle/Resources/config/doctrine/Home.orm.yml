@@ -9,7 +9,7 @@ Mcneude\PortfolioBundle\Entity\Home:
             nullable: false
             generator:
                 strategy: IDENTITY
-        image:
+        titre:
             type: string
             length: 45
             fixed: false
@@ -17,6 +17,12 @@ Mcneude\PortfolioBundle\Entity\Home:
         accroche:
             type: text
             nullable: true
+        urlImage:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+            column: url_image
         apprendre:
             type: text
             nullable: true

@@ -1,8 +1,8 @@
-{% macro choice_url( url_internal, url_external ) %}
-    {%- if url_internal is not empty -%}
-        href="{{ path( 'projet_interieur' , { 'slug': url_internal }) }}"
+{% macro choice_url( slug, url_external ) %}
+    {%- if slug is not empty  -%}
+        href="{{ path( 'projet_interieur' , { 'slug': slug }) }}"
     {%- elseif url_external is not empty -%}
-         href="http://{{-  url_external -}}"
+        href="http://{{-  url_external -}}"
     {%- endif -%}
 {% endmacro %}
 

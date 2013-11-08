@@ -18,9 +18,8 @@ class QuisuisjeCompetencesAdmin extends Admin
             ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
             ->add( 'description', 'textarea', array( 'label' => 'Description', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'position', 'text', array( 'label' => 'position' ) )
-            ->add( 'image', 'text', array( 'label' => 'URL de l\'image', 'required' => false ) )
+            ->add( 'urlImage', 'text', array( 'label' => 'URL de l\'image : /bundles/portfolio/images', 'required' => false ) )
             ->add( 'isCompetencesTechniques', 'checkbox', array( 'label' => 'Cette compétence est-elle technique ?', 'required' => false ) )
-
         ;
     }
 
@@ -33,7 +32,7 @@ class QuisuisjeCompetencesAdmin extends Admin
         $datagridMapper
             ->add('nom')
             ->add('description')
-            ->add('image')
+            ->add('urlImage')
         ;
     }
 
@@ -47,7 +46,7 @@ class QuisuisjeCompetencesAdmin extends Admin
             ->add('nom')
             ->add('description')
             ->add('position')
-            ->add('image')
+            ->add('urlImage')
             ->add('isCompetencesTechniques')
             ->add('_action', 'actions', array(
                 'actions' => array(

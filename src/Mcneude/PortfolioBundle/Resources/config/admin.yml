@@ -2,6 +2,22 @@
 services:
 
   #################
+  #      Home     #
+  #################
+
+    sonata.admin.home:
+        class: Mcneude\PortfolioBundle\Admin\HomeAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Page d'accueil", label: "Contenus" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\Home
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+
+  #################
   # Qui suis je ? #
   #################
 
@@ -91,17 +107,6 @@ services:
   #   Projets     #
   #################
 
-    sonata.admin.projets:
-        class: Mcneude\PortfolioBundle\Admin\ProjetsAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: "Projets", label: "Contenus" }
-        arguments:
-            - ~
-            - Mcneude\PortfolioBundle\Entity\Projets
-            - ~
-        calls:
-            - [ setTranslationDomain, [PortfolioBundle]]
-
     sonata.admin.projetsGroupe:
         class: Mcneude\PortfolioBundle\Admin\ProjetsGroupesAdmin
         tags:
@@ -109,6 +114,17 @@ services:
         arguments:
             - ~
             - Mcneude\PortfolioBundle\Entity\ProjetsGroupes
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+    sonata.admin.projets:
+        class: Mcneude\PortfolioBundle\Admin\ProjetsAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Projets", label: "Contenus" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\Projets
             - ~
         calls:
             - [ setTranslationDomain, [PortfolioBundle]]

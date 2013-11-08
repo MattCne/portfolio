@@ -8,12 +8,32 @@ class HomeController extends Controller
 {
     public function renderAction()
     {
-        //Récupération des projets dans la base de donnée
-        /*$dbProjet = $this->getDoctrine()
-            ->getRepository('PortfolioBundle:Projet');
+        $images = array();
 
-        $projets = $dbProjet->findAll();*/
+        $homeDb = $this->getDoctrine()
+            ->getRepository('PortfolioBundle:Home')
+            ->findAll();
 
-        return $this->render( 'PortfolioBundle:Pages:home.html.twig' );
+        $projetsDb = $this->getDoctrine()
+            ->getRepository('PortfolioBundle:Projets')
+            ->createQueryBuilder('projets')
+            ->setMaxResults(5)
+            ->orderBy('projets.position','DESC')
+            ->getQuery()
+            ->getresult();
+        if( $projetsDb )
+        {
+            $images = $this->getDoctrine()
+                ->getRepository('PortfolioBundle:ProjetImages')
+                ->findBy( array( 'projet' => $projetsDb, 'isImagePrincipale' => '1' ) );
+        }
+
+        $home = isset( $homeDb[0] ) ? $homeDb[0] : null;
+
+        return $this->render( 'PortfolioBundle:Pages:home.html.twig',
+            array(
+                'home' => $home,
+                'projetsImages' => $images
+            ) );
     }
 }

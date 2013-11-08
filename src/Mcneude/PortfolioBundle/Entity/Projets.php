@@ -89,7 +89,6 @@ class Projets
 
     public function getProjetImages()
     {
-
         return $this->projetImages;
     }
 
@@ -106,13 +105,15 @@ class Projets
     /**
      * Set nom
      *
+     * Ajoute le nom et crée le slug à partir de celui ci
      * @param string $nom
      * @return Projets
      */
     public function setNom($nom)
     {
         $this->nom = $nom;
-    
+        $this->setSlug( $this->slugify( $nom ) );
+
         return $this;
     }
 
@@ -418,7 +419,7 @@ class Projets
      */
     public function setSlug($slug)
     {
-        $this->slug = $slug;
+       $this->slug = $slug;
 
         return $this;
     }
@@ -431,5 +432,16 @@ class Projets
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Crée un slug pour le projet
+     * @param $string le texte à convertir
+     * @return string le slug
+     * @todo Ca marche tant qu'on fait pas n'importe quoi, mais bon a voir pour la robustesse (regex ?)
+     */
+    public function slugify( $string )
+    {
+        return strtolower( str_replace( ' ', '-', $string ) );
     }
 }

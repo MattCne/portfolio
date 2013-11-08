@@ -164,4 +164,32 @@ class ProjetImages
     {
         return $this->projet;
     }
+    /**
+     * @var boolean
+     */
+    private $isImagePrincipale;
+
+
+    /**
+     * Set isImagePrincipale
+     *
+     * @param boolean $isImagePrincipale
+     * @return ProjetImages
+     */
+    public function setIsImagePrincipale($isImagePrincipale)
+    {
+        $this->isImagePrincipale = $isImagePrincipale;
+    
+        return $this;
+    }
+
+    /**
+     * Get isImagePrincipale
+     *
+     * @return boolean 
+     */
+    public function getIsImagePrincipale()
+    {
+        return $this->isImagePrincipale;
+    }
 }

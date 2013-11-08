@@ -23,7 +23,7 @@
                         <article>
                             <a href="{{ path( 'projet_interieur' , { 'slug': projet.slug }) }}">
                                 <figure class="visuel">
-                                    <img src="/bundles/portfolio/images{{ projet.urlMiniature }}" alt="visuel"/>
+                                    <img src="{{ asset( '/bundles/portfolio/images/content/projets_miniatures' )}}{{ projet.urlMiniature }}" alt="visuel"/>
                                     <figcaption>
                                         <h1>{{ projet.nom }}</h1>
 
