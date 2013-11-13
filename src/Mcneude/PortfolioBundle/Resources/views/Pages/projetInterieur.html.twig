@@ -9,10 +9,12 @@
             <h1>{{ projet.nom }}</h1>
             {% if projet.urlExternal is not empty %}
                 <a class="projet-link" title="{{ projet.nom }}"
-                   href="http://{{ projet.urlExternal }}"
+                   href="http://{{ projet.urlExternal }}" target="_blank"
                 >
                     Voir le site en ligne
                 </a>
+            {% else %}
+                <p>Ce projet n'est plus en ligne</p>
             {% endif %}
 
             <div class="accroche content">

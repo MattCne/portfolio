@@ -11,7 +11,7 @@
             <header>
                 <h1>Pourquoi développeur web ?</h1>
             </header>
-            <div class="content">
+            <div>
                 {% if quisuisje is not empty %}
                     {{ quisuisje.pourquoi | raw }}
                 {% endif %}
@@ -22,11 +22,11 @@
             <article id="competences" class="box competences-groupe content">
                 <header>
                     <h1>Compétences</h1>
-                    <div class="accroche">
-                        {% if accroches is not empty  %}
-                            {{ accroches.accrocheCompetences | raw }}
-                        {% endif %}
-                    </div>
+                    {% if accroches is not empty  %}
+                        <div class="accroche">
+                                {{ accroches.accrocheCompetences | raw }}
+                        </div>
+                    {% endif %}
                 </header>
                 {% if competencesTech is not empty %}
                     <section class="competences-groupe">
@@ -64,14 +64,14 @@
         <div class="row">
             <article class="content box">
                 <header>
-                    <h1>Methodes de conception.</h1>
-                    <div class="accroche">
-                        {% if accroches is not empty %}
-                            {{ accroches.getAccrocheMethodes | raw }}
-                        {% endif %}
-                    </div>
+                    <h1>Methodes de conception</h1>
+                    {% if accroches is not empty %}
+                        <div class="accroche">
+                                {{ accroches.getAccrocheMethodes | raw }}
+                        </div>
+                    {% endif %}
                 </header>
-                <div class="content">
+                <div>
                     <ul>
                         {%  if quisuisje is not empty %}
                             {{ quisuisje.getMethodes | raw }}
@@ -82,13 +82,13 @@
             <article class="content box">
                 <header>
                     <h1>Politique / Workflow</h1>
-                    <div class="accroche">
-                        {% if accroches is not empty %}
+                    {% if accroches is not empty %}
+                        <div class="accroche">
                             {{ accroches.getAccrochePolitique | raw }}
-                        {% endif %}
-                    </div>
+                        </div>
+                    {% endif %}
                 </header>
-                <div class="content">
+                <div>
                     <ul>
                         {% if quisuisje is not empty %}
                             {{ quisuisje.getPolitique | raw }}
@@ -104,7 +104,7 @@
                     <div class="accroche"> {{ accroches.getAccrocheInfos | raw }}</div>
                 {% endif %}
             </header>
-            <div class="content">
+            <div>
                 <ul>
                     {% if quisuisje is not empty %}
                         {{ quisuisje.getInfos | raw }}

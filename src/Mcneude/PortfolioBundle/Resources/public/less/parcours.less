@@ -3,23 +3,11 @@
 @import 'fontcustom.less';
 
 .full-cv{
-    .opensanslight( 1em );
-    
-     .accroche{
-         border:none;
-     }
-   
-    #experiences, #etude, #exp_comp, #competence{
-        header{
-            h1{
-                font-size:1.5em;
-            }
-        }
-    }
 
     #experiences, #etude{
         > ul{
             > li{
+
                  &:before{
                     content:none;
                  }
@@ -34,7 +22,7 @@
                         position:relative;
 
                         h1{
-                            .opensansbold( 1.1em );
+                            .opensansbold( 1.6em );
                             color:@tomatoes;
                             letter-spacing:0em;
                             border-color: @tomatoes;
@@ -42,8 +30,9 @@
                         time{
                             position:absolute;
                             bottom:0.8em;
-                            font-size:0.8em;
+                            font-size:1.3em;
                             right:0;
+                            top: 0.2em;
                             color: @ruby;
                         }
                     }
@@ -52,6 +41,8 @@
                     }
                     .visuel{
                         width:33.333333%;
+                        border: 1px solid @gris-clair;
+                        margin: 0.5em 0 0;
                     }
                     .content{
                         width:66.666666%;

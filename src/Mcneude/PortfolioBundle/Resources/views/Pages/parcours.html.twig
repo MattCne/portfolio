@@ -7,11 +7,11 @@
     <div class="full full-cv">
         <h1>Parcours</h1>
 
-        <article class="content box" id="experiences">
+        <article class="box" id="experiences">
             <header>
                 <h1>Expériences professionnelles</h1>
 
-                <div classe="accroche">
+                <div class="accroche content">
                     {% if accroches is not null %}
                         {{ accroches.getAccrocheExperiences | raw }}
                     {% endif %}
@@ -37,11 +37,11 @@
                 </ul>
             {% endif %}
         </article>
-        <article class="content box" id="etude">
+        <article class="box" id="etude">
             <header>
-                <h1>Etudes réalisés</h1>
+                <h1>Etudes réalisées</h1>
 
-                <div class="accroche">
+                <div class="accroche content">
                     {% if accroches is not null %}
                         {{ accroches.getAccrocheEtudes | raw }}
                     {% endif %}
@@ -56,9 +56,9 @@
                                     <h1>{{ etude.getNom }}</h1>
                                     <time>{{ etude.getDate | date("d/m/Y") }}</time>
                                 </header>
-                                <div class="visuel"><img src="/bundles/portfolio/images/content{{ etude.getUrlImage }}"
-                                                         alt="Heliopsis"/></div>
-                                <div class="content">{{ etude.getDescription | raw}}</div>
+                                <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_etudes{{ etude.urlImage }}"
+                                                         alt="{{ etude.nom }}"/></div>
+                                <div class="content">{{ etude.description | raw}}</div>
                             </section>
                         </li>
                     {% endfor %}
@@ -66,11 +66,11 @@
             {% endif %}
         </article>
         <div class="row">
-            <article class="content box" id="exp_comp">
+            <article class="box" id="exp_comp">
                 <header>
                     <h1>Expériences complémentaires</h1>
 
-                    <div class="accroche">
+                    <div class="accroche content">
                         {% if accroches is not null %}
                             {{ accroches.getAccrocheExperiencesComplementaires | raw }}
                         {% endif %}
@@ -83,11 +83,11 @@
                 </div>
             </article>
 
-            <article class="content box" id="exp_comp">
+            <article class="box" id="exp_comp">
                 <header>
                     <h1>Intérets</h1>
 
-                    <div class="accroche">
+                    <div class="accroche content">
                         {% if accroches is not null %}
                             {{ accroches.getAccrocheInterets | raw }}
                         {% endif %}

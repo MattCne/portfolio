@@ -1,0 +1,307 @@
+@font-face {
+  font-family: 'opensanslight';
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Light-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Light-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansbold';
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Bold-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'opensansitalic';
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot');
+  src: url('/bundles/portfolio/font/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.woff') format('woff'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.ttf') format('truetype'), url('/bundles/portfolio/font/OpenSans-Italic-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'biko';
+  src: url('/bundles/portfolio/font/Biko_Bold.otf');
+  src: url('/bundles/portfolio/font/Biko_Bold.otf') format('embedded-opentype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('woff'), url('/bundles/portfolio/font/Biko_Bold.otf') format('truetype'), url('/bundles/portfolio/font/Biko_Bold.otf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'felltypes';
+  src: url('/bundles/portfolio/font/IMFeENrm29P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.inline-block {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.clearfix {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+  Font Custom - icon webfonts made simple
+*/
+@font-face {
+  font-family: "fontcustom";
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot");
+  src: url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.eot?#iefix") format("embedded-opentype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.woff") format("woff"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.ttf") format("truetype"), url("/bundles/portfolio/font/iconvault_bc33c7b086bfce8386cea4183c5cdb5e.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.icon-footer_arrow_right:before,
+.icon-parcours:before,
+.icon-projets:before,
+.icon-moi:before,
+.icon-telephone:before,
+.icon-accueil:before,
+.icon-arrow_right:before {
+  font-family: "fontcustom";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+.icon-footer_arrow_right:before {
+  content: "\f100";
+}
+.icon-parcours:before {
+  content: "\f101";
+}
+.icon-projets:before {
+  content: "\f102";
+}
+.icon-moi:before {
+  content: "\f103";
+}
+.icon-telephone:before {
+  content: "\f104";
+}
+.icon-accueil:before {
+  content: "\f105";
+}
+.icon-arrow_right:before {
+  content: "\f106";
+}
+.fontcustom {
+  font-family: "fontcustom";
+}
+.content {
+  /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+
+  zoom: 1;
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 1.2em;
+  letter-spacing: 0.03em;
+  line-height: 1.6em;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
+.content .italic {
+  font-family: "opensansitalic", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+.content .bold {
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+.content .underline {
+  text-decoration: underline;
+}
+.content a {
+  border-bottom: 1px dotted #81adc8;
+  -ms-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.content a:hover {
+  color: #be6c57;
+  border-color: #be6c57;
+}
+.content strong,
+.content .rouge {
+  color: #be6c57;
+}
+.content ul {
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+.content ul li {
+  margin: 0.5em 0 0.5em 0;
+}
+.content ul li:before {
+  -ms-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: "fontcustom";
+  content: "\f106";
+  color: #5d96b9;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  font-size: 0.6em;
+  vertical-align: middle;
+  padding-right: 0.5em;
+}
+.content ul li > ul > li:before {
+  content: "↳";
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.2em;
+  padding-right: 0.3em;
+}
+.content ul li:first-child {
+  margin-top: 0;
+}
+.content section {
+  float: left;
+  padding: 1em;
+  color: #555555;
+}
+.box header > h1,
+.content.middle header > h1 {
+  color: #b0afbd;
+  padding: 0 0 0.25em 0;
+  margin: 0 0 0.5em 0;
+  color: #9493a6;
+  border-bottom: 1px solid #b0afbd;
+}
+.box {
+  border: 1px solid #c8dbe7;
+  border-radius: 0 0 7px 10px;
+  -ms-box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
+  -webkit-box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
+  -moz-box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
+  -o-box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
+  box-shadow: 0 7px 25px 5px rgba(208, 208, 204, 0.5);
+  width: 47%;
+  padding: 1.5em 2em 2em 1.5em;
+  display: block;
+  margin: 0.5em 1em 1em 1em;
+  float: left;
+}
+.content.middle {
+  margin: 2.5em 25% 2.5em 25%;
+}
+.content_2col div,
+.content_4col div,
+.content_2x2col div,
+.content_2x4col div {
+  float: left;
+}
+.content_2col section {
+  width: 50%;
+  letter-spacing: 0.04em;
+}
+.content_4col section {
+  width: 25%;
+}
+.content_2x2col section {
+  width: 50%;
+}
+.content_2x2col div {
+  width: 50%;
+  padding: 0 1.25em 0 0;
+}
+.content_2x4col section {
+  width: 50%;
+}
+.content_2x4col div {
+  width: 25%;
+  padding: 0 1.25em 0 0;
+}
+/* Autre contenu */
+.accroche {
+  padding: 1em 0 1em 0;
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+.accroche > p {
+  padding: 0 0.5em 0 0.5em;
+}
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  .box {
+    width: 100%;
+    margin: 0.5em 0 0.5em 0;
+  }
+  .content section {
+    padding: 0.5em;
+  }
+  .content.middle {
+    margin: 1.5em 0 1.5em 0;
+  }
+  .content_2col section {
+    width: 100%;
+  }
+  .content_4col section {
+    width: 100%;
+  }
+  .content_2x2col section {
+    width: 100%;
+  }
+  .content_2x2col div {
+    width: 100%;
+  }
+  .content_2x4col section {
+    width: 100%;
+  }
+  .content_2x4col div {
+    width: 100%;
+  }
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1330px) {
+  .box {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .content_4col section {
+    width: 50%;
+  }
+  .content_2x2col div {
+    width: 100%;
+  }
+  .content_2x4col div {
+    width: 100%;
+  }
+}
