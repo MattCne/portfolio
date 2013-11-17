@@ -14,7 +14,7 @@ class ProjetsController extends Controller
         $projetsDb = $this->getDoctrine()
             ->getRepository('PortfolioBundle:Projets')
             ->createQueryBuilder('projets')
-            ->orderBy('projets.position')
+            ->orderBy('projets.position', 'DESC')
             ->getQuery()
             ->getresult();
 

@@ -7,66 +7,68 @@
     <div class="full full-cv">
         <h1>Parcours</h1>
 
-        <article class="box" id="experiences">
-            <header>
-                <h1>Expériences professionnelles</h1>
-
-                <div class="accroche content">
-                    {% if accroches is not null %}
-                        {{ accroches.getAccrocheExperiences | raw }}
-                    {% endif %}
-                </div>
-            </header>
-            {% if experiences is not empty %}
-                <ul>
-                    {% for experience in experiences %}
-                        <li>
-                            <section class="exp_pro">
-                                <header>
-                                    <h1>{{ experience.getNom }}</h1>
-                                    <time>{{ experience.getDate | date("d/m/Y") }}</time>
-                                </header>
-                                <div class="visuel">
-                                    <img src="/bundles/portfolio/images/content/parcours_experiences{{ experience.getUrlImage }}"
-                                         alt="{{ experience.getNom }}" title="{{ experience.getNom }}"/>
-                                </div>
-                                <div class="content">{{ experience.getDescription | raw}}</div>
-                            </section>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </article>
-        <article class="box" id="etude">
-            <header>
-                <h1>Etudes réalisées</h1>
-
-                <div class="accroche content">
-                    {% if accroches is not null %}
-                        {{ accroches.getAccrocheEtudes | raw }}
-                    {% endif %}
-                </div>
-            </header>
-            {% if etudes is not empty %}
-                <ul>
-                    {% for etude in etudes %}
-                        <li>
-                            <section class="exp_etude">
-                                <header>
-                                    <h1>{{ etude.getNom }}</h1>
-                                    <time>{{ etude.getDate | date("d/m/Y") }}</time>
-                                </header>
-                                <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_etudes{{ etude.urlImage }}"
-                                                         alt="{{ etude.nom }}"/></div>
-                                <div class="content">{{ etude.description | raw}}</div>
-                            </section>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </article>
         <div class="row">
-            <article class="box" id="exp_comp">
+            <article class="box" id="experiences">
+                <header>
+                    <h1>Expériences professionnelles</h1>
+
+                    <div class="accroche content">
+                        {% if accroches is not null %}
+                            {{ accroches.getAccrocheExperiences | raw }}
+                        {% endif %}
+                    </div>
+                </header>
+                {% if experiences is not empty %}
+                    <ul>
+                        {% for experience in experiences %}
+                            <li>
+                                <section class="exp_pro">
+                                    <header>
+                                        <h1>{{ experience.getNom }}</h1>
+                                        <time>{{ experience.getDate | date("d/m/Y") }}</time>
+                                    </header>
+                                    <div class="visuel">
+                                        <img src="/bundles/portfolio/images/content/parcours_experiences{{ experience.getUrlImage }}"
+                                             alt="{{ experience.getNom }}" title="{{ experience.getNom }}"/>
+                                    </div>
+                                    <div class="content">{{ experience.getDescription | raw}}</div>
+                                </section>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </article>
+            <article class="box" id="etude">
+                <header>
+                    <h1>Etudes réalisées</h1>
+
+                    <div class="accroche content">
+                        {% if accroches is not null %}
+                            {{ accroches.getAccrocheEtudes | raw }}
+                        {% endif %}
+                    </div>
+                </header>
+                {% if etudes is not empty %}
+                    <ul>
+                        {% for etude in etudes %}
+                            <li>
+                                <section class="exp_etude">
+                                    <header>
+                                        <h1>{{ etude.getNom }}</h1>
+                                        <time>{{ etude.getDate | date("d/m/Y") }}</time>
+                                    </header>
+                                    <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_etudes{{ etude.urlImage }}"
+                                                             alt="{{ etude.nom }}"/></div>
+                                    <div class="content">{{ etude.description | raw}}</div>
+                                </section>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </article>
+        </div>
+        <div class="row">
+            <article class="box">
                 <header>
                     <h1>Expériences complémentaires</h1>
 
@@ -83,7 +85,7 @@
                 </div>
             </article>
 
-            <article class="box" id="exp_comp">
+            <article class="box">
                 <header>
                     <h1>Intérets</h1>
 

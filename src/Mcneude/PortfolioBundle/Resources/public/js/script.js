@@ -8,21 +8,49 @@ $(function( $, undefined ){
 });
 
 /**
- * Gestion de la taille des colonnes dans le footer
+ * Gestion de la hauteur des colonnes dans le footer
  */
 (function($, undefined){
-    var $sectionFooter = $('body #main > footer section');
-    var h = 0;
-    $sectionFooter.each(function(){
-        if($(this).outerHeight() >= h)
-            h = $(this).outerHeight();
-    });
+    if( !Modernizr.touch || !Modernizr.geolocation )
+    {
+        var $sectionFooter = $('body #main > footer section');
+        var h = 0;
+        $sectionFooter.each(function(){
+            if($(this).outerHeight() >= h)
+                h = $(this).outerHeight();
+        });
 
-    $sectionFooter.each(function(){
-        $(this).height(h);
-    });
+        $sectionFooter.each(function(){
+            $(this).height(h);
+        });
+    }
 
 })(window.jQuery);
+
+/**
+ * Ajustement de la hauteur des elements '.box' dans les pages par colonne
+ */
+(function($, undefined){
+    if( !Modernizr.touch || !Modernizr.geolocation )
+    {
+        $('.row').each( function(){
+            var h = 0,
+                $box = $(this).children('.box');
+
+            $box.each(function(){
+                if($(this).outerHeight() >= h)
+                    h = $(this).outerHeight();
+            })
+
+            $box.each(function(){
+                $(this).height(h);
+            });
+        });
+
+    }
+
+})(window.jQuery);
+
 
 /**
  * Gestion du changement de groupe dans la page Projet

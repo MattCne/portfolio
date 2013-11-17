@@ -101,6 +101,14 @@
 .fontcustom {
   font-family: "fontcustom";
 }
+.content,
+.content p {
+  letter-spacing: 0.03em;
+  line-height: 1.7em;
+}
+.content p {
+  margin: 0.5em 0 0 0;
+}
 .content {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
@@ -109,8 +117,6 @@
   font-size: 1.3em;
   font-weight: normal;
   line-height: 1.2em;
-  letter-spacing: 0.03em;
-  line-height: 1.6em;
 }
 .content:before,
 .content:after {
@@ -152,7 +158,7 @@
   color: #be6c57;
 }
 .content ul {
-  margin: 0;
+  margin: 0.5em 0 0;
   padding: 0 0 0 1em;
 }
 .content ul li {

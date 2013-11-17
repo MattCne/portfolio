@@ -2,11 +2,20 @@
 @import 'mixins.less';
 @import 'fontcustom.less';
 
-.content{
-	.clearfix;
-    .opensanslight( 1.3em );
+
+.content, .content p{
+
     letter-spacing: 0.03em;
-    line-height: 1.6em;
+    line-height: 1.7em;
+}
+
+.content p{
+    margin: 0.5em 0 0 0;
+}
+
+.content{
+    .clearfix;
+    .opensanslight( 1.3em );
 
     .italic{
 		.opensansitalic;
@@ -34,7 +43,7 @@
 	}
 
     ul{
-		margin:0;
+        margin: 0.5em 0 0;
 		padding:0 0 0 1em;
 		li{
             margin: 0.5em 0 0.5em 0;

@@ -179,6 +179,14 @@ Polyfill disponible sur https://github.com/heygrady/textshadow
 .fontcustom {
   font-family: "fontcustom";
 }
+.content,
+.content p {
+  letter-spacing: 0.03em;
+  line-height: 1.7em;
+}
+.content p {
+  margin: 0.5em 0 0 0;
+}
 .content {
   /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 
@@ -187,8 +195,6 @@ Polyfill disponible sur https://github.com/heygrady/textshadow
   font-size: 1.3em;
   font-weight: normal;
   line-height: 1.2em;
-  letter-spacing: 0.03em;
-  line-height: 1.6em;
 }
 .content:before,
 .content:after {
@@ -286,7 +292,7 @@ Polyfill disponible sur https://github.com/heygrady/textshadow
   color: #be6c57;
 }
 .content ul {
-  margin: 0;
+  margin: 0.5em 0 0;
   padding: 0 0 0 1em;
 }
 .content ul li {
@@ -1826,10 +1832,9 @@ img {
   transition: all 0.3s ease-in-out;
 }
 .full-projets .projet .visuel figcaption h1 {
-  padding: 0.6em 0 0.5em 1em;
+  padding: 3% 0 3.5% 1em;
   color: #cccbd4;
   border-bottom: 1px solid #b0afbd;
-  margin: 0 0 0.5em 0;
   font-size: 1.4em;
 }
 .full-projets .projet .visuel figcaption .accroche {
@@ -1939,6 +1944,8 @@ img {
     padding: 0;
   }
   .full-projets .list-projet li {
+    margin: 1.5em 0 1.5em 0;
+    border-bottom: 1px solid #45443f;
     float: none;
     width: 100%;
   }
@@ -2103,7 +2110,7 @@ img {
   border: 5px solid #D0D0CC;
   border-radius: 5px 5px 5px 5px;
   float: left;
-  height: 300px;
+  height: 230px;
   margin: 0 2.5%;
   overflow: hidden;
   padding: 0.5em;
