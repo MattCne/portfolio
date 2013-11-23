@@ -1,0 +1,5 @@
+NameError: variable @dimgray is undefined in /home/thanatos/workspace/portfolio/src/Mcneude/PortfolioBundle/Resources/public/less/home.less:5:29
+4     > header {
+5         #gradient .vertical( @dimgray, @fuscousgrey );
+6         padding: 1em;
+

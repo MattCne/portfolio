@@ -2577,14 +2577,17 @@ img {
   border-color: #457c9e;
   text-align: center;
 }
-.full.full-quisuisje #competences section.competences-groupe ul {
+.full.full-quisuisje #competences section.competences-groupe > ul {
   padding: 0;
   margin: 0;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li:before {
+.full.full-quisuisje #competences section.competences-groupe > ul > li {
+  margin: 0;
+}
+.full.full-quisuisje #competences section.competences-groupe > ul > li:before {
   content: none;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li > h2 {
+.full.full-quisuisje #competences section.competences-groupe > ul > li > h2 {
   position: relative;
   z-index: 1;
   font-family: "opensansbold", Arial, sans-serif;
@@ -2626,7 +2629,7 @@ img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li > h2:hover {
+.full.full-quisuisje #competences section.competences-groupe > ul > li > h2:hover {
   background-color: #78c678;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#9cd59c), to(#78c678));
@@ -2656,7 +2659,7 @@ img {
   padding-left: 1.5em;
   cursor: pointer;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li > h2:before {
+.full.full-quisuisje #competences section.competences-groupe > ul > li > h2:before {
   font-family: "fontcustom";
   content: "\f100";
   display: inline-block;
@@ -2667,7 +2670,7 @@ img {
   padding-right: 0.5em;
   padding-bottom: 0.1em;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li > h2.active {
+.full.full-quisuisje #competences section.competences-groupe > ul > li > h2.active {
   background-color: #ea4f4f;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#ef7d7d), to(#ea4f4f));
@@ -2701,7 +2704,7 @@ img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li > h2.active:hover {
+.full.full-quisuisje #competences section.competences-groupe > ul > li > h2.active:hover {
   background-color: #78c678;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#9cd59c), to(#78c678));
@@ -2730,38 +2733,38 @@ img {
   padding-left: 0.5em;
   border-color: #78c678;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li > h2.active:hover + .description {
+.full.full-quisuisje #competences section.competences-groupe > ul > li > h2.active:hover + .description {
   border-color: #78c678;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li > .description {
+.full.full-quisuisje #competences section.competences-groupe > ul > li > .description {
   padding: 1em 1em 1em 1.5em;
   border-left: 2px solid;
   border-right: 2px solid;
   border-color: #ea4f4f;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li:first-child > h2 {
+.full.full-quisuisje #competences section.competences-groupe > ul li:first-child > h2 {
   -moz-border-radius: 0px 30px 0px 0px;
   border-radius: 0px 30px 0px 0px;
   behavior: none;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li:first-child > h2:hover,
-.full.full-quisuisje #competences section.competences-groupe ul li:first-child > h2.active {
+.full.full-quisuisje #competences section.competences-groupe > ul li:first-child > h2:hover,
+.full.full-quisuisje #competences section.competences-groupe > ul li:first-child > h2.active {
   -moz-border-radius: 0px;
   border-radius: 0px;
   behavior: none;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li:last-child > h2 {
+.full.full-quisuisje #competences section.competences-groupe > ul li:last-child > h2 {
   -moz-border-radius: 0px 0px 0px 30px;
   border-radius: 0px 0px 0px 30px;
   behavior: none;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li:last-child > h2:hover,
-.full.full-quisuisje #competences section.competences-groupe ul li:last-child > h2.active {
+.full.full-quisuisje #competences section.competences-groupe > ul li:last-child > h2:hover,
+.full.full-quisuisje #competences section.competences-groupe > ul li:last-child > h2.active {
   -moz-border-radius: 0px;
   border-radius: 0px;
   behavior: none;
 }
-.full.full-quisuisje #competences section.competences-groupe ul li:last-child > .description {
+.full.full-quisuisje #competences section.competences-groupe > ul li:last-child > .description {
   border-bottom: 2px solid;
   border-color: #ea4f4f;
   padding-top: 2em;
@@ -3412,7 +3415,7 @@ Impossible de modifier directement en JS (fichier minifié)
   color: #e8e8e7;
 }
 .full.full-home #derniers-projets {
-  margin: 1em;
+  margin: 2em 1em;
 }
 .full.full-home #derniers-projets > h1 {
   font-size: 2em;
