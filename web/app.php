@@ -15,11 +15,7 @@ $loader->register(true);
 require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
 
-ini_set('display_errors', 1);
-error_reporting(-1);
 $kernel = new AppKernel('prod',false);
-ini_set('display_errors', 1);
-error_reporting(-1);
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 $request = Request::createFromGlobals();
