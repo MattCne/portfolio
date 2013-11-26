@@ -38,7 +38,7 @@
             <ul class="liste">
                 {% for fichier in fichiers %}
                     <li>
-                        <a  title="{{ fichier.nom }}"  href="/bundles/portfolio/files{{ fichier.url }}">
+                        <a  title="{{ fichier.nom }}" target="_blank" href="{{ asset('/bundles/portfolio/files') }}{{ fichier.url }}">
                             {{ fichier.nom }}
                         </a>
                     </li>

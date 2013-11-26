@@ -16,7 +16,7 @@ class FichiersAdmin extends Admin
     {
         $formMapper
             ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
-            ->add( 'url', 'text', array( 'label' => 'Url : /bundles/portfolio/files/' ) )
+            ->add( 'url', 'text', array( 'label' => 'Url : /bundles/portfolio/files' ) )
             ->add( 'position', 'text', array( 'label' => 'Position' ) )
         ;
     }
