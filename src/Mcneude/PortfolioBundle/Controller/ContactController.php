@@ -26,6 +26,7 @@ class ContactController extends Controller
                             ->setSubject( $this->container->getParameter( 'admin_email_subject_prefixe' ).$form->get( 'sujet' )->getData() )
                             ->setFrom( $form->get( 'email' )->getData() )
                             ->setTo( $adresse )
+                            ->setContentType("text/html")
                             ->setBody(
                                 $this->renderView(
                                     'PortfolioBundle:Emails/Forms:contact.html.twig',
