@@ -8,6 +8,11 @@
 
     <h1>Contactez moi</h1>
     <form action="{{ path('post_contact_form') }}" method="post" {{ form_enctype(form) }}>
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="notif">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
 
         {{ form_errors(form) }}
         {{ form_widget(form) }}

@@ -44,6 +44,8 @@ class ContactController extends Controller
                 $this->get( 'mailer' )->send( $message );
                 $request->getSession()->getFlashBag()->add( 'success', 'Votre email a bien été envoyé. Merci !' );
 
+                $this->get('session')->getFlashBag()->add('notice', 'Votre message a bien été envoyé.');
+
                 return $this->redirect( $this->generateUrl( 'contact' ) );
             }
         }

@@ -3363,6 +3363,22 @@ Impossible de modifier directement en JS (fichier minifié)
   font-weight: normal;
   line-height: 1.2em;
 }
+.full.full-contact form .error {
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 0;
+  color: #ea4f4f;
+}
+.full.full-contact form .notif {
+  font-family: "opensanslight", Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.2em;
+  color: #ea4f4f;
+  margin: 0.5em 0 0.5em 0;
+}
 .full.full-home {
   padding: 0;
 }
