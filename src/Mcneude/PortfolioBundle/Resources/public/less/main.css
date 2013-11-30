@@ -3337,7 +3337,7 @@ Impossible de modifier directement en JS (fichier minifié)
 .full.full-contact .reseaux a .description {
   float: left;
   color: #ffffff;
-  width: 90%;
+  width: 89%;
   margin: 0 0 0 1%;
 }
 .full.full-contact .reseaux a .description p {
@@ -3694,6 +3694,26 @@ Impossible de modifier directement en JS (fichier minifié)
   line-height: 1.2em;
   color: #ea4f4f;
   margin: 0.5em 0 0.5em 0;
+}
+/*****************/
+/*    MOBILE     */
+/*****************/
+@media screen and (max-width: 760px) {
+  .full.full-contact .reseaux,
+  .full.full-contact .form {
+    width: 100%;
+    float: none;
+  }
+}
+/*****************/
+/*    TABLETTE   */
+/*****************/
+@media screen and (min-width: 760px) and (max-width: 1330px) {
+  .full.full-contact .reseaux,
+  .full.full-contact .form {
+    width: 100%;
+    float: none;
+  }
 }
 .full.full-home {
   padding: 0;

@@ -45,7 +45,7 @@
             .description{
                 float: left;
                 color: @blanc;
-                width: 90%;
+                width: 89%;
                 margin: 0 0 0 1%;
                 p{
                     line-height: 1.2em;
@@ -170,6 +170,34 @@
                 color: @ruby;
                 margin: 0.5em 0 0.5em 0;
             }
+        }
+    }
+}
+
+
+
+/*****************/
+/*    MOBILE     */
+/*****************/
+
+@media screen and (max-width: 760px){
+    .full.full-contact{
+        .reseaux, .form{
+            width: 100%;
+            float: none;
+        }
+    }
+}
+
+/*****************/
+/*    TABLETTE   */
+/*****************/
+
+@media screen and (min-width: 760px) and (max-width: 1330px) {
+    .full.full-contact{
+        .reseaux, .form{
+            width: 100%;
+            float: none;
         }
     }
 }
