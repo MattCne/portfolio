@@ -154,3 +154,30 @@ services:
             - ~
         calls:
             - [ setTranslationDomain, [PortfolioBundle]]
+
+
+  #################
+  #   Contact    #
+  #################
+
+    sonata.admin.projetContact:
+        class: Mcneude\PortfolioBundle\Admin\ContactAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contact", label: "Contenus" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\Contact
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]
+
+    sonata.admin.projetContactReseaux:
+        class: Mcneude\PortfolioBundle\Admin\ContactReseauxAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Contact", label: "Réseaux sociaux" }
+        arguments:
+            - ~
+            - Mcneude\PortfolioBundle\Entity\ContactReseaux
+            - ~
+        calls:
+            - [ setTranslationDomain, [PortfolioBundle]]

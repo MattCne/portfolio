@@ -1,6 +1,6 @@
-Mcneude\PortfolioBundle\Entity\Parcours:
+Mcneude\PortfolioBundle\Entity\Contact:
     type: entity
-    table: parcours
+    table: contact
     fields:
         id:
             id: true
@@ -9,11 +9,12 @@ Mcneude\PortfolioBundle\Entity\Parcours:
             nullable: false
             generator:
                 strategy: IDENTITY
-        experiencesComplementaires:
+        accrocheForm:
             type: text
             nullable: true
-            column: experiences_complementaires
-        interets:
+            column: accroche_form
+        accrocheReseaux:
             type: text
             nullable: true
+            column: accroche_reseaux
     lifecycleCallbacks: {  }

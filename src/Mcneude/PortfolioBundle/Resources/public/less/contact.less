@@ -3,76 +3,173 @@
 @import 'fontcustom.less';
 
 .full.full-contact{
-    form{
-        margin: 1.5em 0 1.5em 2em;
-        .form-row{
-            margin: 0.5em 0 0.5em 0;
-            .transition( all 0.5s );
-            &:hover{
-                label{
-                    color: @chatelle;
-                    .opensansbold( 1.1em );
+
+    .reseaux, .form{
+        width: 48%;
+        float: left;
+    }
+
+    .reseaux{
+        padding: 0;
+        margin: 1em;
+        header{
+            > h1{
+                padding:0 0 0.25em 0;
+                margin:0 0 0.5em 0;
+                color: darken( @chatelle, 10 );
+                border: none;
+            }
+        }
+        a{
+            display: block;
+            padding: 1em;
+            .clearfix;
+            .border-radius( 10px 100px 100px 10px);
+            margin: 1em 0 0 ;
+            h1{
+                color: @blanc;
+                margin: 0 0 0 8.5%;
+                padding: 0;
+                font-size: 1.3em;
+                border: none;
+            }
+
+            .visuel{
+                width: 10%;
+                img{
+                    float:left;
+                    width: auto;
+                }
+            }
+
+            .description{
+                float: left;
+                color: @blanc;
+                width: 90%;
+                margin: 0 0 0 1%;
+                p{
+                    line-height: 1.2em;
+                }
+            }
+
+            &.facebook{
+                #gradient .vertical( #5A74A8, #3B5998 );
+                .transition( all 0.5s );
+                &:hover{
+                    .shadow(  0 0 15px 5px #5A74A8 );
+                }
+            }
+
+            &.twitter{
+                #gradient .vertical( #99DDE2, #6AB6BE );
+                .transition( all 0.5s );
+                &:hover{
+                    .shadow(  0 0 15px 5px #99DDE2 );
+                }
+            }
+            &.google{
+                #gradient .vertical( #79B1D3, #3F9DD5 );
+                .transition( all 0.5s );
+                &:hover{
+                    .shadow(  0 0 15px 5px #79B1D3 );
+                }
+            }
+            &.linkedin{
+                #gradient .vertical(darken(#79B1D3, 20), darken(#2B6A93, 20));
+                .transition( all 0.5s );
+                &:hover{
+                    .shadow(  0 0 15px 5px darken(#79B1D3, 20) );
+                }
+            }
+            &.viadeo{
+                #gradient .vertical(#ABABAB, #616666);
+                .transition( all 0.5s );
+                &:hover{
+                    .shadow(  0 0 15px 5px #ABABAB );
                 }
             }
         }
-        label{
-            .inline-block;
-            .opensanslight( 1.1em );
-            vertical-align: top;
-            width: 20%;
-            color: @gris-fonce;
-        }
+    }
 
-        input[type="text"], textarea{
-            width: 15em;
-            .opensanslight( 1.2em );
-            .border-radius( 3px );
-            border: 1px solid @glacier;
-            .transition( all 0.5s );
-            color: darken( @chatelle, 20 );
-            padding: 0.25em;
-            &:hover{
-                border-color: @chatelle;
+    .form{
+        header h1{
+            border: none;
+        }
+        form{
+            margin: 1.5em 0 1.5em 2em;
+            .form-row{
+                margin: 0.5em 0 0.5em 0;
+                .transition( all 0.5s );
+                &:hover{
+                    label{
+                        color: @chatelle;
+                        .opensansbold( 1.1em );
+                    }
+                }
             }
-        }
+            label{
+                .inline-block;
+                .opensanslight( 1.1em );
+                vertical-align: middle;
+                width: 20%;
+                color: @gris-fonce;
+            }
 
-        textarea{
-            min-height: 10em;
-        }
+            label[for="Contact_message"]{
+                vertical-align: top;
+            }
 
-        .required{
-            &:after{
-                content:'*';
+            input[type="text"], textarea{
+                width: 80%;
+                .opensanslight( 1.2em );
+                .border-radius( 10px );
+                border: 1px solid @glacier;
+                .transition( all 0.5s );
+                color: darken( @chatelle, 20 );
+                padding: 0.5em;
+                &:hover{
+                    border-color: @chatelle;
+                }
+            }
+
+            textarea{
+                min-height: 10em;
+            }
+
+            .required{
+                &:after{
+                    content:'*';
+                    color: @ruby;
+                }
+            }
+
+            button{
+                #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
+                .opensanslight( 1.1em );
+                border: 1px solid @glacier;
+                .border-radius( 0 0 5px 5px );
+                color: #FFFFFF;
+                padding: 0.5em;
+                margin: 2em 0 0 80%;
+                width: 9em;
+                .transition( all 0.5s );
+                &:hover{
+                    #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
+                    cursor: pointer;
+                    .opensansbold( 1.1em );
+                }
+            }
+
+            .error{
+                .opensanslight();
+                margin: 0;
                 color: @ruby;
             }
-        }
-
-        button{
-            #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
-            .opensanslight( 1.1em );
-            border: 1px solid @glacier;
-            border-radius: 20px;
-            color: #FFFFFF;
-            padding: 0.5em;
-            margin: 2em 0 0 15%;
-            width: 9em;
-            .transition( all 0.5s );
-            &:hover{
-                #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
-                cursor: pointer;
-                .opensansbold( 1.1em );
+            .notif{
+                .opensanslight;
+                color: @ruby;
+                margin: 0.5em 0 0.5em 0;
             }
-        }
-
-        .error{
-            .opensanslight();
-            margin: 0;
-            color: @ruby;
-        }
-        .notif{
-            .opensanslight;
-            color: @ruby;
-            margin: 0.5em 0 0.5em 0;
         }
     }
 }

@@ -22,9 +22,7 @@ Mcneude\PortfolioBundle\Entity\ParcoursAccroches:
             nullable: true
             column: accroche_experiences_complementaires
         accrocheInterets:
-            type: string
-            length: 200
-            fixed: false
+            type: text
             nullable: true
             column: accroche_interets
     lifecycleCallbacks: {  }

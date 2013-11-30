@@ -1,21 +1,21 @@
 <ul class="sharebar">
 	<li>
-		<a href="https://www.facebook.com/matthieu.cneude" target="_blank">
+		<a href="http://www.facebook.com/share.php?u={{ app.request.uri }}" target="_blank">
 			<img src="{{ asset('/bundles/portfolio/images/sharebar/facebook.png') }}" alt="Facebook" title="Partager sur Facebook" />
 		</a>
 	</li>
 	<li>
-		<a href="https://twitter.com/"   target="_blank">
+		<a href="http://twitter.com/share?url={{ app.request.uri }}" target="_blank">
 			<img src="{{ asset('/bundles/portfolio/images/sharebar/twitter.png') }}" alt="Twitter" title="Partager sur Twitter" />
 		</a>
 	</li>
 	<li>
-		<a href="http://www.linkedin.com/pub/matthieu-cneude/82/381/280" target="_blank">
+		<a href="http://www.linkedin.com/shareArticle?mini=true&url={{ app.request.uri }}" target="_blank">
 			<img src="{{ asset('/bundles/portfolio/images/sharebar/linkedin.png') }}" alt="Linkedin" title="Partager sur Linkedin" />
 		</a>
 	</li>
 	<li>
-		<a href="https://plus.google.com/u/0/107021059883292387038/posts" target="_blank">
+		<a href="https://plus.google.com/share?url={{ app.request.uri }}" target="_blank">
 			<img src="{{ asset('/bundles/portfolio/images/sharebar/google.png') }}" alt="Google +" title="Partager sur Google +" />
 		</a>
 	</li>

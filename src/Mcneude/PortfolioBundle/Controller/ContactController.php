@@ -15,6 +15,17 @@ class ContactController extends Controller
         $contact = new Contact();
         $form = $this->createForm( 'Contact', $contact );
 
+        $contact = $this->getDoctrine()
+            ->getRepository('PortfolioBundle:Contact')
+            ->findAll();
+
+        $reseaux = $this->getDoctrine()
+            ->getRepository('PortfolioBundle:ContactReseaux')
+            ->createQueryBuilder('reseau')
+            ->orderBy('reseau.position')
+            ->getQuery()
+            ->getresult();
+
         if ( $request->isMethod( 'POST' ) )
         {
             $form->bind( $request );
@@ -52,7 +63,9 @@ class ContactController extends Controller
         }
 
         return $this->render('PortfolioBundle:Pages:contact.html.twig', array(
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'contact' => $contact,
+            'reseaux' => $reseaux
         ) );
     }
 }

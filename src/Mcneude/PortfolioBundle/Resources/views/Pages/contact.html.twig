@@ -7,19 +7,57 @@
 <article class="full full-contact">
 
     <h1>Contactez moi</h1>
-    <form action="{{ path('post_contact_form') }}" method="post" {{ form_enctype(form) }}>
-        {% for flashMessage in app.session.flashbag.get('notice') %}
-            <div class="notif">
-                {{ flashMessage }}
-            </div>
-        {% endfor %}
 
-        {{ form_errors(form) }}
-        {{ form_widget(form) }}
+    <section class="form box">
+        <header>
+            <h1>Laissez moi un message :</h1>
+            {% if contact is not empty %}
+                <div class="description">
+                    {{ contact.accrocheForm  | raw }}
+                </div>
+            {% endif %}
 
-        <button class="bouton" type="submit" >Envoyer</button>
-    </form>
+        </header>
+        <form action="{{ path('post_contact_form') }}" method="post" {{ form_enctype(form) }}>
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="notif">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
 
+            {{ form_errors(form) }}
+            {{ form_widget(form) }}
+
+            <button class="bouton" type="submit" >Envoyer</button>
+        </form>
+    </section>
+
+    {% if reseaux is not empty %}
+        <section class="reseaux">
+                <header>
+                    <h1>Vous pouvez me retrouver sur : </h1>
+                    {% if contact is not empty %}
+                        <div class="description">
+                            {{ contact.accrocheReseaux | raw }}
+                        </div>
+                    {% endif %}
+                </header>
+
+            {% for reseau in reseaux %}
+                <a class="{{ reseau.classReseau }}" href="{{ reseau.url }}" title="{{ reseau.nom }}">
+                    <header>
+                        <h1>{{ reseau.nom }}</h1>
+                    </header>
+                    <div class="visuel">
+                        <img src="{{ asset('/bundles/portfolio/images/') }}{{ reseau.urlImage }}" alt="{{ reseau.nom }}" title="{{ reseau.nom }}" />
+                    </div>
+                    <div class="description content">
+                        {{ reseau.description | raw }}
+                    </div>
+                </a>
+            {% endfor %}
+        </section>
+    {% endif %}
 </article>
 
 {% endblock %}

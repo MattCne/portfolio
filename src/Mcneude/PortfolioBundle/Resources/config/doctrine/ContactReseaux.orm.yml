@@ -1,6 +1,6 @@
-Mcneude\PortfolioBundle\Entity\ParcoursEtudes:
+Mcneude\PortfolioBundle\Entity\ContactReseaux:
     type: entity
-    table: parcours_etudes
+    table: contact_reseaux
     fields:
         id:
             id: true
@@ -14,25 +14,28 @@ Mcneude\PortfolioBundle\Entity\ParcoursEtudes:
             length: 100
             fixed: false
             nullable: true
+        classReseau:
+            type: string
+            length: 200
+            fixed: false
+            nullable: true
+            column: class_reseau
         description:
             type: text
             nullable: true
         urlImage:
             type: string
-            length: 45
+            length: 200
             fixed: false
             nullable: true
             column: url_image
         url:
             type: string
-            length: 45
+            length: 200
             fixed: false
             nullable: true
         position:
             type: integer
             unsigned: false
-            nullable: true
-        date:
-            type: date
             nullable: true
     lifecycleCallbacks: {  }

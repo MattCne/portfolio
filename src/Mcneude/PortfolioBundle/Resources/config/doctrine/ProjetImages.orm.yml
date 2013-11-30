@@ -11,7 +11,7 @@ Mcneude\PortfolioBundle\Entity\ProjetImages:
                 strategy: IDENTITY
         url:
             type: string
-            length: 45
+            length: 200
             fixed: false
             nullable: true
         nom:
