@@ -3639,8 +3639,8 @@ Impossible de modifier directement en JS (fichier minifié)
   behavior: none;
   color: #FFFFFF;
   padding: 0.5em;
-  margin: 2em 0 0 80%;
-  width: 9em;
+  margin: 2em 0 0 30%;
+  width: 40%;
   -ms-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -3680,20 +3680,30 @@ Impossible de modifier directement en JS (fichier minifié)
   line-height: 1.2em;
 }
 .full.full-contact .form form .error {
-  font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1.2em;
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1em;
   font-weight: normal;
   line-height: 1.2em;
-  margin: 0;
+  padding: 0;
+  margin: 1em 0 1em 20%;
   color: #ea4f4f;
 }
+.full.full-contact .form form .error + input {
+  border: #ea4f4f;
+}
 .full.full-contact .form form .notif {
-  font-family: "opensanslight", Arial, sans-serif;
-  font-size: 1.2em;
+  font-family: "opensansbold", Arial, sans-serif;
+  font-size: 1em;
   font-weight: normal;
   line-height: 1.2em;
-  color: #ea4f4f;
-  margin: 0.5em 0 0.5em 0;
+  color: #ffffff;
+  margin: 0.5em 0 1em 0;
+  padding: 1em;
+  background: #ef7d7d;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  behavior: none;
+  border: 2px solid #ea4f4f;
 }
 /*****************/
 /*    MOBILE     */
@@ -3703,6 +3713,9 @@ Impossible de modifier directement en JS (fichier minifié)
   .full.full-contact .form {
     width: 100%;
     float: none;
+  }
+  .full.full-contact .form form .error {
+    margin: 1em 0 1em 0;
   }
 }
 /*****************/

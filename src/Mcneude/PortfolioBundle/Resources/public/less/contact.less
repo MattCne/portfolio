@@ -150,8 +150,8 @@
                 .border-radius( 0 0 5px 5px );
                 color: #FFFFFF;
                 padding: 0.5em;
-                margin: 2em 0 0 80%;
-                width: 9em;
+                margin: 2em 0 0 30%;
+                width: 40%;
                 .transition( all 0.5s );
                 &:hover{
                     #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
@@ -161,14 +161,22 @@
             }
 
             .error{
-                .opensanslight();
-                margin: 0;
+                .opensansbold();
+                padding: 0;
+                margin: 1em 0 1em 20%;
                 color: @ruby;
+                & + input{
+                    border: @ruby;
+                }
             }
             .notif{
-                .opensanslight;
-                color: @ruby;
-                margin: 0.5em 0 0.5em 0;
+                .opensansbold;
+                color: @blanc;
+                margin: 0.5em 0 1em 0;
+                padding: 1em;
+                background: lighten( @ruby, 10 );
+                .border-radius( 5px );
+                border: 2px solid @ruby;
             }
         }
     }
@@ -185,6 +193,11 @@
         .reseaux, .form{
             width: 100%;
             float: none;
+        }
+        .form form{
+            .error{
+                margin: 1em 0 1em 0;
+            }
         }
     }
 }
