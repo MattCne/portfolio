@@ -8,7 +8,7 @@
 
 .full.full-quisuisje {
     #competences{
-        @description-border-color: @ruby;
+        @description-border-color: @olive;
 
         width: 100%;
         margin: 0.5em 0 1em;
@@ -43,8 +43,8 @@
                         .transition( all 0.5s );
 
                         &:hover{
-                            #gradient .vertical( lighten( @olive, 10 ), @olive );
-                            border: 1px solid darken( @olive, 10 );
+                            #gradient .vertical( lighten( @chatelle, 10 ), @chatelle );
+                            border: 1px solid darken( @chatelle, 10 );
                             padding-left: 1.5em;
                             cursor: pointer;
 
@@ -61,17 +61,17 @@
                         }
 
                         &.active{
-                            #gradient .vertical( lighten( @ruby, 10 ), @ruby );
-                            border: 1px solid darken( @ruby, 10 );
+                            #gradient .vertical( lighten( @olive, 10 ), @olive );
+                            border: 1px solid darken( @olive, 10 );
                             padding-left: 1.5em;
                             .transition( all 0.5s );
 
                             &:hover{
-                                #gradient .vertical( lighten( @olive, 10 ), @olive );
+                                #gradient .vertical( lighten( @chatelle, 10 ), @chatelle );
                                 padding-left: 0.5em;
-                                border-color: @olive;
+                                border-color: @chatelle;
                                 + .description{
-                                    border-color: @olive;
+                                    border-color: @chatelle;
                                 }
                             }
                         }
