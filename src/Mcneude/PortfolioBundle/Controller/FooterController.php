@@ -52,10 +52,17 @@ class FooterController extends Controller
         //Récupération des informations utiles
         foreach( $tweets as $tweet ) {
             $dateTweet = date( 'd/m/Y h:m:s', strtotime( $tweet->created_at ) );
-            $urlShort = $tweet->entities->urls[0]->url;
-            $htmlLink =  '<a target="_blank" href="'.$urlShort.'">'.$urlShort.'</a>';
 
-            $formatedTweets[] = array( 'date' => $dateTweet, 'text' => str_replace( $urlShort, $htmlLink , $tweet->text ) );
+            if( isset( $tweet->entities->urls[0] ) )
+            {
+                $urlShort = $tweet->entities->urls[0]->url;
+                $htmlLink =  '<a target="_blank" href="'.$urlShort.'">'.$urlShort.'</a>';
+                $text = str_replace( $urlShort, $htmlLink , $tweet->text );
+            }
+            else
+                $text = $tweet->text;
+
+            $formatedTweets[] = array( 'date' => $dateTweet, 'text' => $text );
         }
 
         return ( $formatedTweets );
