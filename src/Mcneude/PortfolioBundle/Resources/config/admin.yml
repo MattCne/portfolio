@@ -1,4 +1,3 @@
-# Acme/DemoBundle/Resources/config/admin.yml
 services:
 
   #################
