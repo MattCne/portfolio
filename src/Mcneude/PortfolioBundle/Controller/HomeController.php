@@ -21,6 +21,7 @@ class HomeController extends Controller
             ->orderBy('projets.position','DESC')
             ->getQuery()
             ->getresult();
+
         if( $projetsDb )
         {
             $images = $this->getDoctrine()
