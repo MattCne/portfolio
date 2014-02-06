@@ -19,6 +19,7 @@
 
             <div class="accroche content">
                 {{ projet.description | raw  }}
+                <p>{% for groupe in projet.getProjetsGroupe  %} Ce projet a été réalisé avec l'équipe de l'entreprise {{  groupe.getNom  }}. {% endfor %}</p>
             </div>
 
             {% if images is not empty %}
