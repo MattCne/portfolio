@@ -30,7 +30,6 @@ class FooterController extends Controller
                 'twitter_account' => $twitter_account
             )
         );
-
         return new Response( $content );
     }
 

@@ -30,6 +30,7 @@ class ParcoursController extends Controller
             ->getQuery()
             ->getresult();
 
+        //Il ne doit exister qu'une seule instance de accroches ou parcours
         $accroches = isset( $accrochesDb[0] ) ? $accrochesDb[0] : null ;
         $parcours  = isset( $parcoursDb[0] ) ? $parcoursDb[0] : null ;
 
@@ -42,53 +43,5 @@ class ParcoursController extends Controller
             'parcours'      => $parcours,
             'etudes'        => $etudes
         ) );
-
-        /*if( isset( $accrochesDb[0] )
-            && isset( $experiencesDb[0] )
-            && isset( $experiencesComplementairesDb[0] )
-            && isset( $etudesDb[0] ) )
-        {
-
-            $accrochesDb = $accrochesDb[0];
-            $parcoursDb = $parcoursDb[0];
-
-            $accroches = array(
-                'experiences'                => $accrochesDb->getAccrocheExperiences(),
-                'etudes'                     => $accrochesDb->getAccrocheEtudes(),
-                'experiencesComplementaires' => $accrochesDb->getAccrocheExperiencesComplementaires(),
-                'interets'                   => $accrochesDb->getAccrocheInterets()
-            );
-
-            $parcoursDb = array(
-                'experiences_complementaires' => $parcoursDb->getExperiencesComplementaires(),
-                'interets' => $parcoursDb->getInterets(),
-            );
-
-            foreach( $experiencesDb as $key => $experienceDb )
-            {
-                $experiences[$key] = array(
-                    'nom'           => $experienceDb->getNom(),
-                    'description'   => $experienceDb->getDescription(),
-                    'url_images'    => $experienceDb->getUrlImages(),
-                    'url'           => $experienceDb->getUrl(),
-                    'position'      => $experienceDb->getPosition(),
-                    'date'          => $experienceDb->getDate()
-                );
-            }
-
-            foreach( $etudesDb as $key => $etudeDb )
-            {
-                $experiences[$key] = array(
-                    'nom'           => $etudeDb->getNom(),
-                    'description'   => $etudeDb->getDescription(),
-                    'url_images'    => $etudeDb->getUrlImages(),
-                    'url'           => $etudeDb->getUrl(),
-                    'position'      => $etudeDb->getPosition(),
-                    'date'          => $etudeDb->getDate()
-                );
-            }
-        }*/
-
-
     }
 }
