@@ -111,3 +111,8 @@ stfalcon_tinymce:
             simple:
                 plugins:
                     - "lists"
+
+jms_i18n_routing:
+    default_locale: fr
+    locales: [fr, en]
+    strategy: prefix

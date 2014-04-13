@@ -39,6 +39,11 @@ class AppKernel extends Kernel
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
 
+            // Language routing
+            new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
+            // not required, but recommended for better extraction
+            new JMS\TranslationBundle\JMSTranslationBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
