@@ -35,8 +35,15 @@
 	    </ul>
 	</nav>
     <aside class="translation">
-        <a href="{{ path('choose_language', {'language' : 'en'}) }}">|
-            <img src="{{ asset('/bundles/portfolio/images/translation/United-Kingdom.png') }}" title="traduire en anglais" alt="traduire en anglais" />
-        </a>
+
+        {% if app.request.locale == 'fr' %}
+            <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}">
+                <img src="{{ asset('/bundles/portfolio/images/translation/United-Kingdom.png') }}" title="traduire en anglais" alt="traduire en anglais" />
+            </a>
+        {% else %}
+            <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "fr"}) }}">
+                <img src="{{ asset('/bundles/portfolio/images/translation/france.png') }}" title="translate in french" alt="translate in french"" />
+            </a>
+        {% endif %}
     </aside>
 </header>

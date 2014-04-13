@@ -19,8 +19,6 @@ class GeneralController extends Controller
         if( $locale != $language)
             $request->setLocale( $language );
 
-        $locale = $request->getLocale();
-
         $url = $this->container->get('request')->headers->get('referer');
         if(empty($url)) {
             $url = $this->container->get('router')->generate('homepage');
