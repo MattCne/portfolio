@@ -63,9 +63,7 @@ img{
 #main{
     position:relative;
     background:@blanc;
-
 }
-
 
 #main > header{
 
@@ -103,7 +101,7 @@ img{
     }
 
 	.titres{
-		width:25%;
+		width:21%;
 		float:left;
 		margin:0;
 		padding:0;
@@ -139,10 +137,24 @@ img{
             }
 		}
 	}
+    nav{
+        float: left;
+        width: 65%;
+    }
+
+    .translation{
+        width: 10%;
+        float: right;
+        padding: 1em;
+        img{
+            width: 60%;
+            float: right;
+        }
+    }
 }
 
-#main-menu{
-	width:75%;
+ul#main-menu{
+	width:100%;
     float:right;
     margin:0;
 
@@ -402,14 +414,11 @@ img{
         font-size: 1.6em;
     }
 
-
-
     .full{
         > h1{
             margin: 0;
         }
     }
-
 
 	#main > header{
 		.titres{
@@ -422,10 +431,19 @@ img{
         &:after{
             content: none;
         }
-
+        nav{
+            float: none;
+            width: auto;
+        }
+        
+        .translation{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
 	}
 
-	#main-menu{
+	ul#main-menu{
 		float:none;
 		width:100%;
 		margin:2em 0 0 0;
@@ -515,9 +533,14 @@ img{
             width:100%;
             text-align: center;
         }
+        nav{
+            float: none;
+            width: auto;
+        }
+
     }
 
-    #main-menu{
+    ul#main-menu{
         width:100%;
         margin: 0;
         padding: 0;

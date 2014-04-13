@@ -3,7 +3,7 @@
 <header>
 	<a href="{{ path( 'homepage' ) }}" class="titres">
 		<h1>Matthieu Cneude</h1>
-		<h2>Intégrateur / Développeur web</h2>
+		<h2>{{ "title.description" | trans }}</h2>
 	</a>
 	<nav>
 	    <ul id="main-menu">
@@ -34,4 +34,9 @@
 	        </li>
 	    </ul>
 	</nav>
+    <aside class="translation">
+        <a href="{{ path('choose_language', {'language' : 'en'}) }}">|
+            <img src="{{ asset('/bundles/portfolio/images/translation/United-Kingdom.png') }}" title="traduire en anglais" alt="traduire en anglais" />
+        </a>
+    </aside>
 </header>

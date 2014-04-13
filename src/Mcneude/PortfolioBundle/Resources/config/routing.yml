@@ -19,3 +19,6 @@ contact:
 post_contact_form:
     pattern: /contact/send-form
     defaults: { _controller: PortfolioBundle:Contact:render }
+choose_language:
+    pattern: /choose-language/{language}/
+    defaults: { _controller: PortfolioBundle:General:chooseLanguage }
