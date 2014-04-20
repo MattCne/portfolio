@@ -6,11 +6,11 @@
 
 <article class="full full-contact">
 
-    <h1>Contactez moi</h1>
+    <h1>{{ "contact.title.main" | trans }}</h1>
 
     <section class="form box">
         <header>
-            <h1>Laissez moi un message :</h1>
+            <h1>{{ "contact.title.form" | trans }}</h1>
             {% if contact is not empty %}
                 <div class="description">
                     {{ contact.accrocheForm  | raw }}
@@ -28,15 +28,15 @@
             {{ form_errors(form) }}
             {{ form_widget(form) }}
 
-            <button class="bouton" type="submit" >Envoyer</button>
-            <div class="content">Les champs renseignés d'un <strong>*</strong> sont obligatoires.</div>
+            <button class="bouton" type="submit" >{{ "contact.form.submit" | trans }}</button>
+            <div class="content">{{ "contact.form.require" | trans |raw }}</div>
         </form>
     </section>
 
     {% if reseaux is not empty %}
         <section class="reseaux">
                 <header>
-                    <h1>Vous pouvez me retrouver sur : </h1>
+                    <h1>{{ "contact.title.network" |trans }} </h1>
                     {% if contact is not empty %}
                         <div class="description">
                             {{ contact.accrocheReseaux | raw }}

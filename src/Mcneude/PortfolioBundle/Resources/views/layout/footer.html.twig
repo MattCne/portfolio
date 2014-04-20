@@ -3,7 +3,7 @@
     {% import 'PortfolioBundle::macros.html.twig' as macros %}
 
 	<section>
-		<h1>Sites internet</h1>
+		<h1>{{ "footer.title.websites" | trans }}</h1>
         {% if sitesInternet is not null %}
             <ul class="liste">
                 {% for siteInternet in sitesInternet  %}
@@ -18,7 +18,7 @@
 	</section>
 
 	<section>
-		<h1>Autres projets de développement</h1>
+		<h1>{{ "footer.title.otherprojects" | trans }}</h1>
         {% if autresProjets is not null %}
             <ul class="liste">
                 {% for autreProjet in autresProjets  %}
@@ -33,7 +33,7 @@
 	</section>
 
 	<section>
-		<h1>Fichiers</h1>
+		<h1>{{ "footer.title.files" | trans }}</h1>
         {% if fichiers is not null %}
             <ul class="liste">
                 {% for fichier in fichiers %}
@@ -48,7 +48,7 @@
 	</section>
 
 	<section id="twitter">
-		<h1>Derniers tweets ( @{{ twitter_account }} )</h1>
+		<h1>{{ "footer.title.tweets" | trans  }} ( @{{ twitter_account }} )</h1>
         <ul>
         {% for key, tweet in tweets %}
             <li>
@@ -62,8 +62,8 @@
 	</section>
 
 	<div id="pied_page">
-		<p>Développé avec Symfony 2.1 -
-            <small>Copyright © 2013</small>
+		<p>{{ "footer.copyright" | trans  }}
+            <small> - Copyright © 2013</small>
         </p>
 	</div>
 </footer>

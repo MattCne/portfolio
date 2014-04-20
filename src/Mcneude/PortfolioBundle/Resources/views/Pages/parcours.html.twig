@@ -5,12 +5,12 @@
 {% block body %}
 
     <div class="full full-cv">
-        <h1>Parcours</h1>
+        <h1>{{ "career.title.main" | trans }}</h1>
 
         <div class="row">
             <article class="box" id="experiences">
                 <header>
-                    <h1>Expériences professionnelles</h1>
+                    <h1>{{ "career.title.experiences" | trans }}</h1>
 
                     <div class="accroche content">
                         {% if accroches is not null %}
@@ -40,7 +40,7 @@
             </article>
             <article class="box" id="etude">
                 <header>
-                    <h1>Etudes réalisées</h1>
+                    <h1>{{ "career.title.studies" | trans }}</h1>
 
                     <div class="accroche content">
                         {% if accroches is not null %}
@@ -70,7 +70,7 @@
         <div class="row">
             <article class="box">
                 <header>
-                    <h1>Expériences complémentaires</h1>
+                    <h1>{{ "career.title.moreexperiences" | trans }}</h1>
 
                     <div class="accroche content">
                         {% if accroches is not null %}
@@ -87,7 +87,7 @@
 
             <article class="box">
                 <header>
-                    <h1>Intérets</h1>
+                    <h1>{{ "career.title.interests" | trans }}</h1>
 
                     <div class="accroche content">
                         {% if accroches is not null %}

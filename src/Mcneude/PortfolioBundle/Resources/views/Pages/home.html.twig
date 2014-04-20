@@ -16,7 +16,7 @@
             {% if projetsImages is not empty %}
             <!-- SLIDESHOW -->
                 <article id="derniers-projets">
-                    <h1> Mes cinq derniers projets en images</h1>
+                    <h1>{{ "home.title.slideshow" | trans }}</h1>
                     <div class="slideshow flexslider">
                         <ul class="slides">
                             {% for image in projetsImages %}
@@ -33,13 +33,13 @@
 
             <article id="encemoment">
                 <div class="content box">
-                    <h1>En ce moment je me documente sur...</h1>
+                    <h1>{{ "home.title.learn" | trans }}</h1>
                     <div class="content">
                         {{ home.apprendre }}
                     </div>
                 </div>
                 <div class="content box">
-                    <h1>En ce moment je travaille sur...</h1>
+                    <h1>{{ "home.title.work" | trans }}</h1>
                     <div class="content">
                         {{ home.construire }}
                     </div>

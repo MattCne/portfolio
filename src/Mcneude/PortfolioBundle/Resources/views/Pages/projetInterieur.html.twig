@@ -11,10 +11,10 @@
                 <a class="projet-link" title="{{ projet.nom }}"
                    href="http://{{ projet.urlExternal }}" target="_blank"
                 >
-                    Voir le site en ligne
+                    {{ "innerproject.websitelink" | trans }}
                 </a>
             {% else %}
-                <p>Ce projet n'est plus en ligne</p>
+                <p>{{ "innerproject.websitedead" | trans }}</p>
             {% endif %}
 
             <div class="accroche content">
@@ -38,7 +38,7 @@
 
             <section class="middle content">
                 <header>
-                    <h1>Technologies utilisées : </h1>
+                    <h1>{{ "innerproject.title.technology" | trans }}</h1>
                 </header>
                 <div>
                     {{ projet.technologies | raw }}
@@ -48,7 +48,7 @@
             <div class="row">
                 <section class="box content">
                     <header>
-                        <h1>Contraintes & problématiques : </h1>
+                        <h1>{{ "innerproject.title.constraints" | trans }}</h1>
                     </header>
                     <div>
                         {{ projet.difficultes | raw }}
@@ -57,7 +57,7 @@
 
                 <section class="box content">
                     <header>
-                        <h1>Compétences acquises par ce projet : </h1>
+                        <h1>{{ "innerproject.title.projectskills" | trans }}</h1>
                     </header>
                     <div>
                         {{ projet.competencesAcquises | raw }}

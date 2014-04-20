@@ -1,1 +1,67 @@
+meta.description: Matthieu Cneude Portfolio : web developer / web integrator. Passionate in web technologies : PHP 5, AJAX, Javascript (jQuery, Backbone), HTML5, CSS3 (LESS)
 title.description: Web Developer
+
+menu:
+  accueil: Home
+  qui-suis-je: Who am I?
+  projets: Projects
+  parcours: Career
+  contact: Contact me
+
+home:
+  title:
+    slideshow: My five last projects
+    learn: Currently I learn...
+    work: Currently I work on...
+
+whoami:
+  title:
+    main: Who am I?
+    why: Why web developer?
+    skills: Skills
+    conception: Conception methods
+    workflow: Workflow
+    moreInformation: Additional Informations
+  skills:
+    tech: Development skills
+    others: Other skills
+
+projects:
+  title:
+    main: Projects
+    filters: Company filter
+  filters:
+    all:  Show all projects
+
+innerproject:
+  title:
+    technology: Technologies used:
+    constraints: Constraints & issues:
+    projectskills: Skills acquired with this project:
+  websitelink: Go to the website
+  websitedead: This project is not online
+
+career:
+  title:
+    main: Career
+    experiences: Professional experience
+    studies: Studies
+    moreexperiences: Additional experience
+    interests: Interests
+
+contact:
+  title:
+    main: Contact me
+    form: Send me a message :
+    network: You can join me on
+  form:
+    require: Fields with a <strong>*</strong> are required.
+    submit: Send
+
+footer:
+  title:
+    websites: Websites
+    otherprojects: Other projects
+    files: Files
+    tweets: Last tweets
+    copyright: Developed with Symfony 2.1

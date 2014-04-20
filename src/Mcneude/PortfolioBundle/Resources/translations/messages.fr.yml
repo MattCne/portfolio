@@ -1,1 +1,67 @@
+meta.description: Portfolio de Matthieu Cneude : développeur / intégrateur web. Passionné dans les technologies web : PHP 5, AJAX, Javascript (jQuery, Backbone), HTML5, CSS3 (LESS)
 title.description: Intégrateur / Développeur web
+
+menu:
+  accueil: Accueil
+  qui-suis-je: Qui suis-je ?
+  projets: Projets
+  parcours: Parcours
+  contact: Contactez moi
+
+home:
+  title:
+    slideshow: Mes cinq derniers projets en images
+    learn: En ce moment je me documente sur...
+    work: En ce moment je travaille sur...
+
+whoami:
+  title:
+    main: Qui suis-je ?
+    why: Pourquoi développeur web ?
+    skills: Compétences
+    conception: Methodes de conception
+    workflow: Politique \ Workflow
+    moreInformation: Informations complémentaires
+  skills:
+    tech: Compétences en développement
+    others: Autres compétences
+
+projects:
+  title:
+    main: Projets
+    filters: Tri par société
+  filters:
+    all: Afficher tous les projets
+
+innerproject:
+  title:
+    technology: Technologies utilisées :
+    constraints: Contraintes & problématiques :
+    projectskills: Compétences acquises par ce projet :
+  websitelink: Voir le site en ligne
+  websitedead: Ce projet n'est pas en ligne
+
+career:
+  title:
+    main: Parcours
+    experiences: Expériences professionnelles
+    studies: Etudes réalisées
+    moreexperiences: Expériences complémentaires
+    interests: Intérets
+
+contact:
+  title:
+    main: Contactez moi
+    form: Laissez moi un message :
+    network: Vous pouvez me retrouver sur :
+  form:
+    require: Les champs renseignés d'un <strong>*</strong> sont obligatoires.
+    submit: Envoyer
+
+footer:
+  title:
+    websites: Sites internet
+    otherprojects: Autres projets
+    files: Fichiers
+    tweets: Derniers tweets
+    copyright: Développé avec Symfony 2.1

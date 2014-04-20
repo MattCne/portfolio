@@ -9,40 +9,48 @@
 	    <ul id="main-menu">
 	        <li>
 	            <a href="{{ path( 'homepage' ) }}"  {{- macros.is_current_route('homepage') -}}>
-	            	<span class="icon-accueil">Accueil</span>
+	            	<span class="icon-accueil">{{ "menu.accueil" | trans }}</span>
 	            </a>
 	        </li>
 	        <li>
 	            <a href="{{ path( 'quisuisje' ) }}"  {{- macros.is_current_route('quisuisje') -}}>
-	            	<span class="icon-moi">Qui suis-je ?</span>
+	            	<span class="icon-moi">{{ "menu.qui-suis-je" | trans }}</span>
 	            </a>
 	        </li>
 	        <li>
 	            <a href="{{ path( 'projets' ) }}"  {{- macros.is_current_route('projets') -}}>
-	            	<span class="icon-projets">Projets</span>
+	            	<span class="icon-projets">{{ "menu.projets" | trans }}</span>
 	            </a>
 	        </li>
 	        <li>
                 <a href="{{ path( 'parcours' ) }}"  {{- macros.is_current_route('parcours') -}}>
-	            	<span class="icon-parcours">Parcours</span>
+	            	<span class="icon-parcours">{{ "menu.parcours" | trans }}</span>
 	            </a>
 	        </li>
 	        <li>
                 <a href="{{ path( 'contact' ) }}" {{- macros.is_current_route('contact') -}}>
-	            	<span class="icon-telephone">Contactez moi</span>
+	            	<span class="icon-telephone">{{ "menu.contact" | trans }}</span>
 	            </a>
 	        </li>
 	    </ul>
 	</nav>
     <aside class="translation">
-
-        {% if app.request.locale == 'fr' %}
-            <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}">
-                <img src="{{ asset('/bundles/portfolio/images/translation/United-Kingdom.png') }}" title="traduire en anglais" alt="traduire en anglais" />
+        {# TODO : voir à faire fonctionner I18n bundle avec les paramètres d'url #}
+        {% if app.request.locale == 'en' %}
+            {% set variables = {"_locale": "fr"} %}
+            {% if app.request.attributes.get('slug') is defined and app.request.attributes.get('slug') is not null %}
+                {% set variables = {'_locale' : "fr", 'slug' : app.request.attributes.get('slug')} %}
+            {% endif %}
+            <a href="{{ path(app.request.attributes.get('_route'), variables) }}">
+                <img src="{{ asset('/bundles/portfolio/images/translation/france.png') }}" title="traduire en anglais" alt="traduire en anglais" />
             </a>
         {% else %}
-            <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "fr"}) }}">
-                <img src="{{ asset('/bundles/portfolio/images/translation/france.png') }}" title="translate in french" alt="translate in french"" />
+            {% set variables = {"_locale": "en"} %}
+            {% if app.request.attributes.get('slug') is defined and app.request.attributes.get('slug') is not null %}
+                {% set variables = {'_locale' : "en", 'slug' : app.request.attributes.get('slug')} %}
+            {% endif %}
+            <a href="{{ path(app.request.attributes.get('_route'), variables) }}">
+                <img src="{{ asset('/bundles/portfolio/images/translation/United-Kingdom.png') }}" title="translate in french" alt="translate in french"  />
             </a>
         {% endif %}
     </aside>
