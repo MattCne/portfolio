@@ -39,6 +39,9 @@ class AppKernel extends Kernel
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
 
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
+
             // Language routing
             new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
             // not required, but recommended for better extraction

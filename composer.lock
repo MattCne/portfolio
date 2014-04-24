@@ -3,8 +3,62 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "6fe4b9c8f73b81e65917253db29828bd",
+    "hash": "6d03e97e509b11e7e212067487f29e6e",
     "packages": [
+        {
+            "name": "a2lix/translation-form-bundle",
+            "version": "0.x-dev",
+            "target-dir": "A2lix/TranslationFormBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/a2lix/TranslationFormBundle.git",
+                "reference": "1de2f40340bdf45169745d00f0655a23fb81b0b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/a2lix/TranslationFormBundle/zipball/1de2f40340bdf45169745d00f0655a23fb81b0b3",
+                "reference": "1de2f40340bdf45169745d00f0655a23fb81b0b3",
+                "shasum": ""
+            },
+            "require": {
+                "stof/doctrine-extensions-bundle": "dev-master",
+                "symfony/symfony": "<2.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "A2lix\\TranslationFormBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "A2lix",
+                    "homepage": "http://a2lix.fr"
+                },
+                {
+                    "name": "David ALLIX"
+                }
+            ],
+            "description": "Translation field to use with Translatable Doctrine extension",
+            "homepage": "https://github.com/a2lix/TranslationFormBundle",
+            "keywords": [
+                "doctrine2",
+                "form",
+                "gedmo",
+                "translatable",
+                "translation"
+            ],
+            "time": "2013-07-30 14:49:36"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.1.2",
@@ -781,12 +835,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "f2cd33516faa4a773d576ad58d02e283467acdd0"
+                "reference": "47ed3e44d7e9b464c0d3d606a91a4651f8002a2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/f2cd33516faa4a773d576ad58d02e283467acdd0",
-                "reference": "f2cd33516faa4a773d576ad58d02e283467acdd0",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/47ed3e44d7e9b464c0d3d606a91a4651f8002a2b",
+                "reference": "47ed3e44d7e9b464c0d3d606a91a4651f8002a2b",
                 "shasum": ""
             },
             "require": {
@@ -853,7 +907,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2014-04-12 08:05:29"
+            "time": "2014-04-21 07:57:57"
         },
         {
             "name": "jms/aop-bundle",
@@ -2318,12 +2372,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stfalcon/TinymceBundle.git",
-                "reference": "7d52006d55ab4ac086a163354ab3e4a49cbfa4df"
+                "reference": "2d78f28743e8c769d8cd8a164f34f16cc6595d7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stfalcon/TinymceBundle/zipball/7d52006d55ab4ac086a163354ab3e4a49cbfa4df",
-                "reference": "7d52006d55ab4ac086a163354ab3e4a49cbfa4df",
+                "url": "https://api.github.com/repos/stfalcon/TinymceBundle/zipball/2d78f28743e8c769d8cd8a164f34f16cc6595d7c",
+                "reference": "2d78f28743e8c769d8cd8a164f34f16cc6595d7c",
                 "shasum": ""
             },
             "require": {
@@ -2367,7 +2421,69 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2014-03-14 08:38:24"
+            "time": "2014-04-17 12:40:40"
+        },
+        {
+            "name": "stof/doctrine-extensions-bundle",
+            "version": "dev-master",
+            "target-dir": "Stof/DoctrineExtensionsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stof/StofDoctrineExtensionsBundle.git",
+                "reference": "f1c7993863f83f22f187f11d2a8eb462b836701e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stof/StofDoctrineExtensionsBundle/zipball/f1c7993863f83f22f187f11d2a8eb462b836701e",
+                "reference": "f1c7993863f83f22f187f11d2a8eb462b836701e",
+                "shasum": ""
+            },
+            "require": {
+                "gedmo/doctrine-extensions": "~2.3.1",
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "~2.1"
+            },
+            "suggest": {
+                "doctrine/doctrine-bundle": "to use the ORM extensions",
+                "doctrine/mongodb-odm-bundle": "to use the MongoDB ODM extensions"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Stof\\DoctrineExtensionsBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                }
+            ],
+            "description": "Integration of the gedmo/doctrine-extensions with Symfony2",
+            "homepage": "https://github.com/stof/StofDoctrineExtensionsBundle",
+            "keywords": [
+                "behaviors",
+                "doctrine2",
+                "extensions",
+                "gedmo",
+                "loggable",
+                "nestedset",
+                "sluggable",
+                "sortable",
+                "timestampable",
+                "translatable",
+                "tree"
+            ],
+            "time": "2014-04-09 14:29:58"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2808,8 +2924,10 @@
         "sonata-project/doctrine-orm-admin-bundle": 20,
         "sonata-project/user-bundle": 20,
         "sonata-project/jquery-bundle": 20,
+        "jms/i18n-routing-bundle": 20,
         "gedmo/doctrine-extensions": 20,
-        "jms/i18n-routing-bundle": 20
+        "stof/doctrine-extensions-bundle": 20,
+        "a2lix/translation-form-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"

@@ -57,6 +57,35 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
+        #Doctrine Extension
+        mappings:
+          gedmo_translatable:
+                type: yml
+                prefix: Gedmo\Translatable\Entity
+                dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+                alias: GedmoTranslatable # this one is optional and will default to the name set for the mapping
+                is_bundle: false
+
+# StofDoctrineBundle
+stof_doctrine_extensions:
+    default_locale: %locale%
+    orm:
+        default:
+            translatable: true
+
+#TranslationFormBundle
+a2lix_translation_form:
+    locales: [fr, en]       # [optional] Array of the translation locales (The default locale have to be excluded). Can also be specified in the form builder.
+    default_required: true  # [optional] Defaults to false. In this case, translation fields are not mark as required with HTML5.
+    use_aop: true           # [optional] Defaults to false.
+
+# Template
+twig:
+    form:
+        resources:
+            - 'A2lixTranslationFormBundle::form.html.twig'
+
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
@@ -93,6 +122,8 @@ sonata_block:
 # Admin
 sonata_admin:
     title:      Portfolio Matthieu Cneude
+    templates:
+      layout: PortfolioBundle:Admin:standard_layout.html.twig
 
 # FOSUserBundle
 fos_user:

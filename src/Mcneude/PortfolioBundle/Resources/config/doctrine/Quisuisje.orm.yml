@@ -1,6 +1,11 @@
 Mcneude\PortfolioBundle\Entity\Quisuisje:
     type: entity
     table: quisuisje
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\QuisuisjeTranslation
+
     fields:
         id:
             id: true
@@ -12,17 +17,30 @@ Mcneude\PortfolioBundle\Entity\Quisuisje:
         pourquoi:
             type: text
             nullable: true
-        competencesCom:
-            type: text
-            nullable: true
-            column: competences_com
+            gedmo:
+              - translatable
+
         methodes:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+
         politique:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+
         infos:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+    oneToMany:
+        translations:
+            targetEntity: QuisuisjeTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
+
     lifecycleCallbacks: {  }

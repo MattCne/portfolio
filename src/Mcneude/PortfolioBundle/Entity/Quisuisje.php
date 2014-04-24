@@ -27,11 +27,6 @@ class Quisuisje
     /**
      * @var string
      */
-    private $competencesCom;
-
-    /**
-     * @var string
-     */
     private $methodes;
 
     /**
@@ -43,6 +38,17 @@ class Quisuisje
      * @var string
      */
     private $infos;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $translations;
+
+    /**
+     * @var string
+     */
+    protected $locale;
+
 
 
     /**
@@ -99,29 +105,6 @@ class Quisuisje
     public function getCompetencesTech()
     {
         return $this->competencesTech;
-    }
-
-    /**
-     * Set competencesCom
-     *
-     * @param string $competencesCom
-     * @return Quisuisje
-     */
-    public function setCompetencesCom($competencesCom)
-    {
-        $this->competencesCom = $competencesCom;
-    
-        return $this;
-    }
-
-    /**
-     * Get competencesCom
-     *
-     * @return string 
-     */
-    public function getCompetencesCom()
-    {
-        return $this->competencesCom;
     }
 
     /**
@@ -191,5 +174,47 @@ class Quisuisje
     public function getInfos()
     {
         return $this->infos;
+    }
+
+    /**
+     * Set translations
+     *
+     * @param ArrayCollection $translations
+     * @return Product
+     */
+    public function setTranslations($translations)
+    {
+        foreach ($translations as $translation) {
+            $translation->setObject($this);
+        }
+
+        $this->translations = $translations;
+        return $this;
+    }
+
+    /**
+     * Get translations
+     *
+     * @return ArrayCollection
+     */
+    public function getTranslations()
+    {
+        return $this->translations;
+    }
+
+    /**
+     * @param mixed $locale
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocale()
+    {
+        return $this->locale;
     }
 }

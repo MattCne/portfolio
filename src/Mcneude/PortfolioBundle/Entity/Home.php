@@ -3,6 +3,7 @@
 namespace Mcneude\PortfolioBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Home
@@ -13,11 +14,6 @@ class Home
      * @var integer
      */
     private $id;
-
-    /**
-     * @var string
-     */
-    private $image;
 
     /**
      * @var string
@@ -34,6 +30,22 @@ class Home
      */
     private $construire;
 
+    /**
+     * @var ArrayCollection
+     */
+    private $translations;
+
+    /**
+     * @var string
+     */
+    protected $locale;
+
+    public function __construct()
+    {
+        $this->translations = new ArrayCollection;
+    }
+
+
 
     /**
      * Get id
@@ -43,29 +55,6 @@ class Home
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set image
-     *
-     * @param string $image
-     * @return Home
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
-    
-        return $this;
-    }
-
-    /**
-     * Get image
-     *
-     * @return string 
-     */
-    public function getImage()
-    {
-        return $this->image;
     }
 
     /**
@@ -168,6 +157,48 @@ class Home
      * @var string
      */
     private $urlImage;
+
+    /**
+     * Set translations
+     *
+     * @param ArrayCollection $translations
+     * @return Product
+     */
+    public function setTranslations($translations)
+    {
+        foreach ($translations as $translation) {
+            $translation->setObject($this);
+        }
+
+        $this->translations = $translations;
+        return $this;
+    }
+
+    /**
+     * Get translations
+     *
+     * @return ArrayCollection
+     */
+    public function getTranslations()
+    {
+        return $this->translations;
+    }
+
+    /**
+     * @param mixed $locale
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocale()
+    {
+        return $this->locale;
+    }
 
 
     /**

@@ -15,7 +15,21 @@ class HomeAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add( 'titre', 'text', array( 'label' => 'Titre' ) )
+            ->add('translations', 'a2lix_translations', array(
+                'by_reference' => false,
+                'fields' => array(
+                    'accroche' => array(
+                        'label' => 'Accroche',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'apprendre' => array(
+                        'label' => 'En ce moment je me documente sur...'
+                    ),
+                    'construire' => array(
+                        'label' => 'En ce moment je travaille sur...',
+                    )
+                )
+            ) )
             ->add( 'accroche', 'textarea', array( 'label' => 'Accroche', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'urlImage', 'text', array( 'label' => 'URL de l\'image : /bundles/portfolio/images/content/home' ) )
             ->add( 'apprendre', 'text', array( 'label' => 'En ce moment je me documente sur...' ) )

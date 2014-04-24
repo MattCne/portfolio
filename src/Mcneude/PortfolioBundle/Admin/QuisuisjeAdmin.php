@@ -15,6 +15,29 @@ class QuisuisjeAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('translations', 'a2lix_translations', array(
+                'by_reference' => false,
+                'fields' => array(
+                    'pourquoi' => array(
+                        'label' => 'Pourquoi développeur web ?',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'methodes' => array(
+                        'label' => 'Methodes de conception',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'politique' => array(
+                        'label' => 'Politique / workflow',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'infos' => array(
+                        'label' => 'Informations complémentaires',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+
+                )
+            ) )
+
             ->add( 'pourquoi', 'textarea', array( 'label' => 'Pourquoi développeur web ?', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'methodes', 'textarea', array( 'label' => 'Methodes de conception', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'politique', 'textarea', array( 'label' => 'Politique / workflow', 'attr' => array( 'class' => 'tinymce' ) ) )

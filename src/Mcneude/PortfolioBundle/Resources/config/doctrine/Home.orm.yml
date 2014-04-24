@@ -1,22 +1,28 @@
 Mcneude\PortfolioBundle\Entity\Home:
     type: entity
     table: home
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\HomeTranslation
+    id:
+      id:
+        type: integer
+        generator:
+          strategy: AUTO
     fields:
-        id:
-            id: true
-            type: integer
-            unsigned: false
-            nullable: false
-            generator:
-                strategy: IDENTITY
         titre:
             type: string
             length: 45
             fixed: false
             nullable: true
+            gedmo:
+              - translatable
         accroche:
             type: text
             nullable: true
+            gedmo:
+              - translatable
         urlImage:
             type: string
             length: 45
@@ -26,7 +32,16 @@ Mcneude\PortfolioBundle\Entity\Home:
         apprendre:
             type: text
             nullable: true
+            gedmo:
+              - translatable
         construire:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+    oneToMany:
+        translations:
+            targetEntity: HomeTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
     lifecycleCallbacks: {  }
