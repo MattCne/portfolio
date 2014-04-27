@@ -3,6 +3,8 @@
 namespace Mcneude\PortfolioBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 /**
  * QuisuisjeAccroches
@@ -33,6 +35,17 @@ class QuisuisjeAccroches
      * @var string
      */
     private $accrocheInfos;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $translations;
+
+    /**
+     * @var string
+     */
+    protected $locale;
+
 
 
     /**
@@ -136,4 +149,33 @@ class QuisuisjeAccroches
     {
         return $this->accrocheInfos;
     }
+
+    /**
+     * Get translations
+     *
+     * @return ArrayCollection
+     */
+    public function getTranslations()
+    {
+        return $this->translations;
+    }
+
+    /**
+     * @param mixed $locale
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocale()
+    {
+        return $this->locale;
+    }
+
+
+
 }

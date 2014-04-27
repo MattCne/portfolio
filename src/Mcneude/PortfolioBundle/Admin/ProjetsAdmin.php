@@ -15,6 +15,30 @@ class ProjetsAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('translations', 'a2lix_translations', array(
+                'by_reference' => false,
+                'fields' => array(
+                    'nom' => array(
+                        'label' => 'Nom du projet'
+                    ),
+                    'description' => array(
+                        'label' => 'Description du projet',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'difficultes' => array(
+                        'label' => 'Difficultés rencontrés',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'technologies' => array(
+                        'label' => 'Technologies utilisées',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'competencesAcquises' => array(
+                        'label' => 'Compétences acquises',
+                        'attr' => array( 'class' => 'tinymce' )
+                    )
+                )
+            ) )
             ->add( 'nom', 'text', array( 'label' => 'Nom du projet' ) )
             ->add( 'description', 'textarea', array( 'label' => 'Description du projet', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'difficultes', 'textarea', array( 'label' => 'Difficultés rencontrés', 'attr' => array( 'class' => 'tinymce' ) ) )

@@ -67,7 +67,10 @@ class FooterController extends Controller
         return ( $formatedTweets );
     }
 
-
+    /**
+     * Réccupère les projets "sites internet"
+     * @return mixed
+     */
     private function getSitesInternet()
     {
         $projetsDb = $this->getDoctrine()

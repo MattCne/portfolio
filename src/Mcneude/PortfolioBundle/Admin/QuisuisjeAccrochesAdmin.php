@@ -15,6 +15,28 @@ class QuisuisjeAccrochesAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('translations', 'a2lix_translations', array(
+                'by_reference' => false,
+                'fields' => array(
+                    'accrocheMethodes' => array(
+                        'label' => 'Methodes de conception',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'accrocheInfos' => array(
+                        'label' => 'Informations complémentaires',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'accrochePolitique' => array(
+                        'label' => 'Politique / workflow',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'accrocheCompetences' => array(
+                        'label' => 'Compétences',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+
+                )
+            ) )
             ->add( 'accroche_methodes', 'textarea', array( 'label' => 'Methodes de conception', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'accroche_infos', 'textarea', array( 'label' => 'Informations complémentaires', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'accroche_politique', 'textarea', array( 'label' => 'Politique / workflow', 'attr' => array( 'class' => 'tinymce' ) ) )

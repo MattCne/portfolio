@@ -1,6 +1,10 @@
 Mcneude\PortfolioBundle\Entity\QuisuisjeCompetences:
     type: entity
     table: quisuisje_competences
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\QuisuisjeCompetencesTranslation
     fields:
         id:
             id: true
@@ -14,9 +18,13 @@ Mcneude\PortfolioBundle\Entity\QuisuisjeCompetences:
             length: 45
             fixed: false
             nullable: true
+            gedmo:
+              - translatable
         description:
             type: text
             nullable: true
+            gedmo:
+              - translatable
         position:
             type: integer
             unsigned: false
@@ -31,4 +39,10 @@ Mcneude\PortfolioBundle\Entity\QuisuisjeCompetences:
             type: boolean
             nullable: true
             column: is_competences_techniques
+    oneToMany:
+        translations:
+            targetEntity: QuisuisjeCompetencesTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
+
     lifecycleCallbacks: {  }

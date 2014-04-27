@@ -1,6 +1,12 @@
 Mcneude\PortfolioBundle\Entity\Projets:
     type: entity
     table: projets
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\ProjetsTranslation
+
+
     fields:
         id:
             id: true
@@ -14,6 +20,8 @@ Mcneude\PortfolioBundle\Entity\Projets:
             length: 45
             fixed: false
             nullable: true
+            gedmo:
+              - translatable
         position:
             type: integer
             unsigned: false
@@ -21,37 +29,53 @@ Mcneude\PortfolioBundle\Entity\Projets:
         description:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+
         difficultes:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+
         technologies:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+
         competencesAcquises:
             type: text
             nullable: true
             column: competences_acquises
+            gedmo:
+              - translatable
+
         urlMiniature:
             type: string
             length: 45
             fixed: false
             nullable: true
             column: url_miniature
+
         slug:
             type: string
             length: 45
             fixed: false
             nullable: false
+
         urlExternal:
             type: string
             length: 45
             fixed: false
             nullable: true
             column: url_external
+
         isWebsite:
             type: boolean
             nullable: true
             column: is_website
+
     manyToMany:
         projetsGroupe:
             targetEntity: ProjetsGroupes
@@ -69,4 +93,11 @@ Mcneude\PortfolioBundle\Entity\Projets:
                         name: projets_groupe_id
                         referencedColumnName: id
             orderBy: null
+
+    oneToMany:
+        translations:
+            targetEntity: QuisuisjeTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
+
     lifecycleCallbacks: {  }

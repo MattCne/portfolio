@@ -1,6 +1,10 @@
 Mcneude\PortfolioBundle\Entity\QuisuisjeAccroches:
     type: entity
     table: quisuisje_accroches
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\QuisuisjeCompetencesTranslation
     fields:
         id:
             id: true
@@ -9,20 +13,39 @@ Mcneude\PortfolioBundle\Entity\QuisuisjeAccroches:
             nullable: false
             generator:
                 strategy: IDENTITY
+
         accrocheCompetences:
             type: text
             nullable: true
             column: accroche_competences
+            gedmo:
+              - translatable
+
         accrocheMethodes:
             type: text
             nullable: true
             column: accroche_methodes
+            gedmo:
+              - translatable
+
         accrochePolitique:
             type: text
             nullable: true
             column: accroche_politique
+            gedmo:
+              - translatable
+
         accrocheInfos:
             type: text
             nullable: true
             column: accroche_infos
+            gedmo:
+              - translatable
+
+    oneToMany:
+        translations:
+            targetEntity: QuisuisjeCompetencesTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
+
     lifecycleCallbacks: {  }
