@@ -22,7 +22,7 @@ Mcneude\PortfolioBundle\Entity\QuisuisjeAccrochesTranslation:
           nullable: true
     manyToOne:
       object:
-          targetEntity: QuisuisjeAccrochesTranslation
+          targetEntity: QuisuisjeAccroches
           cascade: {  }
           mappedBy: null
           inversedBy: translations

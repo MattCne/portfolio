@@ -15,6 +15,17 @@ class FichiersAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('translations', 'a2lix_translations', array(
+                'by_reference' => false,
+                'fields' => array(
+                    'nom' => array(
+                        'label' => 'Nom'
+                    ),
+                    'url' => array(
+                        'label' => 'Url : /bundles/portfolio/files'
+                    )
+                )
+            ) )
             ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
             ->add( 'url', 'text', array( 'label' => 'Url : /bundles/portfolio/files' ) )
             ->add( 'position', 'text', array( 'label' => 'Position' ) )

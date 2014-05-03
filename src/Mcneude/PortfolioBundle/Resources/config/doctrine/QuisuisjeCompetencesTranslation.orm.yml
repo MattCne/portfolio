@@ -22,7 +22,7 @@ Mcneude\PortfolioBundle\Entity\QuisuisjeCompetencesTranslation:
           nullable: true
     manyToOne:
       object:
-          targetEntity: QuisuisjeCompetencesTranslation
+          targetEntity: QuisuisjeCompetences
           cascade: {  }
           mappedBy: null
           inversedBy: translations

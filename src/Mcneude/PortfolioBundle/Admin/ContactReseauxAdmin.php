@@ -15,6 +15,17 @@ class ContactReseauxAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('translations', 'a2lix_translations', array(
+                'by_reference' => false,
+                'fields' => array(
+                    'nom' => array(
+                        'label' => 'Nom'
+                    ),
+                    'description' => array(
+                        'label' => 'Description',
+                        'attr' => array( 'class' => 'tinymce' ) )
+                )
+            ) )
             ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
             ->add( 'classReseau', 'text', array( 'label' => 'Classe du réseau. Doit être lié à une classe CSS.' ) )
             ->add( 'description', 'textarea', array( 'label' => 'Description', 'attr' => array( 'class' => 'tinymce' ) ) )

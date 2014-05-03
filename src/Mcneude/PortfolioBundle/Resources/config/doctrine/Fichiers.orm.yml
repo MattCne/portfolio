@@ -1,6 +1,11 @@
 Mcneude\PortfolioBundle\Entity\Fichiers:
     type: entity
     table: fichiers
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\FichiersTranslation
+
     fields:
         id:
             id: true
@@ -14,13 +19,25 @@ Mcneude\PortfolioBundle\Entity\Fichiers:
             length: 45
             fixed: false
             nullable: true
+            gedmo:
+              - translatable
         url:
             type: string
             length: 45
             fixed: false
             nullable: true
+            gedmo:
+              - translatable
+
         position:
             type: integer
             unsigned: false
             nullable: true
+
+    oneToMany:
+        translations:
+            targetEntity: FichiersTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
+
     lifecycleCallbacks: {  }

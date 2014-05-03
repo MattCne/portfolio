@@ -1,6 +1,11 @@
 Mcneude\PortfolioBundle\Entity\ContactReseaux:
     type: entity
     table: contact_reseaux
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\ContactReseauxTranslation
+
     fields:
         id:
             id: true
@@ -14,6 +19,9 @@ Mcneude\PortfolioBundle\Entity\ContactReseaux:
             length: 100
             fixed: false
             nullable: true
+            gedmo:
+              - translatable
+
         classReseau:
             type: string
             length: 200
@@ -23,6 +31,9 @@ Mcneude\PortfolioBundle\Entity\ContactReseaux:
         description:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+
         urlImage:
             type: string
             length: 200
@@ -38,4 +49,11 @@ Mcneude\PortfolioBundle\Entity\ContactReseaux:
             type: integer
             unsigned: false
             nullable: true
+
+    oneToMany:
+        translations:
+            targetEntity: ContactReseauxTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
+
     lifecycleCallbacks: {  }

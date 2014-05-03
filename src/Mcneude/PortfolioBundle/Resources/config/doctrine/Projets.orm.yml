@@ -96,7 +96,7 @@ Mcneude\PortfolioBundle\Entity\Projets:
 
     oneToMany:
         translations:
-            targetEntity: QuisuisjeTranslation
+            targetEntity: ProjetsTranslation
             cascade: ["persist", "remove"]
             mappedBy: object
 

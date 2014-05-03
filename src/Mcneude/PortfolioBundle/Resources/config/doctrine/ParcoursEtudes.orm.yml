@@ -1,6 +1,11 @@
 Mcneude\PortfolioBundle\Entity\ParcoursEtudes:
     type: entity
     table: parcours_etudes
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\ParcoursEtudesTranslation
+
     fields:
         id:
             id: true
@@ -14,25 +19,41 @@ Mcneude\PortfolioBundle\Entity\ParcoursEtudes:
             length: 100
             fixed: false
             nullable: true
+            gedmo:
+              - translatable
+
         description:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+
         urlImage:
             type: string
             length: 45
             fixed: false
             nullable: true
             column: url_image
+
         url:
             type: string
             length: 45
             fixed: false
             nullable: true
+
         position:
             type: integer
             unsigned: false
             nullable: true
+
         date:
             type: date
             nullable: true
+
+    oneToMany:
+        translations:
+            targetEntity: ParcoursEtudesTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
+
     lifecycleCallbacks: {  }

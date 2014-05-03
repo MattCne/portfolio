@@ -15,6 +15,27 @@ class ParcoursAccrochesAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('translations', 'a2lix_translations', array(
+                'by_reference' => false,
+                'fields' => array(
+                    'accrocheExperiences' => array(
+                        'label' => 'Accroche',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'accrocheEtudes' => array(
+                        'label' => 'Etudes',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'accrocheInterets' => array(
+                        'label' => 'Intérets',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'accrocheExperiencesComplementaires' => array(
+                        'label' => 'Experiences complémentaires',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                )
+            ) )
             ->add( 'accroche_experiences', 'textarea', array( 'label' => 'Experiences', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'accroche_etudes', 'textarea', array( 'label' => 'Etudes', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'accroche_interets', 'textarea', array( 'label' => 'Intérets', 'attr' => array( 'class' => 'tinymce' ) ) )

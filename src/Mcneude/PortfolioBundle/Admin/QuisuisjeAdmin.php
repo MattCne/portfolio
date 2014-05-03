@@ -33,16 +33,9 @@ class QuisuisjeAdmin extends Admin
                     'infos' => array(
                         'label' => 'Informations complémentaires',
                         'attr' => array( 'class' => 'tinymce' )
-                    ),
-
+                    )
                 )
-            ) )
-
-            ->add( 'pourquoi', 'textarea', array( 'label' => 'Pourquoi développeur web ?', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'methodes', 'textarea', array( 'label' => 'Methodes de conception', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'politique', 'textarea', array( 'label' => 'Politique / workflow', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'infos', 'textarea', array( 'label' => 'Informations complémentaires', 'attr' => array( 'class' => 'tinymce' ) ) )
-        ;
+            ) );
     }
 
     /**

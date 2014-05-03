@@ -1,0 +1,32 @@
+Mcneude\PortfolioBundle\Entity\ParcoursExperiencesTranslation:
+    type: entity
+    table: parcours_experiences_translation
+    uniqueConstraints:
+        lookup_unique_idx:
+            columns: [locale,object_id,field]
+    id:
+      id:
+        type: integer
+        generator:
+          strategy: AUTO
+
+    fields:
+        locale:
+            type: string
+            length: 8
+        field:
+            type: string
+            length: 32
+        content:
+            type: text
+            nullable: true
+    manyToOne:
+        object:
+            targetEntity: ParcoursExperiences
+            cascade: {  }
+            mappedBy: null
+            inversedBy: translations
+            joinColumns:
+                object_id:
+                  referencedColumnName: id
+    lifecycleCallbacks: {  }

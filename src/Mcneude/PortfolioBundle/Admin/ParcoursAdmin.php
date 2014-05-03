@@ -15,6 +15,20 @@ class ParcoursAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('translations', 'a2lix_translations', array(
+                'by_reference' => false,
+                'fields' => array(
+                    'experiencesComplementaires' => array(
+                        'label' => 'Experiences complémentaires',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                    'interets' => array(
+                        'label' => 'Intérets',
+                        'attr' => array( 'class' => 'tinymce' )
+                    ),
+                )
+            ) )
+
             ->add( 'experiences_complementaires', 'textarea', array( 'label' => 'Experiences complémentaires', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'interets', 'textarea', array( 'label' => 'Intérets', 'attr' => array( 'class' => 'tinymce' ) ) )
         ;

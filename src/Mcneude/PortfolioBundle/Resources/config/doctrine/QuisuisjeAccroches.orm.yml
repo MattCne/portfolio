@@ -4,7 +4,7 @@ Mcneude\PortfolioBundle\Entity\QuisuisjeAccroches:
     gedmo:
         translation:
             locale: locale
-            entity: Mcneude\PortfolioBundle\Entity\QuisuisjeCompetencesTranslation
+            entity: Mcneude\PortfolioBundle\Entity\QuisuisjeAccrochesTranslation
     fields:
         id:
             id: true
@@ -44,7 +44,7 @@ Mcneude\PortfolioBundle\Entity\QuisuisjeAccroches:
 
     oneToMany:
         translations:
-            targetEntity: QuisuisjeCompetencesTranslation
+            targetEntity: QuisuisjeAccrochesTranslation
             cascade: ["persist", "remove"]
             mappedBy: object
 

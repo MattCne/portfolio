@@ -1,6 +1,11 @@
 Mcneude\PortfolioBundle\Entity\ParcoursAccroches:
     type: entity
     table: parcours_accroches
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\ParcoursAccrochesTranslation
+
     fields:
         id:
             id: true
@@ -9,20 +14,39 @@ Mcneude\PortfolioBundle\Entity\ParcoursAccroches:
             nullable: false
             generator:
                 strategy: IDENTITY
+
         accrocheEtudes:
             type: text
             nullable: true
             column: accroche_etudes
+            gedmo:
+              - translatable
+
         accrocheExperiences:
             type: text
             nullable: true
             column: accroche_experiences
+            gedmo:
+              - translatable
+
         accrocheExperiencesComplementaires:
             type: text
             nullable: true
             column: accroche_experiences_complementaires
+            gedmo:
+              - translatable
+
         accrocheInterets:
             type: text
             nullable: true
             column: accroche_interets
+            gedmo:
+              - translatable
+
+    oneToMany:
+        translations:
+            targetEntity: ParcoursAccrochesTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
+
     lifecycleCallbacks: {  }

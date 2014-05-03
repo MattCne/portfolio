@@ -22,7 +22,7 @@ Mcneude\PortfolioBundle\Entity\ProjetsTranslation:
           nullable: true
     manyToOne:
       object:
-          targetEntity: ProjetsTranslation
+          targetEntity: Projets
           cascade: {  }
           mappedBy: null
           inversedBy: translations

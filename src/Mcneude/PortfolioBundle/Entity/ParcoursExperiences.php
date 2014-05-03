@@ -3,6 +3,7 @@
 namespace Mcneude\PortfolioBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * ParcoursExperiences
@@ -43,6 +44,17 @@ class ParcoursExperiences
      * @var \DateTime
      */
     private $date;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $translations;
+
+    /**
+     * @var string
+     */
+    protected $locale;
+
 
 
     /**
@@ -192,4 +204,47 @@ class ParcoursExperiences
     {
         return $this->date;
     }
+
+    /**
+     * Set translations
+     *
+     * @param ArrayCollection $translations
+     * @return Product
+     */
+    public function setTranslations($translations)
+    {
+        foreach ($translations as $translation) {
+            $translation->setObject($this);
+        }
+
+        $this->translations = $translations;
+        return $this;
+    }
+
+    /**
+     * Get translations
+     *
+     * @return ArrayCollection
+     */
+    public function getTranslations()
+    {
+        return $this->translations;
+    }
+
+    /**
+     * @param mixed $locale
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocale()
+    {
+        return $this->locale;
+    }
+
 }

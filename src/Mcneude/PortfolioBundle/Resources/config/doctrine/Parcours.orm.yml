@@ -1,6 +1,11 @@
 Mcneude\PortfolioBundle\Entity\Parcours:
     type: entity
     table: parcours
+    gedmo:
+        translation:
+            locale: locale
+            entity: Mcneude\PortfolioBundle\Entity\ParcoursTranslation
+
     fields:
         id:
             id: true
@@ -9,11 +14,24 @@ Mcneude\PortfolioBundle\Entity\Parcours:
             nullable: false
             generator:
                 strategy: IDENTITY
+
         experiencesComplementaires:
             type: text
             nullable: true
             column: experiences_complementaires
+            gedmo:
+              - translatable
+
         interets:
             type: text
             nullable: true
+            gedmo:
+              - translatable
+
+    oneToMany:
+        translations:
+            targetEntity: ParcoursTranslation
+            cascade: ["persist", "remove"]
+            mappedBy: object
+
     lifecycleCallbacks: {  }
