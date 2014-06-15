@@ -36,10 +36,6 @@ class ParcoursAccrochesAdmin extends Admin
                     ),
                 )
             ) )
-            ->add( 'accroche_experiences', 'textarea', array( 'label' => 'Experiences', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'accroche_etudes', 'textarea', array( 'label' => 'Etudes', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'accroche_interets', 'textarea', array( 'label' => 'Intérets', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'accroche_experiences_complementaires', 'textarea', array( 'label' => 'Experiences complémentaires', 'attr' => array( 'class' => 'tinymce' ) ) )
         ;
     }
 

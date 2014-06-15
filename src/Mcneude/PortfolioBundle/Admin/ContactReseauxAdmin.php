@@ -26,9 +26,7 @@ class ContactReseauxAdmin extends Admin
                         'attr' => array( 'class' => 'tinymce' ) )
                 )
             ) )
-            ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
             ->add( 'classReseau', 'text', array( 'label' => 'Classe du réseau. Doit être lié à une classe CSS.' ) )
-            ->add( 'description', 'textarea', array( 'label' => 'Description', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'urlImage', 'text', array( 'label' => 'URL de l\'image : bundles/portfolio/images' ) )
             ->add( 'url', 'text', array( 'label' => 'URL du réseau' ) )
             ->add( 'position', 'text', array( 'label' => 'Position' ) )
@@ -50,7 +48,7 @@ class ContactReseauxAdmin extends Admin
         ;
     }
 
-    /**
+    /**<
      * Configuration de la liste
      * @param ListMapper $listMapper
      */
