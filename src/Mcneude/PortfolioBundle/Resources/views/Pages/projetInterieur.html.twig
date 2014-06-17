@@ -19,7 +19,7 @@
 
             <div class="accroche content">
                 {{ projet.description | raw  }}
-                <p>{% for groupe in projet.getProjetsGroupe  %} Ce projet a été réalisé avec l'équipe de l'entreprise <strong>{{  groupe.getNom  }}</strong>. {% endfor %}</p>
+                <p>{% for groupe in projet.getProjetsGroupe  %} {{ innerproject.copyright }} <strong>{{  groupe.getNom  }}</strong>. {% endfor %}</p>
             </div>
 
             {% if images is not empty %}

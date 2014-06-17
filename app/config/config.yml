@@ -75,12 +75,14 @@ stof_doctrine_extensions:
 
 #TranslationFormBundle
 a2lix_translation_form:
-    locales: [fr, en]       # [optional] Array of the translation locales (The default locale have to be excluded). Can also be specified in the form builder.
+    locales: %locales%     # [optional] Array of the translation locales (The default locale have to be excluded). Can also be specified in the form builder.
     default_required: true  # [optional] Defaults to false. In this case, translation fields are not mark as required with HTML5.
     use_aop: true           # [optional] Defaults to false.
 
 # Template
 twig:
+    globals:
+        languages: [fr, en]
     form:
         resources:
             - 'A2lixTranslationFormBundle::form.html.twig'
@@ -146,5 +148,5 @@ stfalcon_tinymce:
 #JMSi18nRoutingBundle
 jms_i18n_routing:
     default_locale: "%locale%"
-    locales: [fr, en]
+    locales: %locales%
     strategy: "prefix_except_default"

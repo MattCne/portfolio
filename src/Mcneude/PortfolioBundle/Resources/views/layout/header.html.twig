@@ -34,24 +34,15 @@
 	        </li>
 	    </ul>
 	</nav>
-    <aside class="translation">
-        {# TODO : voir à faire fonctionner I18n bundle avec les paramètres d'url #}
-        {% if app.request.locale == 'en' %}
-            {% set variables = {"_locale": "fr"} %}
+    <aside class="translation clearfix">
+        {% for language in languages %}
+            {% set variables = {"_locale": language} %}
             {% if app.request.attributes.get('slug') is defined and app.request.attributes.get('slug') is not null %}
-                {% set variables = {'_locale' : "fr", 'slug' : app.request.attributes.get('slug')} %}
+                {% set variables = {'_locale' : language, 'slug' : app.request.attributes.get('slug')} %}
             {% endif %}
             <a href="{{ path(app.request.attributes.get('_route'), variables) }}">
-                <img src="{{ asset('/bundles/portfolio/images/translation/france.png') }}" title="traduire en anglais" alt="traduire en anglais" />
+                <img src="{{ asset('/bundles/portfolio/images/translation/'~language~'.png') }}" title="traduire en {{ language }}" alt="traduire en {{ language }}" />
             </a>
-        {% else %}
-            {% set variables = {"_locale": "en"} %}
-            {% if app.request.attributes.get('slug') is defined and app.request.attributes.get('slug') is not null %}
-                {% set variables = {'_locale' : "en", 'slug' : app.request.attributes.get('slug')} %}
-            {% endif %}
-            <a href="{{ path(app.request.attributes.get('_route'), variables) }}">
-                <img src="{{ asset('/bundles/portfolio/images/translation/United-Kingdom.png') }}" title="translate in french" alt="translate in french"  />
-            </a>
-        {% endif %}
+        {% endfor %}
     </aside>
 </header>
