@@ -13,24 +13,6 @@
                 </div>
             </header>
 
-            {% if projetsImages is not empty %}
-            <!-- SLIDESHOW -->
-                <article id="derniers-projets">
-                    <h1>{{ "home.title.slideshow" | trans }}</h1>
-                    <div class="slideshow flexslider">
-                        <ul class="slides">
-                            {% for image in projetsImages %}
-                                <li>
-                                    <a data-lightbox="image-diapo" href="{{ asset('/bundles/portfolio/images/content/projets') }}{{ image.url }}">
-                                        <img src="{{ asset('/bundles/portfolio/images/content/projets') }}{{ image.url }}"  alt="{{ image.nom }}" /></a>
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </article>
-            {% endif %}
-
             <article id="encemoment">
                 <div class="content box">
                     <h1>{{ "home.title.learn" | trans }}</h1>
