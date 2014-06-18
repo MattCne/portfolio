@@ -40,6 +40,8 @@ innerproject:
     projectskills: Skills acquired with this project:
   websitelink: Go to the website
   websitedead: This project is not online
+  copyright: This project was developed with the team of the company
+
 
 career:
   title:
@@ -57,6 +59,14 @@ contact:
   form:
     require: Fields with a <strong>*</strong> are required.
     submit: Send
+  nom: Name
+  prenom: First name
+  sujet: Subject
+  email: Email
+  societe: Company
+  addresse: Adress
+  telephone: Phone
+  message: Message
 
 footer:
   title:

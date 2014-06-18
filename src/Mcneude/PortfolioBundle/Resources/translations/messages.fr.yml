@@ -40,6 +40,7 @@ innerproject:
     projectskills: Compétences acquises par ce projet :
   websitelink: Voir le site en ligne
   websitedead: Ce projet n'est pas en ligne
+  copyright: Ce projet a été développé avec l'équipe de l'entreprise
 
 career:
   title:
@@ -57,6 +58,14 @@ contact:
   form:
     require: Les champs renseignés d'un <strong>*</strong> sont obligatoires.
     submit: Envoyer
+  nom: Nom
+  prenom: Prénom
+  sujet: Sujet
+  email: Email
+  societe: Société
+  addresse: Adresse
+  telephone: Téléphone
+  message: Message
 
 footer:
   title:

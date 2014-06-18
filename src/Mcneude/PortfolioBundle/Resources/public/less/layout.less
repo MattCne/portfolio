@@ -62,7 +62,6 @@ img{
 
 #main{
     position:relative;
-    background:@blanc;
 }
 
 #main > header{
@@ -72,13 +71,6 @@ img{
 	margin:1em 0 0 0;
 	position:relative;
 	height:auto;
-
-	background: -moz-linear-gradient(left, rgba(230,232,227,0.54) 0%, rgba(230,232,227,0.55) 1%, rgba(255,255,255,0.72) 30%, rgba(255,255,255,0.79) 42%, rgba(255,255,255,0.79) 58%, rgba(255,255,255,0.74) 66%, rgba(230,232,227,0.53) 99%, rgba(230,232,227,0.52) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(230,232,227,0.54)), color-stop(1%,rgba(230,232,227,0.55)), color-stop(30%,rgba(255,255,255,0.72)), color-stop(42%,rgba(255,255,255,0.79)), color-stop(58%,rgba(255,255,255,0.79)), color-stop(66%,rgba(255,255,255,0.74)), color-stop(99%,rgba(230,232,227,0.53)), color-stop(100%,rgba(230,232,227,0.52))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left, rgba(230,232,227,0.54) 0%,rgba(230,232,227,0.55) 1%,rgba(255,255,255,0.72) 30%,rgba(255,255,255,0.79) 42%,rgba(255,255,255,0.79) 58%,rgba(255,255,255,0.74) 66%,rgba(230,232,227,0.53) 99%,rgba(230,232,227,0.52) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left, rgba(230,232,227,0.54) 0%,rgba(230,232,227,0.55) 1%,rgba(255,255,255,0.72) 30%,rgba(255,255,255,0.79) 42%,rgba(255,255,255,0.79) 58%,rgba(255,255,255,0.74) 66%,rgba(230,232,227,0.53) 99%,rgba(230,232,227,0.52) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left, rgba(230,232,227,0.54) 0%,rgba(230,232,227,0.55) 1%,rgba(255,255,255,0.72) 30%,rgba(255,255,255,0.79) 42%,rgba(255,255,255,0.79) 58%,rgba(255,255,255,0.74) 66%,rgba(230,232,227,0.53) 99%,rgba(230,232,227,0.52) 100%); /* IE10+ */
-	background: linear-gradient(to right, rgba(230,232,227,0.54) 0%,rgba(230,232,227,0.55) 1%,rgba(255,255,255,0.72) 30%,rgba(255,255,255,0.79) 42%,rgba(255,255,255,0.79) 58%,rgba(255,255,255,0.74) 66%,rgba(230,232,227,0.53) 99%,rgba(230,232,227,0.52) 100%); /* W3C */
 
 	&:before{
 		position:absolute;
@@ -94,7 +86,6 @@ img{
         width:100%;
         height:1em;
         #gradient .vertical( darken( @glacier, 10), darken( @glacier, 20) );
-        .shadow(  0 0 15px 5px rgba(175, 175, 175, 0.3) );
 
         border-top:1px solid lighten( @glacier, 20 );
         content:'';
@@ -277,14 +268,15 @@ ul#main-menu{
         font-size:2.5em;
         margin : 0 0 0.5em 0.5em
     }
+    background:url('/bundles/portfolio/images/background/background.jpg');
 }
 
 #main > footer{
     border-top:1px solid darken( @glacier, 20 );
     position:relative;
     padding:1em 0 1em 0;
-    margin:2em 0 0 0;
     .clearfix;
+    z-index: 100;
      clear:both;
     #gradient .vertical( @dimgray, @fuscousgrey );
     .opensanslight();
@@ -295,7 +287,6 @@ ul#main-menu{
 		width:100%;
 		height:1em;
 		#gradient .vertical( darken( @glacier, 10), darken( @glacier, 20) );
-		.shadow(  0 3px 32px 20px rgba(175, 175, 175, 0.25) );
 		border-top:1px solid lighten( @glacier, 20 );
 		border-bottom:1px solid darken( @glacier, 40 );
 		content:'';

@@ -88,15 +88,21 @@
 }
 
 .box{
-    border: 1px solid lighten( @glacier, 20 );
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+
+    border-color: lighten( @glacier, 20 );
+
     border-radius: 0 0 7px 10px;
-    .shadow( 0 7px 25px 5px rgba(208, 208, 204, 0.5) );
 
     width:47%;
     padding: 1.5em 2em 2em 1.5em;
     display: block;
     margin: 0.5em 1em 1em 1em;
     float: left;
+    background: @blanc;
 }
 
 .content.middle{
