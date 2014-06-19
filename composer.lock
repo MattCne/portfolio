@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6d03e97e509b11e7e212067487f29e6e",
+    "hash": "076cd21182cf08cd7b2c8fbc029bbfcb",
     "packages": [
         {
             "name": "a2lix/translation-form-bundle",
@@ -598,7 +598,7 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.3.6",
+            "version": "2.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
@@ -2919,6 +2919,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "doctrine/orm": 20,
         "twig/extensions": 20,
         "kriswallsmith/assetic": 15,
         "friendsofsymfony/user-bundle": 20,
