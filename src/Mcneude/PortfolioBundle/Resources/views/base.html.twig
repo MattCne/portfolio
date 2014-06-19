@@ -16,7 +16,7 @@
     	{% block body %} {% endblock %}
 
     	<!-- FOOTER -->
-        {% render 'PortfolioBundle:Footer:renderFooter' with { 'nbrTweets': 3 }  %}
+        {% render controller('PortfolioBundle:Footer:renderFooter',{ 'nbrTweets': 3 })  %}
 
     	<!-- SCRIPTS -->
     </div>
