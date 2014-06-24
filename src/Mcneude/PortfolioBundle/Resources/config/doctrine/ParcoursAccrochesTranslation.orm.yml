@@ -16,7 +16,7 @@ Mcneude\PortfolioBundle\Entity\ParcoursAccrochesTranslation:
             length: 8
         field:
             type: string
-            length: 32
+            length: 64
         content:
             type: text
             nullable: true
