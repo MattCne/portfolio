@@ -11,8 +11,8 @@ menu:
 home:
   title:
     slideshow: My five last projects
-    learn: Currently I learn...
-    work: Currently I work on...
+    learn: Currently I am learning...
+    work: Currently I am working on...
 
 whoami:
   title:
@@ -21,7 +21,7 @@ whoami:
     skills: Skills
     conception: Conception methods
     workflow: Workflow
-    moreInformation: Additional Informations
+    moreInformation: Additional Information
   skills:
     tech: Development skills
     others: Other skills
