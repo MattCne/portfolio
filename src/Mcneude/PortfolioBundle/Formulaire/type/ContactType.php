@@ -4,6 +4,7 @@ namespace Mcneude\PortfolioBundle\Formulaire\type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class ContactType extends AbstractType
 {
@@ -23,5 +24,13 @@ class ContactType extends AbstractType
     public function getName()
     {
         return 'Contact';
+    }
+
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'translation_domain' => 'contact'
+        ));
+
     }
 }

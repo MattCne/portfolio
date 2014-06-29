@@ -58,14 +58,7 @@ contact:
   form:
     require: Les champs renseignés d'un <strong>*</strong> sont obligatoires.
     submit: Envoyer
-  nom: Nom
-  prenom: Prénom
-  sujet: Sujet
-  email: Email
-  societe: Société
-  addresse: Adresse
-  telephone: Téléphone
-  message: Message
+  label:
 
 footer:
   title:
