@@ -105,6 +105,23 @@
     background: @blanc;
 }
 
+.box-image{
+    h1{
+        color: @gris-fonce;
+        border-color: @gris-fonce;;
+    }
+    .content{
+        .opensansbold( 1.4em );
+    }
+    color: @glacier;
+    width:47%;
+    padding: 1.5em 2em 2em 1.5em;
+    display: block;
+    margin: 0.5em 1em 1em 1em;
+    float: left;
+
+}
+
 .content.middle{
     margin: 2.5em 25% 2.5em 25%;
 }
@@ -167,7 +184,7 @@
 
 @media screen and (max-width: 760px){
 
-    .box{
+    .box, .box-image{
         width: 100%;
         margin: 0.5em 0 0.5em 0;
     }
@@ -220,7 +237,7 @@
 
 @media screen and (min-width: 760px) and (max-width: 1330px) {
 
-    .box{
+    .box, .box-image{
         width: 100%;
         margin-right: 0;
         margin-left: 0;

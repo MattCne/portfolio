@@ -7,20 +7,20 @@
         {% if home is not null %}
             <header>
                 <h1>{{ home.titre }}</h1>
-                <img src={{ asset("/bundles/portfolio/images/content/home") }}{{ home.urlImage }} />
                 <div class="accroche content middle">
                     {{ home.accroche | raw }}
                 </div>
+                <img src={{ asset("/bundles/portfolio/images/content/home") }}{{ home.urlImage }} />
             </header>
 
             <article id="encemoment">
-                <div class="content box">
+                <div class="content box-image">
                     <h1>{{ "home.title.learn" | trans }}</h1>
                     <div class="content">
                         {{ home.apprendre }}
                     </div>
                 </div>
-                <div class="content box">
+                <div class="content box-image">
                     <h1>{{ "home.title.work" | trans }}</h1>
                     <div class="content">
                         {{ home.construire }}
