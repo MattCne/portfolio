@@ -1,7 +1,6 @@
 <footer>
-	{% include 'PortfolioBundle:layout:sharebar.html.twig' %}
+	{% include 'PortfolioBundle:layout:sharebar.html.twig' with {'uri': uri} %}
     {% import 'PortfolioBundle::macros.html.twig' as macros %}
-
 	<section>
 		<h1>{{ "footer.title.websites" | trans }}</h1>
         {% if sitesInternet is not null %}

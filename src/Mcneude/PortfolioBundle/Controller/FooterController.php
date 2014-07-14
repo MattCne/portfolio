@@ -13,7 +13,7 @@ class FooterController extends Controller
      * @param int $nbrTweets Nombre des derniers tweets apparaissant dans le footer
      * @return Response
      */
-    public function renderFooterAction( $nbrTweets ) {
+    public function renderFooterAction( $nbrTweets, $uri  ) {
 
         $tweets = $this->getLastTweetAction( $nbrTweets );
         $sitesInternet = $this->getSitesInternet();
@@ -24,6 +24,7 @@ class FooterController extends Controller
         $content = $this->renderView(
             'PortfolioBundle:layout:footer.html.twig', array(
                 'tweets' => $tweets,
+                'uri' => $uri,
                 'sitesInternet' => $sitesInternet,
                 'autresProjets'=> $autresProjets,
                 'fichiers'  => $fichiers,
