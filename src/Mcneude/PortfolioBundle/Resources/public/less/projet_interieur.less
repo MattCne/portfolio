@@ -6,11 +6,12 @@
     position: relative;
     > h1{
         position: relative;
+        text-align: center;
+        z-index: 0;
     }
 
-    > p, > a.projet-link{
+    > p, > a.projet-link, a.back-link{
         position: absolute;
-        right: 2em;
         font-family: "opensansbold",Arial,sans-serif;
         font-size: 1.1em;
         letter-spacing: 0.02em;
@@ -22,15 +23,21 @@
         color: @gris-fonce;
     }
 
-    > a.projet-link{
+    > a.projet-link, a.back-link{
+        z-index: 1;
         top: 3em;
-        color: @ruby;
         .transition( all 0.5s );
 
         &:hover{
             right: 1em;
             color: @tomatoes;
         }
+
+    }
+
+    > a.projet-link{
+        color: @ruby;
+        right: 2em;
         &:before{
             .fontcustom;
             content: "\f100";
@@ -40,6 +47,20 @@
             padding-bottom:0.1em;
         }
     }
+
+    a.back-link{
+        color: @olive;
+        left: 2em;
+        &:before{
+            .fontcustom;
+            content: "\f100";
+            .inline-block;
+            font-size:0.6em;
+            vertical-align:middle;
+            padding-bottom:0.1em;
+        }
+    }
+
 
     .accroche{
         margin:1em 25% 2em 25%;
@@ -81,7 +102,10 @@
 @media screen and (max-width: 760px){
     .full-projet-interieur{
 
-        > a.projet-link, > p{
+        > a.projet-link, a.back-link, > p{
+            display: block;
+            margin: 1em 0 1em 0;
+            width: 100%;
             position: static;
         }
 

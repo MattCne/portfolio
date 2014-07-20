@@ -39,6 +39,7 @@ innerproject:
     constraints: Constraints & issues:
     projectskills: Skills acquired with this project:
   websitelink: Go to the website
+  backlink: Return to the project list
   websitedead: This project is not online
   copyright: This project was developed with the team of the company
 

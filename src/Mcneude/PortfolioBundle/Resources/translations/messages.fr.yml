@@ -39,6 +39,7 @@ innerproject:
     constraints: Contraintes & problématiques :
     projectskills: Compétences acquises par ce projet :
   websitelink: Voir le site en ligne
+  backlink: Retourner à la liste des projets
   websitedead: Ce projet n'est pas en ligne
   copyright: Ce projet a été développé avec l'équipe de l'entreprise
 

@@ -6,7 +6,11 @@
 {% block body %}
     {% if projet is not empty %}
         <article class="full full-projet-interieur">
+
             <h1>{{ projet.nom }}</h1>
+            <a class="back-link" title="{{ "innerproject.backlink" | trans}}"
+               href="{{ path( 'projets' ) }}"
+                    >{{ "innerproject.backlink" | trans }}</a>
             {% if projet.urlExternal is not empty %}
                 <a class="projet-link" title="{{ projet.nom }}"
                    href="http://{{ projet.urlExternal }}" target="_blank"
