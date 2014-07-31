@@ -26,11 +26,11 @@
 	}
 
 	.underline{
-		text-decoration:underline;
+		text-decoration: underline;
 	}
 
 	a{
-		border-bottom:1px dotted @glacier;
+		border-bottom: 1px dotted @glacier;
 		.transition( all 0.5s );
 		&:hover{
 			color:@contessa;
@@ -88,12 +88,12 @@
 }
 
 .box{
-    border-top: 2px solid;
-    border-left: 2px solid;
-    border-right: 3px solid;
-    border-bottom: 3px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
 
-    border-color: lighten( @glacier, 20 );
+    border-color: @gris-fonce;
 
     border-radius: 0 0 7px 10px;
 
@@ -106,13 +106,7 @@
 }
 
 .box-image{
-    h1{
-        color: @gris-fonce;
-        border-color: @gris-fonce;;
-    }
-    .content{
-        .opensansbold( 1.4em );
-    }
+
     color: @glacier;
     width:47%;
     padding: 1.5em 2em 2em 1.5em;
@@ -120,6 +114,20 @@
     margin: 0.5em 1em 1em 1em;
     float: left;
 
+    .image{
+        width: 15%;
+        float: left;
+    }
+
+    h1{
+        color: @gris-fonce;
+        border-color: @gris-fonce;;
+    }
+
+    .content{
+        .opensansbold( 1.4em );
+        float:left;
+    }
 }
 
 .content.middle{
