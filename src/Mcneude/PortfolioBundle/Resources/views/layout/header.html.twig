@@ -27,7 +27,12 @@
 	            	<span class="icon-parcours">{{ "menu.parcours" | trans }}</span>
 	            </a>
 	        </li>
-	        <li>
+            <li>
+                <a href="{{ blog_url }}" target="_blank">
+                    <span class="icon-bubbles">{{ "Blog" }}</span>
+                </a>
+
+            <li>
                 <a href="{{ path( 'contact' ) }}" {{- macros.is_current_route('contact') -}}>
 	            	<span class="icon-telephone">{{ "menu.contact" | trans }}</span>
 	            </a>

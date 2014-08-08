@@ -159,7 +159,7 @@ ul#main-menu{
 
     > li{
         float:left;
-        width:20%;
+        width:16.666666667%;
         position:relative;
 
         > a{
@@ -193,11 +193,7 @@ ul#main-menu{
                         .transform( scale( 3 ) );
                     }
                 }
-                //Correction sur le bouton contact pour ne pas avoir de scroll horizontal
-                > span.icon-telephone:before{
-                    right:auto;
-                    left: 2em;
-                }
+               
             }
 
             > span{
@@ -235,12 +231,7 @@ ul#main-menu{
 		        }
             }
             //Ajustements pour certain picto svg
-            > span.icon-moi:before{
-                font-size:1.5em;
-                bottom: 2em;
-                right: 2em;
-            }
-             > span.icon-parcours:before{
+            > span.icon-moi:before, > span.icon-parcours:before, span.icon-bubbles:before{
                 font-size:1.5em;
                 bottom: 2em;
                 right: 2em;
