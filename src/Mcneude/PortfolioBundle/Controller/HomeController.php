@@ -6,6 +6,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class HomeController extends Controller
 {
+    /**
+     * Render the homepage
+     * @return Response
+     */
     public function renderAction()
     {
         $images = array();
@@ -14,20 +18,6 @@ class HomeController extends Controller
             ->getRepository('PortfolioBundle:Home')
             ->findAll();
 
-        $projetsDb = $this->getDoctrine()
-            ->getRepository('PortfolioBundle:Projets')
-            ->createQueryBuilder('projets')
-            ->setMaxResults(5)
-            ->orderBy('projets.position','DESC')
-            ->getQuery()
-            ->getresult();
-
-        if( $projetsDb )
-        {
-            $images = $this->getDoctrine()
-                ->getRepository('PortfolioBundle:ProjetImages')
-                ->findBy( array( 'projet' => $projetsDb, 'isImagePrincipale' => '1' ) );
-        }
 
         $home = isset( $homeDb[0] ) ? $homeDb[0] : null;
 

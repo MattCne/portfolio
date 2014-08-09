@@ -9,8 +9,8 @@ class FooterController extends Controller
 {
 
     /**
-     * Rend graphiquement le footer
-     * @param int $nbrTweets Nombre des derniers tweets apparaissant dans le footer
+     * Render the footer
+     * @param int $nbrTweets Number of tweets showing in the footer
      * @return Response
      */
     public function renderFooterAction( $nbrTweets, $uri  ) {
@@ -35,9 +35,9 @@ class FooterController extends Controller
     }
 
     /**
-     * Récupère les derniers tweets
-     * @param $nbrTweets Nombre des derniers tweets apparaissant dans le footer
-     * @return array Texte des tweets formatés et leurs dates
+     * Get the last tweets
+     * @param $nbrTweets Number of tweets showing in the footer
+     * @return array Tweet's text and date
      */
     private function getLastTweetAction( $nbrTweets )
     {
@@ -53,11 +53,13 @@ class FooterController extends Controller
         foreach( $tweets as $tweet ) {
             $dateTweet = date( 'd/m/Y h:m:s', strtotime( $tweet->created_at ) );
 
-            if( isset( $tweet->entities->urls[0] ) )
+            if( !empty( $tweet->entities->urls ) )
             {
-                $urlShort = $tweet->entities->urls[0]->url;
-                $htmlLink =  '<a target="_blank" href="'.$urlShort.'">'.$urlShort.'</a>';
-                $text = str_replace( $urlShort, $htmlLink , $tweet->text );
+                foreach( $tweet->entities->urls as $tweetUrl ){
+                    $urlShort = $tweetUrl->url;
+                    $htmlLink = '<a target="_blank" href="'.$urlShort.'">'.$urlShort.'</a>';
+                    $text = str_replace( $urlShort, $htmlLink , $tweet->text );
+                }
             }
             else
                 $text = $tweet->text;
@@ -69,7 +71,7 @@ class FooterController extends Controller
     }
 
     /**
-     * Réccupère les projets "sites internet"
+     * Get website projects
      * @return mixed
      */
     private function getSitesInternet()
@@ -85,6 +87,10 @@ class FooterController extends Controller
         return $projetsDb;
     }
 
+    /**
+     * Get other projects
+     * @return mixed
+     */
     private function getAutresProjets()
     {
         $projetsDb = $this->getDoctrine()
@@ -98,6 +104,10 @@ class FooterController extends Controller
         return $projetsDb;
     }
 
+    /**
+     * Get files
+     * @return mixed
+     */
     private function getFiles()
     {
         $filesDb = $this->getDoctrine()

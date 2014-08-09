@@ -30,7 +30,6 @@ class ParcoursController extends Controller
             ->getQuery()
             ->getresult();
 
-        //Il ne doit exister qu'une seule instance de accroches ou parcours
         $accroches = isset( $accrochesDb[0] ) ? $accrochesDb[0] : null ;
         $parcours  = isset( $parcoursDb[0] ) ? $parcoursDb[0] : null ;
 

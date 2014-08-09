@@ -10,6 +10,11 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ContactController extends Controller
 {
+    /**
+     * Render the contact page
+     * @param Request $request
+     * @return Response
+     */
     public function renderAction( Request $request )
     {
         $contact = new Contact();
