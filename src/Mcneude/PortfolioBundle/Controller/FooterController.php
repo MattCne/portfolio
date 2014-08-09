@@ -37,7 +37,7 @@ class FooterController extends Controller
     /**
      * Get the last tweets
      * @param $nbrTweets Number of tweets showing in the footer
-     * @return array Tweet's text and date
+     * @return array Tweet's date and text
      */
     private function getLastTweetAction( $nbrTweets )
     {
@@ -49,9 +49,11 @@ class FooterController extends Controller
             'count' => $nbrTweets
         ));
 
-        //Récupération des informations utiles
+        //Format tweets urls and date
         foreach( $tweets as $tweet ) {
-            $dateTweet = date( 'd/m/Y h:m:s', strtotime( $tweet->created_at ) );
+            $dateTweet = date( 'd/m/Y H:m:s', strtotime( $tweet->created_at ) );
+
+            $text = $tweet->text;
 
             if( !empty( $tweet->entities->urls ) )
             {
@@ -61,8 +63,6 @@ class FooterController extends Controller
                     $text = str_replace( $urlShort, $htmlLink , $tweet->text );
                 }
             }
-            else
-                $text = $tweet->text;
 
             $formatedTweets[] = array( 'date' => $dateTweet, 'text' => $text );
         }
