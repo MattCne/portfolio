@@ -2,24 +2,27 @@
 .project
 .settings
 
-/app/bootstrap.php.cache
-/app/cache/*
-/app/logs/*
-/app/config/parameters.yml
+app/bootstrap.php.cache
+app/cache/*
+app/logs/*
+app/config/parameters.yml
+app/config/parameters.yml.prod
 
-/build/
-/vendor/
-/bin/
-/data/
-/web/bundles/
-/web/css/
-/web/js/
+composer.lock
+
+build/
+vendor/
+bin/
+data/
+web/bundles/
+web/css/
+web/js/
 
 .idea
 
 .travis.yml
-/LICENSE
-/README.md
-/UPGRADE.md
-/dump/
+LICENSE
+README.md
+UPGRADE.md
+dump/
 vhost
