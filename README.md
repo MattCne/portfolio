@@ -3,6 +3,6 @@ portfolio
 
 This is the source code of my portfolio.
 
-Code is in english and in french because at this time I mix the two languages...
+Code is in english AND in french because at this time I mixed the two languages...
 
-Now I develop only in english.
+Now I code only in english (for database structure, html attributes, variable name, git comments...) 
