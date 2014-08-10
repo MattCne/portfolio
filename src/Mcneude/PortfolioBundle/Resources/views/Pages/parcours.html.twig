@@ -1,9 +1,7 @@
 {# src/Acme/BlogBundle/Resources/views/Blog/index.html.twig #}
 {% extends 'PortfolioBundle::base.html.twig' %}
 
-
 {% block body %}
-
     <div class="full full-cv">
         <h1>{{ "career.title.main" | trans }}</h1>
 
@@ -13,8 +11,8 @@
                     <h1>{{ "career.title.experiences" | trans }}</h1>
 
                     <div class="accroche content">
-                        {% if accroches is not null %}
-                            {{ accroches.getAccrocheExperiences | raw }}
+                        {% if catchphrase is not null %}
+                            {{ catchphrase.getAccrocheExperiences | raw }}
                         {% endif %}
                     </div>
                 </header>
@@ -43,23 +41,23 @@
                     <h1>{{ "career.title.studies" | trans }}</h1>
 
                     <div class="accroche content">
-                        {% if accroches is not null %}
-                            {{ accroches.getAccrocheEtudes | raw }}
+                        {% if catchphrase is not null %}
+                            {{ catchphrase.getAccrocheEtudes | raw }}
                         {% endif %}
                     </div>
                 </header>
-                {% if etudes is not empty %}
+                {% if studies is not empty %}
                     <ul>
-                        {% for etude in etudes %}
+                        {% for study in studies %}
                             <li>
                                 <section class="exp_etude">
                                     <header>
-                                        <h1>{{ etude.getNom }}</h1>
-                                        <time>{{ etude.getDate | date("d/m/Y") }}</time>
+                                        <h1>{{ study.getNom }}</h1>
+                                        <time>{{ study.getDate | date("d/m/Y") }}</time>
                                     </header>
-                                    <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_etudes{{ etude.urlImage }}"
-                                                             alt="{{ etude.nom }}"/></div>
-                                    <div class="content">{{ etude.description | raw}}</div>
+                                    <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_etudes{{ study.urlImage }}"
+                                                             alt="{{ study.getNom }}"/></div>
+                                    <div class="content">{{ study.description | raw}}</div>
                                 </section>
                             </li>
                         {% endfor %}
@@ -73,14 +71,14 @@
                     <h1>{{ "career.title.moreexperiences" | trans }}</h1>
 
                     <div class="accroche content">
-                        {% if accroches is not null %}
-                            {{ accroches.getAccrocheExperiencesComplementaires | raw }}
+                        {% if catchphrase is not null %}
+                            {{ catchphrase.getAccrocheExperiencesComplementaires | raw }}
                         {% endif %}
                     </div>
                 </header>
                 <div class="content">
-                    {% if parcours is not null %}
-                        {{ parcours.getExperiencesComplementaires | raw }}
+                    {% if career is not null %}
+                        {{ career.getExperiencesComplementaires | raw }}
                     {% endif %}
                 </div>
             </article>
@@ -90,14 +88,14 @@
                     <h1>{{ "career.title.interests" | trans }}</h1>
 
                     <div class="accroche content">
-                        {% if accroches is not null %}
-                            {{ accroches.getAccrocheInterets | raw }}
+                        {% if catchphrase is not null %}
+                            {{ catchphrase.getAccrocheInterets | raw }}
                         {% endif %}
                     </div>
                 </header>
                 <div class="content">
-                    {% if parcours is not null %}
-                        {{ parcours.getInterets | raw }}
+                    {% if career is not null %}
+                        {{ career.getInterets | raw }}
                     {% endif %}
                 </div>
             </article>

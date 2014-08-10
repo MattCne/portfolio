@@ -3,12 +3,12 @@
     {% import 'PortfolioBundle::macros.html.twig' as macros %}
 	<section>
 		<h1>{{ "footer.title.websites" | trans }}</h1>
-        {% if sitesInternet is not null %}
+        {% if websites is not null %}
             <ul class="liste">
-                {% for siteInternet in sitesInternet  %}
+                {% for website in websites  %}
                     <li>
-                        <a title="{{ siteInternet.nom }}" {{- macros.choice_url( siteInternet.slug, siteInternet.urlExternal ) -}}>
-                            {{ siteInternet.nom }}
+                        <a title="{{ website.nom }}" {{- macros.choice_url( website.slug, website.urlExternal ) -}}>
+                            {{ website.nom }}
                         </a>
                     </li>
                 {% endfor %}
@@ -18,12 +18,12 @@
 
 	<section>
 		<h1>{{ "footer.title.otherprojects" | trans }}</h1>
-        {% if autresProjets is not null %}
+        {% if otherProjects is not null %}
             <ul class="liste">
-                {% for autreProjet in autresProjets  %}
+                {% for otherProject in otherProjects  %}
                     <li>
-                        <a title="{{ autreProjet.nom }}" {{- macros.choice_url( autreProjet.slug, autreProjet.urlExternal ) -}}>
-                            {{ autreProjet.nom }}
+                        <a title="{{ otherProject.nom }}" {{- macros.choice_url( otherProject.slug, otherProject.urlExternal ) -}}>
+                            {{ otherProject.nom }}
                         </a>
                     </li>
                 {% endfor %}
@@ -33,12 +33,12 @@
 
 	<section>
 		<h1>{{ "footer.title.files" | trans }}</h1>
-        {% if fichiers is not null %}
+        {% if files is not null %}
             <ul class="liste">
-                {% for fichier in fichiers %}
+                {% for file in files %}
                     <li>
-                        <a  title="{{ fichier.nom }}" target="_blank" href="{{ asset('/bundles/portfolio/files') }}{{ fichier.url }}">
-                            {{ fichier.nom }}
+                        <a  title="{{ file.nom }}" target="_blank" href="{{ asset('/bundles/portfolio/files') }}{{ file.url }}">
+                            {{ file.nom }}
                         </a>
                     </li>
                 {% endfor %}

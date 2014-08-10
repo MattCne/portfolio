@@ -78,12 +78,12 @@ $(function( $, undefined ){
 
         $showAll = $('.full-projets .list-groupe .all');
 
-    //Initialisation : Tous les projets sont visibles
+    //Initialisation : all projects are visible
     $listeProjet.show();
     $showAll.addClass($groupeActive);
     $listeProjet.addClass($projetActive);
 
-    //Au click sur un groupe
+    //click on a group
     $listeGroupe.on( 'click',function(){
         var $currentId = $(this).data('id'),
             $currentProjet = $listeProjetContainer.children('li.'+$currentId);
@@ -110,7 +110,7 @@ $(function( $, undefined ){
 
 })(window.jQuery);
 
-//Gestion de l'accordéon des compétences
+//Skills
 (function($, undefined){
 
     //Initialisation

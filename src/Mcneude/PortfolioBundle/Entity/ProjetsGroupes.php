@@ -75,7 +75,7 @@ class ProjetsGroupes
      * Renvoie le nom formate (sans espace ni majuscules)
      * @return string
      */
-    public function getNomFormate()
+    public function getFormatedName()
     {
         return strtolower( str_replace( ' ', '_', $this->nom ) );
     }

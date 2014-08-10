@@ -6,29 +6,29 @@
 
     <div class="full full-projets">
         <h1>{{ "projects.title.main" | trans }}</h1>
-        {% if groupes is not empty %}
+        {% if groups is not empty %}
             <div class="list-groupe">
                 <span>{{ "projects.title.filters" | trans }}</span>
-                {% for key, group in groupes %}
+                {% for key, group in groups %}
                     <a class="groupe" data-id="{{ key }}" href="#">{{ group }}</a>
                 {% endfor %}
                 <a class="groupe all" data-id="projet" href="#">{{ "projects.filters.all" | trans }}</a>
             </div>
         {% endif %}
 
-        {% if projets is not null %}
+        {% if projects is not null %}
             <ul class="list-projet">
-                {% for projet in projets  %}
-                    <li class="{% for groupe in projet.getProjetsGroupe  %} {{  groupe.getNomFormate  }} {% endfor %} projet">
+                {% for project in projects  %}
+                    <li class="{% for groupe in project.getGroupProject  %} {{  groupe.getFormatedName  }} {% endfor %} projet">
                         <article>
-                            <a href="{{ path( 'projet_interieur' , { 'slug': projet.slug }) }}">
+                            <a href="{{ path( 'projet_interieur' , { 'slug': project.slug }) }}">
                                 <figure class="visuel">
-                                    <img src="{{ asset( '/bundles/portfolio/images/content/projets_miniatures' )}}{{ projet.urlMiniature }}" alt="visuel"/>
+                                    <img src="{{ asset( '/bundles/portfolio/images/content/projets_miniatures' )}}{{ project.urlMiniature }}" alt="visuel"/>
                                     <figcaption>
-                                        <h1>{{ projet.nom }}</h1>
+                                        <h1>{{ project.nom }}</h1>
 
                                         <div class="accroche">
-                                            {{ projet.description | raw }}
+                                            {{ project.description | raw }}
                                         </div>
                                     </figcaption>
                                 </figure>

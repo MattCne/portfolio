@@ -12,8 +12,6 @@ class HomeController extends Controller
      */
     public function renderAction()
     {
-        $images = array();
-
         $homeDb = $this->getDoctrine()
             ->getRepository('PortfolioBundle:Home')
             ->findAll();
@@ -23,8 +21,7 @@ class HomeController extends Controller
 
         return $this->render( 'PortfolioBundle:Pages:home.html.twig',
             array(
-                'home' => $home,
-                'projetsImages' => $images
+                'home' => $home
             ) );
     }
 }

@@ -4,17 +4,17 @@
 
 
 {% block body %}
-    {% if projet is not empty %}
+    {% if project is not empty %}
         <article class="full full-projet-interieur">
 
-            <h1>{{ projet.nom }}</h1>
+            <h1>{{ project.nom }}</h1>
             <a class="back-link" title="{{ "innerproject.backlink" | trans}}"
-               href="{{ path( 'projets' ) }}"
-                    >{{ "innerproject.backlink" | trans }}</a>
-            {% if projet.urlExternal is not empty %}
-                <a class="projet-link" title="{{ projet.nom }}"
-                   href="http://{{ projet.urlExternal }}" target="_blank"
-                >
+               href="{{ path( 'projets' ) }}">
+                {{ "innerproject.backlink" | trans }}
+            </a>
+            {% if project.urlExternal is not empty %}
+                <a class="projet-link" title="{{ project.nom }}"
+                   href="http://{{ projet.urlExternal }}" target="_blank">
                     {{ "innerproject.websitelink" | trans }}
                 </a>
             {% else %}
@@ -22,8 +22,8 @@
             {% endif %}
 
             <div class="accroche content">
-                {{ projet.description | raw  }}
-                <p>{% for groupe in projet.getProjetsGroupe  %} {{ "innerproject.copyright" | trans }} <strong>{{  groupe.getNom  }}</strong>. {% endfor %}</p>
+                {{ project.description | raw  }}
+                <p>{% for group in project.getGroupProject  %} {{ "innerproject.copyright" | trans }} <strong>{{  group.getNom  }}</strong>. {% endfor %}</p>
             </div>
 
             {% if images is not empty %}
@@ -45,7 +45,7 @@
                     <h1>{{ "innerproject.title.technology" | trans }}</h1>
                 </header>
                 <div>
-                    {{ projet.technologies | raw }}
+                    {{ project.technologies | raw }}
                 </div>
             </section>
 
@@ -55,7 +55,7 @@
                         <h1>{{ "innerproject.title.constraints" | trans }}</h1>
                     </header>
                     <div>
-                        {{ projet.difficultes | raw }}
+                        {{ project.difficultes | raw }}
                     </div>
                 </section>
 
@@ -64,7 +64,7 @@
                         <h1>{{ "innerproject.title.projectskills" | trans }}</h1>
                     </header>
                     <div>
-                        {{ projet.competencesAcquises | raw }}
+                        {{ project.competencesAcquises | raw }}
                     </div>
                 </section>
             </div>

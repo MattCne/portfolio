@@ -8,23 +8,23 @@ class ProjetInterieurController extends Controller
 {
     public function renderAction($slug)
     {
-        $groupes = array();
+        $groups = array();
 
-        $projetDb = $this->getDoctrine()
+        $project = $this->getDoctrine()
             ->getRepository('PortfolioBundle:Projets')
             ->findOneBy( array( 'slug' => $slug ) );
 
-        foreach( $projetDb->getProjetsGroupe() as $groupeDb )
-            $groupes[$groupeDb->getNomFormate()] = $groupeDb->getNom();
+        foreach( $project->getGroupProject() as $group )
+            $groups[$group->getFormatedName()] = $group->getNom();
 
         $images = $this->getDoctrine()
             ->getRepository('PortfolioBundle:ProjetImages')
-            ->findBy( array( 'projet' => $projetDb ) );
+            ->findBy( array( 'projet' => $project ) );
 
         return $this->render( 'PortfolioBundle:Pages:projetInterieur.html.twig', array(
-            'projet' => $projetDb,
+            'project' => $project,
             'images' => $images,
-            'groupe' => $groupes
+            'group' => $groups
         ) );
     }
 }
