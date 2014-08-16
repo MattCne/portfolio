@@ -27,7 +27,10 @@ class ParcoursAdmin extends Admin
                         'attr' => array( 'class' => 'tinymce' )
                     ),
                 )
-            ) );
+            ) )
+            ->add( 'experiences_complementaires', 'textarea', array( 'label' => 'Experiences complémentaires' ) )
+            ->add( 'interets', 'textarea', array( 'label' => 'Intérets' ) )
+        ;
     }
 
     /**

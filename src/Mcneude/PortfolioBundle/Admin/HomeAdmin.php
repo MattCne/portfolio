@@ -30,6 +30,11 @@ class HomeAdmin extends Admin
                     )
                 )
             ) )
+
+            ->add( 'titre', 'text', array( 'label' => 'URL de l\'image : /bundles/portfolio/images/content/home' ) )
+            ->add( 'accroche', 'textarea', array( 'label' => 'Accroche', 'attr' => array( 'class' => 'tinymce' ) ) )
+            ->add( 'apprendre', 'text', array( 'label' => 'En ce moment je me documente sur...' ) )
+            ->add( 'construire', 'text', array( 'label' => 'En ce moment je travaille sur...' ) )
             ->add( 'urlImage', 'text', array( 'label' => 'URL de l\'image : /bundles/portfolio/images/content/home' ) )
         ;
     }

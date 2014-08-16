@@ -27,6 +27,8 @@ class QuisuisjeCompetencesAdmin extends Admin
                     ),
                 )
             ) )
+            ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
+            ->add( 'description', 'textarea', array( 'label' => 'Description', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'position', 'text', array( 'label' => 'position' ) )
             ->add( 'urlImage', 'text', array( 'label' => 'URL de l\'image : /bundles/portfolio/images', 'required' => false ) )
             ->add( 'isCompetencesTechniques', 'checkbox', array( 'label' => 'Cette compétence est-elle technique ?', 'required' => false ) )

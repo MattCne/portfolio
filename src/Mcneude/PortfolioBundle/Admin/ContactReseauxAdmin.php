@@ -26,6 +26,8 @@ class ContactReseauxAdmin extends Admin
                         'attr' => array( 'class' => 'tinymce' ) )
                 )
             ) )
+            ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
+            ->add( 'description', 'textarea', array( 'label' => 'Description', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'classReseau', 'text', array( 'label' => 'Classe du réseau. Doit être lié à une classe CSS.' ) )
             ->add( 'urlImage', 'text', array( 'label' => 'URL de l\'image : bundles/portfolio/images' ) )
             ->add( 'url', 'text', array( 'label' => 'URL du réseau' ) )
