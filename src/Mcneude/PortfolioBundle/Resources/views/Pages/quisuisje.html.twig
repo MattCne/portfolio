@@ -1,6 +1,4 @@
-{# src/Acme/BlogBundle/Resources/views/Blog/index.html.twig #}
 {% extends 'PortfolioBundle::base.html.twig' %}
-
 
 {% block body %}
 
@@ -12,46 +10,46 @@
                 <h1>{{ "whoami.title.why" | trans }}</h1>
             </header>
             <div>
-                {% if quisuisje is not empty %}
-                    {{ quisuisje.pourquoi | raw }}
+                {% if whoAmI is not empty %}
+                    {{ whoAmI.pourquoi | raw }}
                 {% endif %}
             </div>
         </article>
 
-        {% if competencesTech or competencesAutre is not empty %}
+        {% if techSkills or otherSkills is not empty %}
             <article id="competences" class="box competences-groupe content">
                 <header>
                     <h1>{{ "whoami.title.skills" | trans }}</h1>
-                    {% if accroches is not empty  %}
+                    {% if catchphrase is not empty  %}
                         <div class="accroche">
-                                {{ accroches.accrocheCompetences | raw }}
+                                {{ catchphrase.accrocheCompetences | raw }}
                         </div>
                     {% endif %}
                 </header>
-                {% if competencesTech is not empty %}
+                {% if techSkills is not empty %}
                     <section class="competences-groupe">
                         <h1>{{ "whoami.skills.tech" | trans }}</h1>
                         <ul>
-                            {% for competenceTech in competencesTech %}
+                            {% for techSkill in techSkills %}
                                 <li class="competence">
-                                   <h2 class="accordeon no-active" data-id="{{ competenceTech.getNomFormate }}">{{ competenceTech.nom }}</h2>
-                                   <div class="description  {{ competenceTech.getNomFormate }}">
-                                        {{ competenceTech.description  | raw  }}
+                                   <h2 class="accordeon no-active" data-id="{{ techSkill.getNomFormate }}">{{ techSkill.nom }}</h2>
+                                   <div class="description  {{ techSkill.getNomFormate }}">
+                                        {{ techSkill.description  | raw  }}
                                    </div>
                                 </li>
                             {% endfor %}
                         </ul>
                     </section>
                {% endif %}
-               {% if competencesAutre is not empty %}
+               {% if otherSkills is not empty %}
                     <section class="competences-groupe">
                         <h1>{{ "whoami.skills.others" | trans }}</h1>
                         <ul>
-                            {% for competenceAutre in competencesAutre %}
+                            {% for otherSkill in otherSkills %}
                                 <li class="competence">
-                                    <h2 class="accordeon no-active" data-id="{{ competenceAutre.getNomFormate }}">{{ competenceAutre.nom }}</h2>
-                                    <div class="description  {{ competenceAutre.getNomFormate }}">
-                                        {{ competenceAutre.description | raw }}
+                                    <h2 class="accordeon no-active" data-id="{{ otherSkill.getNomFormate }}">{{ otherSkill.nom }}</h2>
+                                    <div class="description  {{ otherSkill.getNomFormate }}">
+                                        {{ otherSkill.description | raw }}
                                     </div>
                                 </li>
                             {% endfor %}
@@ -65,30 +63,30 @@
             <article class="content box">
                 <header>
                     <h1>{{ "whoami.title.conception" | trans }}</h1>
-                    {% if accroches is not empty %}
+                    {% if catchphrase is not empty %}
                         <div class="accroche">
-                                {{ accroches.getAccrocheMethodes | raw }}
+                                {{ catchphrase.getAccrocheMethodes | raw }}
                         </div>
                     {% endif %}
                 </header>
                 <div>
-                    {%  if quisuisje is not empty %}
-                        {{ quisuisje.getMethodes | raw }}
+                    {%  if whoAmI is not empty %}
+                        {{ whoAmI.getMethodes | raw }}
                     {% endif %}
                 </div>
             </article>
             <article class="content box">
                 <header>
                     <h1>{{ "whoami.title.workflow" | trans }}</h1>
-                    {% if accroches is not empty %}
+                    {% if catchphrase is not empty %}
                         <div class="accroche">
-                            {{ accroches.getAccrochePolitique | raw }}
+                            {{ catchphrase.getAccrochePolitique | raw }}
                         </div>
                     {% endif %}
                 </header>
                 <div>
-                    {% if quisuisje is not empty %}
-                        {{ quisuisje.getPolitique | raw }}
+                    {% if whoAmI is not empty %}
+                        {{ whoAmI.getPolitique | raw }}
                     {% endif %}
                 </div>
             </article>
@@ -96,13 +94,13 @@
         <article class="content box middle">
             <header>
                 <h1>{{ "whoami.title.moreInformation" | trans }}</h1>
-                {% if accroches is not empty %}
-                    <div class="accroche"> {{ accroches.getAccrocheInfos | raw }}</div>
+                {% if catchphrase is not empty %}
+                    <div class="accroche"> {{ catchphrase.getAccrocheInfos | raw }}</div>
                 {% endif %}
             </header>
             <div>
-                {% if quisuisje is not empty %}
-                    {{ quisuisje.getInfos | raw }}
+                {% if whoAmI is not empty %}
+                    {{ whoAmI.getInfos | raw }}
                 {% endif %}
             </div>
         </article>

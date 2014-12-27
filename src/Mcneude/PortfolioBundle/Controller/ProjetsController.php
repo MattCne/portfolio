@@ -8,28 +8,28 @@ class ProjetsController extends Controller
 {
     public function renderAction()
     {
-        $response = array();
-        $groupes = array();
+        $formatedGroups = array();
 
-        $projetsDb = $this->getDoctrine()
+        $projects = $this->getDoctrine()
             ->getRepository('PortfolioBundle:Projets')
             ->createQueryBuilder('projets')
             ->orderBy('projets.position', 'DESC')
             ->getQuery()
             ->getresult();
 
-        if( $projetsDb )
+        if( $projects )
         {
-            foreach( $projetsDb as $projetDb )
+            foreach( $projects as $projet )
             {
-                foreach( $projetDb->getProjetsGroupe() as $groupeDb )
-                    $groupes[$groupeDb->getNomFormate()] = $groupeDb->getNom();
+                $groups = $projet->getGroupProject();
+                foreach( $groups as $group )
+                    $formatedGroups[$group->getFormatedName()] = $group->getNom();
             }
         }
 
         return $this->render( 'PortfolioBundle:Pages:projets.html.twig', array(
-            'projets' => $projetsDb,
-            'groupes' => $groupes
+            'projects' => $projects,
+            'groups' => $formatedGroups
         ) );
     }
 }

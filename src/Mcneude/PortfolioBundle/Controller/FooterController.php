@@ -10,24 +10,25 @@ class FooterController extends Controller
 
     /**
      * Render the footer
-     * @param int $nbrTweets Number of tweets showing in the footer
+     * @param int $nbrTweets Number of tweets in the footer
      * @return Response
      */
     public function renderFooterAction( $nbrTweets, $uri  ) {
 
-        $tweets = $this->getLastTweetAction( $nbrTweets );
-        $sitesInternet = $this->getSitesInternet();
-        $autresProjets = $this->getAutresProjets();
-        $fichiers = $this->getFiles();
+        $tweets = $this->getLastTweetsAction( $nbrTweets );
+        $websites = $this->getWebsites();
+        $otherProjects = $this->getOthersProjects();
+        $files = $this->getFiles();
+
         $twitter_account = $this->container->getParameter( 'twitter_account' );
 
         $content = $this->renderView(
             'PortfolioBundle:layout:footer.html.twig', array(
                 'tweets' => $tweets,
                 'uri' => $uri,
-                'sitesInternet' => $sitesInternet,
-                'autresProjets'=> $autresProjets,
-                'fichiers'  => $fichiers,
+                'websites' => $websites,
+                'otherProjects'=> $otherProjects,
+                'files'  => $files,
                 'twitter_account' => $twitter_account
             )
         );
@@ -39,7 +40,7 @@ class FooterController extends Controller
      * @param $nbrTweets Number of tweets showing in the footer
      * @return array Tweet's date and text
      */
-    private function getLastTweetAction( $nbrTweets )
+    private function getLastTweetsAction( $nbrTweets )
     {
         $formatedTweets = array();
 
@@ -51,7 +52,6 @@ class FooterController extends Controller
 
         //Format tweets urls and date
         if( empty( $tweets->errors ) ){
-
             foreach( $tweets as $tweet ) {
                 $dateTweet = date( 'd/m/Y H:m:s', strtotime( $tweet->created_at ) );
 
@@ -77,7 +77,7 @@ class FooterController extends Controller
      * Get website projects
      * @return mixed
      */
-    private function getSitesInternet()
+    private function getWebsites()
     {
         $projetsDb = $this->getDoctrine()
             ->getRepository('PortfolioBundle:Projets')
@@ -94,7 +94,7 @@ class FooterController extends Controller
      * Get other projects
      * @return mixed
      */
-    private function getAutresProjets()
+    private function getOthersProjects()
     {
         $projetsDb = $this->getDoctrine()
             ->getRepository('PortfolioBundle:Projets')

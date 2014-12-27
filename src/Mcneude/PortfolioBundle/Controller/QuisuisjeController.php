@@ -8,17 +8,15 @@ class QuisuisjeController extends Controller
 {
     public function renderAction()
     {
-        $competences = array();
-
-        $accrochesDb = $this->getDoctrine()
+        $catchphraseDb = $this->getDoctrine()
             ->getRepository('PortfolioBundle:QuisuisjeAccroches')
             ->findAll();
 
-        $quisuisjeDb = $this->getDoctrine()
+        $whoAmIDb = $this->getDoctrine()
             ->getRepository('PortfolioBundle:Quisuisje')
             ->findAll();
 
-        $competencesTechDb = $this->getDoctrine()
+        $techSkillsDb = $this->getDoctrine()
             ->getRepository('PortfolioBundle:QuisuisjeCompetences')
             ->createQueryBuilder('competencesTech')
             ->where('competencesTech.isCompetencesTechniques = 1')
@@ -26,7 +24,7 @@ class QuisuisjeController extends Controller
             ->getQuery()
             ->getresult();
 
-        $competencesAutreDb = $this->getDoctrine()
+        $otherSkillsDb = $this->getDoctrine()
             ->getRepository('PortfolioBundle:QuisuisjeCompetences')
             ->createQueryBuilder('competences')
             ->where('competences.isCompetencesTechniques = 0')
@@ -34,14 +32,14 @@ class QuisuisjeController extends Controller
             ->getQuery()
             ->getresult();
 
-        $accroches = isset( $accrochesDb[0] ) ? $accrochesDb[0] : null;
-        $quisuisje = isset( $quisuisjeDb[0] ) ? $quisuisjeDb[0] : null;
+        $catchphrase = isset( $catchphraseDb[0] ) ? $catchphraseDb[0] : null;
+        $whoAmI = isset( $whoAmIDb[0] ) ? $whoAmIDb[0] : null;
 
         return $this->render( 'PortfolioBundle:Pages:quisuisje.html.twig', array(
-            'accroches' => $accroches,
-            'quisuisje' => $quisuisje,
-            'competencesTech' => $competencesTechDb,
-            'competencesAutre' => $competencesAutreDb
+            'catchphrase' => $catchphrase,
+            'whoAmI'      => $whoAmI,
+            'techSkills'  => $techSkillsDb,
+            'otherSkills' => $otherSkillsDb
         ) );
     }
 }

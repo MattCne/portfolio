@@ -37,11 +37,11 @@ class ContactController extends Controller
 
             if ( $form->isValid() )
             {
-                $adresse = $this->container->getParameter( 'admin_email' );
+                $adress = $this->container->getParameter( 'admin_email' );
                 $message = \Swift_Message::newInstance()
                             ->setSubject( $this->container->getParameter( 'admin_email_subject_prefixe' ).$form->get( 'sujet' )->getData() )
                             ->setFrom( $form->get( 'email' )->getData() )
-                            ->setTo( $adresse )
+                            ->setTo( $adress )
                             ->setContentType("text/html")
                             ->setBody(
                                 $this->renderView(
@@ -59,9 +59,6 @@ class ContactController extends Controller
                             );
 
                 $this->get( 'mailer' )->send( $message );
-                $request->getSession()->getFlashBag()->add( 'success', 'Votre email a bien été envoyé. Merci !' );
-
-                $this->get('session')->getFlashBag()->add('notice', 'Votre message a bien été envoyé.');
 
                 return $this->redirect( $this->generateUrl( 'contact' ) );
             }
