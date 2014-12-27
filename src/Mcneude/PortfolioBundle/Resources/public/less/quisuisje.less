@@ -33,9 +33,7 @@
                         position: relative;
                         z-index: 1;
                         .opensansbold();
-                        color: @blanc;
 
-                        background-color: @glacier;
                         width: 100%;
                         padding: 0.5em 0 0.5em 1em;
 
@@ -46,6 +44,8 @@
                             border: 1px solid darken( @chatelle, 10 );
                             padding-left: 1.5em;
                             cursor: pointer;
+
+                            color: #FFF;
 
                         }
 
@@ -60,12 +60,14 @@
                         }
 
                         &.active{
+                            color: @blanc;
                             #gradient .vertical( lighten( @olive, 10 ), @olive );
                             border: 1px solid darken( @olive, 10 );
                             padding-left: 1.5em;
                             .transition( all 0.5s );
 
                             &:hover{
+                                color: @blanc;
                                 #gradient .vertical( lighten( @chatelle, 10 ), @chatelle );
                                 padding-left: 0.5em;
                                 border-color: @chatelle;
@@ -80,24 +82,12 @@
                         padding: 1em 1em 1em 1.5em;
                         border-left: 2px solid;
                         border-right: 2px solid;
+                        border-bottom: 1px solid;
                         border-color: @description-border-color;
                     }
                 }
-                li:first-child{
-                    > h2{
-                        .border-radius( 0px 30px 0px 0px );
-                        &:hover, &.active{
-                            .border-radius( 0px );
-                        }
-                    }
-                }
+
                 li:last-child{
-                    > h2{
-                        .border-radius( 0px 0px 0px 30px );
-                        &:hover, &.active{
-                            .border-radius( 0px );
-                        }
-                    }
                     > .description{
                         border-bottom: 2px solid;
                         border-color: @description-border-color;

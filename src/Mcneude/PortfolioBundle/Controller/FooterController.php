@@ -50,21 +50,24 @@ class FooterController extends Controller
         ));
 
         //Format tweets urls and date
-        foreach( $tweets as $tweet ) {
-            $dateTweet = date( 'd/m/Y H:m:s', strtotime( $tweet->created_at ) );
+        if( empty( $tweets->errors ) ){
 
-            $text = $tweet->text;
+            foreach( $tweets as $tweet ) {
+                $dateTweet = date( 'd/m/Y H:m:s', strtotime( $tweet->created_at ) );
 
-            if( !empty( $tweet->entities->urls ) )
-            {
-                foreach( $tweet->entities->urls as $tweetUrl ){
-                    $urlShort = $tweetUrl->url;
-                    $htmlLink = '<a target="_blank" href="'.$urlShort.'">'.$urlShort.'</a>';
-                    $text = str_replace( $urlShort, $htmlLink , $tweet->text );
+                $text = $tweet->text;
+
+                if( !empty( $tweet->entities->urls ) )
+                {
+                    foreach( $tweet->entities->urls as $tweetUrl ){
+                        $urlShort = $tweetUrl->url;
+                        $htmlLink = '<a target="_blank" href="'.$urlShort.'">'.$urlShort.'</a>';
+                        $text = str_replace( $urlShort, $htmlLink , $tweet->text );
+                    }
                 }
-            }
 
-            $formatedTweets[] = array( 'date' => $dateTweet, 'text' => $text );
+                $formatedTweets[] = array( 'date' => $dateTweet, 'text' => $text );
+            }
         }
 
         return ( $formatedTweets );

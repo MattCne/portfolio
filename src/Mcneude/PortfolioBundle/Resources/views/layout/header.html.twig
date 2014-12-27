@@ -9,32 +9,32 @@
 	    <ul id="main-menu">
 	        <li>
 	            <a href="{{ path( 'homepage' ) }}"  {{- macros.is_current_route('homepage') -}}>
-	            	<span class="icon-accueil">{{ "menu.accueil" | trans }}</span>
+	            	<span>{{ "menu.accueil" | trans }}</span>
 	            </a>
 	        </li>
 	        <li>
 	            <a href="{{ path( 'quisuisje' ) }}"  {{- macros.is_current_route('quisuisje') -}}>
-	            	<span class="icon-moi">{{ "menu.qui-suis-je" | trans }}</span>
+	            	<span>{{ "menu.qui-suis-je" | trans }}</span>
 	            </a>
 	        </li>
 	        <li>
 	            <a href="{{ path( 'projets' ) }}"  {{- macros.is_current_route('projets') -}} {{- macros.is_current_route('projet_interieur') -}}>
-	            	<span class="icon-projets">{{ "menu.projets" | trans }}</span>
+	            	<span>{{ "menu.projets" | trans }}</span>
 	            </a>
 	        </li>
 	        <li>
                 <a href="{{ path( 'parcours' ) }}"  {{- macros.is_current_route('parcours') -}}>
-	            	<span class="icon-parcours">{{ "menu.parcours" | trans }}</span>
+	            	<span>{{ "menu.parcours" | trans }}</span>
 	            </a>
 	        </li>
             <li>
                 <a href="{{ blog_url }}" target="_blank">
-                    <span class="icon-bubbles">{{ "Blog" }}</span>
+                    <span>{{ "Blog" }}</span>
                 </a>
             </li>
             <li>
                 <a href="{{ path( 'contact' ) }}" {{- macros.is_current_route('contact') -}}>
-	            	<span class="icon-telephone">{{ "menu.contact" | trans }}</span>
+	            	<span>{{ "menu.contact" | trans }}</span>
 	            </a>
 	        </li>
 	    </ul>

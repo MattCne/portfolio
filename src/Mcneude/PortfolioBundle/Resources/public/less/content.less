@@ -5,7 +5,6 @@
 
 .content, .content p{
 
-    letter-spacing: 0.03em;
     line-height: 1.7em;
 }
 
@@ -39,7 +38,7 @@
 	}
 
 	strong, .rouge{
-		color:@contessa;
+		color:@ruby;
 	}
 
     ul{
@@ -83,15 +82,12 @@
 .box header > h1, .content.middle header > h1{
     padding:0 0 0.25em 0;
     margin:0 0 0.5em 0;
-    color:darken( @chatelle, 10 );
+    color:@chatelle;
     border-bottom:1px solid @chatelle;
 }
 
 .box{
-    border-top: 1px solid;
-    border-left: 1px solid;
-    border-right: 1px solid;
-    border-bottom: 1px solid;
+    .shadow(1px 1px 2px 0 #D0D0CC);
 
     border-color: @gris-fonce;
 
@@ -143,7 +139,6 @@
 .content_2col{
 	section{
 		width:50%;
-		letter-spacing:0.04em;
 	}
 }
 

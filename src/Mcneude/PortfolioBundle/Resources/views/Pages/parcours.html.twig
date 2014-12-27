@@ -8,6 +8,34 @@
         <h1>{{ "career.title.main" | trans }}</h1>
 
         <div class="row">
+            <article class="box" id="etude">
+                <header>
+                    <h1>{{ "career.title.studies" | trans }}</h1>
+
+                    <div class="accroche content">
+                        {% if accroches is not null %}
+                            {{ accroches.getAccrocheEtudes | raw }}
+                        {% endif %}
+                    </div>
+                </header>
+                {% if etudes is not empty %}
+                    <ul>
+                        {% for etude in etudes %}
+                            <li>
+                                <section class="exp_etude">
+                                    <header>
+                                        <h1>{{ etude.getNom }}</h1>
+                                        <time>{{ etude.getDate | date("d/m/Y") }}</time>
+                                    </header>
+                                    <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_etudes{{ etude.urlImage }}"
+                                                             alt="{{ etude.nom }}"/></div>
+                                    <div class="content">{{ etude.description | raw}}</div>
+                                </section>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </article>
             <article class="box" id="experiences">
                 <header>
                     <h1>{{ "career.title.experiences" | trans }}</h1>
@@ -32,34 +60,6 @@
                                              alt="{{ experience.getNom }}" title="{{ experience.getNom }}"/>
                                     </div>
                                     <div class="content">{{ experience.getDescription | raw}}</div>
-                                </section>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </article>
-            <article class="box" id="etude">
-                <header>
-                    <h1>{{ "career.title.studies" | trans }}</h1>
-
-                    <div class="accroche content">
-                        {% if accroches is not null %}
-                            {{ accroches.getAccrocheEtudes | raw }}
-                        {% endif %}
-                    </div>
-                </header>
-                {% if etudes is not empty %}
-                    <ul>
-                        {% for etude in etudes %}
-                            <li>
-                                <section class="exp_etude">
-                                    <header>
-                                        <h1>{{ etude.getNom }}</h1>
-                                        <time>{{ etude.getDate | date("d/m/Y") }}</time>
-                                    </header>
-                                    <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_etudes{{ etude.urlImage }}"
-                                                             alt="{{ etude.nom }}"/></div>
-                                    <div class="content">{{ etude.description | raw}}</div>
                                 </section>
                             </li>
                         {% endfor %}
