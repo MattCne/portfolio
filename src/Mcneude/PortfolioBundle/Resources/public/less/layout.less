@@ -24,33 +24,34 @@ a{
 }
 
 h3, h4{
-	.opensanslight;
+    .opensanslight;
 }
 
 h1{
     .biko;
-	font-size:1.8em;
-	color:@ruby;
-    border-bottom: 1px solid @ruby;
+    font-size:1.8em;
+    color:@fuscousgrey;
+    letter-spacing:0.03em;
+    border-bottom: 1px solid @fuscousgrey;
     margin: 0 0 1em 0;
 }
 
 h2{
     .opensansbold;
-	font-size:1.3em;
-	letter-spacing:0.05em;
-    color:darken( @chatelle, 20 );
+    font-size:1.3em;
+    letter-spacing:0.05em;
+    color:@fuscousgrey;
 }
 
 
 h3{
-	font-size:1.1em;
-	letter-spacing:0.03em;
-	color:darken( @chatelle, 20 );
+    font-size:1.1em;
+    letter-spacing:0.03em;
+    color:@fuscousgrey;
 }
 
 h4{
-	font-size:1em;
+    font-size:1em;
     text-decoration:underline;
 }
 
@@ -65,50 +66,50 @@ img{
 
 #main > header{
 
-	.clearfix;
-	clear:both;
-	position:relative;
-	height:auto;
+    .clearfix;
+    clear:both;
+    position:relative;
+    height:auto;
     border-bottom: 10px solid @glacier;
 
-	.titres{
-		width:17%;
-		float:left;
-		margin:0;
-		padding:0;
-		padding:1.3em 1em 0.5em 1.3em;
+    .titres{
+        width:21%;
+        float:left;
+        margin:0;
+        padding:0;
+        padding:1.3em 1em 0.5em 1.3em;
 
-		h1{
-			color:@gris-fonce;
-			.transition( color 0.5s );
-			&:hover{
-				color:@ruby;
-		    }
+        h1{
+            color:@gris-fonce;
+            .transition( color 0.5s );
+            &:hover{
+                color:@ruby;
+            }
 
             //Annule les régles du H1 de base
             margin-bottom: 0;
             border: none;
-		}
-		h2{
-			font-size:1em;
-			margin:0;
-			.opensanslight;
+        }
+        h2{
+            font-size:1em;
+            margin:0;
+            .opensanslight;
 
-			clear:both;
-			display:block;
-			text-transform:uppercase;
-			color:lighten( @gris-fonce, 10 );
+            clear:both;
+            display:block;
+            text-transform:uppercase;
+            color:lighten( @gris-fonce, 10 );
 
-			.transition( color 0.5s );
+            .transition( color 0.5s );
 
-			&:hover{
+            &:hover{
                 color:@ruby;
             }
-		}
-	}
+        }
+    }
     nav{
         float: left;
-        width: 70%;
+        width: 65%;
     }
 
     .translation{
@@ -120,7 +121,7 @@ img{
             margin: 0.5em;
         }
         img{
-            width: 40%;
+            width: 75%;
             .transition( all 0.5s );
 
             &:hover{
@@ -131,10 +132,9 @@ img{
 }
 
 ul#main-menu{
-	width:100%;
+    width:100%;
     float:right;
     margin:0;
-    background:;
 
     > li{
         float:left;
@@ -142,12 +142,12 @@ ul#main-menu{
         position:relative;
 
         > a{
-        	display:block;
-        	color:@gris-fonce;
-        	letter-spacing:0.05em;
-        	text-align:center;
+            display:block;
+            color:@gris-fonce;
+            letter-spacing:0.05em;
+            text-align:center;
 
-        	.opensanslight( 1.2em );
+            .opensanslight( 1.2em );
             .transition( all 0.5s );
 
             &:hover, &.active{
@@ -160,7 +160,7 @@ ul#main-menu{
             }
 
             &.active{
-                color: darken( @chatelle, 40 );
+                color: @ruby;
                 .opensansbold( 1.2em) ;
                 > span{
                     padding-left:0;
@@ -174,19 +174,52 @@ ul#main-menu{
             }
 
             > span{
-            	display:block;
-            	position:relative;
-            	z-index:100;
+                display:block;
+                position:relative;
+                z-index:100;
 
-            	width:100%;
-        		padding:0.5em;
-        		text-align:center;
-        		.transition( padding-left 0.5s );
+                width:100%;
+                padding:2em 1.5em 2em 1.5em;
+                text-align:center;
+                .transition( padding-left 0.5s );
+                &:before{
+                    position:absolute;
+                    z-index:10;
+                    opacity:0.6;
+
+                    bottom: 0.5em;
+                    font-size:3em;
+                    right: 0.5em;
+
+                    color:@blanc;
+                    .fontcustom;
+                    .transition( all 0.5s );
+
+                    opacity:0;
+                }
+
+                &:hover{
+                    padding-left:0;
+                    &:before{
+                        opacity: 0.4;
+                        color:@blanc;
+                        .transform( scale( 2.5 ) );
+
+                        //TODO : to delete when chrome will support the transition animation
+                        -webkit-transition: none;
+                    }
+                }
+            }
+            //Ajustements pour certain picto svg
+            > span.icon-moi:before, > span.icon-parcours:before, span.icon-bubbles:before{
+                font-size:1.5em;
+                bottom: 2em;
+                right: 2em;
             }
         }
         a:nth-child( 2n + 1 ){
             &:hover{
-                background:lighten( @glacier, 10 );
+                background: glacier;
             }
         }
         a.active:nth-child( 2n + 1 ){
@@ -197,15 +230,15 @@ ul#main-menu{
 }
 
 .full{
-	.clearfix;
-	position:relative;
+    .clearfix;
+    position:relative;
     padding:3em 1em 1em 1em;
     z-index:100;
-    background: @background;
-
+    background: #F1F3F7;
     > h1{
         font-size:2.5em;
         margin : 0 0 0.5em 0.5em;
+        color: @fuscousgrey;
     }
 }
 
@@ -215,41 +248,41 @@ ul#main-menu{
     padding:1em 0 1em 0;
     .clearfix;
     z-index: 100;
-     clear:both;
+    clear:both;
     #gradient .vertical( @dimgray, @fuscousgrey );
     .opensanslight();
 
     > .sharebar{
-    	position:absolute;
-    	top:-1.7em;
-    	margin:0;
-    	padding:0;
-    	margin: 0 0 0 1em;
+        position:absolute;
+        top:-1.7em;
+        margin:0;
+        padding:0;
+        margin: 0 0 0 1em;
 
-    	li:before{
-    		color:lighten( @dimgray, 10 );
-    		width:2em;
-    		font-size:2em;
-    	}
+        li:before{
+            color:lighten( @dimgray, 10 );
+            width:2em;
+            font-size:2em;
+        }
 
-    	> li{
-    		float:left;
-    		width:40px;
-    		height:40px;
-    		.transition( all 0.5s );
-    		&:hover{
-    			.transform( scale( 1.25 ) );
-    		}
-    	}
+        > li{
+            float:left;
+            width:40px;
+            height:40px;
+            .transition( all 0.5s );
+            &:hover{
+                .transform( scale( 1.25 ) );
+            }
+        }
     }
 
-	> #pied_page{
-		clear:both;
-		float:right;
-		font-size:0.8em;
-		color:lighten( @gris-clair, 40 );
-		.text-shadow( -3px 1px 5px rgba(102, 90, 74, 1) );
-	}
+    > #pied_page{
+        clear:both;
+        float:right;
+        font-size:0.8em;
+        color:lighten( @gris-clair, 40 );
+        .text-shadow( -3px 1px 5px rgba(102, 90, 74, 1) );
+    }
 
     #twitter{
         ul {
@@ -278,57 +311,57 @@ ul#main-menu{
         }
     }
 
-	section{
-		width:25%;
-		float:left;
-		padding:1em;
-		border-right:1px solid lighten( @dimgray, 5 );
-		height:100%;
-		margin:1.5em 0 0 0;
+    section{
+        width:25%;
+        float:left;
+        padding:1em;
+        border-right:1px solid lighten( @dimgray, 5 );
+        height:100%;
+        margin:1.5em 0 0 0;
         color:@blanc;
 
         > h1{
             font-size:1.3em;
-			color: lighten( @gris-clair, 25 );
-			padding:0 0 0.5em 0;
-			margin:0 0 0.5em 0;
-			line-height:1.4em;
-			border-bottom:1px solid lighten( @gris-clair, 25 );
-		}
-		> .liste{
-			margin:0;
-			padding:0;
-			> li{
-				text-align:left;
-				> a{
-					font-size:1.1em;
-					letter-spacing:0.05em;
+            color: lighten( @gris-clair, 25 );
+            padding:0 0 0.5em 0;
+            margin:0 0 0.5em 0;
+            line-height:1.4em;
+            border-bottom:1px solid lighten( @gris-clair, 25 );
+        }
+        > .liste{
+            margin:0;
+            padding:0;
+            > li{
+                text-align:left;
+                > a{
+                    font-size:1.1em;
+                    letter-spacing:0.05em;
                     color:@blanc;
 
-					.transition( all 0.5s );
+                    .transition( all 0.5s );
 
 
-					&:before{
-						.fontcustom;
-						content: "\f100";
-						.inline-block;
-						font-size:0.6em;
-						vertical-align:middle;
-						padding-right:0.5em;
-						padding-bottom:0.1em;
-					}
-					&:hover{
-						color: lighten( @ruby, 10 );
-						padding-left:0.5em;
+                    &:before{
+                        .fontcustom;
+                        content: "\f100";
+                        .inline-block;
+                        font-size:0.6em;
+                        vertical-align:middle;
+                        padding-right:0.5em;
+                        padding-bottom:0.1em;
+                    }
+                    &:hover{
+                        color: lighten( @ruby, 10 );
+                        padding-left:0.5em;
 
-						&:before{
+                        &:before{
                             color: @ruby;
-						}
-					}
-				}
-			}
-		}
-	}
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /*****************/
@@ -346,14 +379,14 @@ ul#main-menu{
         }
     }
 
-	#main > header{
-		.titres{
-			float:none;
-			width:100%;
-			text-align:center;
-			margin-top:1em;
-			padding:0;
-		}
+    #main > header{
+        .titres{
+            float:none;
+            width:100%;
+            text-align:center;
+            margin-top:1em;
+            padding:0;
+        }
         &:after{
             content: none;
         }
@@ -361,7 +394,7 @@ ul#main-menu{
             float: none;
             width: auto;
         }
-        
+
         .translation{
             position: absolute;
             top: 0;
@@ -373,30 +406,30 @@ ul#main-menu{
                 width: 50%;
             }
         }
-	}
+    }
 
-	ul#main-menu{
-		float:none;
-		width:100%;
-		margin:2em 0 0 0;
-		padding:0.5em;
+    ul#main-menu{
+        float:none;
+        width:100%;
+        margin:2em 0 0 0;
+        padding:0.5em;
         border-radius: 255px;
         background: @gris-clair;
-		li{
-			float:none;
+        li{
+            float:none;
             margin: 0.25em 0 0.25em 2%;
             width: 96%;
-			border-top:1px solid darken( @glacier, 40 );
-			#gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
+            border-top:1px solid darken( @glacier, 40 );
+            #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
             .border-radius( 3px );
 
-			> a{
-    			color:@blanc;
-    			.transition( none );
+            > a{
+                color:@blanc;
+                .transition( none );
 
-    			&:hover{
-    			    .shadow( 0px 0px 0px 0px #FFF );
-    			}
+                &:hover{
+                    .shadow( 0px 0px 0px 0px #FFF );
+                }
 
                 &.active{
                     color: @blanc;
@@ -412,15 +445,15 @@ ul#main-menu{
                     }
                 }
 
-    			> span{
-    			    .transition( none );
-    			    padding:1.5em;
+                > span{
+                    .transition( none );
+                    padding:1.5em;
 
-        			&:hover{
+                    &:hover{
                         #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
                         padding-left:1.5em;
 
-    			        &:before{
+                        &:before{
                             display:none;
                         }
                     }
@@ -428,15 +461,15 @@ ul#main-menu{
                         //Padding d'un em en plus a cause de la barre
                         padding:2em 1.5em 1.5em 1.5em;
                     }
-    			}
-			}
-		}
-		li:first-child{
-			border-top:none;
-		}
-	}
+                }
+            }
+        }
+        li:first-child{
+            border-top:none;
+        }
+    }
 
-	#main > footer{
+    #main > footer{
 
         section{
             float:none;

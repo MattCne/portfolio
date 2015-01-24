@@ -54,6 +54,9 @@
                 <article>
                     <time>{{ tweet['date'] }}</time>
                     <div>{{ tweet['text']|raw }}</div>
+                    {% for url in tweet['urls'] %}
+                        <a target="_blank" href="{{ url }}">{{ url }}</a>
+                    {% endfor %}
                 </article>
             </li>
         {% endfor %}

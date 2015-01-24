@@ -53,6 +53,7 @@ class FooterController extends Controller
         //Format tweets urls and date
         if( empty( $tweets->errors ) ){
             foreach( $tweets as $tweet ) {
+                $urls = array();
                 $dateTweet = date( 'd/m/Y H:m:s', strtotime( $tweet->created_at ) );
 
                 $text = $tweet->text;
@@ -60,13 +61,12 @@ class FooterController extends Controller
                 if( !empty( $tweet->entities->urls ) )
                 {
                     foreach( $tweet->entities->urls as $tweetUrl ){
-                        $urlShort = $tweetUrl->url;
-                        $htmlLink = '<a target="_blank" href="'.$urlShort.'">'.$urlShort.'</a>';
-                        $text = str_replace( $urlShort, $htmlLink , $tweet->text );
+                        $urls[] = $tweetUrl->url;
                     }
+                    $text = str_replace( $tweetUrl->url, '' , $tweet->text );
                 }
 
-                $formatedTweets[] = array( 'date' => $dateTweet, 'text' => $text );
+                $formatedTweets[] = array( 'urls' => $urls,'date' => $dateTweet, 'text' => $text );
             }
         }
 
@@ -75,7 +75,7 @@ class FooterController extends Controller
 
     /**
      * Get website projects
-     * @return mixed
+     * @return mixed/usr/lib/php5/20121212
      */
     private function getWebsites()
     {

@@ -16,8 +16,8 @@
             width: 48%;
             > h1{
                 font-size:1.3em;
-                color: darken( @glacier, 30 );
-                border-color: darken( @glacier, 20 );
+                color:@glacier;
+                border-color: @glacier;
                 text-align: center;
             }
             > ul{
@@ -40,8 +40,8 @@
                         .transition( all 0.5s );
 
                         &:hover{
-                            #gradient .vertical( lighten( @chatelle, 10 ), @chatelle );
-                            border: 1px solid darken( @chatelle, 10 );
+                            #gradient .vertical( lighten( @glacier, 10 ), @glacier );
+                            border: 1px solid darken( @glacier, 10 );
                             padding-left: 1.5em;
                             cursor: pointer;
 
@@ -68,11 +68,11 @@
 
                             &:hover{
                                 color: @blanc;
-                                #gradient .vertical( lighten( @chatelle, 10 ), @chatelle );
+                                #gradient .vertical( lighten( @glacier, 10 ), @glacier );
                                 padding-left: 0.5em;
-                                border-color: @chatelle;
+                                border-color: @glacier;
                                 + .description{
-                                    border-color: @chatelle;
+                                    border-color: @glacier;
                                 }
                             }
                         }
