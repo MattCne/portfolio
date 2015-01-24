@@ -26,3 +26,6 @@ README.md
 UPGRADE.md
 dump/
 vhost
+
+web/phpinfo.php
+debug.sh
