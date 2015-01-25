@@ -6,23 +6,23 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.2.*",
+        "symfony/symfony": "2.3.*",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.2.*",
         "twig/extensions": "1.0.*",
-        "symfony/assetic-bundle": "2.1.*",
+        "symfony/assetic-bundle": "2.5.*@dev",
         "symfony/swiftmailer-bundle": "2.2.*",
         "symfony/monolog-bundle": "2.2.*",
         "sensio/distribution-bundle": "2.2.*",
         "sensio/framework-extra-bundle": "2.2.*",
         "sensio/generator-bundle": "2.2.*",
-        "jms/security-extra-bundle": "1.4.*",
-        "jms/di-extra-bundle": "1.3.*",
-        "kriswallsmith/assetic": "1.1.0-alpha4",
+        "jms/security-extra-bundle": "dev-master",
+        "jms/di-extra-bundle": "1.5.*@dev",
+        "kriswallsmith/assetic": "1.3.*@dev",
 
         "friendsofsymfony/user-bundle": "*@dev",
 
-        "endroid/twitter-bundle": "dev-master",
+        "endroid/twitter-bundle": "1.*@dev",
         "stfalcon/tinymce-bundle": "dev-master",
 
         "sonata-project/block-bundle": "2.2.*@dev",
@@ -39,7 +39,7 @@
 
         "gedmo/doctrine-extensions": "2.3.*@dev",
         "stof/doctrine-extensions-bundle": "1.1.*@dev",
-        "a2lix/translation-form-bundle": "0.*@dev"
+        "a2lix/translation-form-bundle": "2.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
