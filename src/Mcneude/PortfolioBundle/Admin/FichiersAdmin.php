@@ -15,7 +15,8 @@ class FichiersAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'a2lix_translations_gedmo', array(
+                'translatable_class' => 'Mcneude\PortfolioBundle\Entity\Fichiers',
                 'by_reference' => false,
                 'fields' => array(
                     'nom' => array(
@@ -56,7 +57,7 @@ class FichiersAdmin extends Admin
             ->add('position')
             ->add('_action', 'actions', array(
                 'actions' => array(
-                    'view' => array(),
+                    'show' => array(),
                     'edit' => array(),
                     'delete' => array(),
                 )

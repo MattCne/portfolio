@@ -41,7 +41,7 @@ class ProjetsGroupesAdmin extends Admin
             ->addIdentifier('nom')
             ->add('_action', 'actions', array(
                 'actions' => array(
-                    'view' => array(),
+                    'show' => array(),
                     'edit' => array(),
                     'delete' => array(),
                 )

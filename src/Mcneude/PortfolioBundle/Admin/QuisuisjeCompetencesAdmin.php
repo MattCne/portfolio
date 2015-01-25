@@ -15,7 +15,8 @@ class QuisuisjeCompetencesAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'a2lix_translations_gedmo', array(
+                'translatable_class' => 'Mcneude\PortfolioBundle\Entity\QuisuisjeCompetences',
                 'by_reference' => false,
                 'fields' => array(
                     'nom' => array(
@@ -62,7 +63,7 @@ class QuisuisjeCompetencesAdmin extends Admin
             ->add('isCompetencesTechniques')
             ->add('_action', 'actions', array(
                 'actions' => array(
-                    'view' => array(),
+                    'show' => array(),
                     'edit' => array(),
                     'delete' => array(),
                 )

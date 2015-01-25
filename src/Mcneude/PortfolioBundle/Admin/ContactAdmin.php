@@ -43,7 +43,7 @@ class ContactAdmin extends Admin
             ->add('accrocheReseaux')
             ->add('_action', 'actions', array(
                 'actions' => array(
-                    'view' => array(),
+                    'show' => array(),
                     'edit' => array(),
                     'delete' => array(),
                 )

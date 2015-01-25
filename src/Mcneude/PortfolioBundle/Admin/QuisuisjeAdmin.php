@@ -15,7 +15,8 @@ class QuisuisjeAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'a2lix_translations_gedmo', array(
+                'translatable_class' => 'Mcneude\PortfolioBundle\Entity\Quisuisje',
                 'by_reference' => false,
                 'fields' => array(
                     'pourquoi' => array(
@@ -70,7 +71,7 @@ class QuisuisjeAdmin extends Admin
             ->add( 'infos' )
             ->add('_action', 'actions', array(
                 'actions' => array(
-                    'view' => array(),
+                    'show' => array(),
                     'edit' => array(),
                     'delete' => array(),
                 )

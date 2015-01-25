@@ -24,6 +24,10 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        languages: [fr, en]
+        blog_url: http://www.web-techno.org
+
 
 # Assetic Configuration
 assetic:
@@ -75,16 +79,7 @@ stof_doctrine_extensions:
 #TranslationFormBundle
 a2lix_translation_form:
     locales: %locales%     # [optional] Array of the translation locales (The default locale have to be excluded). Can also be specified in the form builder.
-
-# Template
-twig:
-    globals:
-        languages: [fr, en]
-        blog_url: http://www.web-techno.org
-    form:
-        resources:
-            - 'A2lixTranslationFormBundle::form.html.twig'
-
+    templating: "A2lixTranslationFormBundle::default.html.twig"
 
 # Swiftmailer Configuration
 swiftmailer:

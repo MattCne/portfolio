@@ -15,7 +15,8 @@ class QuisuisjeAccrochesAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'a2lix_translations_gedmo', array(
+                'translatable_class' => 'Mcneude\PortfolioBundle\Entity\QuisuisjeAccroches',
                 'by_reference' => false,
                 'fields' => array(
                     'accrocheMethodes' => array(
@@ -71,7 +72,7 @@ class QuisuisjeAccrochesAdmin extends Admin
             ->add('accroche_competences')
             ->add('_action', 'actions', array(
                 'actions' => array(
-                    'view' => array(),
+                    'show' => array(),
                     'edit' => array(),
                     'delete' => array(),
                 )
