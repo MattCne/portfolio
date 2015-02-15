@@ -11,8 +11,8 @@
                     <h1>{{ "career.title.studies" | trans }}</h1>
 
                     <div class="accroche content">
-                        {% if accroches is not null %}
-                            {{ accroches.getAccrocheEtudes | raw }}
+                        {% if catchphrases is not null %}
+                            {{ catchphrases.getAccrocheEtudes | raw }}
                         {% endif %}
                     </div>
                 </header>
@@ -39,8 +39,8 @@
                     <h1>{{ "career.title.experiences" | trans }}</h1>
 
                     <div class="accroche content">
-                        {% if accroches is not null %}
-                            {{ accroches.getAccrocheExperiences | raw }}
+                        {% if catchphrases is not null %}
+                            {{ catchphrases.getAccrocheExperiences | raw }}
                         {% endif %}
                     </div>
                 </header>
@@ -69,8 +69,8 @@
                     <h1>{{ "career.title.moreexperiences" | trans }}</h1>
 
                     <div class="accroche content">
-                        {% if catchphrase is not null %}
-                            {{ catchphrase.getAccrocheExperiencesComplementaires | raw }}
+                        {% if catchphrases is not null %}
+                            {{ catchphrases.getAccrocheExperiencesComplementaires | raw }}
                         {% endif %}
                     </div>
                 </header>
@@ -86,8 +86,8 @@
                     <h1>{{ "career.title.interests" | trans }}</h1>
 
                     <div class="accroche content">
-                        {% if catchphrase is not null %}
-                            {{ catchphrase.getAccrocheInterets | raw }}
+                        {% if catchphrases is not null %}
+                            {{ catchphrases.getAccrocheInterets | raw }}
                         {% endif %}
                     </div>
                 </header>

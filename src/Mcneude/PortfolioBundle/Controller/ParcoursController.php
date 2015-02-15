@@ -8,7 +8,7 @@ class ParcoursController extends Controller
 {
     public function renderAction()
     {
-        $catchphrase = $this->getDoctrine()
+        $catchphrases = $this->getDoctrine()
             ->getRepository( 'PortfolioBundle:ParcoursAccroches' )
             ->createQueryBuilder( 'parcours' )
             ->getQuery()
@@ -36,7 +36,7 @@ class ParcoursController extends Controller
             ->getresult();
 
         return $this->render( 'PortfolioBundle:Pages:parcours.html.twig', array(
-            'catchphrase'   => $catchphrase,
+            'catchphrases'   => $catchphrases,
             'experiences'   => $experiences,
             'career'        => $career,
             'studies'       => $studies
