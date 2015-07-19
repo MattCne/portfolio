@@ -16,6 +16,7 @@
     	{% block body %} {% endblock %}
 
     	<!-- FOOTER -->
+        {% render controller('PortfolioBundle:Footer:renderFooter',{ 'nbrTweets': 3, 'uri': app.request.uri })  %}
 
     	<!-- SCRIPTS -->
     </div>
