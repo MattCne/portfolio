@@ -28,10 +28,9 @@ h3, h4{
 }
 
 h1{
-    .biko;
+    .opensansbold;
     font-size:1.8em;
     color:@fuscousgrey;
-    letter-spacing:0.03em;
     border-bottom: 1px solid @fuscousgrey;
     margin: 0 0 1em 0;
 }
@@ -39,14 +38,12 @@ h1{
 h2{
     .opensansbold;
     font-size:1.3em;
-    letter-spacing:0.05em;
     color:@fuscousgrey;
 }
 
 
 h3{
     font-size:1.1em;
-    letter-spacing:0.03em;
     color:@fuscousgrey;
 }
 
@@ -59,82 +56,149 @@ img{
     width:100%;
 }
 
-
 #main{
     position:relative;
 }
 
 #main > header{
-
     .clearfix;
+
+    background: @gris-fonce;
+
     clear:both;
     position:relative;
     height:auto;
-    border-bottom: 10px solid @glacier;
 
     .titres{
-        width:21%;
+        width:50%;
         float:left;
         margin:0;
         padding:0;
-        padding:1.3em 1em 0.5em 1.3em;
+        padding: 1em;
+
+        border-bottom: 5px solid @glacier;
 
         h1{
-            color:@gris-fonce;
+            color: @blanc;
+            font-size: 1.2em;
             .transition( color 0.5s );
             &:hover{
-                color:@ruby;
+                color: @ruby;
             }
 
-            //Annule les régles du H1 de base
             margin-bottom: 0;
             border: none;
-        }
-        h2{
-            font-size:1em;
-            margin:0;
-            .opensansregular;
-
-            clear:both;
-            display:block;
-            text-transform:uppercase;
-            color:lighten( @gris-fonce, 10 );
-
-            .transition( color 0.5s );
-
-            &:hover{
-                color:@ruby;
-            }
         }
     }
     nav{
         float: left;
-        width: 65%;
+        width: 40%;
     }
 
-    .translation{
-        margin: 1.5em 0 0 0;
-        float: right;
-        a{
-            display: block;
-            float: right;
-            margin: 0.5em;
-        }
-        img{
-            width: 75%;
-            .transition( all 0.5s );
+    #translator{
+        width: 10%;
+        border-bottom: 5px solid @glacier;
+        float: left;
+        padding: 1em 0 0.75em 0;
 
-            &:hover{
-                .rotation( 15deg );
+        #country-select {
+            margin: 0 2em;
+            width: 8em;
+
+            form {
+                width: 180px;
+                padding: 0;
+            }
+
+            input, select {
+                display: inline;
+                padding: 0;
+                margin: 0;
+            }
+
+            .dropdown  {
+                margin: 0;
+                dd{
+                    position: relative;
+                }
+                a {
+                    text-decoration: none;
+                    outline: 0;
+                    font: 12px Arial, Helvetica, sans-serif;
+                    display: block;
+                    overflow: hidden;
+                }
+                dt a {
+                    display: block;
+                    background: @ruby;
+                    border: 1px solid @ruby;
+                    padding: 3px 10px 4px 10px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                    color: #fff;
+                }
+
+                dt a.active {
+                    background: @ruby;
+                    .border-radius(5px 5px 0px 0px);
+                    color: #fff;
+                }
+
+                dd ul {
+                    background: darken(@ruby,5);
+                    color: darken(@ruby,30);
+                    display: none;
+                    position: absolute;
+                    z-index: 999;
+                    top: 0;
+                    left: 0;
+                    padding: 2px 0 5px 0;
+                    list-style: none;
+                    border-top: none;
+                    margin: 0;
+                    .border-radius(0px 0px 5px 5px);
+                    left: -2.85em;
+                    right: 0;
+                }
+
+                dd ul li a {
+                    padding: 2px 10px;
+                }
+
+                dt a span, dd ul li a span, {
+                    float: left;
+                    width: 16px;
+                    height: 11px;
+                    margin: 2px 6px 0 0;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                }
+
+                dd ul li a em, dt a em {
+                    font-style: normal;
+                    float: left;
+                    width: 100px;
+                    cursor: pointer;
+                }
+
+                dd ul li a em {
+                    color: #dbc3b5;
+                }
+                dd ul li a:hover {
+                    background-color: rgba(255,255,255,.1);
+                }
+                dd ul li a:hover em {
+                    color: #fff;
+                }
             }
         }
     }
 }
 
 ul#main-menu{
-    width:100%;
-    float:right;
     margin:0;
+    padding: 0.25em 0 0 0;
 
     > li{
         float:left;
@@ -143,88 +207,51 @@ ul#main-menu{
 
         > a{
             display:block;
-            color:@gris-fonce;
-            letter-spacing:0.05em;
+            color:@blanc;
             text-align:center;
+            border-bottom: 5px solid @glacier;
 
-            .opensansregular( 1.2em );
+            .opensansregular();
             .transition( all 0.5s );
 
-            &:hover, &.active{
-                opacity: 0.8;
-            }
-
             &:hover{
-                background: @glacier;
-                color:@blanc;
+                color: @ruby;
             }
 
             &.active{
-                color: @ruby;
-                .opensansbold( 1.2em) ;
-                > span{
-                    padding-left:0;
+                background: @glacier;
+                .opensansbold();
 
-                    &:before{
-                        opacity: 0.4;
-                        color:darken( @glacier, 20 );
-                        .transform( scale( 3 ) );
-                    }
+                > span{
+                    padding-left: 0;
+                }
+
+                &:hover{
+                    color: @blanc;
                 }
             }
 
             > span{
                 display:block;
                 position:relative;
-                z-index:100;
 
                 width:100%;
-                padding:2em 1.5em 2em 1.5em;
+
+                padding:1em 0 1em 0;
+                padding-left: 0.75em;
+
                 text-align:center;
                 .transition( padding-left 0.5s );
-                &:before{
-                    position:absolute;
-                    z-index:10;
-                    opacity:0.6;
-
-                    bottom: 0.5em;
-                    font-size:3em;
-                    right: 0.5em;
-
-                    color:@blanc;
-                    .fontcustom;
-                    .transition( all 0.5s );
-
-                    opacity:0;
-                }
 
                 &:hover{
                     padding-left:0;
-                    &:before{
-                        opacity: 0.4;
-                        color:@blanc;
-                        .transform( scale( 2.5 ) );
-
-                        //TODO : to delete when chrome will support the transition animation
-                        -webkit-transition: none;
-                    }
                 }
-            }
-            //Ajustements pour certain picto svg
-            > span.icon-moi:before, > span.icon-parcours:before, span.icon-bubbles:before{
-                font-size:1.5em;
-                bottom: 2em;
-                right: 2em;
             }
         }
         a:nth-child( 2n + 1 ){
             &:hover{
                 background: glacier;
             }
-        }
-        a.active:nth-child( 2n + 1 ){
-            background: none;
-            .shadow( 0px 0px 0px 0px );
         }
     }
 }
@@ -335,7 +362,6 @@ ul#main-menu{
                 text-align:left;
                 > a{
                     font-size:1.1em;
-                    letter-spacing:0.05em;
                     color:@blanc;
 
                     .transition( all 0.5s );
@@ -386,25 +412,26 @@ ul#main-menu{
             text-align:center;
             margin-top:1em;
             padding:0;
+            h1{
+                margin: 1em 0 0 0;
+            }
         }
-        &:after{
-            content: none;
-        }
+
         nav{
             float: none;
             width: auto;
         }
 
-        .translation{
+        #translator{
             position: absolute;
+            right: 1em;
             top: 0;
-            right: 0;
-            padding: 0.5em;
-            margin: 0 1em 0 0;
-            width: 20%;
-            img{
-                width: 50%;
-            }
+            border: none;
+            width: 5em;
+        }
+
+        &:after{
+            content: none;
         }
     }
 
@@ -415,48 +442,29 @@ ul#main-menu{
         padding:0.5em;
         border-radius: 255px;
         background: @gris-clair;
+
         li{
             float:none;
             margin: 0.25em 0 0.25em 2%;
             width: 96%;
-            border-top:1px solid darken( @glacier, 40 );
-            #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 30 ) );
+            background: @glacier;
             .border-radius( 3px );
 
             > a{
                 color:@blanc;
                 .transition( none );
 
-                &:hover{
-                    .shadow( 0px 0px 0px 0px #FFF );
-                }
-
                 &.active{
                     color: @blanc;
                     > span{
-                        #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
-                        &:before{
-                            color: @blanc;
-                            left: 60%;
-                            right: auto;
-                            top: 0.25em;
-                            .transform( scale( 2 ) );
-                        }
+                        background: @ruby;
                     }
                 }
 
                 > span{
                     .transition( none );
-                    padding:1.5em;
+                    padding:0.5em;
 
-                    &:hover{
-                        #gradient .vertical( darken( @glacier, 10),  darken( @glacier, 20 ) );
-                        padding-left:1.5em;
-
-                        &:before{
-                            display:none;
-                        }
-                    }
                     &.icon-accueil{
                         //Padding d'un em en plus a cause de la barre
                         padding:2em 1.5em 1.5em 1.5em;
@@ -497,17 +505,19 @@ ul#main-menu{
         .titres{
             width:100%;
             text-align: center;
+
+            border: none;
         }
         nav{
             float: none;
             width: auto;
         }
 
-        .translation{
+        #translator {
+            width: 5em;
+            right: 6em;
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 20%;
+            border: none;
         }
     }
 

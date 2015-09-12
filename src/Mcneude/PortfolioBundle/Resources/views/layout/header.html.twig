@@ -3,7 +3,6 @@
 <header>
 	<a href="{{ path( 'homepage' ) }}" class="titres">
 		<h1>Matthieu Cneude</h1>
-		<h2>{{ "title.description" | trans }}</h2>
 	</a>
 	<nav>
 	    <ul id="main-menu">
@@ -39,15 +38,21 @@
 	        </li>
 	    </ul>
 	</nav>
-    <aside class="translation clearfix">
-        {% for language in languages %}
-            {% set variables = {"_locale": language} %}
-            {% if app.request.attributes.get('slug') is defined and app.request.attributes.get('slug') is not null %}
-                {% set variables = {'_locale' : language, 'slug' : app.request.attributes.get('slug')} %}
-            {% endif %}
-            <a href="{{ path(app.request.attributes.get('_route'), variables) }}">
-                <img src="{{ asset('/bundles/portfolio/images/translation/'~language~'.png') }}" title="traduire en {{ language }}" alt="traduire en {{ language }}" />
-            </a>
-        {% endfor %}
+    <aside id="translator">
+        <div id="country-select">
+            <form action="server-side-script.php">
+                <select id="country-options" name="country-options">
+                    {% for langCode, language in languages %}
+                        {% set variables = {"_locale": langCode} %}
+                        {% if app.request.attributes.get('slug') is defined and app.request.attributes.get('slug') is not null %}
+                            {% set variables = {'_locale' : langCode, 'slug' : app.request.attributes.get('slug')} %}
+                        {% endif %}
+
+                        <option title="{{ path(app.request.attributes.get('_route'), variables) }}" value="{{ langCode }}" {% if(app.request.attributes.get('_locale') == langCode)%}selected="selected" {% endif %}>{{ language }}</option>
+                    {% endfor %}
+                </select>
+                <input value="Select" type="submit" />
+            </form>
+        </div>
     </aside>
 </header>

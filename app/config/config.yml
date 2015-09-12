@@ -25,7 +25,7 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     globals:
-        languages: [fr, en]
+        languages: { fr: French, en: English}
         blog_url: http://www.web-techno.org
 
 

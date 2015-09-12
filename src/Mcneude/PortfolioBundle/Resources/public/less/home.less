@@ -1,32 +1,24 @@
 .full.full-home{
+    background: url("/bundles/portfolio/images/content/home/bureau_1920.jpg") no-repeat scroll 50% center;
     padding: 0 0 3em 0;
+    height: 80em;
 
     > header {
-        border-bottom: 4px solid @gris-clair;
+        margin: 22% 0 25% 0;
+        > h1, .accroche{
+            color: @blanc;
+        }
         > h1{
-            border-bottom: 1px solid @gris-fonce;
-            color: @gris-fonce;
             font-size: 3.5em;
             margin: 1em 25% 0 25%;
             text-align: center;
-            text-decoration: none;
+            border: none;
             width: 50%;
         }
-        img{
-            width: auto;
-            border: 1px solid @gris-clair;
-        }
         .accroche{
-            margin-top: 1em;
-        }
-    }
-    #encemoment .box{
-        .content{
-            font-size: 2.3em;
-            .opensansbold( 2.3em );
-            line-height: 1.6em;
-            text-align: right;
-            color: @olive;
+            font-size: 3em;
+            text-align: center;
+            margin: 0;
         }
     }
 }
@@ -38,14 +30,18 @@
 
 @media screen and (max-width: 760px){
     .full.full-home{
+        background: url("/bundles/portfolio/images/content/home/bureau_760.jpg") no-repeat scroll 50% center;
+        height: auto;
+
         > header {
+            margin: 0;
             > h1{
                 width: 100%;
-                font-size: 3em;
+                font-size: 2em;
                 margin: 1em 0 1em 0;
             }
-            > img{
-                display: none;
+            .accroche{
+                font-size: 1.5em;
             }
         }
         #derniers-projets{
@@ -63,10 +59,15 @@
 
 @media screen and (min-width: 760px) and (max-width: 1330px) {
     .full.full-home{
+        background: url("/bundles/portfolio/images/content/home/bureau_1330.jpg") no-repeat scroll 50% center;
+        height: auto;
+        height: 60em;
+
         > header {
+            margin: 25% 0 0 0;
+
             > h1{
                 width: 70%;
-                font-size: 2.5em;
                 margin: 1em 15%;
             }
             > img{
