@@ -35,9 +35,8 @@
         "sonata-project/datagrid-bundle": "dev-master",
 
         "jms/i18n-routing-bundle": "dev-master",
-
-        "gedmo/doctrine-extensions": "dev-master",
-        "stof/doctrine-extensions-bundle": "dev-master",
+        "gedmo/doctrine-extensions": "2.3.*@dev",
+        "stof/doctrine-extensions-bundle": "1.1.*@dev",
         "a2lix/translation-form-bundle": "1.*@dev"
     },
     "scripts": {
