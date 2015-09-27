@@ -10,7 +10,7 @@ admin:
 
 login:
     resource: '@SonataUserBundle/Resources/config/routing/admin_resetting.xml'
-    prefix: /login
+    prefix: admin/login
 
 _sonata_admin:
     resource: .
