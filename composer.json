@@ -31,7 +31,6 @@
         "sonata-project/cache-bundle": "dev-master",
         "sonata-project/doctrine-orm-admin-bundle": "dev-master",
         "sonata-project/user-bundle": "dev-master",
-        "sonata-project/jquery-bundle": "dev-master",
         "sonata-project/core-bundle": "dev-master",
         "sonata-project/datagrid-bundle": "dev-master",
 
