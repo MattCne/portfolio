@@ -28,8 +28,6 @@ class ParcoursExperiencesAdmin extends Admin
                     )
                 )
             ) )
-            ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
-            ->add( 'description', 'textarea', array( 'label' => 'Description', 'attr' => array( 'class' => 'tinymce' ) ) )
             ->add( 'date', 'date', array( 'label' => 'date' ) )
             ->add( 'urlImage', 'text', array( 'label' => 'URL image : /bundles/portfolio/images/content/parcours_experiences' ) )
             ->add( 'url', 'text', array( 'label' => 'URL', 'required' => false ) )

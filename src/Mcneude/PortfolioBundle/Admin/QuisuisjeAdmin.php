@@ -37,10 +37,6 @@ class QuisuisjeAdmin extends Admin
                     )
                 )
             ) )
-            ->add( 'pourquoi', 'textarea', array( 'label' => 'Pourquoi développeur web ?' ) )
-            ->add( 'methodes', 'textarea', array( 'label' => 'Methodes de conception' ) )
-            ->add( 'politique', 'textarea', array( 'label' => 'Politique / workflow' ) )
-            ->add( 'infos', 'textarea', array( 'label' => 'Informations complémentaires' ) )
         ;
     }
 

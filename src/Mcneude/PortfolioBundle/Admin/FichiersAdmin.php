@@ -27,8 +27,6 @@ class FichiersAdmin extends Admin
                     )
                 )
             ) )
-            ->add( 'nom', 'text', array( 'label' => 'Nom' ) )
-            ->add( 'url', 'text', array( 'label' => 'Url : /bundles/portfolio/files' ) )
             ->add( 'position', 'text', array( 'label' => 'Position' ) )
         ;
     }

@@ -38,10 +38,6 @@ class QuisuisjeAccrochesAdmin extends Admin
 
                 )
             ) )
-            ->add( 'accroche_methodes', 'textarea', array( 'label' => 'Methodes de conception', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'accroche_infos', 'textarea', array( 'label' => 'Informations complémentaires', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'accroche_politique', 'textarea', array( 'label' => 'Politique / workflow', 'attr' => array( 'class' => 'tinymce' ) ) )
-            ->add( 'accroche_competences', 'textarea', array( 'label' => 'Compétences', 'attr' => array( 'class' => 'tinymce' ) ) )
         ;
     }
 

@@ -29,8 +29,6 @@ class ParcoursAdmin extends Admin
                     ),
                 )
             ) )
-            ->add( 'experiences_complementaires', 'textarea', array( 'label' => 'Experiences complémentaires' ) )
-            ->add( 'interets', 'textarea', array( 'label' => 'Intérets' ) )
         ;
     }
 
