@@ -1,13 +1,4 @@
 /**
- * Gestion du slider
- */
-$(function( $, undefined ){
-    $('.flexslider').flexslider({
-        animation: "slide"
-    });
-});
-
-/**
  * Gestion de la hauteur des colonnes dans le footer
  */
 (function($, undefined){
@@ -55,7 +46,6 @@ $(function( $, undefined ){
 /**
  * Gestion du changement de groupe dans la page Projet
  * TODO gestion en Ajax (plus propre à l'initialisation de la page, plus rapide au chargement)
- * TODO animation en CSS3 (ça en jette plus quand même =)
  */
 
 (function($, undefined){
