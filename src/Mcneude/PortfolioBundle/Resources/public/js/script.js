@@ -1,4 +1,13 @@
 /**
+ * Gestion du slider
+ */
+$(function( $, undefined ){
+    $('.flexslider').flexslider({
+        animation: "slide"
+    });
+});
+
+/**
  * Gestion de la hauteur des colonnes dans le footer
  */
 (function($, undefined){
@@ -22,24 +31,25 @@
  * Ajustement de la hauteur des elements '.box' dans les pages par colonne
  */
 (function($, undefined){
-    if( !Modernizr.touch || !Modernizr.geolocation )
-    {
-        $('.row').each( function(){
-            var h = 0,
-                $box = $(this).children('.box');
+    $(window).load(function() {
+        if( !Modernizr.touch || !Modernizr.geolocation )
+        {
+            $('.row').each( function(){
+                var h = 0,
+                    $box = $(this).children('.box');
 
-            $box.each(function(){
-                if($(this).outerHeight() >= h)
-                    h = $(this).outerHeight();
-            })
+                $box.each(function(){
+                    if($(this).outerHeight() >= h)
+                        h = $(this).outerHeight();
+                })
 
-            $box.each(function(){
-                $(this).height(h);
+                $box.each(function(){
+                    $(this).height(h);
+                });
             });
-        });
 
-    }
-
+        }
+    });
 })(window.jQuery);
 
 
