@@ -11,7 +11,7 @@ $(function( $, undefined ){
  * Gestion de la hauteur des colonnes dans le footer
  */
 (function($, undefined){
-    if( !Modernizr.touch || !Modernizr.geolocation )
+    if( typeof window.orientation === 'undefined' )
     {
         var $sectionFooter = $('body #main > footer section');
         var h = 0;
@@ -32,7 +32,7 @@ $(function( $, undefined ){
  */
 (function($, undefined){
     $(window).load(function() {
-        if( !Modernizr.touch || !Modernizr.geolocation )
+        if( typeof window.orientation === 'undefined' )
         {
             $('.row').each( function(){
                 var h = 0,
