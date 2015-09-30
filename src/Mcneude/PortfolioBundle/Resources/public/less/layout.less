@@ -425,10 +425,19 @@ ul#main-menu{
 
         #translator{
             position: absolute;
-            right: 1em;
+            right: 0;
             top: 0;
             border: none;
-            width: 5em;
+            width: auto;
+            float: none;
+
+            #country-select {
+                margin:0;
+                width: 5em;
+                .dropdown dt a{
+                    .border-radius(5px 0 0 5px);
+                }
+            }
         }
 
         &:after{
