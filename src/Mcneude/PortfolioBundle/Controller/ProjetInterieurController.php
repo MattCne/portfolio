@@ -14,7 +14,7 @@ class ProjetInterieurController extends Controller
             ->getRepository('PortfolioBundle:Projets')
             ->findOneBy( array( 'slug' => $slug ) );
 
-        foreach( $project->getGroupProject() as $group )
+        foreach( $project->getProjetsGroupe() as $group )
             $groups[$group->getFormatedName()] = $group->getNom();
 
         $images = $this->getDoctrine()

@@ -19,7 +19,7 @@
         {% if projects is not null %}
             <ul class="list-projet">
                 {% for project in projects  %}
-                    <li class="{% for groupe in project.getGroupProject  %} {{  groupe.getFormatedName  }} {% endfor %} projet">
+                    <li class="{% for groupe in project.getProjetsGroupe  %} {{  groupe.getFormatedName  }} {% endfor %} projet">
                         <article>
                             <a href="{{ path( 'projet_interieur' , { 'slug': project.slug }) }}">
                                 <figure class="visuel">

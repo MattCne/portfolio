@@ -40,7 +40,7 @@ class ProjetsAdmin extends Admin
                     )
                 )
             ) )
-            ->add( 'projetsGroupe', 'sonata_type_model', array( 'label' => 'Groupes', 'required' => false, 'expanded' => true, 'multiple' => true)  )
+            ->add( 'projetsGroupe','sonata_type_model', array( 'label' => 'Groupes', 'required' => false, 'expanded' => true, 'multiple' => true)  )
             ->add( 'url_miniature', 'text', array( 'label' => 'Url de la miniature principale :  /bundles/portfolio/images/content/projets_miniatures' ) )
             ->add( 'url_external', 'text', array( 'label' => 'Url externe : http://', 'required' => false ) )
             ->add( 'position', 'text', array( 'label' => 'Position' ) )

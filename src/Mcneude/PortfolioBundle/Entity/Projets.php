@@ -414,7 +414,7 @@ class Projets
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getGroupProject()
+    public function getProjetsGroupe()
     {
         return $this->projetsGroupe;
     }

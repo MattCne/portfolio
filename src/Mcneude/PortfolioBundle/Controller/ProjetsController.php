@@ -21,7 +21,7 @@ class ProjetsController extends Controller
         {
             foreach( $projects as $projet )
             {
-                $groups = $projet->getGroupProject();
+                $groups = $projet->getProjetsGroupe();
                 foreach( $groups as $group )
                     $formatedGroups[$group->getFormatedName()] = $group->getNom();
             }
