@@ -1,13 +1,4 @@
 /**
- * Gestion du slider
- */
-$(function( $, undefined ){
-    $('.flexslider').flexslider({
-        animation: "slide"
-    });
-});
-
-/**
  * Gestion de la hauteur des colonnes dans le footer
  */
 (function($, undefined){
