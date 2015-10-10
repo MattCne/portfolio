@@ -499,4 +499,27 @@ class Projets
     {
         return $this->locale;
     }
+
+    /**
+     * Add translations
+     *
+     * @param \Mcneude\PortfolioBundle\Entity\ProjetsTranslation $translations
+     * @return Projets
+     */
+    public function addTranslation(\Mcneude\PortfolioBundle\Entity\ProjetsTranslation $translations)
+    {
+        $this->translations[] = $translations;
+
+        return $this;
+    }
+
+    /**
+     * Remove translations
+     *
+     * @param \Mcneude\PortfolioBundle\Entity\ProjetsTranslation $translations
+     */
+    public function removeTranslation(\Mcneude\PortfolioBundle\Entity\ProjetsTranslation $translations)
+    {
+        $this->translations->removeElement($translations);
+    }
 }

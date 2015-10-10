@@ -6,34 +6,7 @@
         <h1>{{ "career.title.main" | trans }}</h1>
 
         <div class="row">
-            <article class="box" id="etude">
-                <header>
-                    <h1>{{ "career.title.studies" | trans }}</h1>
 
-                    <div class="accroche content">
-                        {% if catchphrases is not null %}
-                            {{ catchphrases.getAccrocheEtudes | raw }}
-                        {% endif %}
-                    </div>
-                </header>
-                {% if studies is not empty %}
-                    <ul>
-                        {% for study in studies %}
-                            <li>
-                                <section class="exp_etude">
-                                    <header>
-                                        <h1>{{ study.getNom }}</h1>
-                                        <time>{{ study.getDate | date("d/m/Y") }}</time>
-                                    </header>
-                                    <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_etudes{{ study.urlImage }}"
-                                                             alt="{{ study.nom }}"/></div>
-                                    <div class="content">{{ study.description | raw}}</div>
-                                </section>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </article>
             <article class="box" id="experiences">
                 <header>
                     <h1>{{ "career.title.experiences" | trans }}</h1>
@@ -56,6 +29,34 @@
                                     <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_experiences{{ experience.urlImage }}"
                                                              alt="{{ experience.getNom }}"/></div>
                                     <div class="content">{{ experience.description | raw}}</div>
+                                </section>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </article>
+            <article class="box" id="etude">
+                <header>
+                    <h1>{{ "career.title.studies" | trans }}</h1>
+
+                    <div class="accroche content">
+                        {% if catchphrases is not null %}
+                            {{ catchphrases.getAccrocheEtudes | raw }}
+                        {% endif %}
+                    </div>
+                </header>
+                {% if studies is not empty %}
+                    <ul>
+                        {% for study in studies %}
+                            <li>
+                                <section class="exp_etude">
+                                    <header>
+                                        <h1>{{ study.getNom }}</h1>
+                                        <time>{{ study.getDate | date("d/m/Y") }}</time>
+                                    </header>
+                                    <div class="visuel"><img src="/bundles/portfolio/images/content/parcours_etudes{{ study.urlImage }}"
+                                                             alt="{{ study.nom }}"/></div>
+                                    <div class="content">{{ study.description | raw}}</div>
                                 </section>
                             </li>
                         {% endfor %}
