@@ -8,9 +8,9 @@
         > ul{
             > li{
 
-                 &:before{
+                &:before{
                     content:none;
-                 }
+                }
 
                 .exp_pro,
                 .exp_etude{
@@ -54,3 +54,27 @@
     }
 }
 
+
+/*****************/
+/*    TABLETTE   */
+/*****************/
+
+@media screen and (min-width: 760px) and (max-width: 1330px) {
+    .full-cv{
+
+        #experiences, #etude{
+            > ul{
+                > li{
+                    .exp_pro,
+                    .exp_etude{
+                        .visuel{
+                            width:20%;
+                            border: 1px solid @gris-clair;
+                            margin: 0.5em 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
