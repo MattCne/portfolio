@@ -17,6 +17,7 @@ data/
 web/bundles/
 web/css/
 web/js/
+web/app_dev.php
 
 .idea
 
