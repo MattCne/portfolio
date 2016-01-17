@@ -60,6 +60,11 @@ class ContactController extends Controller
 
                 $this->get( 'mailer' )->send( $message );
 
+                $this->addFlash(
+                    'notice',
+                    $this->get('translator')->trans('contact.message.email_sent')
+                );
+
                 return $this->redirect( $this->generateUrl( 'contact' ) );
             }
         }

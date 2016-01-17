@@ -57,7 +57,8 @@ contact:
   form:
     require: Les champs renseignés d'un <strong>*</strong> sont obligatoires.
     submit: Envoyer
-  label:
+  message:
+    email_sent: Votre email a été envoyé
 
 footer:
   title:
