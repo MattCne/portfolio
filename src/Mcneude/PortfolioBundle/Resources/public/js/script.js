@@ -1,5 +1,5 @@
 /**
- * Gestion de la hauteur des colonnes dans le footer
+ * Manage the height of the columns into the footer
  */
 (function($, undefined){
     if( typeof window.orientation === 'undefined' )
