@@ -6,9 +6,6 @@ app/bootstrap.php.cache
 app/cache/*
 app/logs/*
 app/config/parameters.yml
-app/config/parameters.yml.prod
-
-composer.lock
 
 build/
 vendor/
